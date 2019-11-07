@@ -24,14 +24,18 @@ public class UserDAO extends JpaDAO<User> implements GenericDAO<User> {
     }
 
     public void delete(Object id) {
-
+        super.delete(User.class, id);
     }
 
     public List<User> listAll() {
-        return null;
+        return super.findByNamedQueryWithoutParameters("User.findAll");
+    }
+
+    public List<User> findByEmail(String email) {
+        return super.findByNamedQueryWithParameter("User.findByEmail", "email", email);
     }
 
     public long count() {
-        return 0;
+        return super.countByNamedQuery("User.countAll");
     }
 }

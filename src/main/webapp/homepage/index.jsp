@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8" %>
+<%
+    response.setCharacterEncoding("UTF-8");
+    request.setCharacterEncoding("UTF-8");
+%>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Web for training">
+    <meta name="author" content="DB">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Ski4Humans - home page - WELCOME</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+
+<body>
+<div class="container">
+    <header>
+        <jsp:directive.include file="header.jsp"/>
+    </header>
+
+    <div>
+        <div style="width: 500px; height: 750px; float: left; margin: 10px 10px 10px 0;">
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="../images/skiiPic/Webp.net-resizeimage.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../images/skiiPic/Webp.net-resizeimage(2).png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../images/skiiPic/Webp.net-resizeimage(1).png" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+
+        <div style="width: 690px; height: 750px; float: left; margin: 10px 0 10px 10px;">
+            <div style="height: 365px; margin: 0px 0 10px 0px;">
+                <div id="carouselExampleControls1" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="../images/skiiPic/alpine_skiing_hafjell_photo_gisle_johnsen_9bcc93d0-4346-4704-a0a7-0fb9f287d63e.jpg"
+                                 height="365" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleControls1" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls1" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+            <div style="margin: 10px 0 10px 0;">
+                <div style="float: left; height: 365px;width: 335px;margin: 10px 10px 0 0;">
+                    <div id="carouselExampleControls2" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="../images/skiiPic/alpine_skiing_hafjell_photo_gisle_johnsen_9bcc93d0-4346-4704-a0a7-0fb9f287d63e.jpg"
+                                     height="365" width="345" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleControls2" role="button"
+                           data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleControls2" role="button"
+                           data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+                <div style="float: left; height: 365px;width: 335px;margin: 10px 0 0 10px;">
+                    <div id="carouselExampleControls3" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="../images/skiiPic/alpine_skiing_hafjell_photo_gisle_johnsen_9bcc93d0-4346-4704-a0a7-0fb9f287d63e.jpg"
+                                     height="365" width="345" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleControls3" role="button"
+                           data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleControls3" role="button"
+                           data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class="firstMessage">
+            <div class="lineUnderMessage"></div>
+            <p class="pTitle" style="font-size: 25px">SKLEP NARCIARSKI SKI4HUMANS.PL - NAJLEPSZY SPRZĘT DLA
+                NARCIARZY</p>
+            <p style="font-size: 14px;text-align: justify">Sklep Ski24 to ponad 20 lat doświadczeń związanych ze
+                sprzedażą sprzętu zimowego.
+                Dzięki ogromnej wiedzy,
+                pasji i determinacji z sukcesem budujemy pozycję lidera sprzedaży nart i sprzętu narciarskiego on-line w
+                Polsce. Każdego roku zdobywamy kolejne tysiące zadowolonych klientów. Jako pierwszy sklep narciarski w
+                Polsce rozpoczęliśmy sprzedaż nart carvingowych. Już od 1997 roku głęboko wierzyliśmy, że nie jest to
+                jedynie tymczasowa moda, ale przyszłość, dlatego rozpoczęliśmy szeroką edukację polskich narciarzy,
+                czego
+                efekty widać gołym okiem.
+
+                Nasz sklep narciarski oferuje Państwu narty najlepszych producentów, wysokiej jakości buty narciarskie,
+                niezawodne i bezpieczne kaski, a także gogle i wiele innych akcesoriów niezbędnych na stoku. Znane marki
+                to
+                nasza mocna strona: Atomic, Head, Volkl, Dynastar, Rossignol, Salomon, Dalbello, Elan, Blizzard, Uvex,
+                Komperdell, Nordica, Dragon, to tylko niektóre z brandów, które znajdziesz w ofercie naszego sklepu.</p>
+        </div>
+
+        <div class="firstMessage">
+            <div class="lineUnderMessage"></div>
+            <p class="pTitle" style="font-size: 25px">KATEGORIE PRODUKTÓW</p>
+            <p style="font-size: 14px;text-align: justify">Sklep Ski24 to ponad 20 lat doświadczeń związanych ze
+                sprzedażą sprzętu zimowego.
+                Dzięki ogromnej wiedzy,
+                pasji i determinacji z sukcesem budujemy pozycję lidera sprzedaży nart i sprzętu narciarskiego on-line w
+                Polsce. Każdego roku zdobywamy kolejne tysiące zadowolonych klientów. Jako pierwszy sklep narciarski w
+                Polsce rozpoczęliśmy sprzedaż nart carvingowych. Już od 1997 roku głęboko wierzyliśmy, że nie jest to
+                jedynie tymczasowa moda, ale przyszłość, dlatego rozpoczęliśmy szeroką edukację polskich narciarzy,
+                czego
+                efekty widać gołym okiem.
+
+                Nasz sklep narciarski oferuje Państwu narty najlepszych producentów, wysokiej jakości buty narciarskie,
+                niezawodne i bezpieczne kaski, a także gogle i wiele innych akcesoriów niezbędnych na stoku. Znane marki
+                to
+                nasza mocna strona: Atomic, Head, Volkl, Dynastar, Rossignol, Salomon, Dalbello, Elan, Blizzard, Uvex,
+                Komperdell, Nordica, Dragon, to tylko niektóre z brandów, które znajdziesz w ofercie naszego sklepu.</p>
+        </div>
+    </div>
+
+    <div class="card-deck mb-3 text-center" style="height: 490px">
+        <div class="card mb-3 box-shadow">
+            <div class="card-header" style="height: 70px">
+                <h5 class="my-0 font-weight-normal" style="line-height: 42px">MONTUJEMY WIĄZANIA</h5>
+            </div>
+            <div class="card-body" style="text-align: justify">
+                <p class="pJustify">Mając na uwadze komfort i bezpieczeństwo naszych klientów,
+                    oferujemy całkowicie darmowy montaż wiązań – wystarczy,
+                    że podasz nam swoją wagę, wzrost i długość skorupy buta.
+                    Po wykonaniu takiej usługi narty są w pełni gotowe do jazdy
+                    i nie wymagają dodatkowej wizyty w serwisie narciarskim.</p>
+            </div>
+            <div class="card-body" style="height: 85px">
+                <a href="../informacje/darmowy-montaz-wiazan.jsp">
+                    <button type="button" class="btn btn-lg btn-block btn-outline-primary">CZYTAJ WIĘCEJ</button>
+                </a>
+            </div>
+        </div>
+        <div class="card mb-3 box-shadow">
+            <div class="card-header" style="height: 70px">
+                <h5 class="my-0 font-weight-normal" style="line-height: 42px">JAK DOBRAĆ SPRZĘT?</h5>
+            </div>
+            <div class="card-body" style="text-align: justify">
+                <p class="pJustify">Odpowiednie dopasowanie sprzętu narciarskiego to jeden z najistotniejszych
+                    czynników, gwarantujących bezpieczną i komfortową jazdę.
+                    Klikając w baner znajdziesz przydatne informacje,x sporządzone
+                    przez naszych fachowców, w jaki sposób dobrać poszczególne elementy
+                    asortymentu (narty, buty narciarskie, kije).</p>
+
+            </div>
+            <div class="card-body" style="height: 110px">
+                <button type="button" class="btn btn-lg btn-block btn-outline-primary">DOPASUJ SPRZĘT</button>
+            </div>
+        </div>
+        <div class="card mb-3 box-shadow">
+            <div class="card-header" style="height: 70px">
+                <h5 class="my-0 font-weight-normal" style="line-height: 42px">PORADY SPECJALISTÓW</h5>
+            </div>
+            <div class="card-body" style="text-align: justify">
+                <p class="pJustify">Artykuły, które zainteresują zarówno początkujących jak i
+                    doświadczonych narciarzy: ciekawostki ze świata narciarskiego,
+                    pomoc w przygotowaniu do pierwszych wyjazdów zimowych, porady
+                    z zakresu konserwacji sprzętu narciarskiego.</p>
+            </div>
+            <div class="card-body" style="height: 63px">
+                <button type="button" class="btn btn-lg btn-block btn-outline-primary">CZYTAJ WIĘCEJ</button>
+            </div>
+        </div>
+        <div class="card mb-3 box-shadow">
+            <div class="card-header" style="height: 70px">
+                <h5 class="my-0 font-weight-normal" style="line-height: 22px">NATYCHMIASTOWA WYSYŁKA W 24H</h5>
+            </div>
+            <div class="card-body" style="text-align: justify">
+                <p class="pJustify">Cały towar prezentowany na stronie znajduje się w naszym magazynie.
+                    Składając zamówienie do godziny 13:00 (od poniedziałku do piątku)
+                    możesz mieć pewność, że sprzęt zostanie wysłany jeszcze
+                    tego samego dnia.</p>
+            </div>
+            <div class="card-body" style="height: 10px">
+                <button type="button" class="btn btn-lg btn-block btn-outline-primary">CZYTAJ WIĘCEJ</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div style="height: 30px"></div>
+        <jsp:directive.include file="../homepage/footer.jsp"/>
+    </footer>
+</div>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</body>
+</html>

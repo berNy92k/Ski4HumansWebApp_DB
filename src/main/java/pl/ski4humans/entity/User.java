@@ -5,6 +5,11 @@ import com.sun.istack.internal.NotNull;
 import javax.persistence.*;
 
 @Entity(name = "Users")
+@NamedQueries({
+        @NamedQuery(name = "User.findAll", query = "SELECT u FROM Users u ORDER BY u.email"),
+        @NamedQuery(name = "User.findByEmail", query = "SELECT u FROM Users u WHERE u.email = :email"),
+        @NamedQuery(name = "User.countAll", query = "SELECT COUNT(u) FROM Users u")
+})
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -30,10 +35,10 @@ public class User {
     }
 
     public User(Integer userId, String email, String fullName, String password) {
+        this.userId = userId;
         this.email = email;
         this.fullName = fullName;
         this.password = password;
-        this.userId = userId;
     }
 
     public Integer getUserId() {

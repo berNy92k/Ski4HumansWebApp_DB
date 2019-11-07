@@ -1,0 +1,167 @@
+html {
+    font-size: 12px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+li{
+    margin: 10px;
+}
+
+a {
+    color: black;
+}
+
+a:link {
+    text-decoration: none
+}
+
+a:visited {
+    text-decoration: none
+}
+
+a:active {
+    text-decoration: none
+}
+
+a:hover {
+    text-decoration: underline
+}
+
+.container {
+    max-width: 1240px;
+    margin-bottom: 20px
+}
+
+.pricing-header {
+    max-width: 1240px;
+}
+
+.header {
+    max-width: 1240px;
+}
+
+.row {
+    max-width: 1240px;
+}
+
+.card-deck .card {
+    min-width: 220px;
+}
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem lightgrey;
+}
+
+.text-muted {
+    margin: 3px;
+    font-size: 10px;
+}
+
+p {
+    line-height: 150%;
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: white;
+    color: rgba(57, 123, 227, 0.99);
+    padding: 5px;
+    font-size: 18px;
+    font-family: "GOST Common", serif;;
+    border: none;
+    margin-right: 15px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ced9ff;
+    min-width: 200px;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-align: left;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #ebeeff;;
+    color: black;
+    border-radius: 10px;
+}
+
+.lineUnderMenu {
+    display: block;
+    overflow: hidden;
+    border-style: inset;
+    border-top: 3px;
+    width: 1210px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 5px;
+    background-color: darkblue;
+}
+
+.firstMessage {
+    clear: both;
+    font-size: 25px;
+    font-family: "Yu Gothic", serif;;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #0d0e48;
+}
+
+.lineUnderMessage {
+    display: block;
+    overflow: hidden;
+    border-style: inset;
+    border-top: 3px;
+    width: 1210px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 5px;
+    background-color: darkblue;
+}
+
+.pTitle {
+    font-size: 20px;
+}
+
+
