@@ -27,19 +27,18 @@ public class UserServices {
     }
 
     public void userList() throws ServletException, IOException {
-        userList(null);
+        userList(Constants.NULL);
     }
 
     public void userList(String message) throws ServletException, IOException {
         List<User> userList = userDAO.listAll();
 
-        request.setAttribute("userList", userList);
+        request.setAttribute("categoryList", userList);
         if (message != null) {
             request.setAttribute("message", message);
         }
 
-        String url = "/admin/user_list.jsp";
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher(url);
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher(Constants.USER_LIST_URL);
         requestDispatcher.forward(request, response);
     }
 
@@ -51,11 +50,11 @@ public class UserServices {
         List<User> emails = userDAO.findByEmail(email);
 
         if (emails.size() > 0) {
-            userList(email + " --> Email already exist in database");
+            userList(email + Constants.EMAIL_ALREADY_EXIST_IN_DB);
         } else {
             User newUser = new User(email, fullName, password);
             userDAO.create(newUser);
-            userList("New user was created");
+            userList(Constants.NEW_USER_WAS_CREATED);
         }
     }
 
@@ -63,11 +62,14 @@ public class UserServices {
         Integer id = Integer.valueOf(request.getParameter("id"));
         User user = userDAO.get(id);
 
-        request.setAttribute("user", user);
+        if (user != null) {
+            request.setAttribute("user", user);
 
-        String url = "/admin/user_create.jsp";
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher(url);
-        requestDispatcher.forward(request, response);
+            RequestDispatcher requestDispatcher = request.getRequestDispatcher(Constants.USER_CREATE_URL);
+            requestDispatcher.forward(request, response);
+        } else {
+            userList(Constants.COULD_NOT_FIND_USER_BY_ID + id);
+        }
     }
 
     public void updateUser() throws ServletException, IOException {
@@ -89,21 +91,31 @@ public class UserServices {
         }
 
         if (isMoreEmailsInDatabase) {
-            userList("User was NOT updated. " + email + " --> Email already exist in database");
+            userList(Constants.USER_WAS_NOT_UPDATED + email + Constants.EMAIL_ALREADY_EXIST_IN_DB);
         } else if (userFoundByEmail != null && !userFoundByEmail.getUserId().equals(userFoundById.getUserId())) {
-            userList("User was NOT updated. " + email + " --> Email already exist in database");
+            userList(Constants.USER_WAS_NOT_UPDATED + email + Constants.EMAIL_ALREADY_EXIST_IN_DB);
         } else {
             User user = new User(userId, email, fullName, password);
             userDAO.update(user);
 
-            userList("User was updated");
+            userList(Constants.USER_WAS_UPDATED);
         }
     }
 
     public void deleteUser() throws ServletException, IOException {
         Integer userId = Integer.valueOf(request.getParameter("id"));
 
-        userDAO.delete(userId);
-        userList("User was deleted");
+        if (userId.equals(1)) {
+            userList(Constants.ADMIN_CAN_NOT_BE_DELETED);
+        } else {
+            User user = userDAO.get(userId);
+
+            if (user != null) {
+                userDAO.delete(userId);
+                userList(Constants.USER_WAS_DELETED);
+            } else {
+                userList(Constants.COULD_NOT_FIND_USER_BY_ID + userId + Constants.DELETED_BY_ANOTHER_ADMIN);
+            }
+        }
     }
 }
