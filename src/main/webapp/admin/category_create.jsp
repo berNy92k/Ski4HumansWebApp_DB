@@ -52,7 +52,7 @@
                        placeholder="Enter category name" value="${category.name}">
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
-            <button type="button" class="btn btn-primary" id="cancel">Cancel</button>
+            <button type="button" class="btn btn-primary" id="cancel" onclick="javascript:history.go(-1);">Cancel</button>
         </form>
     </div>
 
