@@ -33,7 +33,7 @@ public class UserServices {
     public void userList(String message) throws ServletException, IOException {
         List<User> userList = userDAO.listAll();
 
-        request.setAttribute("categoryList", userList);
+        request.setAttribute("userList", userList);
         if (message != null) {
             request.setAttribute("message", message);
         }
@@ -50,7 +50,7 @@ public class UserServices {
         List<User> emails = userDAO.findByEmail(email);
 
         if (emails.size() > 0) {
-            userList(email + Constants.EMAIL_ALREADY_EXIST_IN_DB);
+            userList(email + Constants.USER_EMAIL_ALREADY_EXIST_IN_DB);
         } else {
             User newUser = new User(email, fullName, password);
             userDAO.create(newUser);
@@ -91,9 +91,9 @@ public class UserServices {
         }
 
         if (isMoreEmailsInDatabase) {
-            userList(Constants.USER_WAS_NOT_UPDATED + email + Constants.EMAIL_ALREADY_EXIST_IN_DB);
+            userList(Constants.USER_WAS_NOT_UPDATED + email + Constants.USER_EMAIL_ALREADY_EXIST_IN_DB);
         } else if (userFoundByEmail != null && !userFoundByEmail.getUserId().equals(userFoundById.getUserId())) {
-            userList(Constants.USER_WAS_NOT_UPDATED + email + Constants.EMAIL_ALREADY_EXIST_IN_DB);
+            userList(Constants.USER_WAS_NOT_UPDATED + email + Constants.USER_EMAIL_ALREADY_EXIST_IN_DB);
         } else {
             User user = new User(userId, email, fullName, password);
             userDAO.update(user);
@@ -106,7 +106,7 @@ public class UserServices {
         Integer userId = Integer.valueOf(request.getParameter("id"));
 
         if (userId.equals(1)) {
-            userList(Constants.ADMIN_CAN_NOT_BE_DELETED);
+            userList(Constants.USER_ADMIN_CAN_NOT_BE_DELETED);
         } else {
             User user = userDAO.get(userId);
 
@@ -114,7 +114,7 @@ public class UserServices {
                 userDAO.delete(userId);
                 userList(Constants.USER_WAS_DELETED);
             } else {
-                userList(Constants.COULD_NOT_FIND_USER_BY_ID + userId + Constants.DELETED_BY_ANOTHER_ADMIN);
+                userList(Constants.COULD_NOT_FIND_USER_BY_ID + userId + Constants.DELETED_BY_ANOTHER_USER_ADMIN);
             }
         }
     }
