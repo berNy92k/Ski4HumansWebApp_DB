@@ -60,7 +60,7 @@ public class UserDAOTest {
 
         User updateUser = userDAO.update(user);
 
-        assertTrue(updateUser.getFullName().equals("Update test Men"));
+        assertEquals("Update test Men", updateUser.getFullName());
     }
 
     @Test(expected = PersistenceException.class)
@@ -92,6 +92,7 @@ public class UserDAOTest {
         userDAO.delete(userId);
 
         User deletedUser = userDAO.get(userId);
+
         assertNull(deletedUser);
     }
 
@@ -99,6 +100,7 @@ public class UserDAOTest {
     public void testListAllUser() {
         List<User> users = userDAO.listAll();
         int size = users.size();
+
         assertEquals(5, size);
     }
 
@@ -131,7 +133,7 @@ public class UserDAOTest {
     @Test
     public void testCountUser() {
         long count = userDAO.count();
-        
+
         assertEquals(5,count);
     }
 
