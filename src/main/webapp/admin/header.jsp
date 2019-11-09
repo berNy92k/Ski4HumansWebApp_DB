@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
@@ -16,7 +17,14 @@
     </div>
 
     <div style="font-size: 12px;">
-        ADMINISTRATOR PAGE
+        Welcome,
+        <c:if test="${sessionScope.userEmail != null}">
+            <c:out value="${sessionScope.userEmail}, "/>
+            <a href="../admin/logout">Logout</a>
+        </c:if>
+        <c:if test="${sessionScope.userEmail == null}">
+            <c:out value="Login as administrator to have access"/>
+        </c:if>
     </div>
 </div>
 
@@ -55,68 +63,43 @@
             <div class="btn-group mr-2" role="group" aria-label="First group">
                 <div class="dropdown">
                     <button class="dropbtn" style="border-top-left-radius: 5px; border-bottom-left-radius: 5px">
-                        NARTY
+                        <a href="admin/skis">NARTY</a>
                     </button>
-                    <div class="dropdown-content">
-                        <a href="admin/womenSkis">NARTY DAMSKIE</a>
-                        <a href="admin/menSkis">NARTY MĘSKIE</a>
-                        <a href="admin/juniorSkis">NARTY JUNIORSKIE</a>
-                    </div>
                 </div>
                 <div class="dropdown">
-                    <button class="dropbtn">BUTY</button>
-                    <div class="dropdown-content">
-                        <a href="admin/womenShoes">BUTY DAMSKIE</a>
-                        <a href="admin/menShoes">BUTY MĘSKIE</a>
-                        <a href="admin/juniorShoes">BUTY JUNIORSKIE</a>
-                    </div>
+                    <button class="dropbtn">
+                        <a href="admin/shoes">BUTY</a>
+                    </button>
                 </div>
                 <div class="dropdown">
-                    <button class="dropbtn">KIJE</button>
-                    <div class="dropdown-content">
-                        <a href="admin/womenPoles">KIJE DAMSKIE</a>
-                        <a href="admin/menPoles">KIJE MĘSKIE</a>
-                        <a href="admin/juniorPoles">KIJE UNIORSKIE</a>
-                    </div>
+                    <button class="dropbtn">
+                        <a href="admin/womenSkis">KIJE</a>
+                    </button>
                 </div>
                 <div class="dropdown">
-                    <button class="dropbtn">KASKI</button>
-                    <div class="dropdown-content">
-                        <a href="admin/womenHelmet">KASKI DAMSKIE</a>
-                        <a href="admin/menHelmet">KASKI MĘSKIE</a>
-                        <a href="admin/juniorHelmet">KASKI JUNIORSKIE</a>
-                    </div>
+                    <button class="dropbtn">
+                        <a href="admin/womenSkis">KASKI</a>
+                    </button>
                 </div>
                 <div class="dropdown">
-                    <button class="dropbtn">GOGLE</button>
-                    <div class="dropdown-content">
-                        <a href="admin/womenGoggles">GOGLE DAMSKIE</a>
-                        <a href="admin/menGoggles">GOGLE MĘSKIE</a>
-                        <a href="admin/juniorGoggles">GOGLE JUNIORSKIE</a>
-                    </div>
+                    <button class="dropbtn">
+                        <a href="admin/womenSkis">GOGLE</a>
+                    </button>
                 </div>
                 <div class="dropdown">
-                    <button class="dropbtn">RĘKAWICE</button>
-                    <div class="dropdown-content">
-                        <a href="admin/womenGloves">RĘKAWICE DAMSKIE</a>
-                        <a href="admin/menGloves">RĘKAWICE MĘSKIE</a>
-                        <a href="admin/juniorGloves">RĘKAWICE JUNIORSKIE</a>
-                    </div>
+                    <button class="dropbtn">
+                        <a href="admin/womenSkis">RĘKAWICE</a>
+                    </button>
                 </div>
                 <div class="dropdown">
-                    <button class="dropbtn">ODZIEŻ TERMOAKTYWNA</button>
-                    <div class="dropdown-content">
-                        <a href="admin/womenUnderwear">BIELIZNA DAMSKA</a>
-                        <a href="admin/menUnderwear">BIELIZNA MĘSKA</a>
-                    </div>
+                    <button class="dropbtn">
+                        <a href="admin/womenSkis">ODZIEŻ TERMOAKTYWNA</a>
+                    </button>
                 </div>
                 <div class="dropdown">
-                    <button class="dropbtn">PRODUCENCI</button>
-                    <div class="dropdown-content">
-                        <a href="admin/prod1">Link 1</a>
-                        <a href="admin/prod2">Link 2</a>
-                        <a href="admin/prod3">Link 3</a>
-                    </div>
+                    <button class="dropbtn">
+                        <a href="admin/womenSkis">PRODUCENCI</a>
+                    </button>
                 </div>
                 <div class="dropdown">
                     <button class="dropbtn" style="border-top-right-radius: 5px; border-bottom-right-radius: 5px;">

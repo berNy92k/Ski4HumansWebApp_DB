@@ -26,42 +26,44 @@
         <jsp:include page="header.jsp"/>
     </header>
 
-    <div align="center">
-        &nbsp;
-        <h3><a href="../admin/user_create.jsp"><p style="color:#2b57b4">CREATE NEW USER</p></a></h3>
-        &nbsp;
-    </div>
+    <div style="width: 80%; margin: 0 auto">
+        <div align="center">
+            &nbsp;
+            <h3><a href="../admin/user_create.jsp"><p style="color:#2b57b4">CREATE NEW USER</p></a></h3>
+            &nbsp;
+        </div>
 
-    <div align="center">
-        <h5><p style="color: #950002;">${message}</p></h5>
-    </div>
+        <div align="center">
+            <h5><p style="color: #950002;">${message}</p></h5>
+        </div>
 
-    <div>
-        <table class="table table-striped">
-            <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">ID</th>
-                <th scope="col">Email</th>
-                <th scope="col">Full Name</th>
-                <th scope="col">Actions</th>
-            </tr>
-            </thead>
-            <tbody>
-            <c:forEach var="user" items="${userList}" varStatus="status">
+        <div>
+            <table class="table table-striped">
+                <thead>
                 <tr>
-                    <th scope="row">${status.index + 1}</th>
-                    <td>${user.userId}</td>
-                    <td>${user.email}</td>
-                    <td>${user.fullName}</td>
-                    <td>
-                        <a href="../admin/editUser?id=${user.userId}">EDIT</a> &nbsp
-                        <a href="javascript:deleteUser(${user.userId})">DELETE</a>
-                    </td>
+                    <th scope="col">#</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Full Name</th>
+                    <th scope="col">Actions</th>
                 </tr>
-            </c:forEach>
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                <c:forEach var="user" items="${userList}" varStatus="status">
+                    <tr>
+                        <th scope="row">${status.index + 1}</th>
+                        <td>${user.userId}</td>
+                        <td>${user.email}</td>
+                        <td>${user.fullName}</td>
+                        <td>
+                            <a href="../admin/editUser?id=${user.userId}">EDIT</a> &nbsp
+                            <a href="javascript:deleteUser(${user.userId})">DELETE</a>
+                        </td>
+                    </tr>
+                </c:forEach>
+                </tbody>
+            </table>
+        </div>
     </div>
 
     <footer>

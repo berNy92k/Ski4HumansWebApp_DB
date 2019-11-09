@@ -26,46 +26,54 @@
         <jsp:include page="header.jsp"/>
     </header>
 
-    <div align="center">
-        &nbsp;
-        <c:if test="${user != null}">
-            <p>Please change fields value to update user.</p>
-        </c:if>
-        <c:if test="${user == null}">
-            <p>Please update all fields to create new user.</p>
-        </c:if>
-        &nbsp;
-    </div>
+    <div style="width: 500px; margin: 0 auto">
+        <div align="center">
+            &nbsp;
+            <c:if test="${user != null}">
+                <p>Please change fields value to update user.</p>
+            </c:if>
+            <c:if test="${user == null}">
+                <p>Please update all fields to create new user.</p>
+            </c:if>
+            &nbsp;
+        </div>
 
-    <div>
-        <c:if test="${user != null}">
-            <form action="../admin/updateUser" method="post" id="updateUserForm" onsubmit="return validateCreateUserForm()">
-            <input type="hidden" id="userId" name="userId" value="${user.userId}">
-        </c:if>
-        <c:if test="${user == null}">
-             <form action="../admin/createNewUser" method="post" id="createUserForm" onsubmit="return validateCreateUserForm()">
-        </c:if>
+        <div>
+            <c:if test="${user != null}">
+            <form action="../admin/updateUser" method="post" id="updateUserForm">
+                <input type="hidden" id="userId" name="userId" value="${user.userId}">
+                </c:if>
+                <c:if test="${user == null}">
+                <form action="../admin/createNewUser" method="post" id="createUserForm"
+                      onsubmit="return validateCreateUserForm()">
+                    </c:if>
 
-            <div class="form-group">
-                <label for="email">Email address</label>
-                <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp"
-                       placeholder="Enter email" value="${user.email}">
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.
-                </small>
-            </div>
-            <div class="form-group">
-                <label for="fullName">Full name</label>
-                <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Enter full name"
-                       value="${user.fullName}">
-            </div>
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" class="form-control" id="password" name="password" placeholder="Enter password"
-                       value="${user.password}">
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-            <button type="button" class="btn btn-primary" id="cancel" onclick="javascript:history.go(-1);">Cancel</button>
-        </form>
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp"
+                               placeholder="Enter email" value="${user.email}">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                            else.
+                        </small>
+                    </div>
+                    <div class="form-group">
+                        <label for="fullName">Full name</label>
+                        <input type="text" class="form-control" id="fullName" name="fullName"
+                               placeholder="Enter full name"
+                               value="${user.fullName}">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password" name="password"
+                               placeholder="Enter password"
+                               value="${user.password}">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="button" class="btn btn-primary" id="cancel" onclick="javascript:history.go(-1);">
+                        Cancel
+                    </button>
+                </form>
+        </div>
     </div>
 
     <footer>
@@ -87,7 +95,6 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-
 </body>
 
 <script type="text/javascript">

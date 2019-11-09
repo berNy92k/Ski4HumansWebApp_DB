@@ -8,7 +8,8 @@ import javax.persistence.*;
 @NamedQueries({
         @NamedQuery(name = "User.findAll", query = "SELECT u FROM Users u ORDER BY u.email"),
         @NamedQuery(name = "User.findByEmail", query = "SELECT u FROM Users u WHERE u.email = :email"),
-        @NamedQuery(name = "User.countAll", query = "SELECT COUNT(u) FROM Users u")
+        @NamedQuery(name = "User.countAll", query = "SELECT COUNT(u) FROM Users u"),
+        @NamedQuery(name = "User.checkLoginAndPassword", query = "SELECT u FROM Users u WHERE u.email = :email AND u.password = :password")
 })
 public class User {
     @Id

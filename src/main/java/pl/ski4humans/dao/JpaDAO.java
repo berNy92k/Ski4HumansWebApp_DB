@@ -3,6 +3,7 @@ package pl.ski4humans.dao;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 import java.util.List;
+import java.util.Map;
 
 public class JpaDAO<E> {
     protected EntityManager entityManager;
@@ -65,5 +66,15 @@ public class JpaDAO<E> {
         namedQuery.setParameter(paramName, paramValue);
 
         return (List<E>) namedQuery.getResultList();
+    }
+
+    protected List<E> findByNamedQueryWithMapOfParameters(String query, Map<String, String> parameters) {
+        Query namedQuery = entityManager.createNamedQuery(query);
+
+        for (Map.Entry<String, String> stringStringEntry : parameters.entrySet()) {
+            namedQuery.setParameter(stringStringEntry.getKey(),stringStringEntry.getValue());
+        }
+
+        return namedQuery.getResultList();
     }
 }

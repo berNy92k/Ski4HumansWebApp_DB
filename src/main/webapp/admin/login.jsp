@@ -29,36 +29,35 @@
     <div style="width: 500px; margin: 0 auto">
         <div align="center">
             &nbsp;
-            <c:if test="${category != null}">
-                <p>Please change fields value to update category.</p>
-            </c:if>
-            <c:if test="${category == null}">
-                <p>Please update all fields to create new category.</p>
-            </c:if>
+            <p>Please update all fields to login as Administrator.</p>
             &nbsp;
         </div>
 
-        <div>
-            <c:if test="${category != null}">
-            <form action="../admin/updateCategory" method="post" id="createCategoryForm"
-                  onsubmit="return validateCreateCategoryForm()">
-                <input type="hidden" id="categoryId" name="categoryId" value="${category.categoryId}">
-                </c:if>
-                <c:if test="${category == null}">
-                <form action="../admin/createNewCategory" method="post" id="createCategoryForm"
-                      onsubmit="return validateCreateCategoryForm()">
-                    </c:if>
+        <c:if test="${message != null}">
+            <div align="center">
+                <h5><p style="color: #950002;">${message}</p></h5>
+            </div>
+        </c:if>
 
-                    <div class="form-group">
-                        <label for="name">Category name</label>
-                        <input type="text" class="form-control" id="name" name="name" aria-describedby="nameCategory"
-                               placeholder="Enter category name" value="${category.name}">
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                    <button type="button" class="btn btn-primary" id="cancel" onclick="javascript:history.go(-1);">
-                        Cancel
-                    </button>
-                </form>
+        <div>
+            <form action="../admin/login" method="post" id="loginAdministratorForm"
+                  onsubmit="return validateLoginForm()">
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp"
+                           placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" name="password"
+                           placeholder="Enter password">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="button" class="btn btn-primary" id="cancel" onclick="javascript:history.go(-1);">
+                    Cancel
+                </button>
+                &nbsp;
+            </form>
         </div>
     </div>
 
@@ -81,16 +80,21 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-
 </body>
 
 <script type="text/javascript">
-    function validateCreateCategoryForm() {
-        var name = document.getElementById("name");
+    function validateLoginForm() {
+        var email = document.getElementById("email");
+        var password = document.getElementById("password");
 
-        if (name.value.length == 0) {
-            alert("Name category is required");
-            name.focus();
+        if (email.value.length == 0) {
+            alert("Email is required");
+            email.focus();
+            return false;
+        }
+        if (password.value.length == 0) {
+            alert("Password is required");
+            password.focus();
             return false;
         }
 

@@ -12,6 +12,11 @@ import java.io.IOException;
 public class AdminHomeServlet extends HttpServlet {
 
     @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        doGet(req, resp);
+    }
+
+    @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String homepage = "/admin/index.jsp";
         RequestDispatcher dispatcher = req.getRequestDispatcher(homepage);

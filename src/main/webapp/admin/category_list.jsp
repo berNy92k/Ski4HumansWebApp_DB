@@ -26,40 +26,42 @@
         <jsp:include page="header.jsp"/>
     </header>
 
-    <div align="center">
-        &nbsp;
-        <h3><a href="../admin/category_create.jsp"><p style="color:#2b57b4">CREATE NEW CATEGORY</p></a></h3>
-        &nbsp;
-    </div>
+    <div style="width: 80%; margin: 0 auto">
+        <div align="center">
+            &nbsp;
+            <h3><a href="../admin/category_create.jsp"><p style="color:#2b57b4">CREATE NEW CATEGORY</p></a></h3>
+            &nbsp;
+        </div>
 
-    <div align="center">
-        <h5><p style="color: #950002;">${message}</p></h5>
-    </div>
+        <div align="center">
+            <h5><p style="color: #950002;">${message}</p></h5>
+        </div>
 
-    <div>
-        <table class="table table-striped">
-            <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">ID</th>
-                <th scope="col">Name</th>
-                <th scope="col">Actions</th>
-            </tr>
-            </thead>
-            <tbody>
-            <c:forEach var="category" items="${categoryList}" varStatus="status">
+        <div>
+            <table class="table table-striped">
+                <thead>
                 <tr>
-                    <th scope="row">${status.index + 1}</th>
-                    <td>${category.categoryId}</td>
-                    <td>${category.name}</td>
-                    <td>
-                        <a href="../admin/editCategory?id=${category.categoryId}">EDIT</a> &nbsp
-                        <a href="javascript:deleteCategory(${category.categoryId})">DELETE</a>
-                    </td>
+                    <th scope="col">#</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Actions</th>
                 </tr>
-            </c:forEach>
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                <c:forEach var="category" items="${categoryList}" varStatus="status">
+                    <tr>
+                        <th scope="row">${status.index + 1}</th>
+                        <td>${category.categoryId}</td>
+                        <td>${category.name}</td>
+                        <td>
+                            <a href="../admin/editCategory?id=${category.categoryId}">EDIT</a> &nbsp
+                            <a href="javascript:deleteCategory(${category.categoryId})">DELETE</a>
+                        </td>
+                    </tr>
+                </c:forEach>
+                </tbody>
+            </table>
+        </div>
     </div>
 
     <footer>

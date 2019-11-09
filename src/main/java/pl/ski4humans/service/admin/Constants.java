@@ -7,6 +7,9 @@ public interface Constants {
     // URL
     String USER_LIST_URL = "/admin/user_list.jsp";
     String USER_CREATE_URL = "/admin/user_create.jsp";
+    String ADMIN_URL = "/admin/";
+    String ADMIN_LOGIN_URL = "/admin/login";
+    String ADMIN_LOGIN_URL_JSP = "/admin/login.jsp";
 
     // MESSAGES
     String NEW_USER_WAS_CREATED = "New user was created";
@@ -17,6 +20,7 @@ public interface Constants {
     String USER_WAS_DELETED = "User was deleted";
     String USER_ADMIN_CAN_NOT_BE_DELETED = "The default admin user account cannot be deleted";
     String DELETED_BY_ANOTHER_USER_ADMIN = ", or it might have been deleted by another admin.";
+    String USER_LOGIN_FAILED = "Login failed";
 
 
     // -------------- CATEGORY --------------

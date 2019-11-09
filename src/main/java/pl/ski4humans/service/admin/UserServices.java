@@ -10,6 +10,7 @@ import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
 
@@ -117,5 +118,33 @@ public class UserServices {
                 userList(Constants.COULD_NOT_FIND_USER_BY_ID + userId + Constants.DELETED_BY_ANOTHER_USER_ADMIN);
             }
         }
+    }
+
+    public void loginAsAdministrator() throws ServletException, IOException {
+        String email = request.getParameter("email");
+        String password = request.getParameter("password");
+
+        boolean isCorrect = userDAO.checkLoginAndPassword(email, password);
+
+        if (isCorrect) {
+            HttpSession session = request.getSession();
+            session.setAttribute("userEmail", email);
+
+            RequestDispatcher requestDispatcher = request.getRequestDispatcher(Constants.ADMIN_URL);
+            requestDispatcher.forward(request, response);
+        } else {
+            request.setAttribute("message", Constants.USER_LOGIN_FAILED);
+
+            RequestDispatcher requestDispatcher = request.getRequestDispatcher(Constants.ADMIN_LOGIN_URL_JSP);
+            requestDispatcher.forward(request, response);
+        }
+    }
+
+    public void logoutAsAdministrator() throws ServletException, IOException {
+        HttpSession session = request.getSession();
+        session.removeAttribute("userEmail");
+
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher(Constants.ADMIN_LOGIN_URL_JSP);
+        requestDispatcher.forward(request, response);
     }
 }
