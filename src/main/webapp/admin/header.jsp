@@ -98,7 +98,7 @@
                 </div>
                 <div class="dropdown">
                     <button class="dropbtn">
-                        <a href="admin/womenSkis">PRODUCENCI</a>
+                        <a href="../admin/manufacturer">PRODUCENCI</a>
                     </button>
                 </div>
                 <div class="dropdown">
@@ -106,11 +106,11 @@
                         INNE INFORMACJE
                     </button>
                     <div class="dropdown-content">
-                        <a href="/admin/users">UŻYTKOWNICY</a>
-                        <a href="/admin/category">KATEGORIE</a>
-                        <a href="/admin/customers">KLIENCI</a>
-                        <a href="/admin/reviews">RECENZJE</a>
-                        <a href="/admin/orders">ZAMÓWIENIA</a>
+                        <a href="../admin/users">UŻYTKOWNICY</a>
+                        <a href="../admin/category">KATEGORIE</a>
+                        <a href="../admin/customers">KLIENCI</a>
+                        <a href="../admin/reviews">RECENZJE</a>
+                        <a href="../admin/orders">ZAMÓWIENIA</a>
                     </div>
                 </div>
             </div>

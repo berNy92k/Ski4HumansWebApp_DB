@@ -32,9 +32,9 @@ public class UserServices {
     }
 
     public void userList(String message) throws ServletException, IOException {
-        List<User> userList = userDAO.listAll();
+        List<User> users = userDAO.listAll();
 
-        request.setAttribute("userList", userList);
+        request.setAttribute("userList", users);
         if (message != null) {
             request.setAttribute("message", message);
         }

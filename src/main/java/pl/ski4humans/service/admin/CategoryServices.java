@@ -31,9 +31,9 @@ public class CategoryServices {
     }
 
     public void categoryList(String message) throws ServletException, IOException {
-        List<Category> categoryList = categoryDAO.listAll();
+        List<Category> categories = categoryDAO.listAll();
 
-        request.setAttribute("categoryList", categoryList);
+        request.setAttribute("categoryList", categories);
         if (message != null) {
             request.setAttribute("message", message);
         }

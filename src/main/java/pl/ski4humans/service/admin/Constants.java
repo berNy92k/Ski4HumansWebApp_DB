@@ -38,8 +38,18 @@ public interface Constants {
     String CATEGORY_WAS_DELETED = "Category was deleted";
 
 
-    // -------------- xxx --------------
+    // -------------- MANUFACTURER --------------
     // URL
+    String MANUFACTURER_LIST_URL = "/admin/manufacturer_list.jsp";
+    String MANUFACTURER_CREATE_URL = "/admin/manufacturer_create.jsp";
 
     // MESSAGES
+    String NEW_MANUFACTURER_WAS_CREATED = "New manufacturer was created";
+    String NEW_MANUFACTURER_WAS_NOT_CREATED = "New manufacturer was not created";
+    String MANUFACTURER_WAS_UPDATED = "Manufacturer was updated";
+    String MANUFACTURER_WAS_NOT_UPDATED = "Manufacturer was NOT updated. ";
+    String MANUFACTURER_ALREADY_EXIST_IN_DB = " --> Manufacturer already exist in database";
+    String COULD_NOT_FIND_MANUFACTURER_BY_ID = "Could not find manufacturer with ID: ";
+    String MANUFACTURER_WAS_DELETED = "Manufacturer was deleted";
+    String DELETED_BY_ANOTHER_MANUFACTURER_ADMIN = ", or it might have been deleted by another admin.";
 }

@@ -23,9 +23,6 @@
     <div>
         <img class="mb-2" src="../images/logo.png" width="25%" alt="logo">
     </div>
-    <div class="firstMessage">
-        <p class="pTitle" style="font-size: 25px">Sorry, page could not be found - error 500</p>
-    </div>
     <div>
         <h2>Sorry, the server has encountered an error while fulfilling your request.</h2>
         <h3>Please check back later or contact our administrators - error 500</h3>

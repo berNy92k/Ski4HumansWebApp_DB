@@ -34,7 +34,9 @@ public class JpaDAO<E> {
 
     protected E find(Class<E> type, Object id) {
         E entity = entityManager.find(type, id);
-        entityManager.refresh(entity);
+        if (entity != null) {
+            entityManager.refresh(entity);
+        }
         return entity;
     }
 
@@ -72,7 +74,7 @@ public class JpaDAO<E> {
         Query namedQuery = entityManager.createNamedQuery(query);
 
         for (Map.Entry<String, String> stringStringEntry : parameters.entrySet()) {
-            namedQuery.setParameter(stringStringEntry.getKey(),stringStringEntry.getValue());
+            namedQuery.setParameter(stringStringEntry.getKey(), stringStringEntry.getValue());
         }
 
         return namedQuery.getResultList();
