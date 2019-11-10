@@ -7,7 +7,6 @@ import pl.ski4humans.entity.User;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 import javax.persistence.PersistenceException;
 import java.util.HashMap;
 import java.util.List;
@@ -18,15 +17,14 @@ import static junit.framework.Assert.assertNull;
 import static junit.framework.TestCase.assertEquals;
 import static junit.framework.TestCase.assertTrue;
 
-public class UserDAOTest {
+public class UserDAOTest extends BaseDAOTest {
     private static EntityManagerFactory entityManagerFactory;
     private static EntityManager entityManager;
     private static UserDAO userDAO;
 
     @BeforeClass
     public static void setUp() {
-        entityManagerFactory = Persistence.createEntityManagerFactory("Ski4HumansWebApp");
-        entityManager = entityManagerFactory.createEntityManager();
+        entityManagerSetUp();
 
         userDAO = new UserDAO(entityManager);
     }
@@ -134,12 +132,11 @@ public class UserDAOTest {
     public void testCountUser() {
         long count = userDAO.count();
 
-        assertEquals(5,count);
+        assertEquals(5, count);
     }
 
     @AfterClass
     public static void tearDown() {
-        entityManager.close();
-        entityManagerFactory.close();
+        close();
     }
 }
