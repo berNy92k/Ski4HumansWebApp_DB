@@ -5,9 +5,6 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import pl.ski4humans.entity.Manufacturer;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 import javax.persistence.PersistenceException;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -19,7 +16,7 @@ import static junit.framework.Assert.assertNull;
 import static junit.framework.TestCase.assertEquals;
 import static junit.framework.TestCase.assertTrue;
 
-public class ManufacturerDAOTest extends BaseDAOTest{
+public class ManufacturerDAOTest extends BaseDAOTest {
     private static ManufacturerDAO manufacturerDAO;
 
     @BeforeClass
@@ -105,7 +102,7 @@ public class ManufacturerDAOTest extends BaseDAOTest{
         List<Manufacturer> categories = manufacturerDAO.listAll();
         int size = categories.size();
 
-        assertEquals(1, size);
+        assertEquals(2, size);
     }
 
     @Test

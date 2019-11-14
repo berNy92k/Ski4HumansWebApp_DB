@@ -60,7 +60,9 @@ public class CategoryServices {
         Integer id = Integer.valueOf(request.getParameter("id"));
         Category category = categoryDAO.get(id);
 
-        if (category != null) {
+        if (category != null && id > 0 && id < 8) {
+            categoryList(Constants.CATEGORY_CAN_NOT_BE_UPDATED_SQL_ADMIN);
+        } else if (category != null) {
             request.setAttribute("category", category);
 
             RequestDispatcher requestDispatcher = request.getRequestDispatcher(Constants.CATEGORY_CREATE_URL);
@@ -103,7 +105,9 @@ public class CategoryServices {
 
         Category category = categoryDAO.get(categoryId);
 
-        if (category != null) {
+        if (category != null && categoryId > 0 && categoryId < 8) {
+            categoryList(Constants.CATEGORY_CAN_NOT_BE_DELETED_SQL_ADMIN);
+        } else if (category != null) {
             categoryDAO.delete(categoryId);
             categoryList(Constants.CATEGORY_WAS_DELETED);
         } else {

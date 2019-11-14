@@ -26,11 +26,14 @@
         <jsp:include page="header.jsp"/>
     </header>
 
-    <div style="width: 90%; margin: 0 auto">
+    <div style="width: 98%; margin: 0 auto">
+
+        <div align="center" style="margin-top: 15px">
+            <h2><p style="color: #2d0001;">${equipmentCategoryName} - ${equipmentSex}</p></h2>
+        </div>
+
         <div align="center">
-            &nbsp;
-            <h3><a href="../admin/manufacturer_create.jsp"><p style="color:#2b57b4">DODAJ NOWEGO PRODUCENTA DO BAZY</p></a></h3>
-            &nbsp;
+            <h3><a href="../admin/precreateNewEquipment?eq=${eqCat}&sex=${sex}"><p style="color:#2b57b4">DODAJ NOWY SPRZĘT DO BAZY</p></a></h3>
         </div>
 
         <div align="center">
@@ -44,28 +47,35 @@
                     <th scope="col">#</th>
                     <th scope="col">ID</th>
                     <th scope="col">Name</th>
-                    <th scope="col">Description</th>
+                    <th scope="col">Manufacturer Name</th>
+                    <th scope="col">Short Description</th>
+                    <th scope="col">Price</th>
                     <th scope="col">Image</th>
                     <th scope="col">Actions</th>
                 </tr>
                 </thead>
-                <tbody>
-                <c:forEach var="manufacturer" items="${manufacturerList}" varStatus="status">
-                    <tr>
-                        <th scope="row">${status.index + 1}</th>
-                        <td>${manufacturer.manufacturerId}</td>
-                        <td>${manufacturer.manufacturerName}</td>
-                        <td>${manufacturer.description}</td>
-                        <td>
-                            <img src="data:image/jpg;base64,${manufacturer.base64Image}" width="100">
-                        </td>
-                        <td>
-                            <a href="../admin/editManufacturer?id=${manufacturer.manufacturerId}">EDIT</a> &nbsp
-                            <a href="javascript:deleteManufacturer(${manufacturer.manufacturerId})">DELETE</a>
-                        </td>
-                    </tr>
-                </c:forEach>
-                </tbody>
+                <c:if test="${messageEmpty == false}">
+                    <tbody>
+                    <c:forEach var="equipment" items="${equipmentList}" varStatus="status">
+                        <tr>
+                            <th scope="row">${status.index + 1}</th>
+                            <td>${equipment.equipmentId}</td>
+                            <td>${equipment.name}</td>
+                            <td>${equipment.manufacturer.manufacturerName}</td>
+                            <td>${equipment.shortDescription}</td>
+                            <td>${equipment.price}</td>
+                            <td>
+                                <img src="data:image/jpg;base64,${equipment.base64Image}" width="80">
+                            </td>
+                            <td>
+                                <p><a href="../admin/editEquipment?id=${equipment.equipmentId}">EDIT</a></p>
+                                <p><a href="javascript:deleteEquipment(${equipment.equipmentId})">DELETE</a></p>
+                                <p><a href="../admin/viewEquipment?id=${equipment.equipmentId}">VIEW</a></p>
+                            </td>
+                        </tr>
+                    </c:forEach>
+                    </tbody>
+                </c:if>
             </table>
         </div>
     </div>
@@ -92,9 +102,9 @@
 </body>
 
 <script>
-    function deleteManufacturer(userId) {
-        if (confirm("Are you sure ? If you agree manufacturer with '" + userId + "' id will be deleted")) {
-            window.location = '../admin/deleteManufacturer?id=' + userId;
+    function deleteEquipment(equipmentId) {
+        if (confirm("Are you sure ? If you agree equipment with '" + equipmentId + "' id will be deleted")) {
+            window.location = '../admin/deleteEquipment?id=' + equipmentId;
         }
     }
 </script>

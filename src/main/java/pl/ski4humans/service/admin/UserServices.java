@@ -63,7 +63,9 @@ public class UserServices {
         Integer id = Integer.valueOf(request.getParameter("id"));
         User user = userDAO.get(id);
 
-        if (user != null) {
+        if (id == 1) {
+            userList(Constants.USER_ADMIN_CAN_NOT_BE_UPDATED_SQL_ADMIN);
+        } else if (user != null) {
             request.setAttribute("user", user);
 
             RequestDispatcher requestDispatcher = request.getRequestDispatcher(Constants.USER_CREATE_URL);
@@ -107,7 +109,7 @@ public class UserServices {
         Integer userId = Integer.valueOf(request.getParameter("id"));
 
         if (userId.equals(1)) {
-            userList(Constants.USER_ADMIN_CAN_NOT_BE_DELETED);
+            userList(Constants.USER_ADMIN_CAN_NOT_BE_DELETED_SQL_ADMIN);
         } else {
             User user = userDAO.get(userId);
 

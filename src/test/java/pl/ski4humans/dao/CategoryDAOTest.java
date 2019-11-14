@@ -5,8 +5,6 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import pl.ski4humans.entity.Category;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
 import javax.persistence.PersistenceException;
 import java.util.List;
 
@@ -16,8 +14,6 @@ import static junit.framework.TestCase.assertEquals;
 import static junit.framework.TestCase.assertTrue;
 
 public class CategoryDAOTest extends BaseDAOTest {
-    private static EntityManagerFactory entityManagerFactory;
-    private static EntityManager entityManager;
     private static CategoryDAO categoryDAO;
 
     @BeforeClass

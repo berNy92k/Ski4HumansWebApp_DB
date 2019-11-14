@@ -63,37 +63,37 @@
             <div class="btn-group mr-2" role="group" aria-label="First group">
                 <div class="dropdown">
                     <button class="dropbtn" style="border-top-left-radius: 5px; border-bottom-left-radius: 5px">
-                        <a href="admin/skis">NARTY</a>
+                        <a href="../admin/skis.jsp">NARTY</a>
                     </button>
                 </div>
                 <div class="dropdown">
                     <button class="dropbtn">
-                        <a href="admin/shoes">BUTY</a>
+                        <a href="../admin/skiShoes.jsp">BUTY</a>
                     </button>
                 </div>
                 <div class="dropdown">
                     <button class="dropbtn">
-                        <a href="admin/womenSkis">KIJE</a>
+                        <a href="../admin/skiPoles.jsp">KIJE</a>
                     </button>
                 </div>
                 <div class="dropdown">
                     <button class="dropbtn">
-                        <a href="admin/womenSkis">KASKI</a>
+                        <a href="../admin/skiHelmets.jsp">KASKI</a>
                     </button>
                 </div>
                 <div class="dropdown">
                     <button class="dropbtn">
-                        <a href="admin/womenSkis">GOGLE</a>
+                        <a href="../admin/skiGoggles.jsp">GOGLE</a>
                     </button>
                 </div>
                 <div class="dropdown">
                     <button class="dropbtn">
-                        <a href="admin/womenSkis">RĘKAWICE</a>
+                        <a href="../admin/skiGloves.jsp">RĘKAWICE</a>
                     </button>
                 </div>
                 <div class="dropdown">
                     <button class="dropbtn">
-                        <a href="admin/womenSkis">ODZIEŻ TERMOAKTYWNA</a>
+                        <a href="../admin/thermoactiveClothing.jsp">ODZIEŻ TERMOAKTYWNA</a>
                     </button>
                 </div>
                 <div class="dropdown">

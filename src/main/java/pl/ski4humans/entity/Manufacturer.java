@@ -4,6 +4,7 @@ import com.sun.istack.internal.NotNull;
 
 import javax.persistence.*;
 import java.util.Base64;
+import java.util.List;
 
 @Entity
 @Table(name = "manufacturer")
@@ -28,8 +29,10 @@ public class Manufacturer {
     private byte[] image;
 
     @NotNull
-    @OneToOne(mappedBy = "manufacturer")
-    private Equipment equipment;
+    @OneToMany(fetch = FetchType.LAZY,
+            mappedBy = "manufacturer"
+    )
+    private List<Equipment> equipments;
 
     @Transient
     private String base64Image;
@@ -43,19 +46,11 @@ public class Manufacturer {
         this.image = image;
     }
 
-    public Manufacturer(String manufacturerName, String description, byte[] image, Equipment equipment) {
-        this.manufacturerName = manufacturerName;
-        this.description = description;
-        this.image = image;
-        this.equipment = equipment;
-    }
-
-    public Manufacturer(Integer manufacturerId, String manufacturerName, String description, byte[] image, Equipment equipment) {
+    public Manufacturer(Integer manufacturerId, String manufacturerName, String description, byte[] image) {
         this.manufacturerId = manufacturerId;
         this.manufacturerName = manufacturerName;
         this.description = description;
         this.image = image;
-        this.equipment = equipment;
     }
 
     public Integer getManufacturerId() {
@@ -90,12 +85,12 @@ public class Manufacturer {
         this.image = image;
     }
 
-    public Equipment getEquipment() {
-        return equipment;
+    public List<Equipment> getEquipments() {
+        return equipments;
     }
 
-    public void setEquipment(Equipment equipment) {
-        this.equipment = equipment;
+    public void setEquipments(List<Equipment> equipments) {
+        this.equipments = equipments;
     }
 
     public String getBase64Image() {

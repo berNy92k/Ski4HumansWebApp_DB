@@ -38,7 +38,7 @@ public class UserDAO extends JpaDAO<User> implements GenericDAO<User> {
     }
 
     public boolean checkLoginAndPassword(String email, String password) {
-        Map<String, String> loginAndPassword = new HashMap<>();
+        Map<String, Object> loginAndPassword = new HashMap<>();
         loginAndPassword.put("email", email);
         loginAndPassword.put("password", password);
 

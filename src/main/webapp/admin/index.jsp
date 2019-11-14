@@ -25,25 +25,32 @@
         <jsp:include page="header.jsp"/>
     </header>
 
-    <div>
+    <div style="margin-left: 40px">
         <div class="firstMessage">
-            <p class="pTitle" style="font-size: 25px">SKLEP NARCIARSKI SKI4HUMANS.PL - NAJLEPSZY SPRZĘT DLA
-                NARCIARZY</p>
-            <p style="font-size: 14px;text-align: justify">Sklep Ski24 to ponad 20 lat doświadczeń związanych ze
-                sprzedażą sprzętu zimowego.
-                Dzięki ogromnej wiedzy,
-                pasji i determinacji z sukcesem budujemy pozycję lidera sprzedaży nart i sprzętu narciarskiego on-line w
-                Polsce. Każdego roku zdobywamy kolejne tysiące zadowolonych klientów. Jako pierwszy sklep narciarski w
-                Polsce rozpoczęliśmy sprzedaż nart carvingowych. Już od 1997 roku głęboko wierzyliśmy, że nie jest to
-                jedynie tymczasowa moda, ale przyszłość, dlatego rozpoczęliśmy szeroką edukację polskich narciarzy,
-                czego
-                efekty widać gołym okiem.
-
-                Nasz sklep narciarski oferuje Państwu narty najlepszych producentów, wysokiej jakości buty narciarskie,
-                niezawodne i bezpieczne kaski, a także gogle i wiele innych akcesoriów niezbędnych na stoku. Znane marki
-                to
-                nasza mocna strona: Atomic, Head, Volkl, Dynastar, Rossignol, Salomon, Dalbello, Elan, Blizzard, Uvex,
-                Komperdell, Nordica, Dragon, to tylko niektóre z brandów, które znajdziesz w ofercie naszego sklepu.</p>
+            <p class="pTitle" style="font-size: 25px">SKLEP NARCIARSKI SKI4HUMANS.PL - Część dla administratora
+                strony</p>
+            <p style="font-size: 14px;text-align: justify">
+                Administrator strony posiada możliwość dodawania/ usuwania oraz modyfikowania istniejących jej
+                elementów.</p>
+            <p style="font-size: 14px;text-align: justify">Elementy, które można edytować/ dodawać to:</p>
+            <b style="font-size: 20px">Główne:</b>
+            <ul style="font-size: 14px">
+                <li>narty</li>
+                <li>buty narciarskie</li>
+                <li>kije narciarskie</li>
+                <li>kaski narciarskie</li>
+                <li>gogle narciarskie</li>
+                <li>rekawice narciarskie</li>
+                <li>odzież termoaktywna</li>
+            </ul>
+            <b style="font-size: 20px">Inne informacje:</b>
+            <ul style="font-size: 14px">
+                <li>użytkownicy</li>
+                <li>kategorie</li>
+                <li>klienci</li>
+                <li>recenzje</li>
+                <li>zamówienia</li>
+            </ul>
         </div>
     </div>
 

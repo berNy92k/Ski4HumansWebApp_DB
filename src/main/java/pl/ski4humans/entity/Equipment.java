@@ -3,11 +3,22 @@ package pl.ski4humans.entity;
 import com.sun.istack.internal.NotNull;
 
 import javax.persistence.*;
+import java.util.Base64;
 import java.util.Date;
 
 @Entity
 @Table(name = "equipment",
         uniqueConstraints = @UniqueConstraint(columnNames = "name"))
+@NamedQueries({
+        @NamedQuery(name = "Equipment.findAll", query = "SELECT e FROM Equipment e ORDER BY e.name"),
+        @NamedQuery(name = "Equipment.findByName", query = "SELECT e FROM Equipment e " +
+                "WHERE e.name = :name"),
+        @NamedQuery(name = "Equipment.findAllByCategory", query = "SELECT e FROM Equipment e " +
+                "WHERE e.category.categoryId = :categoryID"),
+        @NamedQuery(name = "Equipment.findAllByCategoryAndSex", query = "SELECT e FROM Equipment e " +
+                "WHERE e.category.categoryId = :categoryID AND e.sex = :sex"),
+        @NamedQuery(name = "Equipment.countAll", query = "SELECT COUNT(e) FROM Equipment e")
+})
 public class Equipment {
 
     @Id
@@ -18,8 +29,8 @@ public class Equipment {
     @Column(name = "name")
     private String name;
     @NotNull
-    @OneToOne
-    @JoinColumn(name = "manufacturer_id", referencedColumnName = "manufacturer_id")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "manufacturer_id")
     private Manufacturer manufacturer;
     @NotNull
     @Column(name = "short_description")
@@ -38,9 +49,9 @@ public class Equipment {
     private float price;
     @NotNull
     @Column(name = "length_or_size")
-    private float lengthOrSize;
+    private String lengthOrSize;
     @NotNull
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "category_id")
     private Category category;
     @NotNull
@@ -49,9 +60,7 @@ public class Equipment {
     @NotNull
     @Column(name = "last_update_time")
     private Date lastUpdateTime;
-
-
-    //    @NotNull
+//    @NotNull
 //    @OneToMany(fetch = FetchType.EAGER,
 //            mappedBy = "review")
 //    private Set<Review> reviews = new HashSet<>();
@@ -60,6 +69,160 @@ public class Equipment {
 //            mappedBy = "skis")
 //    private Set<OrderDetail> orderDetails = new HashSet<>();
 
+    @Transient
+    private String base64Image;
+
     public Equipment() {
+    }
+
+    public Equipment(String name, Manufacturer manufacturer, String shortDescription, String longDescription,
+                     String sex, byte[] image, float price, String lengthOrSize, Category category) {
+        this.name = name;
+        this.manufacturer = manufacturer;
+        this.shortDescription = shortDescription;
+        this.longDescription = longDescription;
+        this.sex = sex;
+        this.image = image;
+        this.price = price;
+        this.lengthOrSize = lengthOrSize;
+        this.category = category;
+    }
+
+    public Equipment(String name, Manufacturer manufacturer, String shortDescription, String longDescription,
+                     String sex, byte[] image, float price, String lengthOrSize, Category category,
+                     Date publishDate, Date lastUpdateTime) {
+        this.name = name;
+        this.manufacturer = manufacturer;
+        this.shortDescription = shortDescription;
+        this.longDescription = longDescription;
+        this.sex = sex;
+        this.image = image;
+        this.price = price;
+        this.lengthOrSize = lengthOrSize;
+        this.category = category;
+        this.publishDate = publishDate;
+        this.lastUpdateTime = lastUpdateTime;
+    }
+
+    public Equipment(Integer equipmentId, String name, Manufacturer manufacturer, String shortDescription,
+                     String longDescription, String sex, byte[] image, float price, String lengthOrSize,
+                     Category category, Date publishDate, Date lastUpdateTime) {
+        this.equipmentId = equipmentId;
+        this.name = name;
+        this.manufacturer = manufacturer;
+        this.shortDescription = shortDescription;
+        this.longDescription = longDescription;
+        this.sex = sex;
+        this.image = image;
+        this.price = price;
+        this.lengthOrSize = lengthOrSize;
+        this.category = category;
+        this.publishDate = publishDate;
+        this.lastUpdateTime = lastUpdateTime;
+    }
+
+    public Integer getEquipmentId() {
+        return equipmentId;
+    }
+
+    public void setEquipmentId(Integer equipmentId) {
+        this.equipmentId = equipmentId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Manufacturer getManufacturer() {
+        return manufacturer;
+    }
+
+    public void setManufacturer(Manufacturer manufacturer) {
+        this.manufacturer = manufacturer;
+    }
+
+    public String getShortDescription() {
+        return shortDescription;
+    }
+
+    public void setShortDescription(String shortDescription) {
+        this.shortDescription = shortDescription;
+    }
+
+    public String getLongDescription() {
+        return longDescription;
+    }
+
+    public void setLongDescription(String longDescription) {
+        this.longDescription = longDescription;
+    }
+
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
+    }
+
+    public byte[] getImage() {
+        return image;
+    }
+
+    public void setImage(byte[] image) {
+        this.image = image;
+    }
+
+    public float getPrice() {
+        return price;
+    }
+
+    public void setPrice(float price) {
+        this.price = price;
+    }
+
+    public String getLengthOrSize() {
+        return lengthOrSize;
+    }
+
+    public void setLengthOrSize(String lengthOrSize) {
+        this.lengthOrSize = lengthOrSize;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
+
+    public Date getPublishDate() {
+        return publishDate;
+    }
+
+    public void setPublishDate(Date publishDate) {
+        this.publishDate = publishDate;
+    }
+
+    public Date getLastUpdateTime() {
+        return lastUpdateTime;
+    }
+
+    public void setLastUpdateTime(Date lastUpdateTime) {
+        this.lastUpdateTime = lastUpdateTime;
+    }
+
+    public String getBase64Image() {
+        this.base64Image = Base64.getEncoder().encodeToString(this.image);
+        return this.base64Image;
+    }
+
+    public void setBase64Image(String base64Image) {
+        this.base64Image = base64Image;
     }
 }

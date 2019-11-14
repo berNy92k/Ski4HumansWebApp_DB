@@ -11,7 +11,7 @@ public class Review {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "review_id")
     private Integer reviewId;
-//    private Equipment equipment;
+//    private equipment equipment;
 //    private Customer customer;
     private int rating;
     private String headline;

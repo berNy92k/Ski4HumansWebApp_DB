@@ -18,9 +18,11 @@ public interface Constants {
     String USER_EMAIL_ALREADY_EXIST_IN_DB = " --> Email already exist in database";
     String COULD_NOT_FIND_USER_BY_ID = "Could not find user with ID: ";
     String USER_WAS_DELETED = "User was deleted";
-    String USER_ADMIN_CAN_NOT_BE_DELETED = "The default admin user account cannot be deleted";
     String DELETED_BY_ANOTHER_USER_ADMIN = ", or it might have been deleted by another admin.";
     String USER_LOGIN_FAILED = "Login failed";
+    String USER_ADMIN_CAN_NOT_BE_DELETED_SQL_ADMIN = "The default admin user account with id = 1 cannot be deleted (It can be update only by SQL Administrator)";
+    String USER_ADMIN_CAN_NOT_BE_UPDATED_SQL_ADMIN = "User can not be updated. User with id = 1 is impossible to update (It can be update only by SQL Administrator)";
+
 
 
     // -------------- CATEGORY --------------
@@ -36,6 +38,8 @@ public interface Constants {
     String CATEGORY_NAME_ALREADY_EXIST_IN_DB = " --> Name of category already exist in database";
     String DELETED_BY_ANOTHER_CATEGORY_ADMIN = ", or it might have been deleted by another admin.";
     String CATEGORY_WAS_DELETED = "Category was deleted";
+    String CATEGORY_CAN_NOT_BE_DELETED_SQL_ADMIN = "Category can not be delete. Categories with id 1,2,3,4,5,6,7 are impossible to delete (It can be delete only by SQL Administrator)";
+    String CATEGORY_CAN_NOT_BE_UPDATED_SQL_ADMIN = "Category can not be updated. Categories with id 1,2,3,4,5,6,7 are impossible to update (It can be update only by SQL Administrator)";
 
 
     // -------------- MANUFACTURER --------------
@@ -52,4 +56,24 @@ public interface Constants {
     String COULD_NOT_FIND_MANUFACTURER_BY_ID = "Could not find manufacturer with ID: ";
     String MANUFACTURER_WAS_DELETED = "Manufacturer was deleted";
     String DELETED_BY_ANOTHER_MANUFACTURER_ADMIN = ", or it might have been deleted by another admin.";
+
+
+    // -------------- EQUIPMENT --------------
+    // URL
+    String EQUIPMENT_LIST_URL = "/admin/equipment_list.jsp";
+    String EQUIPMENT_CREATE_URL = "/admin/equipment_create.jsp";
+    String EQUIPMENT_VIEW_URL = "/admin/equipment_view.jsp";
+    String EQUIPMENT_IS_CREATED_URL = "/admin/equipment_isCreated.jsp";
+
+    // MESSAGES
+    String NEW_EQUIPMENT_WAS_CREATED = "New equipment was created";
+    String NEW_EQUIPMENT_WAS_NOT_CREATED = "New equipment was not created";
+    String EQUIPMENT_WAS_UPDATED = "Equipment was updated";
+    String EQUIPMENT_WAS_NOT_UPDATED = "Equipment was NOT updated. ";
+    String EQUIPMENT_ALREADY_EXIST_IN_DB = " --> Equipment name already exist in database";
+    String COULD_NOT_FIND_EQUIPMENT_BY_ID = "Could not find equipment with ID: ";
+    String EQUIPMENT_WAS_DELETED = "Equipment was deleted";
+    String DELETED_BY_ANOTHER_EQUIPMENT_ADMIN = ", or it might have been deleted by another admin.";
+    String LACK_OF_EQUIPMENT_IN_DB = "Brak sprzętu w bazie.";
+
 }

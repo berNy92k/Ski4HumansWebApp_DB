@@ -26,46 +26,26 @@
         <jsp:include page="header.jsp"/>
     </header>
 
-    <div style="width: 80%; margin: 0 auto">
-        <div align="center">
-            &nbsp;
-            <h3><a href="../admin/category_create.jsp"><p style="color:#2b57b4">DODAJ NOWĄ KATEGORIE DO BAZY</p></a></h3>
-            &nbsp;
-        </div>
-
-        <div align="center">
-            <h5><p style="color: #950002;">${message}</p></h5>
-        </div>
-
-        <div>
-            <table class="table table-striped">
-                <thead>
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">ID</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Actions</th>
-                </tr>
-                </thead>
-                <tbody>
-                <c:forEach var="category" items="${categoryList}" varStatus="status">
-                    <tr>
-                        <th scope="row">${status.index + 1}</th>
-                        <td>${category.categoryId}</td>
-                        <td>${category.name}</td>
-                        <td>
-                            <a href="../admin/editCategory?id=${category.categoryId}">EDIT</a> &nbsp
-                            <a href="javascript:deleteCategory(${category.categoryId})">DELETE</a>
-                        </td>
-                    </tr>
-                </c:forEach>
-                </tbody>
-            </table>
-        </div>
+    <div style="width: 80%;  margin: 50px auto 50px;">
+        <table style="color:#00042d; margin: 0 auto; font-size: large; width: 1000px">
+            <tr>
+                <td style="width: 25%">
+                    <a href="../admin/equipment?eq=thermoactiveClothing&sex=all">Odzież termoaktywna - wszystkie</a>
+                </td>
+                <td style="width: 25%">
+                    <a href="../admin/equipment?eq=thermoactiveClothing&sex=woman">Odzież termoaktywna dla kobiet</a>
+                </td>
+                <td style="width: 25%">
+                    <a href="../admin/equipment?eq=thermoactiveClothing&sex=man">Odzież termoaktywna dla mężczyzn</a>
+                </td>
+                <td style="width: 25%">
+                    <a href="../admin/equipment?eq=thermoactiveClothing&sex=child">Odzież termoaktywna dla dzieci</a>
+                </td>
+            </tr>
+        </table>
     </div>
 
-    <footer>
-        <div style="height: 30px"></div>
+    <footer style="margin-top: 80px">
         <jsp:include page="footer.jsp"/>
     </footer>
 </div>
@@ -84,12 +64,4 @@
         crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 </body>
-
-<script>
-    function deleteCategory(categoryId) {
-        if (confirm("Are you sure ? If you agree category with '" + categoryId + "' id will be deleted")) {
-            window.location = '../admin/deleteCategory?id=' + categoryId;
-        }
-    }
-</script>
 </html>

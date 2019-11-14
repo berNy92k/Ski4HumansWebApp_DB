@@ -29,7 +29,7 @@
     <div style="width: 80%; margin: 0 auto">
         <div align="center">
             &nbsp;
-            <h3><a href="../admin/user_create.jsp"><p style="color:#2b57b4">CREATE NEW USER</p></a></h3>
+            <h3><a href="../admin/user_create.jsp"><p style="color:#2b57b4">DODAJ NOWEGO UŻYTKOWNIKA DO BAZY</p></a></h3>
             &nbsp;
         </div>
 
