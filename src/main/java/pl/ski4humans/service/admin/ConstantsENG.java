@@ -1,6 +1,6 @@
 package pl.ski4humans.service.admin;
 
-public interface Constants {
+public interface ConstantsENG {
     String NULL = null;
 
     // -------------- USER --------------

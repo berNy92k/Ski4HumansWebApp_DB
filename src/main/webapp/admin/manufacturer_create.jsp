@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Ski4Humans - home page - WELCOME</title>
+    <title>Ski4Humans - Create Manufacturer</title>
 
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
@@ -33,10 +33,10 @@
         <div align="center">
             &nbsp;
             <c:if test="${manufacturer != null}">
-                <p>Please change fields value to update manufacturer.</p>
+                <p>Zmień wartości pól w celu wykonania edycji producenta.</p>
             </c:if>
             <c:if test="${manufacturer == null}">
-                <p>Please update all fields to create new manufacturer.</p>
+                <p>Dodaj wartości pól w celu stworzenia nowego producenta.</p>
             </c:if>
             &nbsp;
         </div>
@@ -55,7 +55,7 @@
                     <div class="form-group">
                         <label for="manufacturerName">Nazwa producenta</label>
                         <input type="text" class="form-control" id="manufacturerName" name="manufacturerName"
-                               placeholder="Enter manufacturer name" value="${manufacturer.manufacturerName}">
+                               placeholder="Wpisz nazwę producenta" value="${manufacturer.manufacturerName}">
                     </div>
                     <div class="form-group">
                         <label for="description">Opis</label>
@@ -65,12 +65,12 @@
                     <div class="form-group">
                         <label for="manufacturerImage">Zdjęcie</label>
                         <input type="file" class="form-control" id="manufacturerImage" name="manufacturerImage">
-                        <img id="smallPic" alt="Preview of image" style="width: 300px; margin-top: 5px"
+                        <img id="smallPic" alt="Podgląd zdjęcia" style="width: 300px; margin-top: 5px"
                              src="data:image/jpg;base64, ${manufacturer.base64Image}">
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary">Zatwierdź</button>
                     <button type="button" class="btn btn-primary" id="cancel" onclick="javascript:history.go(-1);">
-                        Cancel
+                        Anuluj
                     </button>
                 </form>
         </div>
@@ -104,18 +104,18 @@
         var manufacturerImage = document.getElementById("manufacturerImage");
 
         if (manufacturerName.value.length == 0) {
-            alert("Manufacturer Name is required");
+            alert("Nazwa producenta jest wymagana");
             manufacturerName.focus();
             return false;
         }
         if (description.value.length == 0) {
-            alert("Description name is required");
+            alert("Opis jest wymagany");
             description.focus();
             return false;
         }
         <c:if test="${manufacturer == null}">
         if (manufacturerImage.value.length == 0) {
-            alert("Image is required");
+            alert("Zdjęcie jest wymagane");
             manufacturerImage.focus();
             return false;
         }

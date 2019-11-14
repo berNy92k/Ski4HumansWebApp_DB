@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Ski4Humans - home page - WELCOME</title>
+    <title>Ski4Humans - Create User</title>
     <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 
@@ -30,10 +30,10 @@
         <div align="center">
             &nbsp;
             <c:if test="${user != null}">
-                <p>Please change fields value to update user.</p>
+                <p>Uzupełnij wszytkie pola w celu wykonania edycji.</p>
             </c:if>
             <c:if test="${user == null}">
-                <p>Please update all fields to create new user.</p>
+                <p>Uzupełnij wszytkie pola w celu dodania nowego użytkownika.</p>
             </c:if>
             &nbsp;
         </div>
@@ -49,28 +49,28 @@
                     </c:if>
 
                     <div class="form-group">
-                        <label for="email">Email address</label>
+                        <label for="email">Adres email</label>
                         <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp"
-                               placeholder="Enter email" value="${user.email}">
-                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
-                            else.
+                               placeholder="Wpisz adres email" value="${user.email}">
+                        <small id="emailHelp" class="form-text text-muted">
+                            Nigdy nikomu nie udostępnimy Twojego adresu email.
                         </small>
                     </div>
                     <div class="form-group">
-                        <label for="fullName">Full name</label>
+                        <label for="fullName">Nazwa użytkownika</label>
                         <input type="text" class="form-control" id="fullName" name="fullName"
-                               placeholder="Enter full name"
+                               placeholder="Wpisz nazwę użytkownika"
                                value="${user.fullName}">
                     </div>
                     <div class="form-group">
-                        <label for="password">Password</label>
+                        <label for="password">Hasło</label>
                         <input type="password" class="form-control" id="password" name="password"
-                               placeholder="Enter password"
+                               placeholder="Wpisz hasło"
                                value="${user.password}">
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary">Zatwierdź</button>
                     <button type="button" class="btn btn-primary" id="cancel" onclick="javascript:history.go(-1);">
-                        Cancel
+                        Anuluj
                     </button>
                 </form>
         </div>
@@ -104,17 +104,17 @@
         var password = document.getElementById("password");
 
         if (email.value.length == 0) {
-            alert("Email is required");
+            alert("Email sie wymagany");
             email.focus();
             return false;
         }
         if (fullName.value.length == 0) {
-            alert("Full name is required");
+            alert("Nazwa użytkownika wymagana");
             fullName.focus();
             return false;
         }
         if (password.value.length == 0) {
-            alert("Password is required");
+            alert("Hasło jest wymagane");
             password.focus();
             return false;
         }

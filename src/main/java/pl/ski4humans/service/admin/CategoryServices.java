@@ -27,7 +27,7 @@ public class CategoryServices {
     }
 
     public void categoryList() throws ServletException, IOException {
-        categoryList(Constants.NULL);
+        categoryList(ConstantsPL.NULL);
     }
 
     public void categoryList(String message) throws ServletException, IOException {
@@ -38,7 +38,7 @@ public class CategoryServices {
             request.setAttribute("message", message);
         }
 
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher(Constants.CATEGORY_LIST_URL);
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher(ConstantsPL.CATEGORY_LIST_URL);
         requestDispatcher.forward(request, response);
     }
 
@@ -48,11 +48,11 @@ public class CategoryServices {
         List<Category> categories = categoryDAO.findByName(name);
 
         if (categories.size() > 0) {
-            categoryList(name + Constants.CATEGORY_NAME_ALREADY_EXIST_IN_DB);
+            categoryList(name + ConstantsPL.CATEGORY_NAME_ALREADY_EXIST_IN_DB);
         } else {
             Category newCategory = new Category(name);
             categoryDAO.create(newCategory);
-            categoryList(Constants.NEW_CATEGORY_WAS_CREATED);
+            categoryList(ConstantsPL.NEW_CATEGORY_WAS_CREATED);
         }
     }
 
@@ -61,14 +61,14 @@ public class CategoryServices {
         Category category = categoryDAO.get(id);
 
         if (category != null && id > 0 && id < 8) {
-            categoryList(Constants.CATEGORY_CAN_NOT_BE_UPDATED_SQL_ADMIN);
+            categoryList(ConstantsPL.CATEGORY_CAN_NOT_BE_UPDATED_SQL_ADMIN);
         } else if (category != null) {
             request.setAttribute("category", category);
 
-            RequestDispatcher requestDispatcher = request.getRequestDispatcher(Constants.CATEGORY_CREATE_URL);
+            RequestDispatcher requestDispatcher = request.getRequestDispatcher(ConstantsPL.CATEGORY_CREATE_URL);
             requestDispatcher.forward(request, response);
         } else {
-            categoryList(Constants.COULD_NOT_FIND_CATEGORY_BY_ID + id);
+            categoryList(ConstantsPL.COULD_NOT_FIND_CATEGORY_BY_ID + id);
         }
     }
 
@@ -89,14 +89,14 @@ public class CategoryServices {
         }
 
         if (isMoreCategoriesInDatabase) {
-            categoryList(Constants.CATEGORY_WAS_NOT_UPDATED + name + Constants.CATEGORY_NAME_ALREADY_EXIST_IN_DB);
+            categoryList(ConstantsPL.CATEGORY_WAS_NOT_UPDATED + name + ConstantsPL.CATEGORY_NAME_ALREADY_EXIST_IN_DB);
         } else if (categoryFoundByName != null && !categoryFoundByName.getCategoryId().equals(categoryFoundById.getCategoryId())) {
-            categoryList(Constants.CATEGORY_WAS_NOT_UPDATED + name + Constants.CATEGORY_NAME_ALREADY_EXIST_IN_DB);
+            categoryList(ConstantsPL.CATEGORY_WAS_NOT_UPDATED + name + ConstantsPL.CATEGORY_NAME_ALREADY_EXIST_IN_DB);
         } else {
             Category newCategory = new Category(categoryId, name);
             categoryDAO.update(newCategory);
 
-            categoryList(Constants.CATEGORY_WAS_UPDATED);
+            categoryList(ConstantsPL.CATEGORY_WAS_UPDATED);
         }
     }
 
@@ -106,12 +106,12 @@ public class CategoryServices {
         Category category = categoryDAO.get(categoryId);
 
         if (category != null && categoryId > 0 && categoryId < 8) {
-            categoryList(Constants.CATEGORY_CAN_NOT_BE_DELETED_SQL_ADMIN);
+            categoryList(ConstantsPL.CATEGORY_CAN_NOT_BE_DELETED_SQL_ADMIN);
         } else if (category != null) {
             categoryDAO.delete(categoryId);
-            categoryList(Constants.CATEGORY_WAS_DELETED);
+            categoryList(ConstantsPL.CATEGORY_WAS_DELETED);
         } else {
-            categoryList(Constants.COULD_NOT_FIND_CATEGORY_BY_ID + categoryId + Constants.DELETED_BY_ANOTHER_CATEGORY_ADMIN);
+            categoryList(ConstantsPL.COULD_NOT_FIND_CATEGORY_BY_ID + categoryId + ConstantsPL.DELETED_BY_ANOTHER_CATEGORY_ADMIN);
         }
     }
 }

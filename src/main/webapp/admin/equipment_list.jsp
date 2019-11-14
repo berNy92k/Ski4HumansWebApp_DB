@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Ski4Humans - home page - WELCOME</title>
+    <title>Ski4Humans - Equipment List</title>
     <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 
@@ -33,7 +33,8 @@
         </div>
 
         <div align="center">
-            <h3><a href="../admin/precreateNewEquipment?eq=${eqCat}&sex=${sex}"><p style="color:#2b57b4">DODAJ NOWY SPRZĘT DO BAZY</p></a></h3>
+            <h3><a href="../admin/precreateNewEquipment?eq=${eqCat}&sex=${sex}"><p style="color:#2b57b4">DODAJ NOWY
+                SPRZĘT DO BAZY</p></a></h3>
         </div>
 
         <div align="center">
@@ -46,12 +47,12 @@
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">ID</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Manufacturer Name</th>
-                    <th scope="col">Short Description</th>
-                    <th scope="col">Price</th>
-                    <th scope="col">Image</th>
-                    <th scope="col">Actions</th>
+                    <th scope="col">Nazwa</th>
+                    <th scope="col">Nazwa producenta</th>
+                    <th scope="col">Krótki opis</th>
+                    <th scope="col">Kwota [zł]</th>
+                    <th scope="col">Zdjęcie</th>
+                    <th scope="col">Akcje</th>
                 </tr>
                 </thead>
                 <c:if test="${messageEmpty == false}">
@@ -68,9 +69,9 @@
                                 <img src="data:image/jpg;base64,${equipment.base64Image}" width="80">
                             </td>
                             <td>
-                                <p><a href="../admin/editEquipment?id=${equipment.equipmentId}">EDIT</a></p>
-                                <p><a href="javascript:deleteEquipment(${equipment.equipmentId})">DELETE</a></p>
-                                <p><a href="../admin/viewEquipment?id=${equipment.equipmentId}">VIEW</a></p>
+                                <p><a href="../admin/editEquipment?id=${equipment.equipmentId}">EDYCJA</a></p>
+                                <p><a href="javascript:deleteEquipment(${equipment.equipmentId})">USUŃ</a></p>
+                                <p><a href="../admin/viewEquipment?id=${equipment.equipmentId}">PODGLĄD</a></p>
                             </td>
                         </tr>
                     </c:forEach>
@@ -103,7 +104,7 @@
 
 <script>
     function deleteEquipment(equipmentId) {
-        if (confirm("Are you sure ? If you agree equipment with '" + equipmentId + "' id will be deleted")) {
+        if (confirm("Czy jestes pewny ? Jeżeli się zgodzisz sprzęt z '" + equipmentId + "' id zostanie usunięty")) {
             window.location = '../admin/deleteEquipment?id=' + equipmentId;
         }
     }

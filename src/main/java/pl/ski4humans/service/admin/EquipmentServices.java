@@ -42,7 +42,7 @@ public class EquipmentServices {
     }
 
     public void equipmentList() throws ServletException, IOException {
-        equipmentList(Constants.NULL);
+        equipmentList(ConstantsPL.NULL);
     }
 
     public void equipmentList(String message) throws ServletException, IOException {
@@ -74,7 +74,7 @@ public class EquipmentServices {
         if (message != null) {
             request.setAttribute("message", message);
         } else if (equipments != null && equipments.size() == 0) {
-            request.setAttribute("message", Constants.LACK_OF_EQUIPMENT_IN_DB);
+            request.setAttribute("message", ConstantsPL.LACK_OF_EQUIPMENT_IN_DB);
             request.setAttribute("messageEmpty", true);
         } else {
             if (equipments != null) {
@@ -83,7 +83,7 @@ public class EquipmentServices {
             }
         }
 
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher(Constants.EQUIPMENT_LIST_URL);
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher(ConstantsPL.EQUIPMENT_LIST_URL);
         requestDispatcher.forward(request, response);
     }
 
@@ -95,7 +95,7 @@ public class EquipmentServices {
             request.setAttribute("equipment", equipment);
         }
 
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher(Constants.EQUIPMENT_VIEW_URL);
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher(ConstantsPL.EQUIPMENT_VIEW_URL);
         requestDispatcher.forward(request, response);
     }
 
@@ -112,7 +112,7 @@ public class EquipmentServices {
         request.setAttribute("sex", sex);
         request.setAttribute("eqCat", eq);
 
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher(Constants.EQUIPMENT_CREATE_URL);
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher(ConstantsPL.EQUIPMENT_CREATE_URL);
         requestDispatcher.forward(request, response);
     }
 
@@ -143,7 +143,7 @@ public class EquipmentServices {
         List<Equipment> equipments = equipmentDAO.findByName(name);
 
         if (equipments.size() > 0) {
-            equipmentIsCreated(name + Constants.EQUIPMENT_ALREADY_EXIST_IN_DB);
+            equipmentIsCreated(name + ConstantsPL.EQUIPMENT_ALREADY_EXIST_IN_DB);
         } else {
             Manufacturer manufacturer = manufacturerDAO.get(manufacturerId);
             Category category = categoryDAO.get(categoryId);
@@ -163,9 +163,9 @@ public class EquipmentServices {
 
             Equipment equipment = equipmentDAO.create(newEquipment);
             if (equipment.getEquipmentId() > 0) {
-                equipmentIsCreated(Constants.NEW_EQUIPMENT_WAS_CREATED);
+                equipmentIsCreated(ConstantsPL.NEW_EQUIPMENT_WAS_CREATED);
             } else {
-                equipmentIsCreated(Constants.NEW_EQUIPMENT_WAS_NOT_CREATED);
+                equipmentIsCreated(ConstantsPL.NEW_EQUIPMENT_WAS_NOT_CREATED);
             }
         }
     }
@@ -173,7 +173,7 @@ public class EquipmentServices {
     private void equipmentIsCreated(String message) throws ServletException, IOException {
         request.setAttribute("message", message);
 
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher(Constants.EQUIPMENT_IS_CREATED_URL);
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher(ConstantsPL.EQUIPMENT_IS_CREATED_URL);
         requestDispatcher.forward(request, response);
     }
 
@@ -188,10 +188,10 @@ public class EquipmentServices {
             request.setAttribute("categories", categories);
             request.setAttribute("manufacturers", manufacturers);
 
-            RequestDispatcher requestDispatcher = request.getRequestDispatcher(Constants.EQUIPMENT_CREATE_URL);
+            RequestDispatcher requestDispatcher = request.getRequestDispatcher(ConstantsPL.EQUIPMENT_CREATE_URL);
             requestDispatcher.forward(request, response);
         } else {
-            equipmentIsCreated(Constants.COULD_NOT_FIND_EQUIPMENT_BY_ID + id);
+            equipmentIsCreated(ConstantsPL.COULD_NOT_FIND_EQUIPMENT_BY_ID + id);
         }
     }
 
@@ -227,7 +227,7 @@ public class EquipmentServices {
         List<Equipment> equipments = equipmentDAO.findByName(name);
 
         if (equipments.size() > 0) {
-            equipmentIsCreated(name + Constants.EQUIPMENT_ALREADY_EXIST_IN_DB);
+            equipmentIsCreated(name + ConstantsPL.EQUIPMENT_ALREADY_EXIST_IN_DB);
         } else {
             Manufacturer manufacturer = manufacturerDAO.get(manufacturerId);
             Category category = categoryDAO.get(categoryId);
@@ -248,9 +248,9 @@ public class EquipmentServices {
 
             Equipment equipment = equipmentDAO.update(newEquipment);
             if (equipment.getEquipmentId() > 0) {
-                equipmentIsCreated(Constants.EQUIPMENT_WAS_UPDATED);
+                equipmentIsCreated(ConstantsPL.EQUIPMENT_WAS_UPDATED);
             } else {
-                equipmentIsCreated(Constants.EQUIPMENT_WAS_NOT_UPDATED);
+                equipmentIsCreated(ConstantsPL.EQUIPMENT_WAS_NOT_UPDATED);
             }
         }
     }
@@ -262,9 +262,9 @@ public class EquipmentServices {
 
         if (equipment != null) {
             equipmentDAO.delete(equipmentId);
-            equipmentList(Constants.EQUIPMENT_WAS_DELETED);
+            equipmentList(ConstantsPL.EQUIPMENT_WAS_DELETED);
         } else {
-            equipmentList(Constants.COULD_NOT_FIND_EQUIPMENT_BY_ID + equipmentId + Constants.DELETED_BY_ANOTHER_CATEGORY_ADMIN);
+            equipmentList(ConstantsPL.COULD_NOT_FIND_EQUIPMENT_BY_ID + equipmentId + ConstantsPL.DELETED_BY_ANOTHER_CATEGORY_ADMIN);
         }
     }
 

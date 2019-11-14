@@ -28,7 +28,7 @@ public class UserServices {
     }
 
     public void userList() throws ServletException, IOException {
-        userList(Constants.NULL);
+        userList(ConstantsPL.NULL);
     }
 
     public void userList(String message) throws ServletException, IOException {
@@ -39,7 +39,7 @@ public class UserServices {
             request.setAttribute("message", message);
         }
 
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher(Constants.USER_LIST_URL);
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher(ConstantsPL.USER_LIST_URL);
         requestDispatcher.forward(request, response);
     }
 
@@ -51,11 +51,11 @@ public class UserServices {
         List<User> emails = userDAO.findByEmail(email);
 
         if (emails.size() > 0) {
-            userList(email + Constants.USER_EMAIL_ALREADY_EXIST_IN_DB);
+            userList(email + ConstantsPL.USER_EMAIL_ALREADY_EXIST_IN_DB);
         } else {
             User newUser = new User(email, fullName, password);
             userDAO.create(newUser);
-            userList(Constants.NEW_USER_WAS_CREATED);
+            userList(ConstantsPL.NEW_USER_WAS_CREATED);
         }
     }
 
@@ -64,14 +64,14 @@ public class UserServices {
         User user = userDAO.get(id);
 
         if (id == 1) {
-            userList(Constants.USER_ADMIN_CAN_NOT_BE_UPDATED_SQL_ADMIN);
+            userList(ConstantsPL.USER_ADMIN_CAN_NOT_BE_UPDATED_SQL_ADMIN);
         } else if (user != null) {
             request.setAttribute("user", user);
 
-            RequestDispatcher requestDispatcher = request.getRequestDispatcher(Constants.USER_CREATE_URL);
+            RequestDispatcher requestDispatcher = request.getRequestDispatcher(ConstantsPL.USER_CREATE_URL);
             requestDispatcher.forward(request, response);
         } else {
-            userList(Constants.COULD_NOT_FIND_USER_BY_ID + id);
+            userList(ConstantsPL.COULD_NOT_FIND_USER_BY_ID + id);
         }
     }
 
@@ -94,14 +94,14 @@ public class UserServices {
         }
 
         if (isMoreEmailsInDatabase) {
-            userList(Constants.USER_WAS_NOT_UPDATED + email + Constants.USER_EMAIL_ALREADY_EXIST_IN_DB);
+            userList(ConstantsPL.USER_WAS_NOT_UPDATED + email + ConstantsPL.USER_EMAIL_ALREADY_EXIST_IN_DB);
         } else if (userFoundByEmail != null && !userFoundByEmail.getUserId().equals(userFoundById.getUserId())) {
-            userList(Constants.USER_WAS_NOT_UPDATED + email + Constants.USER_EMAIL_ALREADY_EXIST_IN_DB);
+            userList(ConstantsPL.USER_WAS_NOT_UPDATED + email + ConstantsPL.USER_EMAIL_ALREADY_EXIST_IN_DB);
         } else {
             User user = new User(userId, email, fullName, password);
             userDAO.update(user);
 
-            userList(Constants.USER_WAS_UPDATED);
+            userList(ConstantsPL.USER_WAS_UPDATED);
         }
     }
 
@@ -109,15 +109,15 @@ public class UserServices {
         Integer userId = Integer.valueOf(request.getParameter("id"));
 
         if (userId.equals(1)) {
-            userList(Constants.USER_ADMIN_CAN_NOT_BE_DELETED_SQL_ADMIN);
+            userList(ConstantsPL.USER_ADMIN_CAN_NOT_BE_DELETED_SQL_ADMIN);
         } else {
             User user = userDAO.get(userId);
 
             if (user != null) {
                 userDAO.delete(userId);
-                userList(Constants.USER_WAS_DELETED);
+                userList(ConstantsPL.USER_WAS_DELETED);
             } else {
-                userList(Constants.COULD_NOT_FIND_USER_BY_ID + userId + Constants.DELETED_BY_ANOTHER_USER_ADMIN);
+                userList(ConstantsPL.COULD_NOT_FIND_USER_BY_ID + userId + ConstantsPL.DELETED_BY_ANOTHER_USER_ADMIN);
             }
         }
     }
@@ -132,12 +132,12 @@ public class UserServices {
             HttpSession session = request.getSession();
             session.setAttribute("userEmail", email);
 
-            RequestDispatcher requestDispatcher = request.getRequestDispatcher(Constants.ADMIN_URL);
+            RequestDispatcher requestDispatcher = request.getRequestDispatcher(ConstantsPL.ADMIN_URL);
             requestDispatcher.forward(request, response);
         } else {
-            request.setAttribute("message", Constants.USER_LOGIN_FAILED);
+            request.setAttribute("message", ConstantsPL.USER_LOGIN_FAILED);
 
-            RequestDispatcher requestDispatcher = request.getRequestDispatcher(Constants.ADMIN_LOGIN_URL_JSP);
+            RequestDispatcher requestDispatcher = request.getRequestDispatcher(ConstantsPL.ADMIN_LOGIN_URL_JSP);
             requestDispatcher.forward(request, response);
         }
     }
@@ -146,7 +146,7 @@ public class UserServices {
         HttpSession session = request.getSession();
         session.removeAttribute("userEmail");
 
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher(Constants.ADMIN_LOGIN_URL_JSP);
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher(ConstantsPL.ADMIN_LOGIN_URL_JSP);
         requestDispatcher.forward(request, response);
     }
 }

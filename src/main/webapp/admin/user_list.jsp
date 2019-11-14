@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Ski4Humans - home page - WELCOME</title>
+    <title>Ski4Humans - User List</title>
     <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 
@@ -29,7 +29,8 @@
     <div style="width: 80%; margin: 0 auto">
         <div align="center">
             &nbsp;
-            <h3><a href="../admin/user_create.jsp"><p style="color:#2b57b4">DODAJ NOWEGO UŻYTKOWNIKA DO BAZY</p></a></h3>
+            <h3><a href="../admin/user_create.jsp"><p style="color:#2b57b4">DODAJ NOWEGO UŻYTKOWNIKA DO BAZY</p></a>
+            </h3>
             &nbsp;
         </div>
 
@@ -44,8 +45,8 @@
                     <th scope="col">#</th>
                     <th scope="col">ID</th>
                     <th scope="col">Email</th>
-                    <th scope="col">Full Name</th>
-                    <th scope="col">Actions</th>
+                    <th scope="col">Nazwa użytkownika</th>
+                    <th scope="col">Akcje</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -56,8 +57,8 @@
                         <td>${user.email}</td>
                         <td>${user.fullName}</td>
                         <td>
-                            <a href="../admin/editUser?id=${user.userId}">EDIT</a> &nbsp
-                            <a href="javascript:deleteUser(${user.userId})">DELETE</a>
+                            <a href="../admin/editUser?id=${user.userId}">EDYCJA</a> &nbsp
+                            <a href="javascript:deleteUser(${user.userId})">USUŃ</a>
                         </td>
                     </tr>
                 </c:forEach>
@@ -89,7 +90,7 @@
 
 <script>
     function deleteUser(userId) {
-        if (confirm("Are you sure ? If you agree user with '" + userId + "' id will be deleted")) {
+        if (confirm("Czy jestes pewny ? Jeżeli się zgodzisz użytkownik z '" + userId + "' id zostanie usunięty")) {
             window.location = '../admin/deleteUser?id=' + userId;
         }
     }

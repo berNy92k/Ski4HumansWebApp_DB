@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Ski4Humans - home page - WELCOME</title>
+    <title>Ski4Humans - Category List</title>
     <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 
@@ -43,8 +43,8 @@
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">ID</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Actions</th>
+                    <th scope="col">Nazwa</th>
+                    <th scope="col">Akcje</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -54,8 +54,8 @@
                         <td>${category.categoryId}</td>
                         <td>${category.name}</td>
                         <td>
-                            <a href="../admin/editCategory?id=${category.categoryId}">EDIT</a> &nbsp
-                            <a href="javascript:deleteCategory(${category.categoryId})">DELETE</a>
+                            <a href="../admin/editCategory?id=${category.categoryId}">EDYCJA</a> &nbsp
+                            <a href="javascript:deleteCategory(${category.categoryId})">USUŃ</a>
                         </td>
                     </tr>
                 </c:forEach>
@@ -87,7 +87,7 @@
 
 <script>
     function deleteCategory(categoryId) {
-        if (confirm("Are you sure ? If you agree category with '" + categoryId + "' id will be deleted")) {
+        if (confirm("Czy jestes pewny ? Jeżeli się zgodzisz kategoria z '" + categoryId + "' id zostanie usunięte")) {
             window.location = '../admin/deleteCategory?id=' + categoryId;
         }
     }

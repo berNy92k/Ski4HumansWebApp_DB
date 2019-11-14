@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Ski4Humans - home page - WELCOME</title>
+    <title>Ski4Humans - Create Category</title>
     <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 
@@ -30,10 +30,10 @@
         <div align="center">
             &nbsp;
             <c:if test="${category != null}">
-                <p>Please change fields value to update category.</p>
+                <p>Uzupełnij wszytkie pola w celu wykonania edycji.</p>
             </c:if>
             <c:if test="${category == null}">
-                <p>Please update all fields to create new category.</p>
+                <p>Uzupełnij wszytkie pola w celu dodania nowej kategorii.</p>
             </c:if>
             &nbsp;
         </div>
@@ -50,13 +50,13 @@
                     </c:if>
 
                     <div class="form-group">
-                        <label for="name">Category name</label>
+                        <label for="name">Nazwa kategorii</label>
                         <input type="text" class="form-control" id="name" name="name" aria-describedby="nameCategory"
-                               placeholder="Enter category name" value="${category.name}">
+                               placeholder="Wpisz nazwę kategorii" value="${category.name}">
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary">Zatwierdź</button>
                     <button type="button" class="btn btn-primary" id="cancel" onclick="javascript:history.go(-1);">
-                        Cancel
+                        Anuluj
                     </button>
                 </form>
         </div>
@@ -89,7 +89,7 @@
         var name = document.getElementById("name");
 
         if (name.value.length == 0) {
-            alert("Name category is required");
+            alert("Nazwa kategorii jest wymagana");
             name.focus();
             return false;
         }

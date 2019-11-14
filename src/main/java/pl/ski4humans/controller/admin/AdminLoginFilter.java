@@ -1,6 +1,6 @@
 package pl.ski4humans.controller.admin;
 
-import pl.ski4humans.service.admin.Constants;
+import pl.ski4humans.service.admin.ConstantsPL;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
@@ -30,12 +30,12 @@ public class AdminLoginFilter implements Filter {
         boolean loginJspPage = httpServletRequest.getRequestURI().endsWith("/admin/login.jsp");
 
         if (loggedIn && (isTheSameURI || loginJspPage)) {
-            RequestDispatcher requestDispatcher = request.getRequestDispatcher(Constants.ADMIN_URL);
+            RequestDispatcher requestDispatcher = request.getRequestDispatcher(ConstantsPL.ADMIN_URL);
             requestDispatcher.forward(request, response);
         } else if (loggedIn || isTheSameURI) {
             filterChain.doFilter(request, response);
         } else {
-            RequestDispatcher requestDispatcher = request.getRequestDispatcher(Constants.ADMIN_LOGIN_URL_JSP);
+            RequestDispatcher requestDispatcher = request.getRequestDispatcher(ConstantsPL.ADMIN_LOGIN_URL_JSP);
             requestDispatcher.forward(request, response);
         }
     }

@@ -30,7 +30,7 @@ public class ManufacturerServices {
 
     public void manufacturerList()
             throws ServletException, IOException {
-        manufacturerList(Constants.NULL);
+        manufacturerList(ConstantsPL.NULL);
     }
 
     public void manufacturerList(String message)
@@ -42,7 +42,7 @@ public class ManufacturerServices {
             request.setAttribute("message", message);
         }
 
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher(Constants.MANUFACTURER_LIST_URL);
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher(ConstantsPL.MANUFACTURER_LIST_URL);
         requestDispatcher.forward(request, response);
     }
 
@@ -54,7 +54,7 @@ public class ManufacturerServices {
         List<Manufacturer> manufacturers = manufacturerDAO.findByManufacturerName(manufacturerName);
 
         if (manufacturers.size() > 0) {
-            manufacturerList(manufacturerName + Constants.MANUFACTURER_ALREADY_EXIST_IN_DB);
+            manufacturerList(manufacturerName + ConstantsPL.MANUFACTURER_ALREADY_EXIST_IN_DB);
             return;
         }
 
@@ -77,9 +77,9 @@ public class ManufacturerServices {
 
         Manufacturer manufacturer = manufacturerDAO.create(newManufacturer);
         if (manufacturer.getManufacturerId() > 0) {
-            manufacturerList(Constants.NEW_MANUFACTURER_WAS_CREATED);
+            manufacturerList(ConstantsPL.NEW_MANUFACTURER_WAS_CREATED);
         } else {
-            manufacturerList(Constants.NEW_MANUFACTURER_WAS_NOT_CREATED);
+            manufacturerList(ConstantsPL.NEW_MANUFACTURER_WAS_NOT_CREATED);
         }
     }
 
@@ -91,10 +91,10 @@ public class ManufacturerServices {
         if (manufacturer != null) {
             request.setAttribute("manufacturer", manufacturer);
 
-            RequestDispatcher requestDispatcher = request.getRequestDispatcher(Constants.MANUFACTURER_CREATE_URL);
+            RequestDispatcher requestDispatcher = request.getRequestDispatcher(ConstantsPL.MANUFACTURER_CREATE_URL);
             requestDispatcher.forward(request, response);
         } else {
-            manufacturerList(Constants.COULD_NOT_FIND_MANUFACTURER_BY_ID + id);
+            manufacturerList(ConstantsPL.COULD_NOT_FIND_MANUFACTURER_BY_ID + id);
         }
     }
 
@@ -117,9 +117,9 @@ public class ManufacturerServices {
         }
 
         if (isMoreEmailsInDatabase) {
-            manufacturerList(Constants.MANUFACTURER_WAS_NOT_UPDATED + manufacturerName + Constants.MANUFACTURER_ALREADY_EXIST_IN_DB);
+            manufacturerList(ConstantsPL.MANUFACTURER_WAS_NOT_UPDATED + manufacturerName + ConstantsPL.MANUFACTURER_ALREADY_EXIST_IN_DB);
         } else if (userFoundByName != null && !userFoundByName.getManufacturerId().equals(userFoundById.getManufacturerId())) {
-            manufacturerList(Constants.MANUFACTURER_WAS_NOT_UPDATED + manufacturerName + Constants.MANUFACTURER_ALREADY_EXIST_IN_DB);
+            manufacturerList(ConstantsPL.MANUFACTURER_WAS_NOT_UPDATED + manufacturerName + ConstantsPL.MANUFACTURER_ALREADY_EXIST_IN_DB);
         } else {
             Manufacturer manufacturer = new Manufacturer();
             manufacturer.setManufacturerId(manufacturerId);
@@ -142,7 +142,7 @@ public class ManufacturerServices {
             }
 
             manufacturerDAO.update(manufacturer);
-            manufacturerList(Constants.MANUFACTURER_WAS_UPDATED);
+            manufacturerList(ConstantsPL.MANUFACTURER_WAS_UPDATED);
         }
     }
 
@@ -154,9 +154,9 @@ public class ManufacturerServices {
 
         if (manufacturer != null) {
             manufacturerDAO.delete(manufacturerId);
-            manufacturerList(Constants.MANUFACTURER_WAS_DELETED);
+            manufacturerList(ConstantsPL.MANUFACTURER_WAS_DELETED);
         } else {
-            manufacturerList(Constants.COULD_NOT_FIND_MANUFACTURER_BY_ID + manufacturerId + Constants.DELETED_BY_ANOTHER_MANUFACTURER_ADMIN);
+            manufacturerList(ConstantsPL.COULD_NOT_FIND_MANUFACTURER_BY_ID + manufacturerId + ConstantsPL.DELETED_BY_ANOTHER_MANUFACTURER_ADMIN);
         }
     }
 }

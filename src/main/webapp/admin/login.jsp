@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Ski4Humans - home page - WELCOME</title>
+    <title>Ski4Humans - LOGIN</title>
     <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 
@@ -29,7 +29,7 @@
     <div style="width: 500px; margin: 0 auto">
         <div align="center">
             &nbsp;
-            <p>Please update all fields to login as Administrator.</p>
+            <p>Uzupełnij wszystkie pola aby zalogować się jako administrator</p>
             &nbsp;
         </div>
 
@@ -43,14 +43,14 @@
             <form action="../admin/login" method="post" id="loginAdministratorForm"
                   onsubmit="return validateLoginForm()">
                 <div class="form-group">
-                    <label for="email">Email address</label>
+                    <label for="email">Adres email</label>
                     <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp"
-                           placeholder="Enter email">
+                           placeholder="Wpisz adres email">
                 </div>
                 <div class="form-group">
-                    <label for="password">Password</label>
+                    <label for="password">Hasło</label>
                     <input type="password" class="form-control" id="password" name="password"
-                           placeholder="Enter password">
+                           placeholder="Wpisz hasło">
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
                 <button type="button" class="btn btn-primary" id="cancel" onclick="javascript:history.go(-1);">

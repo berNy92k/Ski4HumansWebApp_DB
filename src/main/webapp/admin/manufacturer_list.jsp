@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Ski4Humans - home page - WELCOME</title>
+    <title>Ski4Humans - Manufacturer List</title>
     <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 
@@ -43,10 +43,10 @@
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">ID</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Description</th>
-                    <th scope="col">Image</th>
-                    <th scope="col">Actions</th>
+                    <th scope="col">Nazwa</th>
+                    <th scope="col">Opis</th>
+                    <th scope="col">Zdjęcie</th>
+                    <th scope="col">Akcje</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -60,8 +60,8 @@
                             <img src="data:image/jpg;base64,${manufacturer.base64Image}" width="100">
                         </td>
                         <td>
-                            <a href="../admin/editManufacturer?id=${manufacturer.manufacturerId}">EDIT</a> &nbsp
-                            <a href="javascript:deleteManufacturer(${manufacturer.manufacturerId})">DELETE</a>
+                            <a href="../admin/editManufacturer?id=${manufacturer.manufacturerId}">EDYCJA</a> &nbsp
+                            <a href="javascript:deleteManufacturer(${manufacturer.manufacturerId})">USUŃ</a>
                         </td>
                     </tr>
                 </c:forEach>

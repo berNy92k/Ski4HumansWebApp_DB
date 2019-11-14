@@ -17,13 +17,13 @@
     </div>
 
     <div style="font-size: 12px;">
-        Welcome,
+        Witaj,
         <c:if test="${sessionScope.userEmail != null}">
             <c:out value="${sessionScope.userEmail}, "/>
-            <a href="../admin/logout">Logout</a>
+            <a href="../admin/logout">Wyloguj się</a>
         </c:if>
         <c:if test="${sessionScope.userEmail == null}">
-            <c:out value="Login as administrator to have access"/>
+            <c:out value="Zaloguj się jako administrator aby mieć dostęp"/>
         </c:if>
     </div>
 </div>
@@ -40,8 +40,7 @@
                 <input type="text" placeholder="Szukaj.." name="search" size="60"
                        style="font-weight: revert; border-radius: 15px; min-height: 35px;
                        max-height: 35px ;border-color: rgba(109,163,207,0.99)">
-                <button type="submit" style="border-radius: 15px;  min-height: 35px; max-height: 35px">Szukaj
-                </button>
+                <button type="submit" style="border-radius: 15px;  min-height: 35px; max-height: 35px">Szukaj</button>
             </form>
             <a href="#">
                 <img class="mb-2" src="../images/register.png" width="25" height="25" style="margin-top: 5px

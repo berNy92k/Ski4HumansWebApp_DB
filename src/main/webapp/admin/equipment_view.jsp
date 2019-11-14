@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Ski4Humans - home page - WELCOME</title>
+    <title>Ski4Humans - Equipment View</title>
     <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 
@@ -54,7 +54,7 @@
                         </div>
                     </div>
                     <div style="margin-left: 50px">
-                        <img src="data:image/jpg;base64,${equipment.manufacturer.base64Image}" width="80px">
+                        <img src="data:image/jpg;base64,${equipment.manufacturer.base64Image}" width="100px">
                     </div>
                 </div>
                 <div style="margin-bottom: 20px">
@@ -79,11 +79,11 @@
             </div>
             <div style="width: 40px; margin-left: 20px">
                 <div>
-                    <h5>Actions:</h5>
+                    <h5>Akcje:</h5>
                 </div>
                 <div>
-                    <p><a href="../admin/editEquipment?id=${equipment.equipmentId}">EDIT</a></p>
-                    <p><a href="javascript:deleteEquipment(${equipment.equipmentId})">DELETE</a></p>
+                    <p><a href="../admin/editEquipment?id=${equipment.equipmentId}">EDYCJA</a></p>
+                    <p><a href="javascript:deleteEquipment(${equipment.equipmentId})">USUŃ</a></p>
                 </div>
             </div>
         </div>
@@ -131,7 +131,7 @@
 
 <script>
     function deleteEquipment(equipmentId) {
-        if (confirm("Are you sure ? If you agree equipment with '" + equipmentId + "' id will be deleted")) {
+        if (confirm("Czy jestes pewny ? Jeżeli się zgodzisz sprzęt z '" + equipmentId + "' id zostanie usunięty")) {
             window.location = '../admin/deleteEquipment?id=' + equipmentId;
         }
     }
