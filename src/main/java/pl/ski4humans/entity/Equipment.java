@@ -9,7 +9,7 @@ import java.util.Date;
 @Entity
 @Table(name = "equipment",
         uniqueConstraints = @UniqueConstraint(columnNames = "name"))
-@NamedQueries({
+@NamedQueries(value = {
         @NamedQuery(name = "Equipment.findAll", query = "SELECT e FROM Equipment e ORDER BY e.name"),
         @NamedQuery(name = "Equipment.findByName", query = "SELECT e FROM Equipment e " +
                 "WHERE e.name = :name"),
@@ -17,7 +17,10 @@ import java.util.Date;
                 "WHERE e.category.categoryId = :categoryID"),
         @NamedQuery(name = "Equipment.findAllByCategoryAndSex", query = "SELECT e FROM Equipment e " +
                 "WHERE e.category.categoryId = :categoryID AND e.sex = :sex"),
-        @NamedQuery(name = "Equipment.countAll", query = "SELECT COUNT(e) FROM Equipment e")
+        @NamedQuery(name = "Equipment.countAll", query = "SELECT COUNT(e) FROM Equipment e"),
+        @NamedQuery(name = "Equipment.findAllByNameOrDescription", query = "SELECT e FROM Equipment e WHERE e.name LIKE CONCAT('%',:name,'%') " +
+                "OR e.shortDescription LIKE CONCAT('%',:shortDescription,'%') " +
+                "OR e.longDescription LIKE CONCAT('%',:longDescription,'%')")
 })
 public class Equipment {
 

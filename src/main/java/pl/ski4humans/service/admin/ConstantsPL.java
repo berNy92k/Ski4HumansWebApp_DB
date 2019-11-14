@@ -3,7 +3,7 @@ package pl.ski4humans.service.admin;
 public interface ConstantsPL {
     String NULL = null;
 
-    // -------------- USER --------------
+    // -------------- ADMIN/USER --------------
     // URL
     String USER_LIST_URL = "/admin/user_list.jsp";
     String USER_CREATE_URL = "/admin/user_create.jsp";
@@ -25,7 +25,7 @@ public interface ConstantsPL {
 
 
 
-    // -------------- CATEGORY --------------
+    // -------------- ADMIN/CATEGORY --------------
     // URL
     String CATEGORY_LIST_URL = "/admin/category_list.jsp";
     String CATEGORY_CREATE_URL = "/admin/category_create.jsp";
@@ -42,7 +42,7 @@ public interface ConstantsPL {
     String CATEGORY_CAN_NOT_BE_UPDATED_SQL_ADMIN = "Category can not be updated. Categories with id 1,2,3,4,5,6,7 are impossible to update (It can be update only by SQL Administrator)";
 
 
-    // -------------- MANUFACTURER --------------
+    // -------------- ADMIN/MANUFACTURER --------------
     // URL
     String MANUFACTURER_LIST_URL = "/admin/manufacturer_list.jsp";
     String MANUFACTURER_CREATE_URL = "/admin/manufacturer_create.jsp";
@@ -58,7 +58,7 @@ public interface ConstantsPL {
     String DELETED_BY_ANOTHER_MANUFACTURER_ADMIN = ", or it might have been deleted by another admin.";
 
 
-    // -------------- EQUIPMENT --------------
+    // -------------- ADMIN/EQUIPMENT --------------
     // URL
     String EQUIPMENT_LIST_URL = "/admin/equipment_list.jsp";
     String EQUIPMENT_CREATE_URL = "/admin/equipment_create.jsp";

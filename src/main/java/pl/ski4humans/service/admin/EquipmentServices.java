@@ -78,7 +78,6 @@ public class EquipmentServices {
             request.setAttribute("messageEmpty", true);
         } else {
             if (equipments != null) {
-                equipments.size();
                 request.setAttribute("messageEmpty", false);
             }
         }
@@ -226,7 +225,9 @@ public class EquipmentServices {
 
         List<Equipment> equipments = equipmentDAO.findByName(name);
 
-        if (equipments.size() > 0) {
+        if (equipments.size() > 1) {
+            equipmentIsCreated(name + ConstantsPL.EQUIPMENT_ALREADY_EXIST_IN_DB);
+        } else if (equipments.size() == 1 && equipments.get(0).getEquipmentId() != equipmentId) {
             equipmentIsCreated(name + ConstantsPL.EQUIPMENT_ALREADY_EXIST_IN_DB);
         } else {
             Manufacturer manufacturer = manufacturerDAO.get(manufacturerId);
@@ -264,7 +265,7 @@ public class EquipmentServices {
             equipmentDAO.delete(equipmentId);
             equipmentList(ConstantsPL.EQUIPMENT_WAS_DELETED);
         } else {
-            equipmentList(ConstantsPL.COULD_NOT_FIND_EQUIPMENT_BY_ID + equipmentId + ConstantsPL.DELETED_BY_ANOTHER_CATEGORY_ADMIN);
+            equipmentList(ConstantsPL.COULD_NOT_FIND_EQUIPMENT_BY_ID + equipmentId + ConstantsPL.DELETED_BY_ANOTHER_EQUIPMENT_ADMIN);
         }
     }
 

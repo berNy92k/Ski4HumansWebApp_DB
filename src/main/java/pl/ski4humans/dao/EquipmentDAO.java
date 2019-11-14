@@ -52,4 +52,13 @@ public class EquipmentDAO extends JpaDAO<Equipment> implements GenericDAO<Equipm
     public long count() {
         return super.countByNamedQuery("Equipment.countAll");
     }
+
+    public List<Equipment> listAllByNameOrDescription(String search) {
+        Map<String, Object> parameters = new HashMap<>();
+        parameters.put("name", search);
+        parameters.put("shortDescription", search);
+        parameters.put("longDescription", search);
+
+        return super.findByNamedQueryWithMapOfParameters("Equipment.findAllByNameOrDescription", parameters);
+    }
 }

@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
@@ -14,7 +15,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Ski4Humans - home page - WELCOME</title>
+    <title>Ski4Humans - Home Page - WELCOME</title>
     <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 
@@ -113,47 +114,52 @@
         </div>
     </div>
 
-    <div>
+    <div style="margin-bottom: 30px">
         <div class="firstMessage">
             <div class="lineUnderMessage"></div>
             <p class="pTitle" style="font-size: 25px">SKLEP NARCIARSKI SKI4HUMANS.PL - NAJLEPSZY SPRZĘT DLA
                 NARCIARZY</p>
-            <p style="font-size: 14px;text-align: justify">Sklep Ski24 to ponad 20 lat doświadczeń związanych ze
-                sprzedażą sprzętu zimowego.
-                Dzięki ogromnej wiedzy,
-                pasji i determinacji z sukcesem budujemy pozycję lidera sprzedaży nart i sprzętu narciarskiego on-line w
-                Polsce. Każdego roku zdobywamy kolejne tysiące zadowolonych klientów. Jako pierwszy sklep narciarski w
-                Polsce rozpoczęliśmy sprzedaż nart carvingowych. Już od 1997 roku głęboko wierzyliśmy, że nie jest to
-                jedynie tymczasowa moda, ale przyszłość, dlatego rozpoczęliśmy szeroką edukację polskich narciarzy,
-                czego
-                efekty widać gołym okiem.
-
+            <p style="font-size: 14px;text-align: justify">Sklep Ski4Humans to ponad 20 lat doświadczeń związanych ze
+                sprzedażą sprzętu zimowego.<br>
+                Dzięki ogromnej wiedzy, pasji i determinacji z sukcesem budujemy pozycję lidera sprzedaży nart i sprzętu
+                narciarskiego on-line w Polsce. Każdego roku zdobywamy kolejne tysiące zadowolonych klientów. Jako
+                pierwszy sklep narciarski w Polsce rozpoczęliśmy sprzedaż nart carvingowych. Już od 1997 roku głęboko
+                wierzyliśmy, że nie jest to jedynie tymczasowa moda, ale przyszłość, dlatego rozpoczęliśmy szeroką
+                edukację polskich narciarzy, czego efekty widać gołym okiem.
+                <br><br>
                 Nasz sklep narciarski oferuje Państwu narty najlepszych producentów, wysokiej jakości buty narciarskie,
                 niezawodne i bezpieczne kaski, a także gogle i wiele innych akcesoriów niezbędnych na stoku. Znane marki
-                to
-                nasza mocna strona: Atomic, Head, Volkl, Dynastar, Rossignol, Salomon, Dalbello, Elan, Blizzard, Uvex,
-                Komperdell, Nordica, Dragon, to tylko niektóre z brandów, które znajdziesz w ofercie naszego sklepu.</p>
+                to nasza mocna strona: Atomic, Head, Volkl, Rossignol, Salomon, Uvex to tylko niektóre z brandów, które
+                znajdziesz w ofercie naszego sklepu.</p>
         </div>
 
-        <div class="firstMessage">
-            <div class="lineUnderMessage"></div>
-            <p class="pTitle" style="font-size: 25px">KATEGORIE PRODUKTÓW</p>
-            <p style="font-size: 14px;text-align: justify">Sklep Ski24 to ponad 20 lat doświadczeń związanych ze
-                sprzedażą sprzętu zimowego.
-                Dzięki ogromnej wiedzy,
-                pasji i determinacji z sukcesem budujemy pozycję lidera sprzedaży nart i sprzętu narciarskiego on-line w
-                Polsce. Każdego roku zdobywamy kolejne tysiące zadowolonych klientów. Jako pierwszy sklep narciarski w
-                Polsce rozpoczęliśmy sprzedaż nart carvingowych. Już od 1997 roku głęboko wierzyliśmy, że nie jest to
-                jedynie tymczasowa moda, ale przyszłość, dlatego rozpoczęliśmy szeroką edukację polskich narciarzy,
-                czego
-                efekty widać gołym okiem.
-
-                Nasz sklep narciarski oferuje Państwu narty najlepszych producentów, wysokiej jakości buty narciarskie,
-                niezawodne i bezpieczne kaski, a także gogle i wiele innych akcesoriów niezbędnych na stoku. Znane marki
-                to
-                nasza mocna strona: Atomic, Head, Volkl, Dynastar, Rossignol, Salomon, Dalbello, Elan, Blizzard, Uvex,
-                Komperdell, Nordica, Dragon, to tylko niektóre z brandów, które znajdziesz w ofercie naszego sklepu.</p>
-        </div>
+        <c:if test="${messageEmpty == false}">
+            <div class="firstMessage">
+                <div class="lineUnderMessage"></div>
+                <p class="pTitle" style="font-size: 25px">PRZYKŁADOWE NASZE PRODUKTY</p>
+                <div style="width: 95%; margin: 0 auto">
+                    <c:forEach var="equipment" items="${equipmentShortList}">
+                        <div style="width: 250px; border: 1px solid rgba(0,7,255,0.02); display: inline-block;
+                                    margin: 14px;">
+                            <div style="width: 145px; margin: 0 auto">
+                                <a href="viewEquipment?id=${equipment.equipmentId}">
+                                    <img class="book-small" src="data:image/jpg;base64,${equipment.base64Image}"
+                                         width="145px" alt="Podgląd sprzętu"/>
+                                </a>
+                            </div>
+                            <div style="text-align: center; vertical-align: center; margin-top: 5px">
+                                <div style="height: 115px">
+                                    <b style="font-size: 10px"> ${equipment.name}</b>
+                                </div>
+                                <div>
+                                    <b style="color: #bf0004;font-size: 10px">${equipment.price} [zł]</b>
+                                </div>
+                            </div>
+                        </div>
+                    </c:forEach>
+                </div>
+            </div>
+        </c:if>
     </div>
 
     <jsp:include page="../homepage/footerWithHelp.jsp"/>
