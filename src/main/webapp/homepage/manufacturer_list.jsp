@@ -23,7 +23,7 @@
 
 <div class="container">
     <header>
-        <jsp:include page="header.jsp"/>
+        <jsp:directive.include file="header.jsp"/>
     </header>
 
     <div style="width: 98%; margin: 0 auto">

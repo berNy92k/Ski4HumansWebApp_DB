@@ -36,7 +36,9 @@
 
         </div>
         <div class="card-body" style="height: 110px">
-            <button type="button" class="btn btn-lg btn-block btn-outline-primary">DOPASUJ SPRZĘT</button>
+            <a href="#">
+                <button type="button" class="btn btn-lg btn-block btn-outline-primary">DOPASUJ SPRZĘT</button>
+            </a>
         </div>
     </div>
     <div class="card mb-3 box-shadow">
@@ -50,7 +52,9 @@
                 z zakresu konserwacji sprzętu narciarskiego.</p>
         </div>
         <div class="card-body" style="height: 63px">
-            <button type="button" class="btn btn-lg btn-block btn-outline-primary">CZYTAJ WIĘCEJ</button>
+            <a href="#">
+                <button type="button" class="btn btn-lg btn-block btn-outline-primary">CZYTAJ WIĘCEJ</button>
+            </a>
         </div>
     </div>
     <div class="card mb-3 box-shadow">
@@ -64,7 +68,9 @@
                 tego samego dnia.</p>
         </div>
         <div class="card-body" style="height: 10px">
-            <button type="button" class="btn btn-lg btn-block btn-outline-primary">CZYTAJ WIĘCEJ</button>
+            <a href="#">
+                <button type="button" class="btn btn-lg btn-block btn-outline-primary">CZYTAJ WIĘCEJ</button>
+            </a>
         </div>
     </div>
 </div>

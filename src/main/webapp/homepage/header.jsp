@@ -16,8 +16,15 @@
     </div>
 
     <div style="font-size: 12px;">
-        <a href="logIn.jsp" style="margin-right: 15px">Zaloguj się</a>
-        <a href="register.jsp" style="color:red">Zarejestruj się</a>
+        <c:if test="${sessionScope.customerLogged != null}">
+            Witaj,
+            <c:out value="${sessionScope.customerLogged.email} || "/>
+            <a href="../homepage/logout">Wyloguj się</a>
+        </c:if>
+        <c:if test="${sessionScope.customerLogged == null}">
+            <a href="../homepage/login" style="margin-right: 15px">Zaloguj się</a>
+            <a href="../homepage/register" style="color:red">Zarejestruj się</a>
+        </c:if>
     </div>
 </div>
 
@@ -35,15 +42,17 @@
                     Szukaj
                 </button>
             </form>
-            <a href="#">
-                <img class="mb-2" src="../images/register.png" width="25" height="25" style="margin-top: 5px
+            <%--<c:if test="${sessionScope.customerLogged == null}">--%>
+                <a href="../homepage/register">
+                    <img class="mb-2" src="../images/register.png" width="25" height="25" style="margin-top: 5px
                          ;margin-left: 15px" alt="register">
-            </a>
-            <a href="#">
+                </a>
+            <%--</c:if>--%>
+            <a href="../homepage/myAccount">
                 <img class="mb-2" src="../images/mojeKonto.PNG" width="25" height="24" style="margin-top: 5px
                          ;margin-left: 15px" alt="mojeKonto">
             </a>
-            <a href="#">
+            <a href="../homepage/asdasdasdsa">
                 <img class="mb-2" src="../images/koszyk.PNG" width="25" height="25"
                      style="margin-top: 5px;margin-left: 15px" alt="koszyk">
             </a>

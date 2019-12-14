@@ -23,10 +23,10 @@
 
 <div class="container">
     <header>
-        <jsp:include page="header.jsp"/>
+        <jsp:directive.include file="header.jsp"/>
     </header>
 
-    <div style="width: 98%; margin: 30px auto 0;">
+    <div style="width: 98%; margin: 30px auto 40px;">
         <div style="display: flex">
             <div style="margin-right: 15px; width: 610px; border: 1px solid #0d0e48;">
                 <img src="data:image/jpg;base64, ${equipment.base64Image}" width="600px">
@@ -105,6 +105,8 @@
             </table>
         </div>
     </div>
+
+    <jsp:include page="../homepage/footerWithHelp.jsp"/>
 
     <footer>
         <div style="height: 30px"></div>
