@@ -5,6 +5,8 @@ import com.sun.istack.internal.NotNull;
 import javax.persistence.*;
 import java.util.Base64;
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "equipment",
@@ -63,10 +65,10 @@ public class Equipment {
     @NotNull
     @Column(name = "last_update_time")
     private Date lastUpdateTime;
-//    @NotNull
-//    @OneToMany(fetch = FetchType.EAGER,
-//            mappedBy = "review")
-//    private Set<Review> reviews = new HashSet<>();
+
+    @OneToMany(fetch = FetchType.EAGER,
+            mappedBy = "equipment")
+    private Set<Review> reviews = new HashSet<>();
 //    @NotNull
 //    @OneToMany(fetch = FetchType.EAGER,
 //            mappedBy = "skis")

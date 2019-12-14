@@ -72,9 +72,9 @@ public class EquipmentServices {
         }
 
         if (message != null) {
-            request.setAttribute("message", message);
+            request.setAttribute(ConstantsPL.MESSAGE, message);
         } else if (equipments != null && equipments.size() == 0) {
-            request.setAttribute("message", ConstantsPL.LACK_OF_EQUIPMENT_IN_DB);
+            request.setAttribute(ConstantsPL.MESSAGE, ConstantsPL.LACK_OF_EQUIPMENT_IN_DB);
             request.setAttribute("messageEmpty", true);
         } else {
             if (equipments != null) {
@@ -170,7 +170,7 @@ public class EquipmentServices {
     }
 
     private void equipmentIsCreated(String message) throws ServletException, IOException {
-        request.setAttribute("message", message);
+        request.setAttribute(ConstantsPL.MESSAGE, message);
 
         RequestDispatcher requestDispatcher = request.getRequestDispatcher(ConstantsPL.EQUIPMENT_IS_CREATED_URL);
         requestDispatcher.forward(request, response);

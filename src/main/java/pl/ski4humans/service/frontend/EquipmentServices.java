@@ -6,6 +6,7 @@ import pl.ski4humans.enums.CategoryEnum;
 import pl.ski4humans.enums.CategoryPLEnum;
 import pl.ski4humans.enums.SexEnum;
 import pl.ski4humans.enums.SexPLEnum;
+import pl.ski4humans.service.admin.ConstantsPL;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -53,7 +54,7 @@ public class EquipmentServices {
         }
 
         if (equipments != null && equipments.size() == 0) {
-            request.setAttribute("message", ConstantsFrontendPL.LACK_OF_EQUIPMENT_IN_DB);
+            request.setAttribute(ConstantsPL.MESSAGE, ConstantsFrontendPL.LACK_OF_EQUIPMENT_IN_DB);
             request.setAttribute("messageEmpty", true);
         } else {
             if (equipments != null) {

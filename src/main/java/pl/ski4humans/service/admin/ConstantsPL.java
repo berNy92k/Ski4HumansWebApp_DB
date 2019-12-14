@@ -2,6 +2,8 @@ package pl.ski4humans.service.admin;
 
 public interface ConstantsPL {
     String NULL = null;
+    String LOGGED_USER = "userEmail";
+    String MESSAGE = "message";
 
     // -------------- ADMIN/USER --------------
     // URL
@@ -10,6 +12,7 @@ public interface ConstantsPL {
     String ADMIN_URL = "/admin/";
     String ADMIN_LOGIN_URL = "/admin/login";
     String ADMIN_LOGIN_URL_JSP = "/admin/login.jsp";
+    String ADMIN_HOMEPAGE_URL_JSP = "/admin/index.jsp";
 
     // MESSAGES
     String NEW_USER_WAS_CREATED = "New user was created";
@@ -22,7 +25,6 @@ public interface ConstantsPL {
     String USER_LOGIN_FAILED = "Login failed";
     String USER_ADMIN_CAN_NOT_BE_DELETED_SQL_ADMIN = "The default admin user account with id = 1 cannot be deleted (It can be update only by SQL Administrator)";
     String USER_ADMIN_CAN_NOT_BE_UPDATED_SQL_ADMIN = "User can not be updated. User with id = 1 is impossible to update (It can be update only by SQL Administrator)";
-
 
 
     // -------------- ADMIN/CATEGORY --------------
@@ -76,4 +78,35 @@ public interface ConstantsPL {
     String DELETED_BY_ANOTHER_EQUIPMENT_ADMIN = ", or it might have been deleted by another admin.";
     String LACK_OF_EQUIPMENT_IN_DB = "Brak sprzętu w bazie.";
 
+
+    // -------------- ADMIN/CATEGORY --------------
+    // URL
+    String CUSTOMER_LIST_URL = "/admin/customer_list.jsp";
+    String CUSTOMER_CREATE_URL = "/admin/customer_create.jsp";
+    String CUSTOMER_VIEW_URL = "/admin/customer_view.jsp";
+
+    // MESSAGES
+    String NEW_CUSTOMER_WAS_CREATED = "New customer was created";
+    String CUSTOMER_WAS_UPDATED = "Customer was updated";
+    String CUSTOMER_WAS_NOT_UPDATED = "Customer was NOT updated. ";
+    String COULD_NOT_FIND_CUSTOMER_BY_ID = "Could not find customer with ID: ";
+    String CUSTOMER_NAME_ALREADY_EXIST_IN_DB = " --> Email of customer already exist in database";
+    String DELETED_BY_ANOTHER_CUSTOMER_ADMIN = ", or it might have been deleted by another admin.";
+    String CUSTOMER_WAS_DELETED = "Customer was deleted";
+
+
+    // -------------- ADMIN/REVIEW --------------
+    // URL
+    String REVIEW_LIST_URL = "/admin/review_list.jsp";
+    String REVIEW_CREATE_URL = "/admin/review_create.jsp";
+    String REVIEW_VIEW_URL = "/admin/review_view.jsp";
+
+    // MESSAGES
+    String NEW_REVIEW_WAS_CREATED = "New review was created";
+    String REVIEW_WAS_UPDATED = "Review was updated";
+    String REVIEW_WAS_NOT_UPDATED = "Review was NOT updated. ";
+    String COULD_NOT_FIND_REVIEW_BY_ID = "Could not find review with ID: ";
+    String REVIEW_WAS_DELETED = "Review was deleted";
+    String DELETED_BY_ANOTHER_REVIEW_ADMIN = ", or it might have been deleted by another admin.";
 }
+

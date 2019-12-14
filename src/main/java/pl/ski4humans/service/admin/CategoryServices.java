@@ -35,7 +35,7 @@ public class CategoryServices {
 
         request.setAttribute("categoryList", categories);
         if (message != null) {
-            request.setAttribute("message", message);
+            request.setAttribute(ConstantsPL.MESSAGE, message);
         }
 
         RequestDispatcher requestDispatcher = request.getRequestDispatcher(ConstantsPL.CATEGORY_LIST_URL);

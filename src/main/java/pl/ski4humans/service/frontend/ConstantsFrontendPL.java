@@ -3,14 +3,26 @@ package pl.ski4humans.service.frontend;
 public interface ConstantsFrontendPL {
     String NULL = null;
 
+    String MESSAGE = "message";
+
+    // ---------- LOGIN / REGISTER ----------
+    String LOGIN_FORM_PAGE = "/homepage/logIn.jsp";
+    String REGISTER_FORM_PAGE = "/homepage/register.jsp";
+    String LOGGED_CUSTOMER = "customerLogged";
+    String LOGIN_FAILED = "Zły email bądź hasło. Spróbuj ponownie";
+
+    String REGISTER_SUCCESS = "Rejestracja zakończona sukcesem. Zaloguj się.";
+    String REGISTER_FAILED = "Rejestracja nie zakończyła się sukcesem. Email istnieje w bazie.";
+
     // -------------- HOMEPAGE --------------
     // URL
     String HOMEPAGE_URL = "/homepage/index.jsp";
+    String HOMEPAGE_PAGE = "../";
 
     // MESSAGES
     String SEARCH_BY_WORD = "Wyszukane po słowie";
 
-    // -------------- MANUFACTURER --------------
+    // ------------- MANUFACTURER -------------
     // URL
     String MANUFACTURER_LIST_URL = "/homepage/manufacturer_list.jsp";
 

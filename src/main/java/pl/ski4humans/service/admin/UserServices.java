@@ -34,9 +34,9 @@ public class UserServices {
     public void userList(String message) throws ServletException, IOException {
         List<User> users = userDAO.listAll();
 
-        request.setAttribute("userList", users);
+        request.setAttribute("reviewList", users);
         if (message != null) {
-            request.setAttribute("message", message);
+            request.setAttribute(ConstantsPL.MESSAGE, message);
         }
 
         RequestDispatcher requestDispatcher = request.getRequestDispatcher(ConstantsPL.USER_LIST_URL);
@@ -130,12 +130,12 @@ public class UserServices {
 
         if (isCorrect) {
             HttpSession session = request.getSession();
-            session.setAttribute("userEmail", email);
+            session.setAttribute(ConstantsPL.LOGGED_USER, email);
 
             RequestDispatcher requestDispatcher = request.getRequestDispatcher(ConstantsPL.ADMIN_URL);
             requestDispatcher.forward(request, response);
         } else {
-            request.setAttribute("message", ConstantsPL.USER_LOGIN_FAILED);
+            request.setAttribute(ConstantsPL.MESSAGE, ConstantsPL.USER_LOGIN_FAILED);
 
             RequestDispatcher requestDispatcher = request.getRequestDispatcher(ConstantsPL.ADMIN_LOGIN_URL_JSP);
             requestDispatcher.forward(request, response);
@@ -144,7 +144,7 @@ public class UserServices {
 
     public void logoutAsAdministrator() throws ServletException, IOException {
         HttpSession session = request.getSession();
-        session.removeAttribute("userEmail");
+        session.removeAttribute(ConstantsPL.LOGGED_USER);
 
         RequestDispatcher requestDispatcher = request.getRequestDispatcher(ConstantsPL.ADMIN_LOGIN_URL_JSP);
         requestDispatcher.forward(request, response);

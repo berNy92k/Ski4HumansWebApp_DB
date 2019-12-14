@@ -33,7 +33,7 @@ public class ManufacturerServices {
 
         request.setAttribute("manufacturerList", manufacturers);
         if (manufacturers != null && manufacturers.size() == 0) {
-            request.setAttribute("message", ConstantsFrontendPL.LACK_OF_MANUFACTURER_IN_DB);
+            request.setAttribute(ConstantsPL.MESSAGE, ConstantsFrontendPL.LACK_OF_MANUFACTURER_IN_DB);
         }
 
         RequestDispatcher requestDispatcher = request.getRequestDispatcher(ConstantsFrontendPL.MANUFACTURER_LIST_URL);

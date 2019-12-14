@@ -39,7 +39,7 @@ public class ManufacturerServices {
 
         request.setAttribute("manufacturerList", manufacturers);
         if (message != null) {
-            request.setAttribute("message", message);
+            request.setAttribute(ConstantsPL.MESSAGE, message);
         }
 
         RequestDispatcher requestDispatcher = request.getRequestDispatcher(ConstantsPL.MANUFACTURER_LIST_URL);
