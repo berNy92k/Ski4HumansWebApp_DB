@@ -40,7 +40,7 @@ CREATE TABLE [CUSTOMER] (
   [city] varchar(32) NOT NULL,
   [country] varchar(64) NOT NULL,
   [phone_number] varchar(15) NOT NULL,
-  [zipcode] varchar(24) NOT NULL,
+  [zipCode] varchar(24) NOT NULL,
   [password] varchar(16) NOT NULL,
   [register_date] datetime NOT NULL
 )

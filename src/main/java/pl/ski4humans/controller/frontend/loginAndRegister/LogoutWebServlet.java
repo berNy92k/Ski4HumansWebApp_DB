@@ -1,6 +1,6 @@
-package pl.ski4humans.controller.admin.category;
+package pl.ski4humans.controller.frontend.loginAndRegister;
 
-import pl.ski4humans.service.admin.CategoryServices;
+import pl.ski4humans.service.frontend.CustomerServices;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -9,12 +9,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/admin/categories")
-public class ListCategoryServlet extends HttpServlet {
+@WebServlet("/homepage/logout")
+public class LogoutWebServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        CategoryServices categoryServices = new CategoryServices(req, resp);
-        categoryServices.categoryList();
+        CustomerServices customerServices = new CustomerServices(req, resp);
+        customerServices.logoutCustomer();
     }
 }

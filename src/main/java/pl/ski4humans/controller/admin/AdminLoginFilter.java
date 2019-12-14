@@ -24,7 +24,7 @@ public class AdminLoginFilter implements Filter {
         HttpServletRequest httpServletRequest = (HttpServletRequest) request;
         HttpSession session = httpServletRequest.getSession(false);
 
-        boolean loggedIn = session != null && session.getAttribute("userEmail") != null;
+        boolean loggedIn = session != null && session.getAttribute(ConstantsPL.LOGGED_USER) != null;
         String loginURI = httpServletRequest.getContextPath() + "/admin/login";
         boolean isTheSameURI = httpServletRequest.getRequestURI().equals(loginURI);
         boolean loginJspPage = httpServletRequest.getRequestURI().endsWith("/admin/login.jsp");
