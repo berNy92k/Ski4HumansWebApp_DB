@@ -36,24 +36,12 @@
             </a>
         </div>
         <div style="display: flex; justify-content: space-between; position: marker">
-            <form class="searchForm" action="#">
+            <form class="search" action="../search">
                 <input type="text" placeholder="Szukaj.." name="search" size="60"
                        style="font-weight: revert; border-radius: 15px; min-height: 35px;
                        max-height: 35px ;border-color: rgba(109,163,207,0.99)">
                 <button type="submit" style="border-radius: 15px;  min-height: 35px; max-height: 35px">Szukaj</button>
             </form>
-            <a href="#">
-                <img class="mb-2" src="../images/register.png" width="25" height="25" style="margin-top: 5px
-                         ;margin-left: 15px" alt="register">
-            </a>
-            <a href="#">
-                <img class="mb-2" src="../images/mojeKonto.PNG" width="25" height="24" style="margin-top: 5px
-                         ;margin-left: 15px" alt="mojeKonto">
-            </a>
-            <a href="#">
-                <img class="mb-2" src="../images/koszyk.PNG" width="25" height="25"
-                     style="margin-top: 5px;margin-left: 15px" alt="koszyk">
-            </a>
         </div>
     </div>
 
@@ -106,7 +94,7 @@
                     </button>
                     <div class="dropdown-content">
                         <a href="../admin/users">UŻYTKOWNICY</a>
-                        <a href="../admin/category">KATEGORIE</a>
+                        <a href="../admin/categories">KATEGORIE</a>
                         <a href="../admin/customers">KLIENCI</a>
                         <a href="../admin/reviews">RECENZJE</a>
                         <a href="../admin/orders">ZAMÓWIENIA</a>
