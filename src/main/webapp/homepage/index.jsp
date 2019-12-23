@@ -142,7 +142,7 @@
                         <div style="width: 250px; border: 1px solid rgba(0,7,255,0.02); display: inline-block;
                                     margin: 14px;">
                             <div style="width: 145px; margin: 0 auto">
-                                <a href="viewEquipment?id=${equipment.equipmentId}">
+                                <a href="../viewEquipment?id=${equipment.equipmentId}">
                                     <img class="book-small" src="data:image/jpg;base64,${equipment.base64Image}"
                                          width="145px" alt="Podgląd sprzętu"/>
                                 </a>

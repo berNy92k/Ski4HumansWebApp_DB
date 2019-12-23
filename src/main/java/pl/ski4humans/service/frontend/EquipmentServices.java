@@ -1,7 +1,9 @@
 package pl.ski4humans.service.frontend;
 
 import pl.ski4humans.dao.EquipmentDAO;
+import pl.ski4humans.dao.ReviewDAO;
 import pl.ski4humans.entity.Equipment;
+import pl.ski4humans.entity.Review;
 import pl.ski4humans.enums.CategoryEnum;
 import pl.ski4humans.enums.CategoryPLEnum;
 import pl.ski4humans.enums.SexEnum;
@@ -21,6 +23,7 @@ import java.util.List;
 
 public class EquipmentServices {
     private EquipmentDAO equipmentDAO;
+    private ReviewDAO reviewDAO;
     private HttpServletRequest request;
     private HttpServletResponse response;
 
@@ -30,6 +33,7 @@ public class EquipmentServices {
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("Ski4HumansWebApp");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         equipmentDAO = new EquipmentDAO(entityManager);
+        reviewDAO = new ReviewDAO(entityManager);
     }
 
     public void equipmentList() throws ServletException, IOException {
@@ -68,10 +72,28 @@ public class EquipmentServices {
 
     public void viewEquipment() throws ServletException, IOException {
         Integer equipmentId = Integer.valueOf(request.getParameter("id"));
+
         Equipment equipment = equipmentDAO.get(equipmentId);
+        List<Review> reviews = reviewDAO.findAllByEquipmentId(equipmentId);
 
         if (equipment != null) {
             request.setAttribute("equipment", equipment);
+        }
+
+        if (reviews != null && reviews.size() > 0) {
+            request.setAttribute("reviews", reviews);
+
+            int sum = 0;
+            for (Review review : reviews) {
+                sum = sum + review.getRating();
+            }
+            float reviewsAverage = (float) sum / reviews.size();
+
+            int fullStart = (int) reviewsAverage;
+            request.setAttribute("reviewsAverageFull", fullStart);
+
+            int halfStart = reviewsAverage > fullStart ? 1 : 0;
+            request.setAttribute("reviewsAverageHalf", halfStart);
         }
 
         RequestDispatcher requestDispatcher = request.getRequestDispatcher(ConstantsFrontendPL.EQUIPMENT_VIEW_URL);

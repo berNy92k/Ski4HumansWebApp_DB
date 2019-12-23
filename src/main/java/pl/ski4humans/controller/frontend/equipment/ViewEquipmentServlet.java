@@ -13,6 +13,12 @@ import java.io.IOException;
 public class ViewEquipmentServlet extends HttpServlet {
 
     @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+            throws ServletException, IOException {
+        doGet(req,resp);
+    }
+
+    @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
         EquipmentServices equipmentServices = new EquipmentServices(req, resp);

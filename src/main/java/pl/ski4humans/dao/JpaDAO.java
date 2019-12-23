@@ -70,7 +70,8 @@ public class JpaDAO<E> {
         return (List<E>) namedQuery.getResultList();
     }
 
-    protected List<E> findByNamedQueryWithMapOfParameters(String query, Map<String, Object> parameters) {
+    protected List<E> findByNamedQueryWithMapOfParameters(String query,
+                                                          Map<String, Object> parameters) {
         Query namedQuery = entityManager.createNamedQuery(query);
 
         for (Map.Entry<String, Object> stringStringEntry : parameters.entrySet()) {

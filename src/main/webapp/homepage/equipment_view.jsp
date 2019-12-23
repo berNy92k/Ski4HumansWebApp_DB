@@ -57,6 +57,31 @@
                         <img src="data:image/jpg;base64,${equipment.manufacturer.base64Image}" width="250px">
                     </div>
                 </div>
+                <div style="margin-bottom: 40px;display: flex">
+                    <div>
+                        <div>
+                            <h5>Ocena:</h5>
+                            <c:if test="${reviewsAverageFull != null}">
+                                <c:forEach begin="1" end="6" var="i">
+                                    <c:if test="${i <= reviewsAverageFull}">
+                                        <img src="../images/stars/fullStar.png" alt="fullStar" width="25px">
+                                    </c:if>
+                                    <c:if test="${i > reviewsAverageFull}">
+                                        <c:if test="${reviewsAverageHalf == 1 && i == (reviewsAverageFull + 1)}">
+                                            <img src="../images/stars/halfStar.png" alt="fullStar" width="25px">
+                                        </c:if>
+                                        <c:if test="${reviewsAverageHalf != 1 || i > (reviewsAverageFull + 1)}">
+                                            <img src="../images/stars/emptyStar.png" alt="fullStar" width="25px">
+                                        </c:if>
+                                    </c:if>
+                                </c:forEach>
+                            </c:if>
+                            <c:if test="${reviewsAverageFull == null}">
+                                Brak oceny
+                            </c:if>
+                        </div>
+                    </div>
+                </div>
                 <div style="margin-bottom: 40px; text-align: center">
                     <a href="#?eq=${equipment.equipmentId}">
                         <button type="button" class="btn btn-primary" id="cancel">
@@ -108,12 +133,87 @@
 
     <jsp:include page="../homepage/footerWithHelp.jsp"/>
 
+    <div style="clear: both; margin-top: 50px">
+        <table class="table table-striped" style="margin: 0 auto; width: 1200px; table-layout:fixed;
+                      white-space: normal !important; word-wrap: break-word">
+            <thead>
+            <tr>
+                <th scope="col">
+                    <div>
+                        <div style="display: flex">
+                            <div style="width: 990px;">
+                                <h5>Recenzja: </h5>
+                            </div>
+                            <c:if test="${sessionScope.customerLogged != null}">
+                                <div>
+                                    <a href="../homepage/preCreateReview?eqId=${equipment.equipmentId}">
+                                        <h7>Dodaj nową recenzję</h7>
+                                    </a>
+                                </div>
+                            </c:if>
+                        </div>
+                        <div style="display: flex; font-size: 10px">
+                            <div style="width: 295px;">Data wpisu:</div>
+                            <div style="margin-left: 5px; margin-right: 5px">|</div>
+                            <div style="width: 790px">Tytuł:</div>
+                            <div style="margin-left: 5px; margin-right: 5px">|</div>
+                            <div style="width: 195px;">Autor:</div>
+                        </div>
+                    </div>
+
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <c:if test="${reviews == null}">
+                <tr>
+                    <td>
+                        <div>
+                            Brak komentarzy.
+                        </div>
+                    </td>
+                </tr>
+            </c:if>
+            <c:if test="${reviews != null}">
+                <c:forEach items="${reviews}" var="review">
+                    <tr>
+                        <td>
+                            <div>
+                                <div style="display: flex">
+                                    <div style="width: 295px;">${review.reviewTime}</div>
+                                    <div style="margin-left: 5px; margin-right: 5px">|</div>
+                                    <div style="width: 790px">${review.headline}</div>
+                                    <div style="margin-left: 5px; margin-right: 5px">|</div>
+                                    <div style="width: 195px;">${review.customer.firstName} ${review.customer.lastName.substring(0,1)}.</div>
+                                </div>
+                                <div style="clear: both; display: flex; margin-top: 10px;">
+                                    <div style="width: 1090px;">${review.comment}</div>
+                                    <div style="margin-left: 5px; margin-right: 5px">|</div>
+                                    <div style="width: 195px">
+                                        Ocena:
+                                        <c:forEach begin="1" end="6" var="i">
+                                            <c:if test="${i <= review.rating}">
+                                                <img src="../images/stars/fullStar.png" alt="fullStar" width="12px">
+                                            </c:if>
+                                            <c:if test="${i > review.rating}">
+                                                <img src="../images/stars/emptyStar.png" alt="emptyStar" width="12px">
+                                            </c:if>
+                                        </c:forEach>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </c:forEach>
+            </c:if>
+            </tbody>
+        </table>
+    </div>
     <footer>
         <div style="height: 30px"></div>
         <jsp:include page="footer.jsp"/>
     </footer>
 </div>
-
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->

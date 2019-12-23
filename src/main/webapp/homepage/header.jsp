@@ -52,7 +52,7 @@
                 <img class="mb-2" src="../images/mojeKonto.PNG" width="25" height="24" style="margin-top: 5px
                          ;margin-left: 15px" alt="mojeKonto">
             </a>
-            <a href="../homepage/asdasdasdsa">
+            <a href="../homepage/shoppingCart">
                 <img class="mb-2" src="../images/koszyk.PNG" width="25" height="25"
                      style="margin-top: 5px;margin-left: 15px" alt="koszyk">
             </a>

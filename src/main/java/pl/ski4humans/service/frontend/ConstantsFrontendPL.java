@@ -37,4 +37,10 @@ public interface ConstantsFrontendPL {
     // MESSAGES
     String LACK_OF_EQUIPMENT_IN_DB = "Brak sprzętu w bazie - zapraszamy wkrótce";
 
+    // --------------- REVIEW ---------------
+    // URL
+    String REVIEW_HOMEPAGE_CREATE_URL = "/homepage/review_create.jsp";
+
+    // MESSAGES
+
 }

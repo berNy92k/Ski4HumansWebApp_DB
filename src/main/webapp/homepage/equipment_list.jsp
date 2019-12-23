@@ -52,9 +52,6 @@
                             </a>
                         </div>
                         <div>
-                            Rating *****
-                        </div>
-                        <div>
                             <b><i>${equipment.manufacturer.manufacturerName}</i></b>
                         </div>
                         <div style="height: 80px;"><i>${equipment.shortDescription}</i></div>

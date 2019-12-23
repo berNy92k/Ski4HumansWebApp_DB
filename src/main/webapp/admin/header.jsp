@@ -31,7 +31,7 @@
 <div class="header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
     <div style="display: flex; justify-content: space-between; margin-bottom: 40px">
         <div>
-            <a href="../homepage/index.jsp">
+            <a href="../admin/">
                 <img class="mb-2" src="../images/logoAdmin.png" width="330" height="30" alt="logo">
             </a>
         </div>

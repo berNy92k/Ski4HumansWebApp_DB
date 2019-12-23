@@ -40,4 +40,8 @@ public class ReviewDAO extends JpaDAO<Review> implements GenericDAO<Review> {
     public long count() {
         return super.countByNamedQuery("Review.countAll");
     }
+
+    public List<Review> findAllByEquipmentId(int equipmentId) {
+        return super.findByNamedQueryWithParameter("Review.findAllByEquipmentId", "equipmentId", equipmentId);
+    }
 }

@@ -9,7 +9,10 @@ import java.util.Date;
 @Table(name = "review")
 @NamedQueries({
         @NamedQuery(name = "Review.findAll", query = "SELECT r FROM Review r ORDER BY r.reviewId"),
-        @NamedQuery(name = "Review.countAll", query = "SELECT COUNT(r) FROM Review r")
+        @NamedQuery(name = "Review.countAll", query = "SELECT COUNT(r) FROM Review r"),
+        @NamedQuery(name = "Review.findAllByEquipmentId", query = "SELECT r FROM Review r " +
+                "WHERE r.equipment.equipmentId = :equipmentId " +
+                "ORDER BY r.reviewTime")
 })
 public class Review {
 
