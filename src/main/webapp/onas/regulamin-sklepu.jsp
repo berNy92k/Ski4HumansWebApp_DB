@@ -299,7 +299,7 @@
                 <li>Klient może również dokonać odbioru zamówionego towaru osobiście lub za pośrednictwem własnego
                     kuriera, po uprzednim ustaleniu terminu i sposobu ze Sprzedawcą.
                     <br><br>
-                    W tym celu jednak należy skontaktować się ze Sprzedawcą na adres mailowy: info@ski24.pl.
+                    W tym celu jednak należy skontaktować się ze Sprzedawcą na adres mailowy: info@ski4humans.pl.
                 </li>
                 <li>Klient nie ponosi kosztów dostawy w przypadku odbioru osobistego.</li>
             </ol>

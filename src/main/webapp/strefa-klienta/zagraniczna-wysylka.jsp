@@ -58,7 +58,7 @@
                     realizujemy wysyłkę.
                 </li>
                 <li>W razie realizacji większego zamówienia wymagającego większej paczki prosimy o złożenie zapytania o
-                    wycenę na adres mailowy info@ski24.pl
+                    wycenę na adres mailowy info@ski4humans.pl
                 </li>
                 <li>Wysyłkę krajową oraz poza granicę Polski realizujemy za pośrednictwem firmy kurierskiej GLS.
                 </li>

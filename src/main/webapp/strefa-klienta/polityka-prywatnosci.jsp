@@ -84,7 +84,7 @@
                     celów reklamy, badania rynku oraz zachowań i preferencji Klientów z przeznaczeniem wyników tych
                     badań na potrzeby polepszenia jakości usług świadczonych przez Sklep. Zgoda na otrzymywanie
                     informacji handlowej może być w każdym czasie cofnięta poprzez kliknięcie "rezygnuję" w stopce
-                    wiadomości e-mail lub wysyłając wiadomość mailową do sklepu (e-mail info@ski24.pl).
+                    wiadomości e-mail lub wysyłając wiadomość mailową do sklepu (e-mail info@ski4humans.pl).
                 </li>
                 <li>Klienci Sklepu mają prawo wglądu do swoich danych osobowych, poprawiania ich oraz żądania usunięcia
                     w każdym czasie.
@@ -185,7 +185,7 @@
                     gromadzenia, przetwarzania i wykorzystania Państwa danych osobowych, sprostowania, blokowania lub
                     usuwania danych, a także w celu odwołania udzielonych zgód lub wyrażenia sprzeciwu wobec
                     wykorzystywania danych w celach określonych w niniejszej polityce prywatności, prosimy o kontakt z
-                    administratorem danych: info@ski24.pl.<br><br>
+                    administratorem danych: info@ski4humans.pl.<br><br>
 
                     Prawo do wniesienia sprzeciwu<br><br>
 

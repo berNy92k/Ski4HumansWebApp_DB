@@ -81,9 +81,9 @@
             <div style="float: left; margin: 10px;padding: 10px;width: 255px; height: 250px">
                 <img src="../pic/lokalizacja.PNG" style="padding-bottom: 6px"><br>
                 NASZA LOKALIZACJA<br><br>
-                ski24.pl<br>
+                ski4humans.pl<br>
                 Biuro i magazyn sprzętu<br>
-                53-440 Wrocław<br>
+                53-440 Kraków<br>
                 Polska<br>
             </div>
             <div style="float: left; margin: 10px;padding: 10px;width: 255px; height: 250px">

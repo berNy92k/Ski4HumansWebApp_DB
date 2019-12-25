@@ -83,7 +83,7 @@
                     </div>
                 </div>
                 <div style="margin-bottom: 40px; text-align: center">
-                    <a href="#?eq=${equipment.equipmentId}">
+                    <a href="../homepage/addToShoppingCart?eq=${equipment.equipmentId}">
                         <button type="button" class="btn btn-primary" id="cancel">
                             DODAJ DO KOSZYKA
                         </button>

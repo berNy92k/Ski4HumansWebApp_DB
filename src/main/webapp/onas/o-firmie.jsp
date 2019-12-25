@@ -51,8 +51,7 @@
             <p style="font-size: 24px; padding-bottom: 20px">HISTORIA NASZEJ FIRMY</p>
             <p style="font-size: 14px">
                 Nie jest to strona firmy.<br>
-                Strona wykonana w celach treningowych (przećwiczenia języka Javy). Większość
-                tekstu (front) przekopiowana ze strony:<br>
+                Strona wykonana w celach treningowych. Większość tekstu (front) przekopiowana ze strony:<br>
                 <a href="https://ski24.pl">https://ski24.pl</a></p>
         </div>
     </div>

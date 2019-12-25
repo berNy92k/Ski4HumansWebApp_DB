@@ -43,4 +43,13 @@ public interface ConstantsFrontendPL {
 
     // MESSAGES
 
+    // --------------- SHOPPING CART ---------------
+    // URL
+    String SHOPPING_CART_HOMEPAGE_URL = "/homepage/shoppingCart.jsp";
+
+    // MESSAGES
+    String SHOPPING_CART_EQUIPMENT_WAS_ADDED = "Dodano nowy sprzęt do koszyka";
+    String SHOPPING_CART_EQUIPMENT_WAS_DELETED = "Usunięto sprzęt z koszyka";
+    String SHOPPING_CART_EQUIPMENT_WAS_UPDATED = "Dokonano aktualizacji sprzętu z koszyka - proszę o weryfikację ilości oraz kwoty";
+    String SHOPPING_CART_EQUIPMENT_WAS_CLEARED = "Wyczyszczono koszyk z zakupami";
 }

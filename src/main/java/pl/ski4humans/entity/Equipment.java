@@ -3,10 +3,7 @@ package pl.ski4humans.entity;
 import com.sun.istack.internal.NotNull;
 
 import javax.persistence.*;
-import java.util.Base64;
-import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 @Entity
 @Table(name = "equipment",
@@ -229,5 +226,18 @@ public class Equipment {
 
     public void setBase64Image(String base64Image) {
         this.base64Image = base64Image;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Equipment equipment = (Equipment) o;
+        return Objects.equals(equipmentId, equipment.equipmentId);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(equipmentId);
     }
 }
