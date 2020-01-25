@@ -1,4 +1,4 @@
-package pl.ski4humans.controller.frontend.shoppingCart.model;
+package pl.ski4humans.controller.frontend.shoppingCartAndPayment.model;
 
 import pl.ski4humans.entity.Equipment;
 
@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ShoppingCart {
-    private Map<Equipment, Integer> shoppingCart = null;
+    private Map<Equipment, Integer> shoppingCart;
 
     public ShoppingCart() {
         this.shoppingCart = new HashMap<>();
