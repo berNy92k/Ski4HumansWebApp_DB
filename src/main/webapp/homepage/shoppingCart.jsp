@@ -122,30 +122,32 @@
                     </c:if>
                 </table>
             </div>
-            <div>
-                <table style="border: 2px solid #2b57b4; border-radius: 10px; padding: 1ex;">
-                    <tr>
-                        <td>
-                            <button type="submit">Zaaktualizauj dane</button>
-                        </td>
-                        <td>
-                            <a href="../homepage/clear_shopping_cart">
-                                <input type="button" value="Wyczyść kartę"/>
-                            </a>
-                        </td>
-                        <td>
-                            <a href="${pageContext.request.contextPath}/">
-                                <input type="button" value="Kontynuuj zakupy"/>
-                            </a>
-                        </td>
-                        <td>
-                            <a href="../homepage/checkout">
-                                <input type="button" value="Zakup"/>
-                            </a>
-                        </td>
-                    </tr>
-                </table>
-            </div>
+            <c:if test="${cart.totalQuantityOfEquipments != 0}">
+                <div>
+                    <table style="border: 2px solid #2b57b4; border-radius: 10px; padding: 1ex;">
+                        <tr>
+                            <td>
+                                <button type="submit">Zaaktualizauj dane</button>
+                            </td>
+                            <td>
+                                <a href="../homepage/clear_shopping_cart">
+                                    <input type="button" value="Wyczyść kartę"/>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="${pageContext.request.contextPath}/">
+                                    <input type="button" value="Kontynuuj zakupy"/>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="../homepage/checkout">
+                                    <input type="button" value="Zakup"/>
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </c:if>
         </form>
 
         <footer>

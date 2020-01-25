@@ -38,7 +38,7 @@
                         <h3 style="color: #0d0e48">${customer.customerId}</h3>
                     </li>
                     <li class="list-group-item">
-                        <h4 style="color: #b60001">Cena:</h4> &nbsp;
+                        <h4 style="color: #b60001">Data rejestracji:</h4> &nbsp;
                         <h3 style="color: #0d0e48">${customer.registerDate}</h3>
                     </li>
                     <li class="list-group-item">

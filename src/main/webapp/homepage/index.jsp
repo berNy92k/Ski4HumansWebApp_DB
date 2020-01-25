@@ -58,6 +58,14 @@
                             <img src="../images/skiiPic/alpine_skiing_hafjell_photo_gisle_johnsen_9bcc93d0-4346-4704-a0a7-0fb9f287d63e.jpg"
                                  height="365" class="d-block w-100" alt="...">
                         </div>
+                        <div class="carousel-item">
+                            <img src="../images/skiiPic/i.jpg"
+                                 height="365" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../images/skiiPic/image.jpg"
+                                 height="365" class="d-block w-100" alt="...">
+                        </div>
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleControls1" role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -74,7 +82,11 @@
                     <div id="carouselExampleControls2" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="../images/skiiPic/alpine_skiing_hafjell_photo_gisle_johnsen_9bcc93d0-4346-4704-a0a7-0fb9f287d63e.jpg"
+                                <img src="../images/skiiPic/Webp.net-resizeimage(5).jpg"
+                                     height="365" width="345" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../images/skiiPic/Webp.net-resizeimage(6).jpg"
                                      height="365" width="345" class="d-block w-100" alt="...">
                             </div>
                         </div>
@@ -94,7 +106,11 @@
                     <div id="carouselExampleControls3" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="../images/skiiPic/alpine_skiing_hafjell_photo_gisle_johnsen_9bcc93d0-4346-4704-a0a7-0fb9f287d63e.jpg"
+                                <img src="../images/skiiPic/Webp.net-resizeimage(4).jpg"
+                                     height="365" width="345" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../images/skiiPic/Webp.net-resizeimage(3).jpg"
                                      height="365" width="345" class="d-block w-100" alt="...">
                             </div>
                         </div>

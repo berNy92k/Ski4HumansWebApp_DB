@@ -42,16 +42,18 @@
                     Szukaj
                 </button>
             </form>
-            <%--<c:if test="${sessionScope.customerLogged == null}">--%>
+            <c:if test="${sessionScope.customerLogged == null}">
                 <a href="../homepage/register">
                     <img class="mb-2" src="../images/register.png" width="25" height="25" style="margin-top: 5px
                          ;margin-left: 15px" alt="register">
                 </a>
-            <%--</c:if>--%>
-            <a href="../homepage/myAccount">
-                <img class="mb-2" src="../images/mojeKonto.PNG" width="25" height="24" style="margin-top: 5px
+            </c:if>
+            <c:if test="${sessionScope.customerLogged != null}">
+                <a href="../homepage/myAccount">
+                    <img class="mb-2" src="../images/mojeKonto.PNG" width="25" height="24" style="margin-top: 5px
                          ;margin-left: 15px" alt="mojeKonto">
-            </a>
+                </a>
+            </c:if>
             <a href="../homepage/shoppingCart">
                 <img class="mb-2" src="../images/koszyk.PNG" width="25" height="25"
                      style="margin-top: 5px;margin-left: 15px" alt="koszyk">
