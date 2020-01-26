@@ -31,9 +31,9 @@ Below you will be able to see short description with images for:
 ### 4.1 Homepage - for users
 Screens with homepage view for clients/ users.
 
-![GitHub Logo](src\main\webapp\images\websiteScreens\homepage1.PNG)
-![GitHub Logo](src\main\webapp\images\websiteScreens\homepage2.PNG)
-![GitHub Logo](src\main\webapp\images\websiteScreens\homepage3.PNG)
+![GitHub Logo](src/main/webapp/images/websiteScreens/homepage1.PNG)
+![GitHub Logo](src/main/webapp/images/websiteScreens/homepage2.PNG)
+![GitHub Logo](src/main/webapp/images/websiteScreens/homepage3.PNG)
 ##### 4.1.1  Homepage - select
 User can choose the type of equipment and gender.
 
@@ -51,55 +51,55 @@ User can choose the type of equipment and gender.
  - For Women
  - For Childen
 
-![GitHub Logo](src\main\webapp\images\websiteScreens\homepage_selector.PNG)
+![GitHub Logo](src/main/webapp/images/websiteScreens/homepage_selector.PNG)
 
 ##### 4.1.2  Homepage - example after select type with gender - when equipments exist in DB
-![GitHub Logo](src\main\webapp\images\websiteScreens\homepage_selected_example.PNG)
+![GitHub Logo](src/main/webapp/images/websiteScreens/homepage_selected_example.PNG)
 
 ##### 4.1.2  Homepage - example after select type with gender - when equipments not exist in DB
-![GitHub Logo](src\main\webapp\images\websiteScreens\homepage_selected_not_exist_example.PNG)
+![GitHub Logo](src/main/webapp/images/websiteScreens/homepage_selected_not_exist_example.PNG)
 
 ##### 4.1.2  Homepage - example of manufacturers
-![GitHub Logo](src\main\webapp\images\websiteScreens\homepage_selected_manufacturers_example.PNG)
+![GitHub Logo](src/main/webapp/images/websiteScreens/homepage_selected_manufacturers_example.PNG)
 
 ##### 4.1.2  Homepage - example of search button
-![GitHub Logo](src\main\webapp\images\websiteScreens\homepage_fill_search.PNG)
+![GitHub Logo](src/main/webapp/images/websiteScreens/homepage_fill_search.PNG)
 
-![GitHub Logo](src\main\webapp\images\websiteScreens\homepage_search_example.PNG)
+![GitHub Logo](src/main/webapp/images/websiteScreens/homepage_search_example.PNG)
 
 ##### 4.1.2  Homepage - login page
-![GitHub Logo](src\main\webapp\images\websiteScreens\homepage_log_in_page.PNG)
+![GitHub Logo](src/main/webapp/images/websiteScreens/homepage_log_in_page.PNG)
 
-![GitHub Logo](src\main\webapp\images\websiteScreens\homepage_logged.PNG)
+![GitHub Logo](src/main/webapp/images/websiteScreens/homepage_logged.PNG)
 
 ##### 4.1.2  Homepage - register page
-![GitHub Logo](src\main\webapp\images\websiteScreens\homepage_register_page.PNG)
+![GitHub Logo](src/main/webapp/images/websiteScreens/homepage_register_page.PNG)
 
 ##### 4.1.2  Homepage - select
-![GitHub Logo](src\main\webapp\images\websiteScreens\homepage_empty_shopping_cart.PNG)
+![GitHub Logo](src/main/webapp/images/websiteScreens/homepage_empty_shopping_cart.PNG)
 
 ##### 4.1.2  Homepage - select
-![GitHub Logo](src\main\webapp\images\websiteScreens\homepage_not_empty_shopping_cart.PNG)
+![GitHub Logo](src/main/webapp/images/websiteScreens/homepage_not_empty_shopping_cart.PNG)
 
 ##### 4.1.2  Homepage - select
-![GitHub Logo](src\main\webapp\images\websiteScreens\homepage_message_shopping_cart.PNG)
+![GitHub Logo](src/main/webapp/images/websiteScreens/homepage_message_shopping_cart.PNG)
 
 ##### 4.1.2  Homepage - select
-![GitHub Logo](src\main\webapp\images\websiteScreens\homepage_equipment_detail.PNG)
+![GitHub Logo](src/main/webapp/images/websiteScreens/homepage_equipment_detail.PNG)
 
-![GitHub Logo](src\main\webapp\images\websiteScreens\homepage_equipment_detail2_with_reviews.PNG)
-
-##### 4.1.2  Homepage - select
-![GitHub Logo](src\main\webapp\images\websiteScreens\homepage_not_empty_shopping_cart.PNG)
+![GitHub Logo](src/main/webapp/images/websiteScreens/homepage_equipment_detail2_with_reviews.PNG)
 
 ##### 4.1.2  Homepage - select
-![GitHub Logo](src\main\webapp\images\websiteScreens\homepage_shopping_cart_payment.PNG)
+![GitHub Logo](src/main/webapp/images/websiteScreens/homepage_not_empty_shopping_cart.PNG)
 
 ##### 4.1.2  Homepage - select
-![GitHub Logo](src\main\webapp\images\websiteScreens\homepage_shopping_cart_payment1.PNG)
+![GitHub Logo](src/main/webapp/images/websiteScreens/homepage_shopping_cart_payment.PNG)
 
 ##### 4.1.2  Homepage - select
-![GitHub Logo](src\main\webapp\images\websiteScreens\homepage_shopping_cart_payment2.PNG)
+![GitHub Logo](src/main/webapp/images/websiteScreens/homepage_shopping_cart_payment1.PNG)
+
+##### 4.1.2  Homepage - select
+![GitHub Logo](src/main/webapp/images/websiteScreens/homepage_shopping_cart_payment2.PNG)
 
 
 ### 4.2 Homepage - for admins
@@ -108,7 +108,7 @@ Screens with homepage view for admins
 ##### 4.1.2  Homepage - login page
 Before admin will be able to do anything it is necessary to login.
 
-![GitHub Logo](src\main\webapp\images\websiteScreens\admin_homepage.PNG)
+![GitHub Logo](src/main/webapp/images/websiteScreens/admin_homepage.PNG)
 
 ##### 4.1.2  Homepage - admin
 User can choose the type of equipment/gender and other information important for administrators.
@@ -133,7 +133,7 @@ User can choose the type of equipment/gender and other information important for
  - For Women
  - For Childen
  
-![GitHub Logo](src\main\webapp\images\websiteScreens\admin_homepage_after_login.PNG)
+![GitHub Logo](src/main/webapp/images/websiteScreens/admin_homepage_after_login.PNG)
 
 
 
