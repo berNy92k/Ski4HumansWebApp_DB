@@ -7,33 +7,11 @@ _It is not website for any existing shop_
 - [Introduction](#1-Introduction)
 - [Table of Contents](#2-Table-of-Contents)
 - [How to run ?](#3-how-to-run-)
-- [Properties](#4-Properties)
-  - [General properties](#41-generalproperties)
-    - [disable.enable.export.or.import.data](#411--disableenableexportorimportdata)
-    - [save.to.file.used.sql.queries](#412--savetofileusedsqlqueries)
-    - [source.db.server](#413--sourcedbserver)
-    - [source.db.port](#414--sourcedbport)
-    - [source.db.name](#415--sourcedbname)
-    - [source.db.user](#416--sourcedbuser)
-    - [source.db.password](#417--sourcedbpassword)
-    - [table.name](#418--tablename)
-    - [column.name](#419--columnname)
-    - [ids](#4110-ids)
-    - [path.to.masking.file](#4111-pathtomaskingfile)
-    - [old.files.with.sql.scripts](#4112-oldfileswithsqlscripts)
-    - [save.to.file.delete.rows.in.one.query](#4113-savetofiledeleterowsinonequery)
-    - [save.to.file.insert.rows.in.one.query](#4114-savetofileinsertrowsinonequery)
-    - [destination.db.server](#4115-destinationdbserver)
-    - [destination.db.port](#4116-destinationdbport)
-    - [destination.db.name](#4117-destinationdbname)
-    - [destination.db.user](#4118-destinationdbuser)
-    - [destination.db.password](#4119-destinationdbpassword)
-  - [Masking properties](#42-maskingproperties)
-    - [masking.type](#421-maskingtype)
-    - [masking.type.path](#422-maskingtypepath)
-    - [mask.clob.type](#423-maskclobtype)
-    - [mask.blob.type](#424-maskblobtype)
-  - [File with table/columns to mask](#43-listoftablesandcolumnstomasktxt)
+- [Description of user pages and admin pages](#4-Description-of-user-pages-and-admin-pages)
+  - [Homepage - for users](#41-Homepage-for-users)
+  - [Homepage - for users](#41-Homepage-for-users)
+  - [Homepage - for users](#41-Homepage-for-users)
+  - [Homepage - for users](#41-Homepage-for-users)
 - [TODO list](#5-TODO-list)
 
 ## 3 How to run ?
@@ -44,29 +22,121 @@ or
 
 use link from heroku: TODO
 
-## 4 Properties
-All properties must be in 'properties' directory (in root directory).
+## 4 Description of user pages and admin pages
+Below you will be able to see short description with images for:
 
-Main settings for this application have to be in properties/database/ and name of this file is general.properties.
-Application have option to mask chosen data. Settings for masking part have to be in properties/masking/ and names fo this files are masking.properties and listOfTablesAndColumnsToMask.txt.
+- user pages
+- admin pages
 
-```
-properties
-   database
-       general.properties
-   masking
-       listOfTablesAndColumnsToMask.txt
-       masking.properties
-```
-More detail about properties files are below.
+### 4.1 Homepage - for users
+Screens with homepage view for clients/ users.
 
-### 4.1 general.properties
-Main file with settings for this application.
-##### 4.1.1  disable.enable.export.or.import.data
-    User decide here if run import or export
-    
-##### 4.1.2  save.to.file.used.sql.queries
-    User decide here if all used sql queries will be saved to file
+![GitHub Logo](src\main\webapp\images\websiteScreens\homepage1.PNG)
+![GitHub Logo](src\main\webapp\images\websiteScreens\homepage2.PNG)
+![GitHub Logo](src\main\webapp\images\websiteScreens\homepage3.PNG)
+##### 4.1.1  Homepage - select
+User can choose the type of equipment and gender.
+
+ *the type of equipment 
+ - skis
+ - ski boots
+ - ski poles
+ - ski goggles
+ - ski gloves
+ - thermoactive clothing
+ - manufacturers
+ 
+ *gender
+ - For Men
+ - For Women
+ - For Childen
+
+![GitHub Logo](src\main\webapp\images\websiteScreens\homepage_selector.PNG)
+
+##### 4.1.2  Homepage - example after select type with gender - when equipments exist in DB
+![GitHub Logo](src\main\webapp\images\websiteScreens\homepage_selected_example.PNG)
+
+##### 4.1.2  Homepage - example after select type with gender - when equipments not exist in DB
+![GitHub Logo](src\main\webapp\images\websiteScreens\homepage_selected_not_exist_example.PNG)
+
+##### 4.1.2  Homepage - example of manufacturers
+![GitHub Logo](src\main\webapp\images\websiteScreens\homepage_selected_manufacturers_example.PNG)
+
+##### 4.1.2  Homepage - example of search button
+![GitHub Logo](src\main\webapp\images\websiteScreens\homepage_fill_search.PNG)
+
+![GitHub Logo](src\main\webapp\images\websiteScreens\homepage_search_example.PNG)
+
+##### 4.1.2  Homepage - login page
+![GitHub Logo](src\main\webapp\images\websiteScreens\homepage_log_in_page.PNG)
+
+![GitHub Logo](src\main\webapp\images\websiteScreens\homepage_logged.PNG)
+
+##### 4.1.2  Homepage - register page
+![GitHub Logo](src\main\webapp\images\websiteScreens\homepage_register_page.PNG)
+
+##### 4.1.2  Homepage - select
+![GitHub Logo](src\main\webapp\images\websiteScreens\homepage_empty_shopping_cart.PNG)
+
+##### 4.1.2  Homepage - select
+![GitHub Logo](src\main\webapp\images\websiteScreens\homepage_not_empty_shopping_cart.PNG)
+
+##### 4.1.2  Homepage - select
+![GitHub Logo](src\main\webapp\images\websiteScreens\homepage_message_shopping_cart.PNG)
+
+##### 4.1.2  Homepage - select
+![GitHub Logo](src\main\webapp\images\websiteScreens\homepage_equipment_detail.PNG)
+
+![GitHub Logo](src\main\webapp\images\websiteScreens\homepage_equipment_detail2_with_reviews.PNG)
+
+##### 4.1.2  Homepage - select
+![GitHub Logo](src\main\webapp\images\websiteScreens\homepage_not_empty_shopping_cart.PNG)
+
+##### 4.1.2  Homepage - select
+![GitHub Logo](src\main\webapp\images\websiteScreens\homepage_shopping_cart_payment.PNG)
+
+##### 4.1.2  Homepage - select
+![GitHub Logo](src\main\webapp\images\websiteScreens\homepage_shopping_cart_payment1.PNG)
+
+##### 4.1.2  Homepage - select
+![GitHub Logo](src\main\webapp\images\websiteScreens\homepage_shopping_cart_payment2.PNG)
+
+
+### 4.2 Homepage - for admins
+Screens with homepage view for admins
+
+##### 4.1.2  Homepage - login page
+Before admin will be able to do anything it is necessary to login.
+
+![GitHub Logo](src\main\webapp\images\websiteScreens\admin_homepage.PNG)
+
+##### 4.1.2  Homepage - admin
+User can choose the type of equipment/gender and other information important for administrators.
+
+ *the type of equipment 
+ - skis
+ - ski boots
+ - ski poles
+ - ski goggles
+ - ski gloves
+ - thermoactive clothing
+ - manufacturers
+ - other information
+   - users
+   - category
+   - clients
+   - reviews
+   - orders
+ 
+ *gender
+ - For Men
+ - For Women
+ - For Childen
+ 
+![GitHub Logo](src\main\webapp\images\websiteScreens\admin_homepage_after_login.PNG)
+
+
+
 
 ## 5 TODO list
 * **IMPORTANT.** Make refactoring of frontend code - right now there is a mess 
