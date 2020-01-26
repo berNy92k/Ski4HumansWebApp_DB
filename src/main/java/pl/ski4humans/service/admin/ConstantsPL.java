@@ -108,5 +108,17 @@ public interface ConstantsPL {
     String COULD_NOT_FIND_REVIEW_BY_ID = "Could not find review with ID: ";
     String REVIEW_WAS_DELETED = "Review was deleted";
     String DELETED_BY_ANOTHER_REVIEW_ADMIN = ", or it might have been deleted by another admin.";
+
+    // -------------- ADMIN/ORDER --------------
+    String ORDER_LIST_URL = "/admin/order_list.jsp";
+    String ORDER_VIEW_URL = "/admin/order_view.jsp";
+
+    // MESSAGES
+    String NEW_ORDER_WAS_CREATED = "New order was created";
+    String ORDER_WAS_UPDATED = "Order was updated";
+    String ORDER_WAS_NOT_UPDATED = "Order was NOT updated. ";
+    String COULD_NOT_FIND_ORDER_BY_ID = "Could not find order with ID: ";
+    String ORDER_WAS_DELETED = "Order was deleted";
+    String DELETED_BY_ANOTHER_ORDER_ADMIN = ", or it might have been deleted by another admin.";
 }
 

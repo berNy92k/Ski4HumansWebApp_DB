@@ -46,10 +46,19 @@ public interface ConstantsFrontendPL {
     // --------------- SHOPPING CART ---------------
     // URL
     String SHOPPING_CART_HOMEPAGE_URL = "/homepage/shoppingCart.jsp";
+    String SHOPPING_CART_CHECKOUT_HOMEPAGE_URL = "/homepage/shoppingCartCheckout.jsp";
+    String SHOPPING_CART_FINAL_CHECKOUT_HOMEPAGE_URL = "/homepage/shoppingCartFinalCheckout.jsp";
+    String PAYMENT_HOMEPAGE_URL = "/homepage/payment.jsp";
 
     // MESSAGES
     String SHOPPING_CART_EQUIPMENT_WAS_ADDED = "Dodano nowy sprzęt do koszyka";
     String SHOPPING_CART_EQUIPMENT_WAS_DELETED = "Usunięto sprzęt z koszyka";
     String SHOPPING_CART_EQUIPMENT_WAS_UPDATED = "Dokonano aktualizacji sprzętu z koszyka - proszę o weryfikację ilości oraz kwoty";
     String SHOPPING_CART_EQUIPMENT_WAS_CLEARED = "Wyczyszczono koszyk z zakupami";
+    String SHOPPING_CART_CUSTOMER_NOT_LOGGED = "Użytkownik nie jest zalogowny. " +
+            "Proszę o zalogowanie się a następnie powtórzenie czynności.";
+    String TRANSACTION_FINISHED_WITH_SUCCESFULL = "Zamówienie przyjęte. " +
+            "W ciąglu kilku najbliższych dniach przesyłka zostanie do Ciebie dostarczona " +
+            "o czym zostaniesz poinformowany mailowo.";
+    String TRANSACTION_FAILED = "Błąd w trakcie transakcji.";
 }

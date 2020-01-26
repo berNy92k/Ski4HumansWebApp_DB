@@ -34,7 +34,7 @@ public class UserServices {
     public void userList(String message) throws ServletException, IOException {
         List<User> users = userDAO.listAll();
 
-        request.setAttribute("reviewList", users);
+        request.setAttribute("userList", users);
         if (message != null) {
             request.setAttribute(ConstantsPL.MESSAGE, message);
         }
