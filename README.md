@@ -9,9 +9,40 @@ _It is not website for any existing shop_
 - [How to run ?](#3-how-to-run-)
 - [Description of user pages and admin pages](#4-Description-of-user-pages-and-admin-pages)
   - [Homepage - for users](#41-Homepage-for-users)
+    - [Homepage - Navigation Bar](#411-Homepage-navigation-Bar)
+    - [Homepage - Equipment exist in DB](#412-Homepage-Equipment-exist-in-DB)
+    - [Homepage - Equipment not exist in DB](#413-Equipment-not-exist-in-DB)
+    - [Homepage - Manufacturers](#414-Homepage-Manufacturers)
+    - [Homepage - Search Button](#415-Homepage-Search-Button)
+    - [Homepage - Login page](#416-Homepage-Login-page)
+    - [Homepage - Register page](#417-Homepage-Register-page)
+    - [Homepage - Shopping cart](#418-Homepage-Shopping-cart)
+    - [Homepage - Shopping cart empty](#419-Homepage-Shopping-cart-empty)
+    - [Homepage - Shopping cart - continue order without logging](#4110-Homepage-Shopping-cart-continue-order-without-logging)
+    - [Homepage - Equipment View](#4111-Homepage-Equipment-View)
+    - [Homepage - Shopping cart - continue order when logged - part 1](#4112-Homepage-Shopping-cart-continue-order-when-logged-part-1)
+    - [Homepage - Shopping cart - continue order when logged - part 2](#4113-Homepage-Shopping-cart-continue-order-when-logged-part-2)
+    - [Homepage - Shopping cart - continue order when logged - part 3](#4114-Homepage-Shopping-cart-continue-order-when-logged-part-3)
   - [Homepage - for users](#41-Homepage-for-users)
-  - [Homepage - for users](#41-Homepage-for-users)
-  - [Homepage - for users](#41-Homepage-for-users)
+    - [](#41-Homepage-for-users)
+    - [](#41-Homepage-for-users)
+    - [](#41-Homepage-for-users)
+    - [](#41-Homepage-for-users)
+    - [](#41-Homepage-for-users)
+    - [](#41-Homepage-for-users)
+    - [](#41-Homepage-for-users)
+    - [](#41-Homepage-for-users)
+    - [](#41-Homepage-for-users)
+    - [](#41-Homepage-for-users)
+    - [](#41-Homepage-for-users)
+    - [](#41-Homepage-for-users)
+    - [](#41-Homepage-for-users)
+    - [](#41-Homepage-for-users)
+    - [](#41-Homepage-for-users)
+    - [](#41-Homepage-for-users)
+    - [](#41-Homepage-for-users)
+    - [](#41-Homepage-for-users)
+    - [](#41-Homepage-for-users)
 - [TODO list](#5-TODO-list)
 
 ## 3 How to run ?
@@ -54,7 +85,7 @@ User can choose the type of equipment and gender.
 
 ![GitHub Logo](src/main/webapp/images/websiteScreens/homepage_selector.PNG)
 
-##### 4.1.2  Homepage - Equipment not exist in DB 
+##### 4.1.2  Homepage - Equipment exist in DB 
 Example after select equipment type with gender - when equipments exist in DB
 
 ![GitHub Logo](src/main/webapp/images/websiteScreens/homepage_selected_example.PNG)
@@ -76,14 +107,14 @@ Example how search button is working.
 
 ![GitHub Logo](src/main/webapp/images/websiteScreens/homepage_search_example.PNG)
 
-##### 4.1.6  Homepage - login page
+##### 4.1.6  Homepage - Login page
 Example of login page. Necessary to finish order in the shop.
 
 ![GitHub Logo](src/main/webapp/images/websiteScreens/homepage_log_in_page.PNG)
 
 ![GitHub Logo](src/main/webapp/images/websiteScreens/homepage_logged.PNG)
 
-##### 4.1.7  Homepage - register page
+##### 4.1.7  Homepage - Register page
 Example of register page. Necessary to login and finish order in the shop.
 
 ![GitHub Logo](src/main/webapp/images/websiteScreens/homepage_register_page.PNG)
@@ -120,7 +151,7 @@ Client should check if all data are correct and press 'Przejdź dalej'.
 
 ![GitHub Logo](src/main/webapp/images/websiteScreens/homepage_shopping_cart_payment1.PNG)
 
-##### 4.1.2  Homepage - Shopping cart - continue order when logged - part 3
+##### 4.1.14  Homepage - Shopping cart - continue order when logged - part 3
 Order is finished. Message with this information is display on the screen.
 
 ![GitHub Logo](src/main/webapp/images/websiteScreens/homepage_shopping_cart_payment2.PNG)
@@ -215,13 +246,13 @@ Can not delete/ update main ADMIN account - it will throw error if somebody will
 ##### 4.2.16  Homepage - Navigation Bar - part 8 - Orders
 ![GitHub Logo](src/main/webapp/images/websiteScreens/admin_orders.PNG)
 
-##### 4.1.2  Homepage - Orders View Page
+##### 4.1.17  Homepage - Orders View Page
 ![GitHub Logo](src/main/webapp/images/websiteScreens/admin_orders_view.PNG)
 
-##### 4.1.2  Homepage - Users View Page
+##### 4.1.18  Homepage - Users View Page
 ![GitHub Logo](src/main/webapp/images/websiteScreens/admin_users_view.PNG)
 
-##### 4.1.2  Homepage - Page not exist/ DB error
+##### 4.1.19  Homepage - Page not exist/ DB error
 
 Page not exist:
 
