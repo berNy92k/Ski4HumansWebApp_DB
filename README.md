@@ -245,13 +245,13 @@ Can not delete/ update main ADMIN account - it will throw error if somebody will
 ##### 4.2.16 Homepage - Navigation Bar - part 8 - Orders
 ![GitHub Logo](src/main/webapp/images/websiteScreens/admin_orders.PNG)
 
-##### 4.1.17 Homepage - Orders View Page
+##### 4.2.17 Homepage - Orders View Page
 ![GitHub Logo](src/main/webapp/images/websiteScreens/admin_orders_view.PNG)
 
-##### 4.1.18 Homepage - Users View Page
+##### 4.2.18 Homepage - Users View Page
 ![GitHub Logo](src/main/webapp/images/websiteScreens/admin_users_view.PNG)
 
-##### 4.1.19 Homepage - Page not exist/ DB error
+##### 4.2.19 Homepage - Page not exist/ DB error
 
 Page not exist:
 
