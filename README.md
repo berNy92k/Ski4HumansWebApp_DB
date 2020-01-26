@@ -8,7 +8,7 @@ _It is not website for any existing shop_
 - [Table of Contents](#2-Table-of-Contents)
 - [How to run ?](#3-how-to-run-)
 - [Description of user pages and admin pages](#4-Description-of-user-pages-and-admin-pages)
-  - [Homepage - for users](#41-Homepage-for-users)
+  - [Homepage - for users](#41-Homepage---for-users)
     - [Homepage - Navigation Bar](#411-Homepage-navigation-Bar)
     - [Homepage - Equipment exist in DB](#412-Homepage-Equipment-exist-in-DB)
     - [Homepage - Equipment not exist in DB](#413-Equipment-not-exist-in-DB)
