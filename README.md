@@ -8,21 +8,21 @@ _It is not website for any existing shop_
 - [Table of Contents](#2-Table-of-Contents)
 - [How to run ?](#3-how-to-run-)
 - [Description of user pages and admin pages](#4-Description-of-user-pages-and-admin-pages)
-  - [Homepage - for users](#41--Homepage---for-users)
-    - [Homepage - Navigation Bar](#411-Homepage-navigation-Bar)
-    - [Homepage - Equipment exist in DB](#412-Homepage-Equipment-exist-in-DB)
-    - [Homepage - Equipment not exist in DB](#413-Equipment-not-exist-in-DB)
-    - [Homepage - Manufacturers](#414-Homepage-Manufacturers)
-    - [Homepage - Search Button](#415-Homepage-Search-Button)
-    - [Homepage - Login page](#416-Homepage-Login-page)
-    - [Homepage - Register page](#417-Homepage-Register-page)
-    - [Homepage - Shopping cart](#418-Homepage-Shopping-cart)
-    - [Homepage - Shopping cart empty](#419-Homepage-Shopping-cart-empty)
-    - [Homepage - Shopping cart - continue order without logging](#4110-Homepage-Shopping-cart-continue-order-without-logging)
-    - [Homepage - Equipment View](#4111-Homepage-Equipment-View)
-    - [Homepage - Shopping cart - continue order when logged - part 1](#4112-Homepage-Shopping-cart-continue-order-when-logged-part-1)
-    - [Homepage - Shopping cart - continue order when logged - part 2](#4113-Homepage-Shopping-cart-continue-order-when-logged-part-2)
-    - [Homepage - Shopping cart - continue order when logged - part 3](#4114-Homepage-Shopping-cart-continue-order-when-logged-part-3)
+  - [Homepage - for users](#41-Homepage---for-users)
+    - [Homepage - Navigation Bar](#411-Homepage---navigation-Bar)
+    - [Homepage - Equipment exist in DB](#412-Homepage---Equipment-exist-in-DB)
+    - [Homepage - Equipment not exist in DB](#413-Homepage---Equipment-not-exist-in-DB)
+    - [Homepage - Manufacturers](#414-Homepage---Manufacturers)
+    - [Homepage - Search Button](#415-Homepage---Search-Button)
+    - [Homepage - Login page](#416-Homepage---Login-page)
+    - [Homepage - Register page](#417-Homepage---Register-page)
+    - [Homepage - Shopping cart](#418-Homepage---Shopping-cart)
+    - [Homepage - Shopping cart empty](#419-Homepage---Shopping-cart-empty)
+    - [Homepage - Shopping cart - continue order without logging](#4110-Homepage---Shopping-cart-continue-order-without-logging)
+    - [Homepage - Equipment View](#4111-Homepage---Equipment-View)
+    - [Homepage - Shopping cart - continue order when logged - part 1](#4112-Homepage---Shopping-cart---continue-order-when-logged---part-1)
+    - [Homepage - Shopping cart - continue order when logged - part 2](#4113-Homepage---Shopping-cart---continue-order-when-logged---part-2)
+    - [Homepage - Shopping cart - continue order when logged - part 3](#4114-Homepage---Shopping-cart---continue-order-when-logged---part-3)
   - [Homepage - for users](#41-Homepage-for-users)
     - [](#41-Homepage-for-users)
     - [](#41-Homepage-for-users)
@@ -66,7 +66,7 @@ Screens with homepage view for clients/ users.
 ![GitHub Logo](src/main/webapp/images/websiteScreens/homepage2.PNG)
 ![GitHub Logo](src/main/webapp/images/websiteScreens/homepage3.PNG)
 
-##### 4.1.1  Homepage - Navigation Bar
+##### 4.1.1 Homepage - Navigation Bar
 User can choose the type of equipment and gender.
 
  *the type of equipment 
@@ -90,45 +90,45 @@ Example after select equipment type with gender - when equipments exist in DB
 
 ![GitHub Logo](src/main/webapp/images/websiteScreens/homepage_selected_example.PNG)
 
-##### 4.1.3  Homepage - Equipment not exist in DB
+##### 4.1.3 Homepage - Equipment not exist in DB
 Example after select equipment type with gender - when equipments not exist in DB
 
 ![GitHub Logo](src/main/webapp/images/websiteScreens/homepage_selected_not_exist_example.PNG)
 
-##### 4.1.4  Homepage - Manufacturers
+##### 4.1.4 Homepage - Manufacturers
 Example page with manufacturers.
 
 ![GitHub Logo](src/main/webapp/images/websiteScreens/homepage_selected_manufacturers_example.PNG)
 
-##### 4.1.5  Homepage - Search Button
+##### 4.1.5 Homepage - Search Button
 Example how search button is working.
 
 ![GitHub Logo](src/main/webapp/images/websiteScreens/homepage_fill_search.PNG)
 
 ![GitHub Logo](src/main/webapp/images/websiteScreens/homepage_search_example.PNG)
 
-##### 4.1.6  Homepage - Login page
+##### 4.1.6 Homepage - Login page
 Example of login page. Necessary to finish order in the shop.
 
 ![GitHub Logo](src/main/webapp/images/websiteScreens/homepage_log_in_page.PNG)
 
 ![GitHub Logo](src/main/webapp/images/websiteScreens/homepage_logged.PNG)
 
-##### 4.1.7  Homepage - Register page
+##### 4.1.7 Homepage - Register page
 Example of register page. Necessary to login and finish order in the shop.
 
 ![GitHub Logo](src/main/webapp/images/websiteScreens/homepage_register_page.PNG)
 
-##### 4.1.8  Homepage - Shopping cart
+##### 4.1.8 Homepage - Shopping cart
 ![GitHub Logo](src/main/webapp/images/websiteScreens/homepage_not_empty_shopping_cart.PNG)
 
-##### 4.1.9  Homepage - Shopping cart empty
+##### 4.1.9 Homepage - Shopping cart empty
 ![GitHub Logo](src/main/webapp/images/websiteScreens/homepage_empty_shopping_cart.PNG)
 
-##### 4.1.10  Homepage - Shopping cart - continue order without logging
+##### 4.1.10 Homepage - Shopping cart - continue order without logging
 ![GitHub Logo](src/main/webapp/images/websiteScreens/homepage_message_shopping_cart.PNG)
 
-##### 4.1.11  Homepage - Equipment View
+##### 4.1.11 Homepage - Equipment View
 Example of equipment view page. Below you can see also reviews/ comments by other clients.
 To add any reviews/ comments it is necessary to login.
 
@@ -136,7 +136,7 @@ To add any reviews/ comments it is necessary to login.
 
 ![GitHub Logo](src/main/webapp/images/websiteScreens/homepage_equipment_detail2_with_reviews.PNG)
 
-##### 4.1.12  Homepage - Shopping cart - continue order when logged - part 1
+##### 4.1.12 Homepage - Shopping cart - continue order when logged - part 1
 After press 'Zakup' in Shopping Cart user will see next page.
 
 User is asked to fill fields with information about shipping address (fields are filled automatically from 
@@ -144,18 +144,17 @@ client account but it can be change during order - shipping address is not alway
 
 ![GitHub Logo](src/main/webapp/images/websiteScreens/homepage_shopping_cart_payment.PNG)
 
-##### 4.1.13  Homepage - Shopping cart - continue order when logged - part 2
+##### 4.1.13 Homepage - Shopping cart - continue order when logged - part 2
 Summary of shopping cart and shipping address.
 
 Client should check if all data are correct and press 'Przejdź dalej'.
 
 ![GitHub Logo](src/main/webapp/images/websiteScreens/homepage_shopping_cart_payment1.PNG)
 
-##### 4.1.14  Homepage - Shopping cart - continue order when logged - part 3
+##### 4.1.14 Homepage - Shopping cart - continue order when logged - part 3
 Order is finished. Message with this information is display on the screen.
 
 ![GitHub Logo](src/main/webapp/images/websiteScreens/homepage_shopping_cart_payment2.PNG)
-
 
 ### 4.2 Homepage - for admins
 Screens with homepage view for admins
