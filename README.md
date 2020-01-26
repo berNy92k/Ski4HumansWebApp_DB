@@ -3,6 +3,8 @@
 _Website with accessories for skiing. This application was created to train JAVA backend, while the frontend was created in order to present the progress._
 _It is not website for any existing shop_
 
+Frontend of page was based on https://ski24.pl/.
+
 ## 2 Table of Contents
 - [Introduction](#1-Introduction)
 - [Table of Contents](#2-Table-of-Contents)
@@ -264,3 +266,4 @@ For DB error (500) page looks similar but with different error number.
 (i was mostly focused on backend during creating this application - frontend was done to see results).
 It is necessary to update style.css and separate style code from .jsp files.
 * Make refactoring of backend code - delete unused code and simplify what is possible.
+* implement RWD
