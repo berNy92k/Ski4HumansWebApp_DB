@@ -31,7 +31,7 @@ Below you will be able to see short description with images for:
 ### 4.1 Homepage - for users
 Screens with homepage view for clients/ users.
 
-![GitHub Logo](src/main/webapp/images/websiteScreens/homepage1.PNG)
+![GitHub Logo](src\main\webapp\images\websiteScreens\homepage1.PNG)
 ![GitHub Logo](src\main\webapp\images\websiteScreens\homepage2.PNG)
 ![GitHub Logo](src\main\webapp\images\websiteScreens\homepage3.PNG)
 ##### 4.1.1  Homepage - select
