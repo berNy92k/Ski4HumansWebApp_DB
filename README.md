@@ -32,7 +32,7 @@ _It is not website for any existing shop_
     - [Homepage - Create new equipment](#426-Homepage---Create-new-equipment)
     - [Homepage - View selected equipment](#427-Homepage---View-selected-equipment)
     - [Homepage - Enable actions for selected equipment](#428-Homepage---Enable-actions-for-selected-equipment)
-    - [Homepage - Update/ Edit selected equipment](#429-Homepage---Update/-Edit-selected-equipment)
+    - [Homepage - Update/ Edit selected equipment](#429-Homepage---Update---Edit-selected-equipment)
     - [Homepage - Delete selected equipment](#4210-Homepage---Delete-selected-equipment)
     - [Homepage - Navigation Bar - part 3 - Manufacturer](#4211-Homepage---Navigation-Bar---part-3---Manufacturer)
     - [Homepage - Navigation Bar - part 4 - Users](#4212-Homepage---Navigation-Bar---part-4---Users)
@@ -42,7 +42,7 @@ _It is not website for any existing shop_
     - [Homepage - Navigation Bar - part 8 - Orders](#4216-Homepage---Navigation-Bar---part-8---Orders)
     - [Homepage - Orders View Page](#4217-Homepage---Orders-View-Page)
     - [Homepage - Users View Page](#4218-Homepage---Users-View-Page)
-    - [Homepage - Page not exist/ DB error](#4219-Homepage---Page-not-exist/-DB-error)
+    - [Homepage - Page not exist/ DB error](#4219-Homepage---Page-not-exist---DB-error)
 - [TODO list](#5-TODO-list)
 
 ## 3 How to run ?
@@ -217,7 +217,7 @@ Note: 'xx' - name of equipment that was choosen
 ##### 4.2.8 Homepage - Enable actions for selected equipment
 ![GitHub Logo](src/main/webapp/images/websiteScreens/admin_equipment_view_actions.PNG)
 
-##### 4.2.9 Homepage - Update/ Edit selected equipment
+##### 4.2.9 Homepage - Update - Edit selected equipment
 ![GitHub Logo](src/main/webapp/images/websiteScreens/admin_equipment_edit.PNG)
 
 ##### 4.2.10 Homepage - Delete selected equipment
@@ -251,7 +251,7 @@ Can not delete/ update main ADMIN account - it will throw error if somebody will
 ##### 4.2.18 Homepage - Users View Page
 ![GitHub Logo](src/main/webapp/images/websiteScreens/admin_users_view.PNG)
 
-##### 4.2.19 Homepage - Page not exist/ DB error
+##### 4.2.19 Homepage - Page not exist - DB error
 
 Page not exist:
 
