@@ -79,7 +79,7 @@ public interface ConstantsPL {
     String LACK_OF_EQUIPMENT_IN_DB = "Brak sprzętu w bazie.";
 
 
-    // -------------- ADMIN/CATEGORY --------------
+    // -------------- ADMIN/CUSTOMER --------------
     // URL
     String CUSTOMER_LIST_URL = "/admin/customer_list.jsp";
     String CUSTOMER_CREATE_URL = "/admin/customer_create.jsp";

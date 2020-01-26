@@ -61,4 +61,17 @@ public interface ConstantsFrontendPL {
             "W ciąglu kilku najbliższych dniach przesyłka zostanie do Ciebie dostarczona " +
             "o czym zostaniesz poinformowany mailowo.";
     String TRANSACTION_FAILED = "Błąd w trakcie transakcji.";
+
+    // --------------- MY ACCOUNT ---------------
+    // URL
+    String MY_ACCOUNT_VIEW_URL = "/homepage/myAccount_view.jsp";
+    String MY_ACCOUNT_CREATE_URL = "/homepage/myAccount_create.jsp";
+
+    // MESSAGES
+    String MY_ACCOUNT_CUSTOMER_WAS_UPDATED = "Klient został zaktualizowany";
+    String MY_ACCOUNT_CUSTOMER_WAS_NOT_UPDATED = "Klient nie został zaktualizowany. ";
+    String MY_ACCOUNT_COULD_NOT_FIND_CUSTOMER_BY_ID = "Nie udało znaleźć się klienta z ID: ";
+    String MY_ACCOUNT_CUSTOMER_NAME_ALREADY_EXIST_IN_DB = " --> Email klienta znajduje się już w bazie danych";
+    String MY_ACCOUNT_DELETED_BY_ANOTHER_CUSTOMER_ADMIN = ", albo mogło zostać usunięte przez innego administratora.";
+    String MY_ACCOUNT_CUSTOMER_WAS_DELETED = "Klient został usunięty.";
 }

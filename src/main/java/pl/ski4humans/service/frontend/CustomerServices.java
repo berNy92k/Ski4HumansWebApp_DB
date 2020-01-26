@@ -110,4 +110,78 @@ public class CustomerServices {
             requestDispatcher.forward(request, response);
         }
     }
+
+    public void myAccountViewCustomer() throws ServletException, IOException {
+        myAccountViewCustomer(null);
+    }
+
+    public void myAccountViewCustomer(String message) throws ServletException, IOException {
+        //TODO dodac zamowienia
+
+        request.setAttribute(ConstantsFrontendPL.MESSAGE, message);
+
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher(ConstantsFrontendPL.MY_ACCOUNT_VIEW_URL);
+        requestDispatcher.forward(request, response);
+    }
+
+    public void myAccountEditCustomer() throws ServletException, IOException {
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher(ConstantsFrontendPL.MY_ACCOUNT_CREATE_URL);
+        requestDispatcher.forward(request, response);
+    }
+
+    public void myAccountUpdateCustomer() throws ServletException, IOException {
+        Integer categoryId = Integer.valueOf(request.getParameter("customerId"));
+        String email = request.getParameter("email");
+        String password = request.getParameter("password");
+        String firstName = request.getParameter("firstName");
+        String lastName = request.getParameter("lastName");
+        String street = request.getParameter("street");
+        String homeNumber = request.getParameter("homeNumber");
+        String city = request.getParameter("city");
+        String zipCode = request.getParameter("zipCode");
+        String country = request.getParameter("country");
+        String phone = request.getParameter("phone");
+
+        boolean isMoreCategoriesInDatabase = false;
+
+        Customer customerFoundById = customerDAO.get(categoryId);
+
+        List<Customer> customers = customerDAO.findByEmail(email);
+        Customer customerFoundByEmail = null;
+        if (customers.size() > 0 && customers.size() < 2) {
+            customerFoundByEmail = customers.get(0);
+        } else if (customers.size() > 1) {
+            isMoreCategoriesInDatabase = true;
+        }
+
+        if (isMoreCategoriesInDatabase) {
+            myAccountViewCustomer(ConstantsFrontendPL.MY_ACCOUNT_CUSTOMER_WAS_NOT_UPDATED + email + ConstantsFrontendPL.MY_ACCOUNT_CUSTOMER_NAME_ALREADY_EXIST_IN_DB);
+        } else if (customerFoundByEmail != null && !customerFoundByEmail.getCustomerId().equals(customerFoundById.getCustomerId())) {
+            myAccountViewCustomer(ConstantsFrontendPL.MY_ACCOUNT_CUSTOMER_WAS_NOT_UPDATED + email + ConstantsFrontendPL.MY_ACCOUNT_CUSTOMER_NAME_ALREADY_EXIST_IN_DB);
+        } else {
+            Customer newCustomer = new Customer();
+            newCustomer.setCustomerId(categoryId);
+            newCustomer.setEmail(email);
+            if (password.length() == 0) {
+                newCustomer.setPassword(customerFoundById.getPassword());
+            } else {
+                newCustomer.setPassword(password);
+            }
+            newCustomer.setFirstName(firstName);
+            newCustomer.setLastName(lastName);
+            newCustomer.setStreet(street);
+            newCustomer.setHomeNumber(homeNumber);
+            newCustomer.setCity(city);
+            newCustomer.setZipCode(zipCode);
+            newCustomer.setCountry(country);
+            newCustomer.setPhone(phone);
+            newCustomer.setRegisterDate(customerFoundById.getRegisterDate());
+            Customer customer = customerDAO.update(newCustomer);
+
+            HttpSession session = request.getSession();
+            session.setAttribute(ConstantsFrontendPL.LOGGED_CUSTOMER, customer);
+
+            myAccountViewCustomer(ConstantsFrontendPL.MY_ACCOUNT_CUSTOMER_WAS_UPDATED);
+        }
+    }
 }
