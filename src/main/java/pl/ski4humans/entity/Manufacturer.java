@@ -3,8 +3,7 @@ package pl.ski4humans.entity;
 import com.sun.istack.internal.NotNull;
 
 import javax.persistence.*;
-import java.util.Base64;
-import java.util.List;
+import java.util.*;
 
 @Entity
 @Table(name = "manufacturer")
@@ -32,7 +31,7 @@ public class Manufacturer {
     @OneToMany(fetch = FetchType.LAZY,
             mappedBy = "manufacturer"
     )
-    private List<Equipment> equipments;
+    private Set<Equipment> equipments = new HashSet<>();
 
     @Transient
     private String base64Image;
@@ -85,11 +84,11 @@ public class Manufacturer {
         this.image = image;
     }
 
-    public List<Equipment> getEquipments() {
+    public Set<Equipment> getEquipments() {
         return equipments;
     }
 
-    public void setEquipments(List<Equipment> equipments) {
+    public void setEquipments(Set<Equipment> equipments) {
         this.equipments = equipments;
     }
 

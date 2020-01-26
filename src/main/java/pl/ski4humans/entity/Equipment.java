@@ -66,10 +66,10 @@ public class Equipment {
     @OneToMany(fetch = FetchType.EAGER,
             mappedBy = "equipment")
     private Set<Review> reviews = new HashSet<>();
-//    @NotNull
-//    @OneToMany(fetch = FetchType.EAGER,
-//            mappedBy = "skis")
-//    private Set<OrderDetail> orderDetails = new HashSet<>();
+
+    @OneToMany(fetch = FetchType.EAGER,
+            mappedBy = "equipment")
+    private Set<OrderEquipmentDetail> orderDetails = new HashSet<>();
 
     @Transient
     private String base64Image;
@@ -222,6 +222,14 @@ public class Equipment {
     public String getBase64Image() {
         this.base64Image = Base64.getEncoder().encodeToString(this.image);
         return this.base64Image;
+    }
+
+    public Set<Review> getReviews() {
+        return reviews;
+    }
+
+    public void setReviews(Set<Review> reviews) {
+        this.reviews = reviews;
     }
 
     public void setBase64Image(String base64Image) {

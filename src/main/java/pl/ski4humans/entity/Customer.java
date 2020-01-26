@@ -5,6 +5,7 @@ import com.sun.istack.internal.NotNull;
 import javax.persistence.*;
 import java.util.Date;
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 
 @Entity
@@ -56,7 +57,11 @@ public class Customer {
 
     @OneToMany(fetch = FetchType.EAGER,
             mappedBy = "customer")
-    Set<Review> reviews = new HashSet<>();
+    private Set<Review> reviews = new HashSet<>();
+
+    @OneToMany(fetch = FetchType.LAZY,
+            mappedBy = "customer")
+    private Set<Order> orders = new HashSet<>();
 
     public Customer() {
     }
@@ -203,5 +208,47 @@ public class Customer {
 
     public void setRegisterDate(Date registerDate) {
         this.registerDate = registerDate;
+    }
+
+    public Set<Review> getReviews() {
+        return reviews;
+    }
+
+    public void setReviews(Set<Review> reviews) {
+        this.reviews = reviews;
+    }
+
+    public Set<Order> getOrders() {
+
+        return orders;
+    }
+
+    public void setOrders(Set<Order> orders) {
+        this.orders = orders;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Customer customer = (Customer) o;
+        return Objects.equals(customerId, customer.customerId) &&
+                Objects.equals(email, customer.email) &&
+                Objects.equals(password, customer.password) &&
+                Objects.equals(firstName, customer.firstName) &&
+                Objects.equals(lastName, customer.lastName) &&
+                Objects.equals(street, customer.street) &&
+                Objects.equals(homeNumber, customer.homeNumber) &&
+                Objects.equals(city, customer.city) &&
+                Objects.equals(zipCode, customer.zipCode) &&
+                Objects.equals(country, customer.country) &&
+                Objects.equals(phone, customer.phone) &&
+                Objects.equals(registerDate, customer.registerDate) &&
+                Objects.equals(reviews, customer.reviews);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(customerId, email, password, firstName, lastName, street, homeNumber, city, zipCode, country, phone, registerDate, reviews);
     }
 }
