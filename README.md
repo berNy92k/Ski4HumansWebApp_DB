@@ -262,8 +262,4 @@ Page not exist:
 For DB error (500) page looks similar but with different error number.
 
 ## 5 TODO list
-* **IMPORTANT.** Make refactoring of frontend code - right now there is a mess 
-(i was mostly focused on backend during creating this application - frontend was done to see results).
-It is necessary to update style.css and separate style code from .jsp files.
 * Make refactoring of backend code - delete unused code and simplify what is possible.
-* implement RWD
