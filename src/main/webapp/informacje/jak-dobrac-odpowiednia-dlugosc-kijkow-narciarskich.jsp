@@ -24,7 +24,7 @@
 </header>
 
 <div class="container">
-    <div style="padding-bottom: 20px">
+    <div class="paddingBottom20">
         <ul class="nav">
             <li class="nav-item">
                 <a class="nav-link active" href="../homepage/index.jsp">Strona główna</a>
@@ -46,35 +46,35 @@
     </div>
     <div>
         <div>
-            <p style="font-size: 30px; padding-bottom: 20px">JAK DOBRAĆ ODPOWIEDNIĄ DŁUGOŚĆ KIJKÓW NARCIARSKICH?</p>
+            <p class="fontSize30PaddingBottom20">JAK DOBRAĆ ODPOWIEDNIĄ DŁUGOŚĆ KIJKÓW NARCIARSKICH?</p>
         </div>
-        <div class="firstMessage" style="padding-left: 20px;padding-right: 20px;text-align: justify">
-            <p style="font-size: 14px">
+        <div class="firstMessage paddingLeft20paddingRight20textAlignJustify">
+            <p class="fontSize14">
                 Kije narciarskie to bardzo ważny (aczkolwiek bagatelizowany) element sprzętu narciarskiego, którego brak
                 powoduje złe nawyki podczas jazdy. Kijki służą przede wszystkim do zachowania równowagi oraz
                 utrzymywania właściwej postawy - dzięki nim automatycznie prostujemy plecy, a ręce trzymamy bliżej
                 ciała. Są również niezastąpioną pomocą na płaskich powierzchniach, gdzie umożliwiają odpychanie.</p>
         </div>
 
-        <hr style="height:0;border:none;border-top:1px solid #000;">
+        <hr class="lineHeight0BorderNoneBorderTop1pxSolid000">
         <div>
-            <p style="font-size: 24px; padding-bottom: 20px">CZY DŁUGOŚĆ KIJÓW JEST AŻ TAK WAŻNA?</p>
+            <p class="fontSize24 paddingBottom20">CZY DŁUGOŚĆ KIJÓW JEST AŻ TAK WAŻNA?</p>
         </div>
-        <div class="firstMessage" style="padding-left: 20px;padding-right: 20px;text-align: justify">
-            <p style="font-size: 14px">
+        <div class="firstMessage paddingLeft20paddingRight20textAlignJustify">
+            <p class="fontSize14">
                 Za krótkie kije sprawiają, że (podczas skręcania) niepotrzebnie schylamy się i kierujemy tułów do
                 przodu. Z kolei zbyt długie są odpowiedzialne za nadmierne prostowanie się i odchylanie do tyłu – w ten
                 sposób narciarz próbuje kompensować ich długość. Tylko właściwie dopasowana długość kijów zagwarantuje
                 zrównoważoną pozycję.</p>
         </div>
 
-        <hr style="height:0;border:none;border-top:1px solid #000;">
+        <hr class="lineHeight0BorderNoneBorderTop1pxSolid000">
         <div>
-            <p style="font-size: 24px; padding-bottom: 20px">W JAKI SPOSÓB DOBRAĆ WŁAŚCIWĄ DŁUGOŚĆ KIJKÓW
+            <p class="fontSize24 paddingBottom20">W JAKI SPOSÓB DOBRAĆ WŁAŚCIWĄ DŁUGOŚĆ KIJKÓW
                 NARCIARSKICH?</p>
         </div>
-        <div class="firstMessage" style="padding-left: 20px;padding-right: 20px;text-align: justify">
-            <ul style="font-size: 14px">
+        <div class="firstMessage paddingLeft20paddingRight20textAlignJustify">
+            <ul class="fontSize14">
                 <li>
                     Obróć kijek tak aby jego rączka opierała się o ziemię. Następnie stań prosto i chwyć go bezpośrednio
                     pod talerzykiem. Jeżeli przedramię z ramieniem (trzymanym równolegle do ciała) utworzyły kąt prosty,
@@ -89,8 +89,7 @@
         </div>
     </div>
 
-    <footer>
-        <div style="height: 30px"></div>
+    <footer class="footerFreeSpace30px">
         <jsp:include page="../homepage/footer.jsp"/>
     </footer>
 </div>

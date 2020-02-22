@@ -19,7 +19,7 @@
 </head>
 <body>
 
-<div align="center" style="margin-top: 25px">
+<div align="center" class="marginTop25">
     <div>
         <img class="mb-2" src="../images/logo.png" width="25%" alt="logo">
     </div>

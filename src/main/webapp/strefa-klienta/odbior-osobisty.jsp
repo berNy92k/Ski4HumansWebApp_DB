@@ -24,7 +24,7 @@
 </header>
 
 <div class="container">
-    <div style="padding-bottom: 20px">
+    <div class="paddingBottom20">
         <ul class="nav">
             <li class="nav-item">
                 <a class="nav-link active" href="../homepage/index.jsp">Strona główna</a>
@@ -45,13 +45,13 @@
     </div>
     <div>
         <div>
-            <p style="font-size: 30px; padding-bottom: 20px">Odbiór osobisty</p>
+            <p class="fontSize30PaddingBottom20">Odbiór osobisty</p>
         </div>
         <div>
-            <p style="font-size: 45px; padding-bottom: 20px">ODBIÓR OSOBISTY DLA KLIENTÓW Z XYZ I OKOLIC:</p>
+            <p class="fontSize45PaddingBottom20">ODBIÓR OSOBISTY DLA KLIENTÓW Z XYZ I OKOLIC:</p>
         </div>
-        <div class="firstMessage" style="padding-left: 20px;padding-right: 20px;text-align: justify">
-            <ul style="font-size: 14px">
+        <div class="firstMessage paddingLeft20paddingRight20textAlignJustify">
+            <ul class="fontSize14">
                 <li>Zapraszamy do naszej siedziby biura i magazynu sklepu internetowego ski4humans.pl w XYZ:
                     <br><br>
                     ul. XYZ 00
@@ -79,8 +79,7 @@
         </div>
     </div>
 
-    <footer>
-        <div style="height: 30px"></div>
+    <footer class="footerFreeSpace30px30px">
         <jsp:include page="../homepage/footer.jsp"/>
     </footer>
 </div>

@@ -24,7 +24,7 @@
 </header>
 
 <div class="container">
-    <div style="padding-bottom: 20px">
+    <div class="paddingBottom20">
         <ul class="nav">
             <li class="nav-item">
                 <a class="nav-link active" href="../homepage/index.jsp">Strona główna</a>
@@ -45,12 +45,12 @@
     </div>
     <div>
         <div>
-            <p style="font-size: 30px; padding-bottom: 20px">Dostawa i płatności</p>
+            <p class="fontSize30PaddingBottom20">Dostawa i płatności</p>
         </div>
-        <div class="firstMessage" style="padding-left: 20px;padding-right: 20px;text-align: justify">
-            <p style="font-size: 18px">SPOSOBY WYSYŁKI, FORMY TRANSPORTU - ZASADY WYSYŁKI ZAMÓWIONEGO TOWARU</p>
-            <hr style="height:0;border:none;border-top:1px solid #000;">
-            <ol style="font-size: 14px">
+        <div class="firstMessage paddingLeft20paddingRight20textAlignJustify">
+            <p class="fontSize18">SPOSOBY WYSYŁKI, FORMY TRANSPORTU - ZASADY WYSYŁKI ZAMÓWIONEGO TOWARU</p>
+            <hr class="lineHeight0BorderNoneBorderTop1pxSolid000">
+            <ol class="fontSize14">
 
                 <li>Informacja o cenie zakupu towaru w Sklepie podawana jest na stronie Sklepu. Cena towaru nie ulegnie
                     zmianie niezależnie od zmian cen w Sklepie, które mogą się pojawić po potwierdzeniu przyjęcia do
@@ -156,8 +156,7 @@
         </div>
     </div>
 
-    <footer>
-        <div style="height: 30px"></div>
+    <footer class="footerFreeSpace30px">
         <jsp:include page="../homepage/footer.jsp"/>
     </footer>
 </div>

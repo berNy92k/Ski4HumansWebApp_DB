@@ -24,7 +24,7 @@
 </header>
 
 <div class="container">
-    <div style="padding-bottom: 20px">
+    <div class="paddingBottom20">
         <ul class="nav">
             <li class="nav-item">
                 <a class="nav-link active" href="../homepage/index.jsp">Strona główna</a>
@@ -44,13 +44,13 @@
         </ul>
     </div>
     <div>
-        <header style="padding-bottom: 30px; padding-top: 10px">
+        <header class="paddingBottom30 paddingTop10">
             <h3>
                 JAK DOBRAĆ SPRZĘT NARCIARSKI?
             </h3>
         </header>
         <div>
-            <ul style="font-size: 23px">
+            <ul class="fontSize24">
                 <li>
                     <a class="nav-link active" href="w-jaki-sposob-dobrac-buty-narciarskie.jsp">BUTY NARCIARSKIE</a>
                 </li>
@@ -67,8 +67,7 @@
         </div>
     </div>
 
-    <footer>
-        <div style="height: 30px"></div>
+    <footer class="footerFreeSpace30px">
         <jsp:include page="../homepage/footer.jsp"/>
     </footer>
 </div>

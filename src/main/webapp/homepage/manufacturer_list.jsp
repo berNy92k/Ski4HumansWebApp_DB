@@ -26,20 +26,20 @@
         <jsp:directive.include file="header.jsp"/>
     </header>
 
-    <div style="width: 98%; margin: 0 auto">
+    <div class="width98Margin0auto">
 
         <div align="center">
-            <h5><p style="color: #950002;">${message}</p></h5>
+            <h5><p class="color950002">${message}</p></h5>
         </div>
 
-        <div style="width: 95%; margin: 0 auto">
+        <div class="width95margin0auto">
             <c:forEach var="manufacturer" items="${manufacturerList}">
-                <div style="width: 250px; border: 1px solid rgba(0,7,255,0.02); display: inline-block; margin: 14px">
-                    <div style="width: 245px">
+                <div class="width250border07255006displayInlineBlockMargin14">
+                    <div class="width245">
                         <img class="book-small" src="data:image/jpg;base64,${manufacturer.base64Image}" width="245px"
                              alt="Podgląd sprzętu"/>
                     </div>
-                    <div style="text-align: center; vertical-align: center; margin-top: 25px">
+                    <div class="textAlignCenterVerticalAlignCenterMarginTop25">
                         <div>
                             <b>${manufacturer.manufacturerName}</b>
                         </div>
@@ -51,8 +51,7 @@
             </c:forEach>
         </div>
 
-        <footer>
-            <div style="height: 30px"></div>
+        <footer class="footerFreeSpace30px">
             <jsp:include page="footer.jsp"/>
         </footer>
     </div>

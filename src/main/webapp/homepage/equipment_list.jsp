@@ -26,27 +26,27 @@
         <jsp:directive.include file="header.jsp"/>
     </header>
 
-    <div style="width: 98%; margin: 0 auto">
+    <div class="width98Margin0auto">
 
-        <div align="center" style="margin-top: 15px">
-            <h2><p style="color: #2d0001;">${equipmentCategoryName} - ${equipmentSex}</p></h2>
+        <div align="center" class="marginTop15">
+            <h2><p class="color2d0001">${equipmentCategoryName} - ${equipmentSex}</p></h2>
         </div>
 
         <div align="center">
-            <h5><p style="color: #950002;">${message}</p></h5>
+            <h5><p class="color950002">${message}</p></h5>
         </div>
 
-        <div style="width: 95%; margin: 0 auto">
+        <div class="width95margin0auto">
             <c:forEach var="equipment" items="${equipmentList}">
-                <div style="width: 250px; border: 1px solid rgba(0,7,255,0.02); display: inline-block; margin: 14px">
-                    <div style="width: 245px">
+                <div class="width250border07255006displayInlineBlockMargin14">
+                    <div class="width245">
                         <a href="viewEquipment?id=${equipment.equipmentId}">
                             <img class="book-small" src="data:image/jpg;base64,${equipment.base64Image}" width="245px"
                                  alt="Podgląd sprzętu"/>
                         </a>
                     </div>
-                    <div style="text-align: center; vertical-align: center; margin-top: 5px">
-                        <div style="height: 90px">
+                    <div class="textAlignCenterVerticalAlignCenterMarginTop5">
+                        <div class="height90">
                             <a href="viewEquipment?id=${equipment.equipmentId}">
                                 <b>${equipment.name}</b>
                             </a>
@@ -54,17 +54,16 @@
                         <div>
                             <b><i>${equipment.manufacturer.manufacturerName}</i></b>
                         </div>
-                        <div style="height: 80px;"><i>${equipment.shortDescription}</i></div>
+                        <div class="height80"><i>${equipment.shortDescription}</i></div>
                         <div>
-                            <b style="color: #bf0004">${equipment.price} [zł]</b>
+                            <b class="colorbf0004">${equipment.price} [zł]</b>
                         </div>
                     </div>
                 </div>
             </c:forEach>
         </div>
 
-        <footer>
-            <div style="height: 30px"></div>
+        <footer class="footerFreeSpace30px">
             <jsp:include page="footer.jsp"/>
         </footer>
     </div>

@@ -26,16 +26,15 @@
         <jsp:include page="header.jsp"/>
     </header>
 
-    <div style="width: 1200px; margin: 30px auto 0;">
+    <div class="width1200pxMargin30auto0">
         <div align="center">
             <div align="center">
-                <h3><p style="color: #950002;">${message}</p></h3>
+                <h3><p class="color950002">${message}</p></h3>
             </div>
         </div>
     </div>
 
-    <footer>
-        <div style="height: 30px"></div>
+    <footer class="footerFreeSpace30px">
         <jsp:include page="footer.jsp"/>
     </footer>
 </div>

@@ -24,7 +24,7 @@
 </header>
 
 <div class="container">
-    <div style="padding-bottom: 20px">
+    <div class="paddingBottom20">
         <ul class="nav">
             <li class="nav-item">
                 <a class="nav-link active" href="../homepage/index.jsp">Strona główna</a>
@@ -39,10 +39,10 @@
     </div>
     <div>
         <div>
-            <p style="font-size: 30px; padding-bottom: 20px">O nas</p>
+            <p class="fontSize30PaddingBottom20">O nas</p>
         </div>
-        <div class="firstMessage" style="padding-left: 20px;padding-right: 20px;text-align: justify">
-            <ul style="font-size: 14px">
+        <div class="firstMessage paddingLeft20paddingRight20textAlignJustify">
+            <ul class="fontSize14">
                 <li>
                     <a href="dane-kontaktowe.jsp">Dane kontaktowe</a>
                 </li>
@@ -71,8 +71,7 @@
         </div>
     </div>
 
-    <footer>
-        <div style="height: 30px"></div>
+    <footer class="footerFreeSpace30px30px">
         <jsp:include page="../homepage/footer.jsp"/>
     </footer>
 </div>

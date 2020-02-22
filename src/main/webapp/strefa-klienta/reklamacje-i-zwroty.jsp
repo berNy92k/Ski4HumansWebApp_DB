@@ -24,7 +24,7 @@
 </header>
 
 <div class="container">
-    <div style="padding-bottom: 20px">
+    <div class="paddingBottom20">
         <ul class="nav">
             <li class="nav-item">
                 <a class="nav-link active" href="../homepage/index.jsp">Strona główna</a>
@@ -45,32 +45,32 @@
     </div>
     <div>
         <div>
-            <p style="font-size: 30px; padding-bottom: 20px">Reklamacje i zwroty</p>
+            <p class="fontSize30PaddingBottom20">Reklamacje i zwroty</p>
         </div>
-        <div class="firstMessage" style="padding-left: 20px;padding-right: 20px;text-align: justify">
-            <p style="font-size: 22px; padding-bottom: 10px"><strong>ZWROT</strong></p>
+        <div class="firstMessage paddingLeft20paddingRight20textAlignJustify">
+            <p class="fontSize22PaddingBottom10"><strong>ZWROT</strong></p>
 
-            <p style="font-size: 18px; padding-bottom: 5px"><strong>W JAKI SPOSÓB MOGĘ ZWRÓCIĆ ZAKUPIONY TOWAR?</strong>
+            <p class="fontSize18PaddingBottom5"><strong>W JAKI SPOSÓB MOGĘ ZWRÓCIĆ ZAKUPIONY TOWAR?</strong>
             </p>
 
-            <p style="font-size: 14px; padding-bottom: 5px">Okazało się, że zakupiony towar nie spełnia Twoich oczekiwań
+            <p class="fontSize14PaddingBottom5">Okazało się, że zakupiony towar nie spełnia Twoich oczekiwań
                 (nie odpowiada rozmiarem, jest nietrafionym prezentem albo po prostu nie podoba Ci się)?
 
                 Zastosuj tych kilka prostych kroków, które w szybki sposób pomogą Ci zwrócić towar:</p>
 
-            <p style="font-size: 18px; padding-bottom: 5px"><strong>KROK 1
+            <p class="fontSize18PaddingBottom5"><strong>KROK 1
                 <br><br>
                 ZAPOZNAJ SIĘ Z NASZYM REGULAMINEM.</strong></p>
 
-            <p style="font-size: 14px; padding-bottom: 5px">Na stronie ski4humans.pl, w zakładce „regulamin sklepu”
+            <p class="fontSize14PaddingBottom5">Na stronie ski4humans.pl, w zakładce „regulamin sklepu”
                 znajdziesz szczegółowe informacje dotyczące odstąpienia od umowy <a href="../onas/regulamin-sklepu.jsp">KLIKNIJ</a>
             </p>
 
-            <p style="font-size: 18px; padding-bottom: 5px"><strong>KROK 2
+            <p class="fontSize18PaddingBottom5"><strong>KROK 2
                 <br><br>
                 POINFORMUJ NAS O ODSTĄPIENIU OD UMOWY.</strong></p>
 
-            <p style="font-size: 14px; padding-bottom: 5px">Od umowy możesz odstąpić w ciągu 14 dni od momentu
+            <p class="fontSize14PaddingBottom5">Od umowy możesz odstąpić w ciągu 14 dni od momentu
                 otrzymania produktu, bez podawania jakiejkolwiek
                 przyczyny.
                 <br><br>
@@ -83,11 +83,11 @@
                 dołączany do paczki lub można go pobrać z zakładki „reklamacje i zwroty” na naszej stronie:
                 ski4humans.pl).</p>
 
-            <p style="font-size: 18px; padding-bottom: 5px"><strong>KROK 3
+            <p class="fontSize18PaddingBottom5"><strong>KROK 3
 
                 PRZYGOTUJ I WYŚLIJ PACZKĘ.</strong></p>
 
-            <p style="font-size: 14px; padding-bottom: 5px">
+            <p class="fontSize14PaddingBottom5">
                 Spakuj produkt, a następnie wyślij go dowolnym przekaźnikiem (nie później niż 14 dni od dnia, w którym
                 poinformowali nas Państwo o odstąpieniu od niniejszej umowy) na adres naszego magazynu:
                 <br><br>
@@ -99,11 +99,11 @@
                 <br><br>
                 Termin jest zachowany jeżeli odeślesz rzecz przed upływem terminu 14 dni.
             </p>
-            <p style="font-size: 18px; padding-bottom: 5px"><strong>KROK 4
+            <p class="fontSize18PaddingBottom5"><strong>KROK 4
 
                 OCZEKUJ NA ZWROT ŚRODKÓW.</strong></p>
 
-            <p style="font-size: 14px; padding-bottom: 5px">
+            <p class="fontSize14PaddingBottom5">
                 Wszystkie otrzymane płatności, w tym koszty dostarczenia rzeczy (z wyjątkiem dodatkowych kosztów
                 wynikających z wybranego przez Państwa sposobu dostarczenia innego niż najtańszy zwykły sposób
                 dostarczenia oferowany przez nas) nie później niż 14 dni od dnia, w którym zostaliśmy poinformowani o
@@ -118,30 +118,30 @@
                 Odpowiadasz tylko za zmniejszenie wartości rzeczy wynikające z korzystania z niej w sposób inny niż było
                 to konieczne do stwierdzenia charakteru, cech i funkcjonowania rzeczy.
             </p>
-            <hr style="height:0;border:none;border-top:1px solid #000;">
+            <hr class="lineHeight0BorderNoneBorderTop1pxSolid000">
 
-            <p style="font-size: 18px; padding-bottom: 5px"><strong>WYMIANA</strong></p>
+            <p class="fontSize18PaddingBottom5"><strong>WYMIANA</strong></p>
 
-            <p style="font-size: 14px; padding-bottom: 5px">Zakupiony produkt okazał się za mały albo za duży i
+            <p class="fontSize14PaddingBottom5">Zakupiony produkt okazał się za mały albo za duży i
                 chciałbyś go wymienić?
                 <br><br>
                 Dołożymy wszelkich starań żebyś jak najszybciej otrzymał swój wymarzony sprzęt. Co należy zrobić:</p>
 
-            <p style="font-size: 18px; padding-bottom: 5px"><strong>KROK 1
+            <p class="fontSize18PaddingBottom5"><strong>KROK 1
                 <br><br>
                 SPRAWDŹ CZY WYBRANY PRZEZ CIEBIE ROZMIAR JEST DOSTĘPNY NA STRONIE I ZŁÓŻ NOWE ZAMÓWIENIE.</strong></p>
 
-            <p style="font-size: 14px; padding-bottom: 5px">Poinformuj nas w dowolny sposób, że będzie to wymiana
+            <p class="fontSize14PaddingBottom5">Poinformuj nas w dowolny sposób, że będzie to wymiana
                 (bezpośrednio w zamówieniu – dodaj komentarz „WYMIANA”).
                 <br><br>
                 Jeżeli produkt, który Cię interesuje występuje wyłącznie w jednym rozmiarze, chętnie pomożemy Ci znaleźć
                 nowy model, odpowiadający Twoim wymaganiom.</p>
 
-            <p style="font-size: 18px; padding-bottom: 5px"><strong>KROK 2
+            <p class="fontSize18PaddingBottom5"><strong>KROK 2
                 <br><br>
                 POINFORMUJ NAS MAILOWO O ODSTĄPIENIU OD UMOWY.</strong></p>
 
-            <p style="font-size: 14px; padding-bottom: 5px">Od umowy możesz odstąpić w ciągu 14 dni od momentu
+            <p class="fontSize14PaddingBottom5">Od umowy możesz odstąpić w ciągu 14 dni od momentu
                 otrzymania produktu, bez podawania jakiejkolwiek przyczyny.
                 <br><br>
                 Dla celów dowodowych najlepiej wykonać to na piśmie np. wysyłając wiadomość mailową na adres:
@@ -154,11 +154,11 @@
                 dołączany do paczki lub można go pobrać z zakładki „reklamacje i zwroty” na naszej stronie:
                 ski4humans.pl).
             </p>
-            <p style="font-size: 18px; padding-bottom: 5px"><strong>KROK 3
+            <p class="fontSize18PaddingBottom5"><strong>KROK 3
                 <br><br>
                 PRZYGOTUJ I WYŚLIJ PACZKĘ.</strong></p>
 
-            <p style="font-size: 14px; padding-bottom: 5px">Spakuj produkt, a następnie wyślij go dowolnym przekaźnikiem
+            <p class="fontSize14PaddingBottom5">Spakuj produkt, a następnie wyślij go dowolnym przekaźnikiem
                 na adres naszego magazynu:
                 <br><br>
                 SKI4HUMANS
@@ -168,29 +168,29 @@
                 xx – xxx XYZ
                 <br><br>
             </p>
-            <p style="font-size: 18px; padding-bottom: 5px"><strong>KROK 4
+            <p class="fontSize18PaddingBottom5"><strong>KROK 4
                 <br><br>
                 OCZEKUJ WIADOMOŚCI MAILOWEJ.</strong></p>
 
-            <p style="font-size: 14px; padding-bottom: 5px">
+            <p class="fontSize14PaddingBottom5">
                 Zostaniesz poinformowany o realizacji nowego zamówienia.
                 <br><br>
                 Będzie to oznaczało, że Twój zwrot już do nas dotarł i wysyłamy do Ciebie nową paczkę.
             </p>
 
-            <hr style="height:0;border:none;border-top:1px solid #000;">
+            <hr class="lineHeight0BorderNoneBorderTop1pxSolid000">
 
-            <p style="font-size: 26px; padding-bottom: 5px"><strong>REKLAMACJA SPRZĘTU</strong></p>
+            <p class="fontSize26PaddingBottom5"><strong>REKLAMACJA SPRZĘTU</strong></p>
 
-            <p style="font-size: 14px; padding-bottom: 5px">
+            <p class="fontSize14PaddingBottom5">
                 Jeżeli uważasz, że zakupiony towar w jakikolwiek sposób jest niezgodny z zawartą umową, postępuj zgodnie
                 z naszą instrukcją:</p>
 
-            <p style="font-size: 18px; padding-bottom: 5px"><strong>KROK 1
+            <p class="fontSize18PaddingBottom5"><strong>KROK 1
                 <br><br>
                 ZGŁOŚ REKLAMACJĘ TOWARU.</strong></p>
 
-            <p style="font-size: 14px; padding-bottom: 5px">
+            <p class="fontSize14PaddingBottom5">
                 Możesz zrobić to w dowolnej formie, ale dla celów dowodowych najbezpieczniej zrobić to pisemnie.
                 <br><br>
                 Wyślij nam maila na adres: info@ski4humans.pl. Precyzyjne opisanie wady i określenie twoich żądań ułatwi
@@ -202,11 +202,11 @@
                 Paragon fiskalny nie jest konieczny do zareklamowania produktu, jednak znacznie ułatwi złożenie
                 reklamacji.
             </p>
-            <p style="font-size: 18px; padding-bottom: 5px"><strong>KROK 2
+            <p class="fontSize18PaddingBottom5"><strong>KROK 2
                 <br><br>
                 PRZYGOTUJ I WYŚLIJ PACZKĘ.</strong></p>
 
-            <p style="font-size: 14px; padding-bottom: 5px">
+            <p class="fontSize14PaddingBottom5">
                 Spakuj produkt, a następnie wyślij go dowolnym przekaźnikiem na adres naszego magazynu:
                 <br><br>
                 SKI4HUMANS
@@ -216,17 +216,16 @@
                 xx – xxx XYZ
                 <br><br>
             </p>
-            <p style="font-size: 18px; padding-bottom: 5px"><strong>KROK 3
+            <p class="fontSize18PaddingBottom5"><strong>KROK 3
                 <br><br>
                 OCZEKUJ NA INFORMACJĘ O ROZPATRZENIU REKLAMACJI.</strong></p>
-            <p style="font-size: 14px; padding-bottom: 5px">
+            <p class="fontSize14PaddingBottom5">
                 W ciągu 14 dni od otrzymania zwrotu, przedstawimy Ci decyzję dotyczącą rozpatrzenia reklamacji.
             </p>
         </div>
     </div>
 
-    <footer>
-        <div style="height: 30px"></div>
+    <footer class="footerFreeSpace30px">
         <jsp:include page="../homepage/footer.jsp"/>
     </footer>
 </div>

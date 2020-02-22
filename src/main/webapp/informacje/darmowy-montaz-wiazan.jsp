@@ -24,7 +24,7 @@
 </header>
 
 <div class="container">
-    <div style="padding-bottom: 20px">
+    <div class="paddingBottom20">
         <ul class="nav">
             <li class="nav-item">
                 <a class="nav-link active" href="../homepage/index.jsp">Strona główna</a>
@@ -45,10 +45,10 @@
     </div>
     <div>
         <div>
-            <p style="font-size: 30px; padding-bottom: 20px">DARMOWY MONTAŻ WIĄZAŃ</p>
+            <p class="fontSize30PaddingBottom20">DARMOWY MONTAŻ WIĄZAŃ</p>
         </div>
-        <div class="firstMessage" style="padding-left: 20px;padding-right: 20px;text-align: justify">
-            <p style="font-size: 14px">
+        <div class="firstMessage paddingLeft20paddingRight20textAlignJustify">
+            <p class="fontSize14">
                 Prawidłowy montaż wiązań to jeden z najważniejszych kroków,
                 przygotowujących sprzęt narciarski do użytkowania. Właściwy montaż to gwarancja bezpieczeństwa każdego
                 narciarza. Warto pamiętać, że montaż musi być wykonany przez osoby odpowiednio do tego wykwalifikowane:
@@ -57,12 +57,12 @@
                 wiązań.</p>
         </div>
 
-        <hr style="height:0;border:none;border-top:1px solid #000;">
+        <hr class="lineHeight0BorderNoneBorderTop1pxSolid000">
         <div>
-            <p style="font-size: 24px; padding-bottom: 20px">JAKIE DANE SĄ POTRZEBNE DO MONTAŻU WIĄZAŃ?</p>
+            <p class="fontSize24 paddingBottom20">JAKIE DANE SĄ POTRZEBNE DO MONTAŻU WIĄZAŃ?</p>
         </div>
-        <div class="firstMessage" style="padding-left: 20px;padding-right: 20px;text-align: justify">
-            <ul style="font-size: 14px">
+        <div class="firstMessage paddingLeft20paddingRight20textAlignJustify">
+            <ul class="fontSize14">
                 <li>
                     Żeby wykonać poprawny montaż przede wszystkim należy podać długość skorupy buta, mierzoną w
                     milimetrach. Warto pamiętać, że jest to trzycyfrowa liczba, przeważnie wytłoczona w okolicach pięty
@@ -77,7 +77,7 @@
                 </li>
             </ul>
             <br>
-            <ol style="font-size: 12px">
+            <ol class="fontSize12">
                 <li>Narciarz początkujący – preferujący małe prędkości i spokojną jazdę, jeżdżący na stokach o
                     niewielkim nachyleniu.
                 </li>
@@ -86,13 +86,13 @@
             </ol>
         </div>
 
-        <hr style="height:0;border:none;border-top:1px solid #000;">
+        <hr class="lineHeight0BorderNoneBorderTop1pxSolid000">
         <div>
-            <p style="font-size: 24px; padding-bottom: 20px">DODATKOWE ELEMENTY, UWZGLĘDNIANE PODCZAS MONTAŻU
+            <p class="fontSize24 paddingBottom20">DODATKOWE ELEMENTY, UWZGLĘDNIANE PODCZAS MONTAŻU
                 WIĄZAŃ:</p>
         </div>
-        <div class="firstMessage" style="padding-left: 20px;padding-right: 20px;text-align: justify">
-            <ul style="font-size: 14px">
+        <div class="firstMessage paddingLeft20paddingRight20textAlignJustify">
+            <ul class="fontSize14">
                 <li>
                     Wiek narciarza - osoby, które mają ponad 50 lat powinni poinformować o tym w zamówieniu w celu
                     bezpiecznego ustawienia wiązań.
@@ -104,20 +104,20 @@
             </ul>
         </div>
 
-        <hr style="height:0;border:none;border-top:1px solid #000;">
-        <div class="firstMessage" style="padding-left: 20px;padding-right: 20px;text-align: justify">
-            <p style="font-size: 14px">
+        <hr class="lineHeight0BorderNoneBorderTop1pxSolid000">
+        <div class="firstMessage paddingLeft20paddingRight20textAlignJustify">
+            <p class="fontSize14">
                 Dane muszą zgadzać się z rzeczywistymi wymiarami narciarza. Tylko wtedy montaż będzie przeprowadzony
                 prawidłowo, zapewniając użytkownikowi właściwy stopień bezpieczeństwa!
             </p>
         </div>
 
-        <hr style="height:0;border:none;border-top:1px solid #000;">
+        <hr class="lineHeight0BorderNoneBorderTop1pxSolid000">
         <div>
-            <p style="font-size: 24px; padding-bottom: 20px">WIĄZANIA STANDARDOWE CZY NA PŁYCIE?</p>
+            <p class="fontSize24PaddingBottom20">WIĄZANIA STANDARDOWE CZY NA PŁYCIE?</p>
         </div>
-        <div class="firstMessage" style="padding-left: 20px;padding-right: 20px;text-align: justify">
-            <p style="font-size: 14px">
+        <div class="firstMessage paddingLeft20paddingRight20textAlignJustify">
+            <p class="fontSize14">
                 Obecnie narciarze mają duży wybór w dopasowaniu dla siebie najlepszych wiązań. Szczególną popularnością
                 cieszą się wiązania na płycie, które umożliwiają łatwą i szybką regulację bez używania jakichkolwiek
                 narzędzi. Jeżeli chcą Państwo ustawić je samodzielnie, nasi specjaliści chętnie objaśnią jak wykonać to
@@ -125,22 +125,22 @@
             </p>
         </div>
 
-        <hr style="height:0;border:none;border-top:1px solid #000;">
-        <div class="firstMessage" style="padding-left: 20px;padding-right: 20px;text-align: justify">
-            <p style="font-size: 14px">
+        <hr class="lineHeight0BorderNoneBorderTop1pxSolid000">
+        <div class="firstMessage paddingLeft20paddingRight20textAlignJustify">
+            <p class="fontSize14">
                 Standardowe wiązania (bez płyty) mają ruchomy wyłącznie tylny bezpiecznik, dlatego (po montażu do
                 wybranej długości buta) można jeszcze do nich dopasować buty, które są o rozmiar mniejsze, bądź o dwa
                 rozmiary większe.
             </p>
         </div>
 
-        <hr style="height:0;border:none;border-top:1px solid #000;">
+        <hr class="lineHeight0BorderNoneBorderTop1pxSolid000">
         <div>
-            <p style="font-size: 24px; padding-bottom: 20px">JAK PODAĆ WSZYSTKIE DANE, GDY NIE KUPIŁEM/KUPIŁAM JESZCZE
+            <p class="fontSize24PaddingBottom20">JAK PODAĆ WSZYSTKIE DANE, GDY NIE KUPIŁEM/KUPIŁAM JESZCZE
                 BUTÓW?</p>
         </div>
-        <div class="firstMessage" style="padding-left: 20px;padding-right: 20px;text-align: justify">
-            <p style="font-size: 14px">
+        <div class="firstMessage paddingLeft20paddingRight20textAlignJustify">
+            <p class="fontSize14">
                 Żeby ułatwić zakupy w naszym sklepie oferujemy klientom następujące rozwiązanie:
                 wybierając najpierw buty, a dopiero potem narty, w koszyku istnieje możliwość zamówienia montażu wiązań
                 do butów kupionych własnie w tym zamówieniu. Kiedy butów jest więcej wystarczy zaznaczyć, do której pary
@@ -151,17 +151,16 @@
             </p>
         </div>
 
-        <hr style="height:0;border:none;border-top:1px solid #000;">
-        <div class="firstMessage" style="padding-left: 20px;padding-right: 20px;text-align: justify">
-            <p style="font-size: 14px">
+        <hr class="lineHeight0BorderNoneBorderTop1pxSolid000">
+        <div class="firstMessage paddingLeft20paddingRight20textAlignJustify">
+            <p class="fontSize14">
                 PO ZAMONOTWANIU WIĄZAŃ NARTY SĄ W PEŁNI GOTOWE DO JAZDY NA STOKU!
             </p>
         </div>
-        <hr style="height:0;border:none;border-top:1px solid #000;">
+        <hr class="lineHeight0BorderNoneBorderTop1pxSolid000">
     </div>
 
-    <footer>
-        <div style="height: 30px"></div>
+    <footer class="footerFreeSpace30px">
         <jsp:include page="../homepage/footer.jsp"/>
     </footer>
 </div>

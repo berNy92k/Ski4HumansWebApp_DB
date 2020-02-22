@@ -26,17 +26,17 @@
         <jsp:include page="header.jsp"/>
     </header>
 
-    <div style="width: 98%; margin: 0 auto">
+    <div class="width98Margin0auto">
         <div align="center">
             &nbsp;
             <h3>
-                <a href="../admin/preCreateNewReview"><p style="color:#2b57b4">DODAJ NOWĄ RECENCJĘ DO BAZY</p></a>
+                <a href="../admin/preCreateNewReview"><p class="color2b57b4">DODAJ NOWĄ RECENCJĘ DO BAZY</p></a>
             </h3>
             &nbsp;
         </div>
 
         <div align="center">
-            <h5><p style="color: #950002;">${message}</p></h5>
+            <h5><p class="color950002">${message}</p></h5>
         </div>
 
         <div>
@@ -63,7 +63,7 @@
                         <td>${review.equipment.equipmentId}</td>
                         <td>${review.customer.customerId}</td>
                         <td>${review.reviewTime}</td>
-                        <td style="width: 220px">
+                        <td class="width220">
                             <a href="../admin/editReview?id=${review.reviewId}">EDYCJA</a> |
                             <a href="javascript:deleteReview(${review.reviewId})">USUŃ</a> |
                             <a href="../admin/viewReview?id=${review.reviewId}">PODGLĄD</a>
@@ -75,8 +75,7 @@
         </div>
     </div>
 
-    <footer>
-        <div style="height: 30px"></div>
+    <footer class="footerFreeSpace30px">
         <jsp:include page="footer.jsp"/>
     </footer>
 </div>

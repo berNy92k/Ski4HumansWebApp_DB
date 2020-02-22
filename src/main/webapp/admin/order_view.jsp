@@ -26,10 +26,10 @@
         <jsp:include page="header.jsp"/>
     </header>
 
-    <div style="width: 98%; margin: 30px auto 0; display: flex">
-        <div style="margin-right: 10px; width: 94%;">
+    <div class="width98Margin30auto0 displayFlex">
+        <div class="marginRight10 width94percentage">
             <div>
-                <h4 style="color: #b60001">Dane klienta: </h4>
+                <h4 class="colorb60001">Dane klienta: </h4>
                 <table class="table table-striped">
                     <thead>
                     <tr>
@@ -57,7 +57,7 @@
             </div>
 
             <div>
-                <h4 style="color: #b60001">Dane do wysyłki: </h4>
+                <h4 class="colorb60001">Dane do wysyłki: </h4>
                 <table class="table table-striped">
                     <thead>
                     <tr>
@@ -87,7 +87,7 @@
             </div>
 
             <div>
-                <h4 style="color: #b60001">Zamówiony sprzęt: </h4>
+                <h4 class="colorb60001">Zamówiony sprzęt: </h4>
                 <table class="table table-striped">
                     <thead>
                     <tr>
@@ -134,7 +134,7 @@
                 </table>
             </div>
         </div>
-        <div style="width: 100px;">
+        <div class="width100">
             <div>
                 <h5>Akcje:</h5>
             </div>
@@ -144,8 +144,7 @@
         </div>
     </div>
 
-    <footer>
-        <div style="height: 30px"></div>
+    <footer class="footerFreeSpace30px">
         <jsp:include page="footer.jsp"/>
     </footer>
 </div>

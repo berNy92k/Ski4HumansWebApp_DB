@@ -6,17 +6,15 @@
     response.setCharacterEncoding("UTF-8");
     request.setCharacterEncoding("UTF-8");
 %>
-<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom border-top box-shadow"
-     style="font-size: 10px">
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom border-top box-shadow fontSize10">
     <div class="my-auto mr-md-auto">
-        <img class="mb-2" src="../images/poland.png" width="15" height="10"
-             style="margin-right: 5px">Wybierz język
+        <img class="mb-2 marginRight5" src="../images/poland.png" width="15" height="10">Wybierz język
     </div>
     <div class="my-auto mr-md-auto">
         Do kolejnej wysyłki pozostało: 12:56:11
     </div>
 
-    <div style="font-size: 12px;">
+    <div class="fontSize12">
         Witaj,
         <c:if test="${sessionScope.userEmail != null}">
             <c:out value="${sessionScope.userEmail}, "/>
@@ -29,18 +27,17 @@
 </div>
 
 <div class="header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-    <div style="display: flex; justify-content: space-between; margin-bottom: 40px">
+    <div class="displayFlex justifyContentSpaceBetween marginBottom40px">
         <div>
             <a href="../admin/">
                 <img class="mb-2" src="../images/logoAdmin.png" width="330" height="30" alt="logo">
             </a>
         </div>
-        <div style="display: flex; justify-content: space-between; position: marker">
+        <div class="displayFlex justifyContentSpaceBetween positionMarker">
             <form class="search" action="../search">
                 <input type="text" placeholder="Szukaj.." name="search" size="60"
-                       style="font-weight: revert; border-radius: 15px; min-height: 35px;
-                       max-height: 35px ;border-color: rgba(109,163,207,0.99)">
-                <button type="submit" style="border-radius: 15px;  min-height: 35px; max-height: 35px">Szukaj</button>
+                       class="fontWeightRevert borderRadius15MinHeight35MaxHeight35 borderColorRgba109163207099">
+                <button type="submit" class="borderRadius15MinHeight35MaxHeight35">Szukaj</button>
             </form>
         </div>
     </div>
@@ -49,7 +46,7 @@
         <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
             <div class="btn-group mr-2" role="group" aria-label="First group">
                 <div class="dropdown">
-                    <button class="dropbtn" style="border-top-left-radius: 5px; border-bottom-left-radius: 5px">
+                    <button class="dropbtn borderTopLeftRadius5BorderBottomLeftRadius5">
                         <a href="../admin/skis.jsp">NARTY</a>
                     </button>
                 </div>
@@ -89,7 +86,7 @@
                     </button>
                 </div>
                 <div class="dropdown">
-                    <button class="dropbtn" style="border-top-right-radius: 5px; border-bottom-right-radius: 5px;">
+                    <button class="dropbtn borderTopRightRadius5BorderBottomRightRadius5">
                         INNE INFORMACJE
                     </button>
                     <div class="dropdown-content">

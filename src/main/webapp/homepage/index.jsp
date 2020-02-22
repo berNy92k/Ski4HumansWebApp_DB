@@ -26,7 +26,7 @@
     </header>
 
     <div>
-        <div style="width: 500px; height: 750px; float: left; margin: 10px 10px 10px 0;">
+        <div class="indexCarousel1">
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -50,8 +50,8 @@
             </div>
         </div>
 
-        <div style="width: 690px; height: 750px; float: left; margin: 10px 0 10px 10px;">
-            <div style="height: 365px; margin: 0px 0 10px 0px;">
+        <div class="indexCarousel2">
+            <div class="indexCarousel2a">
                 <div id="carouselExampleControls1" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
@@ -77,8 +77,8 @@
                     </a>
                 </div>
             </div>
-            <div style="margin: 10px 0 10px 0;">
-                <div style="float: left; height: 365px;width: 335px;margin: 10px 10px 0 0;">
+            <div class="indexCarousel2b">
+                <div class="indexCarousel2ba">
                     <div id="carouselExampleControls2" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
@@ -102,7 +102,7 @@
                         </a>
                     </div>
                 </div>
-                <div style="float: left; height: 365px;width: 335px;margin: 10px 0 0 10px;">
+                <div class="indexCarousel2bb">
                     <div id="carouselExampleControls3" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
@@ -130,12 +130,12 @@
         </div>
     </div>
 
-    <div style="margin-bottom: 30px">
+    <div class="marginBottom30px">
         <div class="firstMessage">
             <div class="lineUnderMessage"></div>
-            <p class="pTitle" style="font-size: 25px">SKLEP NARCIARSKI SKI4HUMANS.PL - NAJLEPSZY SPRZĘT DLA
+            <p class="pTitle">SKLEP NARCIARSKI SKI4HUMANS.PL - NAJLEPSZY SPRZĘT DLA
                 NARCIARZY</p>
-            <p style="font-size: 14px;text-align: justify">Sklep Ski4Humans to ponad 20 lat doświadczeń związanych ze
+            <p class="indexFirstMessage1">Sklep Ski4Humans to ponad 20 lat doświadczeń związanych ze
                 sprzedażą sprzętu zimowego.<br>
                 Dzięki ogromnej wiedzy, pasji i determinacji z sukcesem budujemy pozycję lidera sprzedaży nart i sprzętu
                 narciarskiego on-line w Polsce. Każdego roku zdobywamy kolejne tysiące zadowolonych klientów. Jako
@@ -152,23 +152,22 @@
         <c:if test="${messageEmpty == false}">
             <div class="firstMessage">
                 <div class="lineUnderMessage"></div>
-                <p class="pTitle" style="font-size: 25px">PRZYKŁADOWE NASZE PRODUKTY</p>
-                <div style="width: 95%; margin: 0 auto">
+                <p class="pTitle">PRZYKŁADOWE NASZE PRODUKTY</p>
+                <div class="width95margin0auto">
                     <c:forEach var="equipment" items="${equipmentShortList}">
-                        <div style="width: 250px; border: 1px solid rgba(0,7,255,0.02); display: inline-block;
-                                    margin: 14px;">
-                            <div style="width: 145px; margin: 0 auto">
+                        <div class=width250border07255006displayInlineBlockMargin14>
+                            <div class="indexFirstMessage2aa">
                                 <a href="../viewEquipment?id=${equipment.equipmentId}">
                                     <img class="book-small" src="data:image/jpg;base64,${equipment.base64Image}"
                                          width="145px" alt="Podgląd sprzętu"/>
                                 </a>
                             </div>
-                            <div style="text-align: center; vertical-align: center; margin-top: 5px">
-                                <div style="height: 115px">
-                                    <b style="font-size: 10px"> ${equipment.name}</b>
+                            <div class="textAlignCenterVerticalAlignCenterMarginTop5">
+                                <div class="indexFirstMessage2aba">
+                                    <b class="fontSize10"> ${equipment.name}</b>
                                 </div>
                                 <div>
-                                    <b style="color: #bf0004;font-size: 10px">${equipment.price} [zł]</b>
+                                    <b class="indexFirstMessage2abc">${equipment.price} [zł]</b>
                                 </div>
                             </div>
                         </div>
@@ -180,8 +179,7 @@
 
     <jsp:include page="../homepage/footerWithHelp.jsp"/>
 
-    <footer>
-        <div style="height: 30px"></div>
+    <footer class="footerFreeSpace30px">
         <jsp:directive.include file="../homepage/footer.jsp"/>
     </footer>
 </div>

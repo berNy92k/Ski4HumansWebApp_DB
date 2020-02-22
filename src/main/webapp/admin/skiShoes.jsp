@@ -26,26 +26,26 @@
         <jsp:include page="header.jsp"/>
     </header>
 
-    <div style="width: 80%;  margin: 50px auto 50px;">
-        <table style="color:#00042d; margin: 0 auto; font-size: large; width: 1000px">
+    <div class="width80Margin50auto50">
+        <table class="color00042dMargin0autoFontSizeLargeWidth1000px">
             <tr>
-                <td style="width: 25%">
+                <td class="width25percentage">
                     <a href="../admin/equipment?eq=skiShoes&sex=all">Wszystkie buty narciarskie</a>
                 </td>
-                <td style="width: 25%">
+                <td class="width25percentage">
                     <a href="../admin/equipment?eq=skiShoes&sex=woman">Buty narciarskie dla kobiet</a>
                 </td>
-                <td style="width: 25%">
+                <td class="width25percentage">
                     <a href="../admin/equipment?eq=skiShoes&sex=man">Buty narciarskie dla mężczyzn</a>
                 </td>
-                <td style="width: 25%">
+                <td class="width25percentage">
                     <a href="../admin/equipment?eq=skiShoes&sex=child">Buty narciarskie dla dzieci</a>
                 </td>
             </tr>
         </table>
     </div>
 
-    <footer style="margin-top: 80px">
+    <footer class="footerFreeSpace80px">
         <jsp:include page="footer.jsp"/>
     </footer>
 </div>

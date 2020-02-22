@@ -24,7 +24,7 @@
 </header>
 
 <div class="container">
-    <div style="padding-bottom: 20px">
+    <div class="paddingBottom20">
         <ul class="nav">
             <li class="nav-item">
                 <a class="nav-link active" href="../homepage/index.jsp">Strona główna</a>
@@ -46,13 +46,13 @@
     </div>
     <div>
         <div>
-            <p style="font-size: 30px; padding-bottom: 20px">W JAKI SPOSÓB DOBRAĆ BUTY NARCIARSKIE?</p>
+            <p class="fontSize30PaddingBottom20">W JAKI SPOSÓB DOBRAĆ BUTY NARCIARSKIE?</p>
         </div>
         <div>
-            <p style="font-size: 24px; padding-bottom: 20px">JAK PRAWIDŁOWO ZMIERZYĆ STOPĘ?</p>
+            <p class="fontSize24PaddingBottom20">JAK PRAWIDŁOWO ZMIERZYĆ STOPĘ?</p>
         </div>
-        <div class="firstMessage" style="padding-left: 20px;padding-right: 20px;text-align: justify">
-            <ul style="font-size: 14px">
+        <div class="firstMessage paddingLeft20paddingRight20textAlignJustify">
+            <ul class="fontSize14">
                 <li>
                     Czystą kartkę papieru połóż na podłodze i postaw na niej stopę.
                 </li>
@@ -63,42 +63,42 @@
                     Zmierz w centymetrach odległość między zaznaczonymi punktami.
                 </li>
             </ul>
-            <p style="font-size: 14px">
+            <p class="fontSize14">
                 Szukając butów do jazdy rekreacyjnej zalecamy dodać 0.5-1.0 cm do długości zmierzonej stopy. W przypadku
                 jazdy sportowej nie dodajemy już dodatkowych centymetrów, a tym samym uzyskujemy bardziej precyzyjny
                 przekaz siły na narty - jednocześnie zgadzając się na utratę komfortu w bucie narciarskim.</p>
         </div>
 
-        <hr style="height:0;border:none;border-top:1px solid #000;">
+        <hr class="lineHeight0BorderNoneBorderTop1pxSolid000">
         <div>
-            <p style="font-size: 24px; padding-bottom: 20px">JAK DOBRAĆ ROZMIAR BUTÓW NARCIARSKICH?</p>
+            <p class="fontSize24PaddingBottom20">JAK DOBRAĆ ROZMIAR BUTÓW NARCIARSKICH?</p>
         </div>
-        <div class="firstMessage" style="padding-left: 20px;padding-right: 20px;text-align: justify">
-            <p style="font-size: 14px">
+        <div class="firstMessage paddingLeft20paddingRight20textAlignJustify">
+            <p class="fontSize14">
                 Na dole strony znajduje się tabelki przykładowa tabelka, gdzie rozmiary odpowiadają zmierzonej długości
                 stopy w centymetrach (oznaczone są jako Mondo Point).</p>
         </div>
 
-        <hr style="height:0;border:none;border-top:1px solid #000;">
+        <hr class="lineHeight0BorderNoneBorderTop1pxSolid000">
         <div>
-            <p style="font-size: 24px; padding-bottom: 20px">CO JESZCZE WARTO UWZGLĘDNIĆ PRZY WYBORZE BUTÓW
+            <p class="fontSize24PaddingBottom20">CO JESZCZE WARTO UWZGLĘDNIĆ PRZY WYBORZE BUTÓW
                 NARCIARSKICH?</p>
         </div>
-        <div class="firstMessage" style="padding-left: 20px;padding-right: 20px;text-align: justify">
+        <div class="firstMessage paddingLeft20paddingRight20textAlignJustify">
 
-            <p style="font-size: 14px">
+            <p class="fontSize14">
                 Szerokość</p>
-            <p style="font-size: 14px">
+            <p class="fontSize14">
                 Buty narciarskie powinny być również dopasowane pod względem szerokości, która odpowiada szerokości
                 stopy w okolicach kości śródstopia (najczęściej ten współczynnik jest podany dla rozmiaru stopy 27,5
                 cm).
             </p>
-            <p style="font-size: 14px">Buty należy dopasować pod kątem wygody i charakteru jazdy:</p>
+            <p class="fontSize14">Buty należy dopasować pod kątem wygody i charakteru jazdy:</p>
         </div>
 
-        <hr style="height:0;border:none;border-top:1px solid #000;">
-        <div class="firstMessage" style="padding-left: 20px;padding-right: 20px;text-align: justify">
-            <ul style="font-size: 14px">
+        <hr class="lineHeight0BorderNoneBorderTop1pxSolid000">
+        <div class="firstMessage paddingLeft20paddingRight20textAlignJustify">
+            <ul class="fontSize14">
                 <li>
                     Buty do jazdy sportowej: poniżej 98 mm
                 </li>
@@ -113,10 +113,10 @@
                 </li>
             </ul>
             <br>
-            <p style="font-size: 14px">
+            <p class="fontSize14">
                 Flex
             </p>
-            <p style="font-size: 14px">
+            <p class="fontSize14">
                 Podczas wyboru butów narciarskich należy także kierować się flexem, czyli sztywnością buta. Wybór
                 właściwego flexu jest zależny od następujących czynników: umiejętności, predyspozycji fizycznych oraz
                 wagi. Osoby posiadające bardziej zaawansowane umiejętności w jeździe oraz charakteryzujące się większą
@@ -124,9 +124,9 @@
             </p>
         </div>
 
-        <hr style="height:0;border:none;border-top:1px solid #000;">
-        <div class="firstMessage" style="padding-left: 20px;padding-right: 20px;text-align: justify">
-            <ul style="font-size: 14px">
+        <hr class="lineHeight0BorderNoneBorderTop1pxSolid000">
+        <div class="firstMessage paddingLeft20paddingRight20textAlignJustify">
+            <ul class="fontSize14">
                 <li>
                     Początkujący: 40 – 70
                 </li>
@@ -137,18 +137,17 @@
                     Zaawansowani: 90 – wzwyż
                 </li>
             </ul>
-            <p style="font-size: 14px">
+            <p class="fontSize14">
                 Jeżeli mierzysz buty w domu pamiętaj, żeby dokładnie spiąć klamry i przyjąć pozycję narciarską – kolana
                 powinny być lekko ugięte (w taki sposób, aby znajdowały się w pionowej linii z palcami stóp), a golenie
                 oparte o języki butów.<br>
                 Palce nie mogą zbyt mocno naciskać na przód wkładki.
             </p>
         </div>
-        <hr style="height:0;border:none;border-top:1px solid #000;">
+        <hr class="lineHeight0BorderNoneBorderTop1pxSolid000">
     </div>
 
-    <footer>
-        <div style="height: 30px"></div>
+    <footer class="footerFreeSpace30px">
         <jsp:include page="../homepage/footer.jsp"/>
     </footer>
 </div>

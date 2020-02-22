@@ -24,7 +24,7 @@
 </header>
 
 <div class="container">
-    <div style="padding-bottom: 20px">
+    <div class="paddingBottom20">
         <ul class="nav">
             <li class="nav-item">
                 <a class="nav-link active" href="../homepage/index.jsp">Strona główna</a>
@@ -44,11 +44,11 @@
         </ul>
     </div>
     <div>
-        <div style="max-width: 1120px">
-            <div style="float: left; margin: 10px;padding: 10px;width: 350px; height: 450px"></div>
-            <div style="float: left; margin: 10px;padding: 10px;width: 350px; height: 450px">
-                <p style="font-size: 22px; padding-bottom: 20px">Informacja o sklepie</p>
-                <p style="font-size: 15px">
+        <div class="maxWidth1120">
+            <div class="floatLeftMargin10Padding10Width350Height450"></div>
+            <div class="floatLeftMargin10Padding10Width350Height450">
+                <p class="fontSize22PaddingBottom20">Informacja o sklepie</p>
+                <p class="fontSize15">
                     ski4humans.pl<br>
                     Biuro i magazyn sprzętu<br>
                     00-000 Miasto<br>
@@ -57,7 +57,7 @@
                     Telefon stacjonarny: +48 xx xxx xx xx<br>
                     Napisz do nas: info@skii4humans.pl</p>
             </div>
-            <div style="float: left; margin: 10px;padding: 10px;width: 350px; height: 450px">
+            <div class="floatLeftMargin10Padding10Width350Height450">
                 <form>
                     <div class="form-group">
                         <input type="email" class="form-control" id="inputEmail1" aria-describedby="emailHelp"
@@ -76,18 +76,18 @@
                 </form>
             </div>
         </div>
-        <div style="clear: both"></div>
-        <div style="max-width: 1120px">
-            <div style="float: left; margin: 10px;padding: 10px;width: 255px; height: 250px">
-                <img src="../pic/lokalizacja.PNG" style="padding-bottom: 6px"><br>
+        <div class="clearBoth"></div>
+        <div class="maxWidth1120">
+            <div class="floatLeftMargin10Padding10Width255Height250">
+                <img src="../images/lokalizacja.PNG" class="paddingBottom6"><br>
                 NASZA LOKALIZACJA<br><br>
                 ski4humans.pl<br>
                 Biuro i magazyn sprzętu<br>
                 53-440 Kraków<br>
                 Polska<br>
             </div>
-            <div style="float: left; margin: 10px;padding: 10px;width: 255px; height: 250px">
-                <img src="../pic/email1.PNG" style="padding-bottom: 13px"><br>
+            <div class="floatLeftMargin10Padding10Width255Height250">
+                <img src="../images/email1.PNG" class="paddingBottom13"><br>
                 DANE KONTAKTOWE<br><br>
                 E-mail:
                 <a href="mailto:info@ski4humans.pl">
@@ -95,24 +95,23 @@
                 </a>
                 <br>
             </div>
-            <div style="float: left; margin: 10px;padding: 10px;width: 260px; height: 250px">
-                <img src="../pic/phone1.PNG"><br>
+            <div class="floatLeftMargin10Padding10Width260Height250">
+                <img src="../images/phone1.PNG"><br>
                 SKONTAKTUJ SIĘ Z NAMI<br><br>
                 Tel. komórkowy: +48 xxx xxx xxx<br>
                 Tel. stacjonarny: +48 xx xxx xx xx<br>
             </div>
-            <div style="float: left; margin: 10px;padding: 10px;width: 260px; height: 250px">
-                <img src="../pic/obslugaKllienta.PNG"><br>
+            <div class="floatLeftMargin10Padding10Width260Height250">
+                <img src="../images/obslugaKllienta.PNG"><br>
                 OBSŁUGA KLIENTA<br><br>
                 8:00 - 16:00<br>
                 od poniedziałku do piątku<br>
             </div>
         </div>
-        <div style="clear: both"></div>
+        <div class="clearBoth"></div>
     </div>
 
-    <footer>
-        <div style="height: 30px"></div>
+    <footer class="footerFreeSpace30px">
         <jsp:include page="../homepage/footer.jsp"/>
     </footer>
 </div>

@@ -12,9 +12,9 @@
             <li><a class="text-muted" href="#">
                 <form action="index.jsp">
                     <input type="text" name="nazwa" placeholder="Twój adres email*" size="30"
-                           style="border-radius: 5px; min-height: 30px; max-height: 35px ;border-color: rgba(109,163,207,0.99)">
+                           class="borderRadius5MinHeight30MaxHeight35BorderColor109163207099">
                     <input type="submit" value="Wyślij"
-                           style="border-radius: 5px;  min-height: 30px; max-height: 35px">
+                           class="borderRadius5MinHeight30MaxHeight35">
                 </form>
             </a></li>
             <li class="text-muted">* Możesz zrezygnować w każdej chwili. W tym celu należy odnaleźć
@@ -77,19 +77,21 @@
     </div>
 </div>
 
-<div class="row&copy" style="align-items: center">
-    <p style="text-align: center">
+<div class="row&copy textItemsCenter">
+    <p class="textAlignCenter">
         <small class="d-block mb-3 text-muted">&copy; Copyright ski4humans.pl. All rights reserved.</small>
     </p>
 </div>
 
-<div class="row&socialMedia" style="align-items: center">
+<div class="row&socialMedia textItemsCenter">
     <!-- <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a
         href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a
         href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0
     BY</a></div> -->
-    <p style="text-align: center"><img class="mb-2" src="../images/facebook.png" width="20" height="20">
+    <p class="textAlignCenter">
+        <img class="mb-2" src="../images/facebook.png" width="20" height="20">
         <img class="mb-2" src="../images/google-plus.png" width="20" height="20">
         <img class="mb-2" src="../images/youtube.png" width="20" height="20">
-        <img class="mb-2" src="../images/instagram.png" width="20" height="20"></p>
+        <img class="mb-2" src="../images/instagram.png" width="20" height="20">
+    </p>
 </div>

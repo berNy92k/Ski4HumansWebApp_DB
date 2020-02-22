@@ -26,25 +26,25 @@
         <jsp:directive.include file="header.jsp"/>
     </header>
 
-    <div style="width: 98%; margin: 30px auto 40px;">
-        <div style="display: flex">
-            <div style="margin-right: 15px; width: 610px; border: 1px solid #0d0e48;">
+    <div class="width98Margin30auto40">
+        <div class="displayFlex">
+            <div class="marginRight15Width610Border0d0e48">
                 <img src="data:image/jpg;base64, ${equipment.base64Image}" width="600px">
             </div>
-            <div style="width: 50px"></div>
-            <div style="width: 500px">
-                <div style="margin-bottom: 40px">
-                    <h3 style="color: #0d0e48"><b>${equipment.name}</b></h3>
+            <div class="width50"></div>
+            <div class="width500">
+                <div class="marginBottom40px">
+                    <h3 class="color0d0e48"><b>${equipment.name}</b></h3>
                 </div>
-                <div style="margin-bottom: 40px;display: flex">
-                    <h6 style="color: #b60001">Cena:</h6> &nbsp;
-                    <h2 style="color: #b60001"><b>${equipment.price}</b> zł</h2>
+                <div class="marginBottom40displayFlex">
+                    <h6 class="colorb60001">Cena:</h6> &nbsp;
+                    <h2 class="colorb60001"><b>${equipment.price}</b> zł</h2>
                 </div>
-                <div style="margin-bottom: 40px">
+                <div class="marginBottom40px">
                     <h6>Długość (cm) / Rozmiar (EU)</h6>
                     <h3>${equipment.lengthOrSize}</h3>
                 </div>
-                <div style="margin-bottom: 40px;display: flex">
+                <div class="marginBottom40displayFlex">
                     <div>
                         <div>
                             <h5>Producent:</h5>
@@ -53,11 +53,11 @@
                             <h3>${equipment.manufacturer.manufacturerName}</h3>
                         </div>
                     </div>
-                    <div style="margin-left: 50px">
+                    <div class="marginLeft50">
                         <img src="data:image/jpg;base64,${equipment.manufacturer.base64Image}" width="250px">
                     </div>
                 </div>
-                <div style="margin-bottom: 40px;display: flex">
+                <div class="marginBottom40displayFlex">
                     <div>
                         <div>
                             <h5>Ocena:</h5>
@@ -82,18 +82,17 @@
                         </div>
                     </div>
                 </div>
-                <div style="margin-bottom: 40px; text-align: center">
+                <div class="marginBottom40TextAlignCenter">
                     <a href="../homepage/addToShoppingCart?eq=${equipment.equipmentId}">
                         <button type="button" class="btn btn-primary" id="cancel">
                             DODAJ DO KOSZYKA
                         </button>
                     </a>
                 </div>
-                <div style="margin-bottom: 20px">
-                    <table style="margin: 0 auto; table-layout:fixed;
-                    white-space: normal !important; word-wrap: break-word;">
+                <div class="marginBottom20px">
+                    <table class="margin0autoTableLayoutFixedWhiteSpaceNormalImportantWordWrapBreakWord">
                         <thead>
-                        <tr style="background-color:rgba(0,117,255,0.23)">
+                        <tr class="backgroundColorRgba0117255023">
                             <th>
                                 <h7>Krótki opis produktu:</h7>
                             </th>
@@ -110,11 +109,10 @@
                 </div>
             </div>
         </div>
-        <div style="clear: both; margin-top: 40px">
-            <table style="margin: 0 auto; width: 1200px; table-layout:fixed; white-space: normal !important;
-            word-wrap: break-word">
+        <div class="clearBothMarginTop40">
+            <table class="margin0autoTableLayoutFixedWhiteSpaceNormalImportantWordWrapBreakWordWidth1200">
                 <thead>
-                <tr style="background-color:rgba(0,117,255,0.23)">
+                <tr class="backgroundColorRgba0117255023">
                     <th>
                         <h5>Opis produktu: </h5>
                     </th>
@@ -133,15 +131,14 @@
 
     <jsp:include page="../homepage/footerWithHelp.jsp"/>
 
-    <div style="clear: both; margin-top: 50px">
-        <table class="table table-striped" style="margin: 0 auto; width: 1200px; table-layout:fixed;
-                      white-space: normal !important; word-wrap: break-word">
+    <div class="clearBothMarginTop50">
+        <table class="table table-striped margin0autoTableLayoutFixedWhiteSpaceNormalImportantWordWrapBreakWordWidth1200">
             <thead>
             <tr>
                 <th scope="col">
                     <div>
-                        <div style="display: flex">
-                            <div style="width: 990px;">
+                        <div class="displayFlex">
+                            <div class="width900">
                                 <h5>Recenzja: </h5>
                             </div>
                             <c:if test="${sessionScope.customerLogged != null}">
@@ -152,12 +149,12 @@
                                 </div>
                             </c:if>
                         </div>
-                        <div style="display: flex; font-size: 10px">
-                            <div style="width: 295px;">Data wpisu:</div>
-                            <div style="margin-left: 5px; margin-right: 5px">|</div>
-                            <div style="width: 790px">Tytuł:</div>
-                            <div style="margin-left: 5px; margin-right: 5px">|</div>
-                            <div style="width: 195px;">Autor:</div>
+                        <div class="displayFlex fontSize10">
+                            <div class="width295">Data wpisu:</div>
+                            <div class="marginLeft5MarginRight5">|</div>
+                            <div class="width790">Tytuł:</div>
+                            <div class="marginLeft5MarginRight5">|</div>
+                            <div class="width195">Autor:</div>
                         </div>
                     </div>
 
@@ -179,17 +176,17 @@
                     <tr>
                         <td>
                             <div>
-                                <div style="display: flex">
-                                    <div style="width: 295px;">${review.reviewTime}</div>
-                                    <div style="margin-left: 5px; margin-right: 5px">|</div>
-                                    <div style="width: 790px">${review.headline}</div>
-                                    <div style="margin-left: 5px; margin-right: 5px">|</div>
-                                    <div style="width: 195px;">${review.customer.firstName} ${review.customer.lastName.substring(0,1)}.</div>
+                                <div class="displayFlex">
+                                    <div class="width295">${review.reviewTime}</div>
+                                    <div class="marginLeft5MarginRight5">|</div>
+                                    <div class="width790">${review.headline}</div>
+                                    <div class="marginLeft5MarginRight5">|</div>
+                                    <div class="width195">${review.customer.firstName} ${review.customer.lastName.substring(0,1)}.</div>
                                 </div>
-                                <div style="clear: both; display: flex; margin-top: 10px;">
-                                    <div style="width: 1090px;">${review.comment}</div>
-                                    <div style="margin-left: 5px; margin-right: 5px">|</div>
-                                    <div style="width: 195px">
+                                <div class="clearBothDisplayFlexMarginTop10">
+                                    <div class="width1090">${review.comment}</div>
+                                    <div class="marginLeft5MarginRight5">|</div>
+                                    <div class="width195">
                                         Ocena:
                                         <c:forEach begin="1" end="6" var="i">
                                             <c:if test="${i <= review.rating}">
@@ -209,8 +206,7 @@
             </tbody>
         </table>
     </div>
-    <footer>
-        <div style="height: 30px"></div>
+    <footer class="footerFreeSpace30px">
         <jsp:include page="footer.jsp"/>
     </footer>
 </div>

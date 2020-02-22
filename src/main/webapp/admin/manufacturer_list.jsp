@@ -26,15 +26,15 @@
         <jsp:include page="header.jsp"/>
     </header>
 
-    <div style="width: 90%; margin: 0 auto">
+    <div class="width90Margin0auto">
         <div align="center">
             &nbsp;
-            <h3><a href="../admin/manufacturer_create.jsp"><p style="color:#2b57b4">DODAJ NOWEGO PRODUCENTA DO BAZY</p></a></h3>
+            <h3><a href="../admin/manufacturer_create.jsp"><p class="color2b57b4">DODAJ NOWEGO PRODUCENTA DO BAZY</p></a></h3>
             &nbsp;
         </div>
 
         <div align="center">
-            <h5><p style="color: #950002;">${message}</p></h5>
+            <h5><p class="color950002">${message}</p></h5>
         </div>
 
         <div>
@@ -70,8 +70,7 @@
         </div>
     </div>
 
-    <footer>
-        <div style="height: 30px"></div>
+    <footer class="footerFreeSpace30px">
         <jsp:include page="footer.jsp"/>
     </footer>
 </div>

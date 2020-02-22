@@ -24,7 +24,7 @@
 </header>
 
 <div class="container">
-    <div style="padding-bottom: 20px">
+    <div class="paddingBottom20">
         <ul class="nav">
             <li class="nav-item">
                 <a class="nav-link active" href="../homepage/index.jsp">Strona główna</a>
@@ -45,10 +45,10 @@
     </div>
     <div>
         <div>
-            <p style="font-size: 30px; padding-bottom: 20px">JAK DOPASOWAĆ DŁUGOŚĆ NART?</p>
+            <p class="fontSize30PaddingBottom20">JAK DOPASOWAĆ DŁUGOŚĆ NART?</p>
         </div>
-        <div class="firstMessage" style="padding-left: 20px;padding-right: 20px;text-align: justify">
-            <p style="font-size: 14px">
+        <div class="firstMessage paddingLeft20paddingRight20textAlignJustify">
+            <p class="fontSize14">
                 Narciarstwo alpejskie to dyscyplina sportowa, w której właściwe dopasowanie sprzętu stanowi
                 najważniejszy element w przygotowaniach do jazdy. Jego prawidłowy dobór ma wpływ przede wszystkim na
                 bezpieczeństwo narciarza – zmniejsza ryzyko wszelkich kontuzji, a nawet groźnych wypadków. Poza tym
@@ -57,12 +57,12 @@
                 oraz warunków panujących na stoku.</p>
         </div>
 
-        <hr style="height:0;border:none;border-top:1px solid #000;">
+        <hr class="lineHeight0BorderNoneBorderTop1pxSolid000">
         <div>
-            <p style="font-size: 24px; padding-bottom: 20px">JAKĄ DŁUGOŚĆ NART WYBRAĆ?</p>
+            <p class="fontSize24PaddingBottom20">JAKĄ DŁUGOŚĆ NART WYBRAĆ?</p>
         </div>
-        <div class="firstMessage" style="padding-left: 20px;padding-right: 20px;text-align: justify">
-            <ul style="font-size: 14px">
+        <div class="firstMessage paddingLeft20paddingRight20textAlignJustify">
+            <ul class="fontSize14">
                 <li>
                     Narty dla początkujących i średniozaawansowanych (czyli głównie allround i allmountain) dobiera się
                     nawet 20 - 15 cm krótsze od wzrostu, co może być sporym zaskoczeniem dla narciarzy, którzy byli
@@ -95,10 +95,10 @@
         </div>
         <br>
         <div>
-            <p style="font-size: 24px; padding-bottom: 20px">PAMIĘTAJ!</p>
+            <p class="fontSize24PaddingBottom20">PAMIĘTAJ!</p>
         </div>
-        <div class="firstMessage" style="padding-left: 20px;padding-right: 20px;text-align: justify">
-            <p style="font-size: 14px">
+        <div class="firstMessage paddingLeft20paddingRight20textAlignJustify">
+            <p class="fontSize14">
                 Jeżeli masz jakiekolwiek wątpliwości podczas wyboru nart albo czujesz się niekomfortowo na wybranym
                 przez siebie modelu - nie bój się pytać. Doradcy naszych w sklepach (zarówno stacjonarnym, jak i
                 internetowym) posiadają wiedzę, która pomoże Ci w doborze właściwego dla siebie sprzętu
@@ -107,8 +107,7 @@
         </div>
     </div>
 
-    <footer>
-        <div style="height: 30px"></div>
+    <footer class="footerFreeSpace30px">
         <jsp:include page="../homepage/footer.jsp"/>
     </footer>
 </div>

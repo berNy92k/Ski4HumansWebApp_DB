@@ -26,7 +26,7 @@
         <jsp:directive.include file="header.jsp"/>
     </header>
 
-    <div style="width: 98%; margin: 20px auto 0">
+    <div class="width98Margin20auto0">
 
         <div align="center">
             <h3>
@@ -36,8 +36,7 @@
 
     </div>
 
-    <footer>
-        <div style="height: 30px"></div>
+    <footer class="footerFreeSpace30px">
         <jsp:include page="footer.jsp"/>
     </footer>
 </div>

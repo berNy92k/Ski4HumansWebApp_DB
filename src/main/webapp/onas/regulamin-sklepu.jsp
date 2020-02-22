@@ -24,7 +24,7 @@
 </header>
 
 <div class="container">
-    <div style="padding-bottom: 20px">
+    <div class="paddingBottom20">
         <ul class="nav">
             <li class="nav-item">
                 <a class="nav-link active" href="../homepage/index.jsp">Strona główna</a>
@@ -45,20 +45,20 @@
     </div>
     <div>
         <div>
-            <p style="font-size: 30px; padding-bottom: 20px">Regulamin sklepu</p>
+            <p class="fontSize30PaddingBottom20">Regulamin sklepu</p>
         </div>
-        <div class="firstMessage" style="padding-left: 20px;padding-right: 20px;text-align: justify">
-            <p style="font-size: 14px">
+        <div class="firstMessage paddingLeft20paddingRight20textAlignJustify">
+            <p class="fontSize14">
                 NINIEJSZY REGULAMIN OKREŚLA ZASADY KORZYSTANIA Z INTERNETOWEGO SKLEPU ZNAJDUJĄCEGO SIĘ POD ADRESEM
                 www.ski4humans.pl.</p>
-            <hr style="height:0;border:none;border-top:1px solid #000;">
-            <p style="font-size: 14px">Każda osoba korzystająca z usług sklepu internetowego www.ski4humans.pl ma
+            <hr class="lineHeight0BorderNoneBorderTop1pxSolid000">
+            <p class="fontSize14">Każda osoba korzystająca z usług sklepu internetowego www.ski4humans.pl ma
                 obowiązek zapoznania się z niniejszym regulaminem.</p>
-            <p style="font-size: 14px">.</p>
+            <p class="fontSize14">.</p>
         </div>
-        <div class="firstMessage" style="padding-left: 20px;padding-right: 20px;text-align: justify">
-            <p style="font-size: 18px">§ 1. ZASTOSOWANIE</p>
-            <ol style="font-size: 14px">
+        <div class="firstMessage paddingLeft20paddingRight20textAlignJustify">
+            <p class="fontSize18">§ 1. ZASTOSOWANIE</p>
+            <ol class="fontSize14">
                 <li>Witryna znajdująca się pod adresem www.ski4humans.pl jest sklepem internetowym i służy do
                     prowadzenia sprzedaży na odległość za pośrednictwem sieci Internet.
                 </li>
@@ -101,11 +101,11 @@
                     jest pod warunkiem wcześniejszego porozumienia się ze Sprzedawcą.
                 </li>
             </ol>
-            <p style="font-size: 14px">.</p>
+            <p class="fontSize14">.</p>
         </div>
-        <div class="firstMessage" style="padding-left: 20px;padding-right: 20px;text-align: justify">
-            <p style="font-size: 18px">§ 2. OPISY I ZDJĘCIA PRODUKTÓW</p>
-            <ol style="font-size: 14px">
+        <div class="firstMessage paddingLeft20paddingRight20textAlignJustify">
+            <p class="fontSize18">§ 2. OPISY I ZDJĘCIA PRODUKTÓW</p>
+            <ol class="fontSize14">
                 <li>Sprzedawca udostępnia Klientom ogólną informację o produktach znajdujących się na stronie Sklepu,
                     zawierającą opis produktu zgodnie z informacjami rozpowszechnianymi przez producenta lub
                     dystrybutora.
@@ -115,11 +115,11 @@
                     występujących pomiędzy rzeczywistym wyglądem danej rzeczy a jej wyglądem na zdjęciu.
                 </li>
             </ol>
-            <p style="font-size: 14px">.</p>
+            <p class="fontSize14">.</p>
         </div>
-        <div class="firstMessage" style="padding-left: 20px;padding-right: 20px;text-align: justify">
-            <p style="font-size: 18px">§ 3. INFORMACJE O KONTACH UŻYTKOWNIKA</p>
-            <ol style="font-size: 14px">
+        <div class="firstMessage paddingLeft20paddingRight20textAlignJustify">
+            <p class="fontSize18">§ 3. INFORMACJE O KONTACH UŻYTKOWNIKA</p>
+            <ol class="fontSize14">
                 <li>Klient może złożyć zamówienie w Sklepie poprzez stronę internetową korzystając z konta Klienta,
                     korzystając z opcji złożenia zamówienia bez rejestracji konta Klienta w Sklepie poprzez wybranie
                     opcji „Kontynuuj bez rejestracji” lub korzystając z opcji logowania przez portal facebook.com.
@@ -137,11 +137,11 @@
                 <li>W czasie rejestracji Klient proszony jest o zapoznanie się z regulaminem.
                 </li>
             </ol>
-            <p style="font-size: 14px">.</p>
+            <p class="fontSize14">.</p>
         </div>
-        <div class="firstMessage" style="padding-left: 20px;padding-right: 20px;text-align: justify">
-            <p style="font-size: 18px">§ 4. ZAMÓWIENIA</p>
-            <ol style="font-size: 14px">
+        <div class="firstMessage paddingLeft20paddingRight20textAlignJustify">
+            <p class="fontSize18">§ 4. ZAMÓWIENIA</p>
+            <ol class="fontSize14">
                 <li>Bieżąca obsługa Klientów prowadzona jest w dni robocze w godzinach od 8.00 do 16.00, pod numerem
                     telefonu: xxx xxx xxx oraz mailowo pod adresem: info@ski4humans.pl.
                 </li>
@@ -207,11 +207,11 @@
                 <li>Do każdego zamówienia wystawiany jest paragon fiskalny, a na życzenie Klienta również faktura VAT.
                 </li>
             </ol>
-            <p style="font-size: 14px">.</p>
+            <p class="fontSize14">.</p>
         </div>
-        <div class="firstMessage" style="padding-left: 20px;padding-right: 20px;text-align: justify">
-            <p style="font-size: 18px">§ 5. CENY</p>
-            <ol style="font-size: 14px">
+        <div class="firstMessage paddingLeft20paddingRight20textAlignJustify">
+            <p class="fontSize18">§ 5. CENY</p>
+            <ol class="fontSize14">
                 <li>Informacja o cenie zakupu towaru w Sklepie podawana jest na stronie Sklepu. Cena towaru nie ulegnie
                     zmianie niezależnie od zmian cen w Sklepie, które mogą się pojawić po potwierdzeniu przyjęcia do
                     realizacji zamówienia Klienta.
@@ -228,11 +228,11 @@
                     zmian.
                 </li>
             </ol>
-            <p style="font-size: 14px">.</p>
+            <p class="fontSize14">.</p>
         </div>
-        <div class="firstMessage" style="padding-left: 20px;padding-right: 20px;text-align: justify">
-            <p style="font-size: 18px">§ 6. FORMY PŁATNOŚCI I CZAS REALIZACJI ZAMÓWIENIA</p>
-            <ol style="font-size: 14px">
+        <div class="firstMessage paddingLeft20paddingRight20textAlignJustify">
+            <p class="fontSize18">§ 6. FORMY PŁATNOŚCI I CZAS REALIZACJI ZAMÓWIENIA</p>
+            <ol class="fontSize14">
                 <li>Klient płaci cenę za zamówione produkty, wedle swego wyboru:
                     <br><br>
                     płatność on-line (przedpłata) za pośrednictwem systemu płatności elektronicznych DotPay.pl (kartą
@@ -259,11 +259,11 @@
                     przez Klienta podczas składania zamówienia.
                 </li>
             </ol>
-            <p style="font-size: 14px">.</p>
+            <p class="fontSize14">.</p>
         </div>
-        <div class="firstMessage" style="padding-left: 20px;padding-right: 20px;text-align: justify">
-            <p style="font-size: 18px">§ 7. DOSTAWA I KOSZTY WYSYŁKI</p>
-            <ol style="font-size: 14px">
+        <div class="firstMessage paddingLeft20paddingRight20textAlignJustify">
+            <p class="fontSize18">§ 7. DOSTAWA I KOSZTY WYSYŁKI</p>
+            <ol class="fontSize14">
                 <li>Zamówiony towar dostarczany jest do Klienta na terenie Polski na jego koszt za pośrednictwem firmy
                     kurierskiej GLS.
                 </li>
@@ -303,11 +303,11 @@
                 </li>
                 <li>Klient nie ponosi kosztów dostawy w przypadku odbioru osobistego.</li>
             </ol>
-            <p style="font-size: 14px">.</p>
+            <p class="fontSize14">.</p>
         </div>
-        <div class="firstMessage" style="padding-left: 20px;padding-right: 20px;text-align: justify">
-            <p style="font-size: 18px">§ 8. REKLAMACJE</p>
-            <ol style="font-size: 14px">
+        <div class="firstMessage paddingLeft20paddingRight20textAlignJustify">
+            <p class="fontSize18">§ 8. REKLAMACJE</p>
+            <ol class="fontSize14">
                 <li>Wszystkie produkty oferowane w Sklepie są fabrycznie nowe (chyba, że w opisie wyraźnie zaznaczono,
                     że są używane), wolne od wad fizycznych i prawnych oraz zostały legalnie wprowadzone na rynek
                     polski.
@@ -361,11 +361,11 @@
                     pod adresem: <a href="http://ec.europa.eu/consumers/odr/">http://ec.europa.eu/consumers/odr/</a>.
                 </li>
             </ol>
-            <p style="font-size: 14px">.</p>
+            <p class="fontSize14">.</p>
         </div>
-        <div class="firstMessage" style="padding-left: 20px;padding-right: 20px;text-align: justify">
-            <p style="font-size: 18px">§ 9. ODSTĄPIENIE OD UMOWY</p>
-            <ol style="font-size: 14px">
+        <div class="firstMessage paddingLeft20paddingRight20textAlignJustify">
+            <p class="fontSize18">§ 9. ODSTĄPIENIE OD UMOWY</p>
+            <ol class="fontSize14">
                 <li>Klient będący konsumentem może w terminie 14 dni od umowy odstąpić bez podawania przyczyny i bez
                     ponoszenia kosztów z wyjątkiem:
                     <br><br>
@@ -427,11 +427,11 @@
                     wypełniony formularz zwrotu.
                 </li>
             </ol>
-            <p style="font-size: 14px">.</p>
+            <p class="fontSize14">.</p>
         </div>
-        <div class="firstMessage" style="padding-left: 20px;padding-right: 20px;text-align: justify">
-            <p style="font-size: 18px">§ 10. POLITYKA PRYWATNOŚCI</p>
-            <ol style="font-size: 14px">
+        <div class="firstMessage paddingLeft20paddingRight20textAlignJustify">
+            <p class="fontSize18">§ 10. POLITYKA PRYWATNOŚCI</p>
+            <ol class="fontSize14">
                 <li>Administratorem danych osobowych Klientów w Sklepie jest XYZ Spółka jawna z siedzibą w XYZ,
                     ul. XYZ xx, xx – xxx XYZ.
                 </li>
@@ -494,11 +494,11 @@
                     producentem przeglądarki, z której Państwo korzystacie.
                 </li>
             </ol>
-            <p style="font-size: 14px">.</p>
+            <p class="fontSize14">.</p>
         </div>
-        <div class="firstMessage" style="padding-left: 20px;padding-right: 20px;text-align: justify">
-            <p style="font-size: 18px">§ 11. WYMAGANIA TECHNICZNE</p>
-            <p style="font-size: 14px"> Minimalne wymagania techniczne wobec komputera, używanego do zakupów w Sklepie:
+        <div class="firstMessage paddingLeft20paddingRight20textAlignJustify">
+            <p class="fontSize18">§ 11. WYMAGANIA TECHNICZNE</p>
+            <p class="fontSize14"> Minimalne wymagania techniczne wobec komputera, używanego do zakupów w Sklepie:
                 komputer z dostępem do sieci Internet oraz poczty e-mail, wymagane oprogramowanie:
                 <br><br>
                 komputer z systemem operacyjnym obsługującym jedną z poniższych przeglądarek internetowych: Internet
@@ -510,11 +510,11 @@
                 karta wideo i monitor o rozdzielczości min. 1024px w poziomie, klawiatura lub dowolne urządzenie
                 wskazujące.
             </p>
-            <p style="font-size: 14px">.</p>
+            <p class="fontSize14">.</p>
         </div>
-        <div class="firstMessage" style="padding-left: 20px;padding-right: 20px;text-align: justify">
-            <p style="font-size: 18px">§ 12. POSTANOWIENIA KOŃCOWE</p>
-            <ol style="font-size: 14px">
+        <div class="firstMessage paddingLeft20paddingRight20textAlignJustify">
+            <p class="fontSize18">§ 12. POSTANOWIENIA KOŃCOWE</p>
+            <ol class="fontSize14">
                 <li>Regulamin wchodzi w życie z dniem 25 grudnia 2014 r.
                 </li>
                 <li>Sprzedawca może dokonać zmian w niniejszym regulaminie, przy czym zmiana dokonywana jest poprzez
@@ -544,12 +544,11 @@
                     powszechny.
                 </li>
             </ol>
-            <p style="font-size: 14px">.</p>
+            <p class="fontSize14">.</p>
         </div>
     </div>
 
-    <footer>
-        <div style="height: 30px"></div>
+    <footer class="footerFreeSpace30px">
         <jsp:include page="../homepage/footer.jsp"/>
     </footer>
 </div>

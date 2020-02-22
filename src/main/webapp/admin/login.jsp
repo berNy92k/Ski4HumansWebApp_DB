@@ -26,7 +26,7 @@
         <jsp:include page="header.jsp"/>
     </header>
 
-    <div style="width: 500px; margin: 0 auto">
+    <div class="width500pxMargin0auto">
         <div align="center">
             &nbsp;
             <p>Uzupełnij wszystkie pola aby zalogować się jako administrator</p>
@@ -35,7 +35,7 @@
 
         <c:if test="${message != null}">
             <div align="center">
-                <h5><p style="color: #950002;">${message}</p></h5>
+                <h5><p class="color950002">${message}</p></h5>
             </div>
         </c:if>
 
@@ -61,8 +61,7 @@
         </div>
     </div>
 
-    <footer>
-        <div style="height: 30px"></div>
+    <footer class="footerFreeSpace30px">
         <jsp:include page="footer.jsp"/>
     </footer>
 </div>

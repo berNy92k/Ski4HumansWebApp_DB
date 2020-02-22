@@ -26,15 +26,15 @@
         <jsp:directive.include file="header.jsp"/>
     </header>
 
-    <div style="width: 98%; margin: 20px auto 0">
+    <div class="width98Margin20auto0">
 
         <%-- Form for transaction --%>
         <form action="../homepage/continueCheckout" method="post" id="shoppingCart">
 
-            <div style="display: flex">
+            <div class="displayFlex">
                 <%-- Shopping cart --%>
-                <div style="width: 48%">
-                    <div align="center" style="clear: both;">
+                <div class="width48percentage">
+                    <div align="center" class="clearBoth">
                         <h5>Koszyk</h5>
                     </div>
                     <table class="table table-striped">
@@ -90,13 +90,13 @@
                 </div>
 
                 <%-- Address --%>
-                <div style="width: 48%; margin-left: 4%">
+                <div class="width48percentage marginLeft4percentage">
                     <div align="center">
                         <h5>Adres do wysyłki / Dane kontaktowe</h5>
                     </div>
 
-                    <div style="display: flex">
-                        <div style="width: 48%">
+                    <div class="displayFlex">
+                        <div class="width48percentage">
                             <div class="form-group">
                                 <label for="email">Email</label>
                                 <input type="text" class="form-control" id="email" name="email" aria-describedby="email"
@@ -127,7 +127,7 @@
                                        placeholder="Wpisz numer domu" value="${loggedCustomer.homeNumber}">
                             </div>
                         </div>
-                        <div style="width: 48%; margin-left: 4%">
+                        <div class="width48percentage marginLeft4percentage">
                             <div class="form-group">
                                 <label for="city">Miasto</label>
                                 <input type="text" class="form-control" id="city" name="city" aria-describedby="city"
@@ -157,7 +157,7 @@
 
             <%-- Finish transaction --%>
             <c:if test="${cart.totalQuantityOfEquipments != 0}">
-                <table style="border: 2px solid #2b57b4; border-radius: 10px; padding: 1ex;">
+                <table class="border2b57b4BorderRadius10Padding1ex">
                     <tr>
                         <td>
                             <button type="submit">
@@ -176,8 +176,7 @@
         </form>
     </div>
 
-    <footer>
-        <div style="height: 30px"></div>
+    <footer class="footerFreeSpace30px">
         <jsp:include page="footer.jsp"/>
     </footer>
 </div>

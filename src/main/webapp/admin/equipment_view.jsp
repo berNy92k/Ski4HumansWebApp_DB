@@ -26,25 +26,25 @@
         <jsp:include page="header.jsp"/>
     </header>
 
-    <div style="width: 98%; margin: 30px auto 0;">
-        <div style="display: flex">
-            <div style="margin-right: 15px; width: 610px; border: 1px solid #0d0e48;">
+    <div class="width98Margin30auto0">
+        <div class="displayFlex">
+            <div class="marginRight15Width610Border0d0e48">
                 <img src="data:image/jpg;base64, ${equipment.base64Image}" width="600px">
             </div>
-            <div style="width: 50px"></div>
-            <div style="width: 400px">
-                <div style="margin-bottom: 40px">
-                    <h3 style="color: #0d0e48">${equipment.name}</h3>
+            <div class="width50"></div>
+            <div class="width400">
+                <div class="marginBottom40px">
+                    <h3 class="color0d0e48">${equipment.name}</h3>
                 </div>
-                <div style="margin-bottom: 40px;display: flex">
-                    <h4 style="color: #b60001">Cena:</h4> &nbsp;
-                    <h2 style="color: #b60001">${equipment.price} zł</h2>
+                <div class="marginBottom40displayFlex">
+                    <h4 class="colorb60001">Cena:</h4> &nbsp;
+                    <h2 class="colorb60001">${equipment.price} zł</h2>
                 </div>
-                <div style="margin-bottom: 40px">
+                <div class="marginBottom40px">
                     <h5>Długość (cm) / Rozmiar (EU)</h5>
                     <h3>${equipment.lengthOrSize}</h3>
                 </div>
-                <div style="margin-bottom: 40px;display: flex">
+                <div class="marginBottom40displayFlex">
                     <div>
                         <div>
                             <h5>Producent:</h5>
@@ -53,15 +53,14 @@
                             <h3>${equipment.manufacturer.manufacturerName}</h3>
                         </div>
                     </div>
-                    <div style="margin-left: 50px">
+                    <div class="marginLeft50">
                         <img src="data:image/jpg;base64,${equipment.manufacturer.base64Image}" width="100px">
                     </div>
                 </div>
-                <div style="margin-bottom: 20px">
-                    <table style="margin: 0 auto;width: 400px; table-layout:fixed;
-                    white-space: normal !important; word-wrap: break-word;">
+                <div class="marginBottom20px">
+                    <table class="margin0autoTableLayoutFixedWhiteSpaceNormalImportantWordWrapBreakWordWidth400">
                         <thead>
-                        <tr style="background-color:rgba(0,84,140,0.59)">
+                        <tr class="backgroundColorRgba084140059">
                             <th>
                                 <h5>Krótki opis produktu: </h5>
                             </th>
@@ -77,7 +76,7 @@
                     </table>
                 </div>
             </div>
-            <div style="width: 40px; margin-left: 20px">
+            <div class="width40 marginLeft20">
                 <div>
                     <h5>Akcje:</h5>
                 </div>
@@ -87,11 +86,10 @@
                 </div>
             </div>
         </div>
-        <div style="clear: both; margin-top: 40px">
-            <table style="margin: 0 auto; width: 1200px; table-layout:fixed; white-space: normal !important;
-            word-wrap: break-word">
+        <div class="clearBothMarginTop40">
+            <table class="margin0autoTableLayoutFixedWhiteSpaceNormalImportantWordWrapBreakWordWidth1200">
                 <thead>
-                <tr style="background-color:rgba(0,84,140,0.59)">
+                <tr class="backgroundColorRgba084140059">
                     <th>
                         <h2>Opis produktu: </h2>
                     </th>
@@ -108,8 +106,7 @@
         </div>
     </div>
 
-    <footer>
-        <div style="height: 30px"></div>
+    <footer class="footerFreeSpace30px">
         <jsp:include page="footer.jsp"/>
     </footer>
 </div>

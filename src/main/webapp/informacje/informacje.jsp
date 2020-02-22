@@ -24,7 +24,7 @@
 </header>
 
 <div class="container">
-    <div style="padding-bottom: 20px">
+    <div class="paddingBottom20">
         <ul class="nav">
             <li class="nav-item">
                 <a class="nav-link active" href="../homepage/index.jsp">Strona główna</a>
@@ -38,13 +38,13 @@
         </ul>
     </div>
     <div>
-        <header style="padding-bottom: 30px; padding-top: 10px">
+        <header class="paddingBottom30 paddingTop10">
             <h1>
                 Informacje
             </h1>
         </header>
         <div>
-            <p style="height: 15px;text-indent: 3%">Lista stron w Informacje:</p>
+            <p class="height15 textIndent3percentage">Lista stron w Informacje:</p>
             <ul>
                 <li>
                     <a class="nav-link active" href="darmowy-montaz-wiazan.jsp">DARMOWY MONTAŻ WIĄZAŃ</a>
@@ -77,8 +77,7 @@
         </div>
     </div>
 
-    <footer>
-        <div style="height: 30px"></div>
+    <footer class="footerFreeSpace30px">
         <jsp:include page="../homepage/footer.jsp"/>
     </footer>
 </div>

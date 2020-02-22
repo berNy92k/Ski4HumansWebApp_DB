@@ -26,8 +26,8 @@
         <jsp:directive.include file="header.jsp"/>
     </header>
 
-    <div style="width: 98%; margin: 20px auto 0">
-        <div align="center" style="clear: both;">
+    <div class="width98Margin20auto0">
+        <div align="center" class="clearBoth">
             <h2>Podsumowanie zamówienia</h2>
         </div>
 
@@ -37,10 +37,10 @@
             <%-- hidden object for final transaction --%>
             <input type="hidden" id="transactionData" name="transactionData" value="${transactionData}">
 
-            <div style="display: flex">
+            <div class="displayFlex">
                 <%-- Shopping cart --%>
-                <div style="width: 48%">
-                    <div align="center" style="clear: both;">
+                <div class="width48percentage">
+                    <div align="center" class="clearBoth">
                         <h5>Koszyk</h5>
                     </div>
                     <table class="table table-striped">
@@ -95,13 +95,13 @@
                 </div>
 
                 <%-- Address --%>
-                <div style="width: 48%; margin-left: 4%">
+                <div class="width48percentage marginLeft4percentage">
                     <div align="center">
                         <h5>Adres do wysyłki / Dane kontaktowe</h5>
                     </div>
 
-                    <div style="display: flex">
-                        <div style="width: 50%">
+                    <div class="displayFlex">
+                        <div class="width50percentage">
                             <table class="table table-striped">
                                 <tbody>
                                 <tr>
@@ -142,7 +142,7 @@
             </div>
 
             <%-- Finish transaction --%>
-            <table style="border: 2px solid #2b57b4; border-radius: 10px; padding: 1ex;">
+            <table class="border2b57b4BorderRadius10Padding1ex">
                 <tr>
                     <td>
                         <button type="submit">
@@ -160,8 +160,7 @@
         </form>
     </div>
 
-    <footer>
-        <div style="height: 30px"></div>
+    <footer class="footerFreeSpace30px">
         <jsp:include page="footer.jsp"/>
     </footer>
 </div>

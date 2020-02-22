@@ -24,7 +24,7 @@
 </header>
 
 <div class="container">
-    <div style="padding-bottom: 20px">
+    <div class="paddingBottom20">
         <ul class="nav">
             <li class="nav-item">
                 <a class="nav-link active" href="../homepage/index.jsp">Strona główna</a>
@@ -45,14 +45,14 @@
     </div>
     <div>
         <div>
-            <p style="font-size: 30px; padding-bottom: 20px">FAQ</p>
+            <p class="fontSize30PaddingBottom20">FAQ</p>
         </div>
         <div>
-            <p style="font-size: 25px; padding-bottom: 20px">SKĄD MAM WIEDZIEĆ, ŻE SKLEP SKI4HUMANS.PL JEST
+            <p class="fontSize25PaddingBottom20">SKĄD MAM WIEDZIEĆ, ŻE SKLEP SKI4HUMANS.PL JEST
                 WIARYGODNY?</p>
         </div>
-        <div class="firstMessage" style="padding-left: 20px;padding-right: 20px;text-align: justify">
-            <p style="font-size: 14px">
+        <div class="firstMessage paddingLeft20paddingRight20textAlignJustify">
+            <p class="fontSize14">
                 Jesteśmy legalną firmą i sprzedajemy sprzęt sportowy już od wielu lat. Naszą działalność na polskim
                 rynku rozpoczęliśmy w 1997 roku. Przez kilka ostatnich lat konsekwentnie budowaliśmy pozycję silnego
                 dystrybutora nart i snowboardu w kraju. Oferta naszego sklepu obejmuje szeroki asortyment desek, butów,
@@ -66,12 +66,12 @@
                 zaangażowaniu naszych pracowników - fachowców, którzy chętnie udzielają cennych porad, zakupy w naszych
                 e-sklepach są czystą przyjemnością.</p>
         </div>
-        <hr style="height:0;border:none;border-top:1px solid #000;">
+        <hr class="lineHeight0BorderNoneBorderTop1pxSolid000">
         <div>
-            <p style="font-size: 25px; padding-bottom: 20px">JAK WYSZUKAĆ INTERESUJĄCY MNIE PRODUKT?</p>
+            <p class="fontSize25PaddingBottom20">JAK WYSZUKAĆ INTERESUJĄCY MNIE PRODUKT?</p>
         </div>
-        <div class="firstMessage" style="padding-left: 20px;padding-right: 20px;text-align: justify">
-            <p style="font-size: 14px">
+        <div class="firstMessage paddingLeft20paddingRight20textAlignJustify">
+            <p class="fontSize14">
                 Zespół naszych pracowników dokłada wszelkich starań, by zakupy dokonane w naszym sklepie były
                 bezpieczne. Zachowujemy wszelkie procedury używane standardowo w innych sklepach internetowych.
                 Stosujemy protokół SSL (Secure Socket Layer), który sprawia, że informacje bankowe wprowadzane przy
@@ -80,24 +80,24 @@
                 Jeśli masz jakiekolwiek wątpliwości, zadzwoń do nas lub napisz. Jesteśmy do Twojej dyspozycji i chętnie
                 odpowiemy na wszelkie pytania.</p>
         </div>
-        <hr style="height:0;border:none;border-top:1px solid #000;">
+        <hr class="lineHeight0BorderNoneBorderTop1pxSolid000">
         <div>
-            <p style="font-size: 25px; padding-bottom: 20px">CZY ZAKUPY W SKI4HUMANS.PL SĄ BEZPIECZNE?</p>
+            <p class="fontSize25PaddingBottom20">CZY ZAKUPY W SKI4HUMANS.PL SĄ BEZPIECZNE?</p>
         </div>
-        <div class="firstMessage" style="padding-left: 20px;padding-right: 20px;text-align: justify">
-            <p style="font-size: 14px">
+        <div class="firstMessage paddingLeft20paddingRight20textAlignJustify">
+            <p class="fontSize14">
                 Jeśli wiesz, jakie narty, buty czy inne chcesz kupić, wpisz model w wyszukiwarkę w górnej prawej części
                 strony. Jeśli szukasz produktu pasującego do Ciebie, możesz skorzystać z menu górnego i wyszukać produkt
                 w poszczególnych kategoriach. Innym rozwiązaniem jest skorzystanie z filtrów po lewej stronie.
                 Wystarczy, że klikniesz np. Narty Męskie, a dalej wyfiltrujesz, jaka cena i inne kryteria Cię
                 interesują.</p>
         </div>
-        <hr style="height:0;border:none;border-top:1px solid #000;">
+        <hr class="lineHeight0BorderNoneBorderTop1pxSolid000">
         <div>
-            <p style="font-size: 25px; padding-bottom: 20px">JAK MAM SIĘ ZALOGOWAĆ DO SKI4HUMANS.PL?</p>
+            <p class="fontSize25PaddingBottom20">JAK MAM SIĘ ZALOGOWAĆ DO SKI4HUMANS.PL?</p>
         </div>
-        <div class="firstMessage" style="padding-left: 20px;padding-right: 20px;text-align: justify">
-            <p style="font-size: 14px">
+        <div class="firstMessage paddingLeft20paddingRight20textAlignJustify">
+            <p class="fontSize14">
                 Zakupy w ski4humans.pl mają być szybkie i łatwe. Możesz się zalogować, tworząc swoje konto lub dokonać
                 zakupów bez logowania. Założenie konta w ski4humans.pl nie jest obowiązkowe. Zachęcamy jednak do
                 rejestracji
@@ -111,12 +111,12 @@
                 a gdybyś zapomniał hasła, które zdefiniowałeś, możemy Ci je szybko przypomnieć. Możesz też bez problemu
                 zalogować się przez swoje konto na Facebooku.</p>
         </div>
-        <hr style="height:0;border:none;border-top:1px solid #000;">
+        <hr class="lineHeight0BorderNoneBorderTop1pxSolid000">
         <div>
-            <p style="font-size: 25px; padding-bottom: 20px">JAK MOGĘ ZŁOŻYĆ ZAMÓWIENIE?</p>
+            <p class="fontSize25PaddingBottom20">JAK MOGĘ ZŁOŻYĆ ZAMÓWIENIE?</p>
         </div>
-        <div class="firstMessage" style="padding-left: 20px;padding-right: 20px;text-align: justify">
-            <p style="font-size: 14px">
+        <div class="firstMessage paddingLeft20paddingRight20textAlignJustify">
+            <p class="fontSize14">
                 Jeśli znalazłeś interesujący Cię produkt, kliknij przycisk DODAJ DO KOSZYKA – znajdujący się na stronie
                 konkretnego produktu. Zobaczysz informację ZAKTUALIZOWANO PRZEDMIOTY W KOSZYKU. Możesz teraz kontynuować
                 zakupy i wyszukiwać kolejne produkty lub przejść do Złożenia zamówienia. Możesz w każdej chwili
@@ -125,10 +125,10 @@
                 szybki podgląd. Wystarczy, że klikniesz POKAŻ KOSZYK, a przeniesiony zostaniesz do pełnej listy
                 produktów w koszyku. Jeśli chcesz kontynuować zakupy, zawsze możesz kliknąć na KONTYNUUJ ZAKUPY.</p>
         </div>
-        <hr style="height:0;border:none;border-top:1px solid #000;">
+        <hr class="lineHeight0BorderNoneBorderTop1pxSolid000">
         <br>
-        <div class="firstMessage" style="padding-left: 20px;padding-right: 20px;text-align: justify">
-            <p style="font-size: 14px">
+        <div class="firstMessage paddingLeft20paddingRight20textAlignJustify">
+            <p class="fontSize14">
                 Kiedy już skończyłeś dodawanie produktów do koszyka i chcesz dokończyć proces zakupów, kliknij na
                 przycisk PRZEJDŹ DO KASY. Najpierw poprosimy Cię o podanie danych adresowych. Tutaj możesz też
                 zadecydować, czy chcesz podać inny adres wysyłki i czy życzysz sobie fakturę VAT. Następnie wybierz
@@ -138,8 +138,7 @@
         </div>
     </div>
 
-    <footer>
-        <div style="height: 30px"></div>
+    <footer class="footerFreeSpace30px30px">
         <jsp:include page="../homepage/footer.jsp"/>
     </footer>
 </div>

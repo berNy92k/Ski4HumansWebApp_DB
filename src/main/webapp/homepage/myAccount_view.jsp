@@ -26,68 +26,70 @@
         <jsp:directive.include file="header.jsp"/>
     </header>
 
-    <div style="width: 98%; margin: 30px auto 0">
+    <div class="width98Margin30auto0">
         <div align="center">
-            <h5><p style="color: #950002;">${message}</p></h5>
+            <h5><p class="color950002">${message}</p></h5>
         </div>
-        <div style="background-color: #d7e6f3; padding: 15px 15px 15px 40px; margin-bottom: 50px">
-            <h2 style="color: #0d0e48">#${sessionScope.customerLogged.customerId} ${sessionScope.customerLogged.firstName} ${sessionScope.customerLogged.lastName}</h2>
+        <div class="backgroundColord7e6f3Padding15151540MarginBottom50">
+            <h2 class="color0d0e48">
+                #${sessionScope.customerLogged.customerId} ${sessionScope.customerLogged.firstName} ${sessionScope.customerLogged.lastName}
+            </h2>
         </div>
-        <div style="display: flex">
-            <div style="margin-right: 15px; width: 500px;">
+        <div class="displayFlex">
+            <div class="marginTop15 width500">
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">
-                        <h4 style="color: #b60001">ID:</h4> &nbsp;
-                        <h3 style="color: #0d0e48">${sessionScope.customerLogged.customerId}</h3>
+                        <h4 class="colorb60001">ID:</h4> &nbsp;
+                        <h3 class="color0d0e48">${sessionScope.customerLogged.customerId}</h3>
                     </li>
                     <li class="list-group-item">
-                        <h4 style="color: #b60001">Data rejestracji:</h4> &nbsp;
-                        <h3 style="color: #0d0e48">${sessionScope.customerLogged.registerDate}</h3>
+                        <h4 class="colorb60001">Data rejestracji:</h4> &nbsp;
+                        <h3 class="color0d0e48">${sessionScope.customerLogged.registerDate}</h3>
                     </li>
                     <li class="list-group-item">
-                        <h4 style="color: #b60001">Email:</h4> &nbsp;
-                        <h3 style="color: #0d0e48">${sessionScope.customerLogged.email}</h3>
+                        <h4 class="colorb60001">Email:</h4> &nbsp;
+                        <h3 class="color0d0e48">${sessionScope.customerLogged.email}</h3>
                     </li>
                     <li class="list-group-item">
-                        <h4 style="color: #b60001">Imię:</h4> &nbsp;
-                        <h3 style="color: #0d0e48">${sessionScope.customerLogged.firstName}</h3>
+                        <h4 class="colorb60001">Imię:</h4> &nbsp;
+                        <h3 class="color0d0e48">${sessionScope.customerLogged.firstName}</h3>
                     </li>
                     <li class="list-group-item">
-                        <h4 style="color: #b60001">Nazwisko:</h4> &nbsp;
-                        <h3 style="color: #0d0e48">${sessionScope.customerLogged.lastName}</h3>
+                        <h4 class="colorb60001">Nazwisko:</h4> &nbsp;
+                        <h3 class="color0d0e48">${sessionScope.customerLogged.lastName}</h3>
                     </li>
                     <li class="list-group-item">
-                        <h4 style="color: #b60001">Ulica:</h4> &nbsp;
-                        <h3 style="color: #0d0e48">${sessionScope.customerLogged.street}</h3>
+                        <h4 class="colorb60001">Ulica:</h4> &nbsp;
+                        <h3 class="color0d0e48">${sessionScope.customerLogged.street}</h3>
                     </li>
                 </ul>
             </div>
-            <div style="width: 50px"></div>
-            <div style="margin-right: 15px; width: 500px;">
+            <div class="width50"></div>
+            <div class="marginRight15 width500">
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">
-                        <h4 style="color: #b60001">Numer domu:</h4> &nbsp;
-                        <h3 style="color: #0d0e48">${sessionScope.customerLogged.homeNumber}</h3>
+                        <h4 class="colorb60001">Numer domu:</h4> &nbsp;
+                        <h3 class="color0d0e48">${sessionScope.customerLogged.homeNumber}</h3>
                     </li>
                     <li class="list-group-item">
-                        <h4 style="color: #b60001">Miasto:</h4> &nbsp;
-                        <h3 style="color: #0d0e48">${sessionScope.customerLogged.city}</h3>
+                        <h4 class="colorb60001">Miasto:</h4> &nbsp;
+                        <h3 class="color0d0e48">${sessionScope.customerLogged.city}</h3>
                     </li>
                     <li class="list-group-item">
-                        <h4 style="color: #b60001">Kod pocztowy:</h4> &nbsp;
-                        <h3 style="color: #0d0e48">${sessionScope.customerLogged.zipCode}</h3>
+                        <h4 class="colorb60001">Kod pocztowy:</h4> &nbsp;
+                        <h3 class="color0d0e48">${sessionScope.customerLogged.zipCode}</h3>
                     </li>
                     <li class="list-group-item">
-                        <h4 style="color: #b60001">Kraj:</h4> &nbsp;
-                        <h3 style="color: #0d0e48">${sessionScope.customerLogged.country}</h3>
+                        <h4 class="colorb60001">Kraj:</h4> &nbsp;
+                        <h3 class="color0d0e48">${sessionScope.customerLogged.country}</h3>
                     </li>
                     <li class="list-group-item">
-                        <h4 style="color: #b60001">Numer telefonu:</h4> &nbsp;
-                        <h3 style="color: #0d0e48">${sessionScope.customerLogged.phone}</h3>
+                        <h4 class="colorb60001">Numer telefonu:</h4> &nbsp;
+                        <h3 class="color0d0e48">${sessionScope.customerLogged.phone}</h3>
                     </li>
                 </ul>
             </div>
-            <div style="width: 100px; margin-left: 20px">
+            <div class="width100 marginLeft20">
                 <div>
                     <h5>Akcje:</h5>
                 </div>
@@ -98,8 +100,7 @@
         </div>
     </div>
 
-    <footer>
-        <div style="height: 30px"></div>
+    <footer class="footerFreeSpace30px">
         <jsp:directive.include file="footer.jsp"/>
     </footer>
 </div>
@@ -118,12 +119,4 @@
         crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 </body>
-
-<script>
-    function deleteCustomer(customerId) {
-        if (confirm("Czy jestes pewny ? Jeżeli się zgodzisz klient z '" + customerId + "' id zostanie usunięty")) {
-            window.location = '../admin/deleteCustomer?id=' + customerId;
-        }
-    }
-</script>
 </html>

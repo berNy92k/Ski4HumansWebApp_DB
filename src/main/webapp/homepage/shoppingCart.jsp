@@ -26,14 +26,14 @@
         <jsp:directive.include file="header.jsp"/>
     </header>
 
-    <div style="width: 98%; margin: 20px auto 0;">
+    <div class="width98Margin20auto0">
 
         <div align="center">
             <h5>Koszyk</h5>
         </div>
 
         <div align="center">
-            <h5><p style="color: #950002;">${message}</p></h5>
+            <h5><p class="color950002">${message}</p></h5>
         </div>
 
         <form action="../homepage/updateEquipmentInShoppingCart" method="get" id="shoppingCart">
@@ -124,7 +124,7 @@
             </div>
             <c:if test="${cart.totalQuantityOfEquipments != 0}">
                 <div>
-                    <table style="border: 2px solid #2b57b4; border-radius: 10px; padding: 1ex;">
+                    <table class="border2b57b4BorderRadius10Padding1ex">
                         <tr>
                             <td>
                                 <button type="submit">Zaaktualizauj dane</button>
@@ -150,8 +150,7 @@
             </c:if>
         </form>
 
-        <footer>
-            <div style="height: 30px"></div>
+        <footer class="footerFreeSpace30px">
             <jsp:include page="footer.jsp"/>
         </footer>
     </div>

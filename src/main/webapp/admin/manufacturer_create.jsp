@@ -29,7 +29,7 @@
         <jsp:include page="header.jsp"/>
     </header>
 
-    <div style="width: 500px; margin: 0 auto">
+    <div class="width500pxMargin0auto">
         <div align="center">
             &nbsp;
             <c:if test="${manufacturer != null}">
@@ -65,7 +65,7 @@
                     <div class="form-group">
                         <label for="manufacturerImage">Zdjęcie</label>
                         <input type="file" class="form-control" id="manufacturerImage" name="manufacturerImage">
-                        <img id="smallPic" alt="Podgląd zdjęcia" style="width: 300px; margin-top: 5px"
+                        <img id="smallPic" alt="Podgląd zdjęcia" class="width300 marginTop5"
                              src="data:image/jpg;base64, ${manufacturer.base64Image}">
                     </div>
                     <button type="submit" class="btn btn-primary">Zatwierdź</button>
@@ -76,8 +76,7 @@
         </div>
     </div>
 
-    <footer>
-        <div style="height: 30px"></div>
+    <footer class="footerFreeSpace30px">
         <jsp:include page="footer.jsp"/>
     </footer>
 </div>

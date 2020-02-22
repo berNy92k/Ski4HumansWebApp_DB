@@ -26,10 +26,10 @@
         <jsp:include page="header.jsp"/>
     </header>
 
-    <div style="width: 98%; margin: 0 auto">
+    <div class="width98Margin0auto">
 
         <div align="center">
-            <h5><p style="color: #950002;">${message}</p></h5>
+            <h5><p class="color950002">${message}</p></h5>
         </div>
 
         <div>
@@ -69,8 +69,7 @@
         </div>
     </div>
 
-    <footer>
-        <div style="height: 30px"></div>
+    <footer class="footerFreeSpace30px">
         <jsp:include page="footer.jsp"/>
     </footer>
 </div>

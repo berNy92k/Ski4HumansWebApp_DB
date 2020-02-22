@@ -24,7 +24,7 @@
 </header>
 
 <div class="container">
-    <div style="padding-bottom: 20px">
+    <div class="paddingBottom20">
         <ul class="nav">
             <li class="nav-item">
                 <a class="nav-link active" href="../homepage/index.jsp">Strona główna</a>
@@ -44,14 +44,14 @@
         </ul>
     </div>
     <div>
-        <p style="font-size: 30px; padding-bottom: 20px">POLITYKA PRYWATNOŚCI</p>
+        <p class="fontSize30PaddingBottom20">POLITYKA PRYWATNOŚCI</p>
     </div>
     <div>
         <div>
-            <p style="font-size: 50px; padding-bottom: 20px">POLITYKA PRYWATNOŚCI</p>
+            <p class="fontSize50PaddingBottom20">POLITYKA PRYWATNOŚCI</p>
         </div>
-        <div class="firstMessage" style="padding-left: 20px;padding-right: 20px;text-align: justify">
-            <ol style="font-size: 14px;">
+        <div class="firstMessage paddingLeft20paddingRight20textAlignJustify">
+            <ol class="fontSize14">
                 <li>Administratorem danych osobowych jest spółka „Mazur” Spółka jawna z siedzibą we Wrocławiu, ul.
                     Stalowa 94, 53-440 Wrocław.
                 </li>
@@ -73,7 +73,7 @@
                     organom władzy publicznej, jeżeli wymagają tego obowiązujące przepisy prawa.
                 </li>
                 <br>
-                <hr style="height:0;border:none;border-top:1px solid #000;">
+                <hr class="lineHeight0BorderNoneBorderTop1pxSolid000">
                 <br>
                 <li>Dane te są gromadzone z należytą starannością i odpowiednio chronione przed dostępem osób do tego
                     nieupoważnionych, zgodnie z ustawą z dnia 29 sierpnia 1997 r. O ochronie danych osobowych.
@@ -106,7 +106,7 @@
                     one pod poniższymi linkami:
 
                     <br><br>
-                    <p style="font-size: 10px">
+                    <p class="fontSize10">
                         Internet Explorer™: <a
                             href="https://support.microsoft.com/pl-pl/help/17442/windows-internet-explorer-delete-manage-cookies">
                         https://support.microsoft.com/pl-pl/help/17442/windows-internet-explorer-delete-manage-cookies</a><br>
@@ -119,7 +119,7 @@
                         W przypadku braku zgody na wykorzystywanie plików cookies, funkcjonalność naszej strony może
                         zostać ograniczona.<br><br>
                     </p>
-                    <hr style="height:0;border:none;border-top:1px solid #000;">
+                    <hr class="lineHeight0BorderNoneBorderTop1pxSolid000">
                     <p>
                         Sklep internetowy wykorzystuje wymienione pliki cookies w następujących celach:<br>
                         - utrzymanie sesji użytkownika Witryny (po zalogowaniu), dzięki której użytkownik nie musi na
@@ -131,7 +131,7 @@
                         doradzamy skorzystać z pliku pomocy przeglądarki lub skontaktować się z producentem
                         przeglądarki, z której Państwo korzystacie.<br><br>
                     </p>
-                    <hr style="height:0;border:none;border-top:1px solid #000;">
+                    <hr class="lineHeight0BorderNoneBorderTop1pxSolid000">
                     <p>
                         Niniejsza strona internetowa korzysta również z tzw. plików cookies Double Click (w ramach
                         Google Analytics). Umożliwiają one rozpoznanie Państwa przeglądarki w przypadku korzystania z
@@ -141,7 +141,7 @@
                         tego przepisy prawa lub jeśli osoby trzecie przetwarzają powyższe dane na zlecenie
                         Google.<br><br>
                     </p>
-                    <hr style="height:0;border:none;border-top:1px solid #000;">
+                    <hr class="lineHeight0BorderNoneBorderTop1pxSolid000">
                     <p>
                         Mogą dezaktywować Państwo cookies Double Click klikając w link. Mogą Państwo również tak
                         skonfigurować swoją przeglądarkę, aby otrzymywać informację o stosowaniu cookies i mieć
@@ -151,7 +151,7 @@
                         braku akceptacji wykorzystywania plików cookies, funkcjonalność naszej strony internetowej może
                         zostać ograniczona.<br><br>
                     </p>
-                    <hr style="height:0;border:none;border-top:1px solid #000;">
+                    <hr class="lineHeight0BorderNoneBorderTop1pxSolid000">
                 </li>
                 <li>
                     Państwa prawa<br><br>
@@ -207,8 +207,7 @@
         </div>
     </div>
 
-    <footer>
-        <div style="height: 30px"></div>
+    <footer class="footerFreeSpace30px">
         <jsp:include page="../homepage/footer.jsp"/>
     </footer>
 </div>

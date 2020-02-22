@@ -24,7 +24,7 @@
 </header>
 
 <div class="container">
-    <div style="padding-bottom: 20px">
+    <div class="paddingBottom20">
         <ul class="nav">
             <li class="nav-item">
                 <a class="nav-link active" href="../homepage/index.jsp">Strona główna</a>
@@ -45,19 +45,18 @@
     </div>
     <div>
         <div>
-            <p style="font-size: 30px; padding-bottom: 20px">O firmie</p>
+            <p class="fontSize30PaddingBottom20">O firmie</p>
         </div>
-        <div class="firstMessage" style="padding-left: 20px;padding-right: 20px;text-align: justify">
-            <p style="font-size: 24px; padding-bottom: 20px">HISTORIA NASZEJ FIRMY</p>
-            <p style="font-size: 14px">
+        <div class="firstMessage paddingLeft20paddingRight20textAlignJustify">
+            <p class="fontSize24PaddingBottom20">HISTORIA NASZEJ FIRMY</p>
+            <p class="fontSize14">
                 Nie jest to strona firmy.<br>
                 Strona wykonana w celach treningowych. Większość tekstu (front) przekopiowana ze strony:<br>
                 <a href="https://ski24.pl">https://ski24.pl</a></p>
         </div>
     </div>
 
-    <footer>
-        <div style="height: 30px"></div>
+    <footer class="footerFreeSpace30px">
         <jsp:include page="../homepage/footer.jsp"/>
     </footer>
 </div>

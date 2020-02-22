@@ -26,57 +26,57 @@
         <jsp:include page="header.jsp"/>
     </header>
 
-    <div style="width: 98%; margin: 30px auto 0">
-        <div style="background-color: #d7e6f3; padding: 15px 15px 15px 40px; margin-bottom: 50px">
-            <h2 style="color: #0d0e48">#${review.reviewId} - ${review.headline}</h2>
+    <div class="width98Margin30auto0">
+        <div class="backgroundColord7e6f3Padding15151540MarginBottom50">
+            <h2 class="color0d0e48">#${review.reviewId} - ${review.headline}</h2>
         </div>
-        <div style="display: flex">
-            <div style="margin-right: 15px; width: 500px;">
+        <div class="displayFlex">
+            <div class="marginRight15Width500">
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">
-                        <h4 style="color: #b60001">ID:</h4> &nbsp;
-                        <h3 style="color: #0d0e48">${review.reviewId}</h3>
+                        <h4 class="colorb60001">ID:</h4> &nbsp;
+                        <h3 class="color0d0e48">${review.reviewId}</h3>
                     </li>
                     <li class="list-group-item">
-                        <h4 style="color: #b60001">Ocena:</h4> &nbsp;
-                        <h3 style="color: #0d0e48">${review.rating}</h3>
+                        <h4 class="colorb60001">Ocena:</h4> &nbsp;
+                        <h3 class="color0d0e48">${review.rating}</h3>
                     </li>
                     <li class="list-group-item">
-                        <h4 style="color: #b60001">Tytuł:</h4> &nbsp;
-                        <h3 style="color: #0d0e48">${review.headline}</h3>
+                        <h4 class="colorb60001">Tytuł:</h4> &nbsp;
+                        <h3 class="color0d0e48">${review.headline}</h3>
                     </li>
                     <li class="list-group-item">
-                        <h4 style="color: #b60001">Komentarz:</h4> &nbsp;
-                        <h3 style="color: #0d0e48">${review.comment}</h3>
+                        <h4 class="colorb60001">Komentarz:</h4> &nbsp;
+                        <h3 class="color0d0e48">${review.comment}</h3>
                     </li>
                     <li class="list-group-item">
-                        <h4 style="color: #b60001">Data wpisu:</h4> &nbsp;
-                        <h3 style="color: #0d0e48">${review.reviewTime}</h3>
+                        <h4 class="colorb60001">Data wpisu:</h4> &nbsp;
+                        <h3 class="color0d0e48">${review.reviewTime}</h3>
                     </li>
                 </ul>
             </div>
-            <div style="width: 50px"></div>
-            <div style="margin-right: 15px; width: 500px;">
+            <div class="width50"></div>
+            <div class="marginRight15Width500">
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">
-                        <h4 style="color: #b60001">ID sprzętu:</h4> &nbsp;
-                        <h3 style="color: #0d0e48">${review.equipment.equipmentId}</h3>
+                        <h4 class="colorb60001">ID sprzętu:</h4> &nbsp;
+                        <h3 class="color0d0e48">${review.equipment.equipmentId}</h3>
                     </li>
                     <li class="list-group-item">
-                        <h4 style="color: #b60001">Nazwa sprzętu:</h4> &nbsp;
-                        <h3 style="color: #0d0e48">${review.equipment.name}</h3>
+                        <h4 class="colorb60001">Nazwa sprzętu:</h4> &nbsp;
+                        <h3 class="color0d0e48">${review.equipment.name}</h3>
                     </li>
                     <li class="list-group-item">
-                        <h4 style="color: #b60001">ID klienta:</h4> &nbsp;
-                        <h3 style="color: #0d0e48">${review.customer.customerId}</h3>
+                        <h4 class="colorb60001">ID klienta:</h4> &nbsp;
+                        <h3 class="color0d0e48">${review.customer.customerId}</h3>
                     </li>
                     <li class="list-group-item">
-                        <h4 style="color: #b60001">Email klienta:</h4> &nbsp;
-                        <h3 style="color: #0d0e48">${review.customer.email}</h3>
+                        <h4 class="colorb60001">Email klienta:</h4> &nbsp;
+                        <h3 class="color0d0e48">${review.customer.email}</h3>
                     </li>
                 </ul>
             </div>
-            <div style="width: 100px; margin-left: 20px">
+            <div class="marginLeft20Width100">
                 <div>
                     <h5>Akcje:</h5>
                 </div>
@@ -88,8 +88,7 @@
         </div>
     </div>
 
-    <footer>
-        <div style="height: 30px"></div>
+    <footer class="footerFreeSpace30px">
         <jsp:include page="footer.jsp"/>
     </footer>
 </div>

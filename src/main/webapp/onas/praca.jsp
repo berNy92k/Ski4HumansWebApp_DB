@@ -24,7 +24,7 @@
 </header>
 
 <div class="container">
-    <div style="padding-bottom: 20px">
+    <div class="paddingBottom20">
         <ul class="nav">
             <li class="nav-item">
                 <a class="nav-link active" href="../homepage/index.jsp">Strona główna</a>
@@ -45,24 +45,23 @@
     </div>
     <div>
         <div>
-            <p style="font-size: 30px; padding-bottom: 20px">Praca</p>
+            <p class="fontSize30PaddingBottom20">Praca</p>
         </div>
         <div>
-            <p style="font-size: 24px; padding-bottom: 20px">POSZUKUJEMY PRACOWNIKÓW NA STANOWISKA:</p>
+            <p class="fontSize24PaddingBottom20">POSZUKUJEMY PRACOWNIKÓW NA STANOWISKA:</p>
         </div>
-        <div class="firstMessage" style="padding-left: 20px;padding-right: 20px;text-align: justify">
+        <div class="firstMessage paddingLeft20paddingRight20textAlignJustify">
             <ul>
                 <li>
-                    <p style="font-size: 14px"><a href="#"> Aktualnie brak ofert. Zapraszamy wkrótce</a></p>
+                    <p class="fontSize14"><a href="#"> Aktualnie brak ofert. Zapraszamy wkrótce</a></p>
                 </li>
-                <hr style="height:0;border:none;border-top:1px solid #000;">
+                <hr class="lineHeight0BorderNoneBorderTop1pxSolid000">
             </ul>
         </div>
 
     </div>
 
-    <footer>
-        <div style="height: 30px"></div>
+    <footer class="footerFreeSpace30px">
         <jsp:include page="../homepage/footer.jsp"/>
     </footer>
 </div>

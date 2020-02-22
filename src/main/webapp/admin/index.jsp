@@ -25,16 +25,16 @@
         <jsp:include page="header.jsp"/>
     </header>
 
-    <div style="margin-left: 40px">
+    <div class="marginLeft40">
         <div class="firstMessage">
-            <p class="pTitle" style="font-size: 25px">SKLEP NARCIARSKI SKI4HUMANS.PL - Część dla administratora
+            <p class="pTitle fontSize25">SKLEP NARCIARSKI SKI4HUMANS.PL - Część dla administratora
                 strony</p>
-            <p style="font-size: 14px;text-align: justify">
+            <p class="indexFirstMessage1">
                 Administrator strony posiada możliwość dodawania/ usuwania oraz modyfikowania istniejących jej
                 elementów.</p>
-            <p style="font-size: 14px;text-align: justify">Elementy, które można edytować/ dodawać to:</p>
-            <b style="font-size: 20px">Główne:</b>
-            <ul style="font-size: 14px">
+            <p class="indexFirstMessage1">Elementy, które można edytować/ dodawać to:</p>
+            <b class="fontSize20">Główne:</b>
+            <ul class="fontSize14">
                 <li>narty</li>
                 <li>buty narciarskie</li>
                 <li>kije narciarskie</li>
@@ -43,8 +43,8 @@
                 <li>rekawice narciarskie</li>
                 <li>odzież termoaktywna</li>
             </ul>
-            <b style="font-size: 20px">Inne informacje:</b>
-            <ul style="font-size: 14px">
+            <b class="fontSize20">Inne informacje:</b>
+            <ul class="fontSize14">
                 <li>użytkownicy</li>
                 <li>kategorie</li>
                 <li>klienci</li>
@@ -54,8 +54,7 @@
         </div>
     </div>
 
-    <footer>
-        <div style="height: 30px"></div>
+    <footer class="footerFreeSpace30px">
         <jsp:include page="footer.jsp"/>
     </footer>
 </div>

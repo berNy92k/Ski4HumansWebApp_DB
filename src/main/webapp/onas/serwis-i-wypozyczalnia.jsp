@@ -24,7 +24,7 @@
 </header>
 
 <div class="container">
-    <div style="padding-bottom: 20px">
+    <div class="paddingBottom20">
         <ul class="nav">
             <li class="nav-item">
                 <a class="nav-link active" href="../homepage/index.jsp">Strona główna</a>
@@ -45,11 +45,11 @@
     </div>
     <div>
         <div>
-            <p style="font-size: 30px; padding-bottom: 20px">Serwis i wypożyczalnia</p>
+            <p class="fontSize30PaddingBottom20">Serwis i wypożyczalnia</p>
         </div>
-        <div class="firstMessage" style="padding-left: 20px;padding-right: 20px;text-align: justify">
-            <p style="font-size: 35px; padding-bottom: 20px">SERWIS NARCIARSKO - SNOWBOARDOWY</p>
-            <p style="font-size: 12px">
+        <div class="firstMessage paddingLeft20paddingRight20textAlignJustify">
+            <p class="fontSize35PaddingBottom20">SERWIS NARCIARSKO - SNOWBOARDOWY</p>
+            <p class="fontSize12">
                 Zachęcamy do skorzystania z naszych usług serwisowych! Przygotujemy Twój sprzęt do zbliżającego się
                 sezonu, a także przeprowadzimy konserwację po zimie.<br>
                 W serwisie świadczymy następujące usługi:<br>
@@ -61,13 +61,13 @@
                 - skracanie kijków.</p>
         </div>
         <br>
-        <hr style="height:0;border:none;border-top:1px solid #000;">
+        <hr class="lineHeight0BorderNoneBorderTop1pxSolid000">
         <br>
         <div>
-            <p style="font-size: 30px; padding-bottom: 20px">CENNIK:</p>
+            <p class="fontSize30PaddingBottom20">CENNIK:</p>
         </div>
-        <div class="firstMessage" style="padding-left: 20px;padding-right: 20px;text-align: justify">
-            <ul style="font-size: 14px">
+        <div class="firstMessage paddingLeft20paddingRight20textAlignJustify">
+            <ul class="fontSize14">
                 <li>Podstawa – ostrzenie krawędzi z planowaniem ślizgów, smarowanie na gorąco - 50 zł</li>
                 <li>Fullserwis – ostrzenie krawędzi z planowaniem ślizgów, uzupełnianie ubytków, smarowanie na gorąco -
                     70–100 zł
@@ -82,8 +82,8 @@
                 <li>Klejenie rozwarstwień i wklejki- 20 zł</li>
                 <li>Ustawienie siły wypięcia wiązań - gratis</li>
             </ul>
-            <p style="font-size: 30px; padding-bottom: 20px">WYPOŻYCZALNIA</p>
-            <p style="font-size: 12px">
+            <p class="fontSize30PaddingBottom20">WYPOŻYCZALNIA</p>
+            <p class="fontSize12">
                 Chciałbyś spróbować swoich sił na stoku ale nie posiadasz własnych nart lub deski? W naszej wypożyczalni
                 znajdziesz sprzęt narciarski i snowboardowy, który zapewni Ci najwyższy komfort użytkowania.<br>
                 Nasi doradcy udzielą Ci profesjonalnej pomocy i dobiorą sprzęt odpowiadający Twoim umiejętnościom (bez
@@ -91,13 +91,13 @@
                 Dysponujemy dużym wyborem rozmiarów i modeli, zarówno dla dorosłych jak i dzieci.</p>
         </div>
         <br>
-        <hr style="height:0;border:none;border-top:1px solid #000;">
+        <hr class="lineHeight0BorderNoneBorderTop1pxSolid000">
         <br>
         <div>
-            <p style="font-size: 30px; padding-bottom: 20px">CENNIK (ZA DOBĘ):</p>
+            <p class="fontSize30PaddingBottom20">CENNIK (ZA DOBĘ):</p>
         </div>
-        <div class="firstMessage" style="padding-left: 20px;padding-right: 20px;text-align: justify">
-            <ul style="font-size: 14px; padding: 15px">
+        <div class="firstMessage paddingLeft20paddingRight20textAlignJustify">
+            <ul class="fontSize14 padding15">
                 <li>Komplet: narty carvingowe, buty, kijki – 35 zł</li>
                 <li>Komplet: deska snowboardowa, buty – 35 zł</li>
                 <li>Narty carvingowe – 25 zł</li>
@@ -114,14 +114,13 @@
                 <li>Przy terminie dłuższym niż 5 dni – 10% rabatu</li>
                 <li>Wypożyczenia sprzętu na dłuższe terminy – w cenie do uzgodnienia</li>
             </ul>
-            <p style="font-size: 12px">
+            <p class="fontSize12">
                 Potrzebujesz więcej informacji? Zadzwoń: xx xxx xx xx
             </p>
         </div>
     </div>
 
-    <footer>
-        <div style="height: 30px"></div>
+    <footer class="footerFreeSpace30px">
         <jsp:include page="../homepage/footer.jsp"/>
     </footer>
 </div>

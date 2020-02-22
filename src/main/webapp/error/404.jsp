@@ -19,14 +19,14 @@
 </head>
 <body>
 
-<div align="center" style="margin-top: 25px">
+<div align="center" class="marginTop25">
     <div>
         <img class="mb-2" src="../images/logo.png" width="25%" alt="logo">
     </div>
     &nbsp;
     &nbsp;
     <div class="firstMessage">
-        <p class="pTitle" style="font-size: 25px">Sorry, page could not be found - error 404</p>
+        <p class="pTitle fontSize25">Sorry, page could not be found - error 404</p>
     </div>
     &nbsp;
     <div>

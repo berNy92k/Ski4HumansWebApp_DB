@@ -26,7 +26,7 @@
         <jsp:include page="header.jsp"/>
     </header>
 
-    <div style="width: 1200px; margin: 0 auto">
+    <div class="width1200pxMargin0auto">
         <div align="center">
             &nbsp;
             <c:if test="${equipment != null}">
@@ -49,8 +49,8 @@
                       enctype="multipart/form-data" onsubmit="return validateCreateEquipmentForm()">
                     </c:if>
 
-                    <div style="display: flex">
-                        <div style="width: 550px">
+                    <div class="displayFlex">
+                        <div class="width550">
                             <div class="form-group">
                                 <label for="name">Nazwa sprzętu</label>
                                 <input type="text" class="form-control" id="name" name="name"
@@ -80,7 +80,7 @@
                                        value="${equipment.price}">
                             </div>
                         </div>
-                        <div style="margin-left: 50px; width: 550px">
+                        <div class="marginLeft50 width550">
                             <div class="form-group">
                                 <label for="lengthOrSize">Długość sprzętu lub jego rozmiar</label>
                                 <input type="text" class="form-control" id="lengthOrSize" name="lengthOrSize"
@@ -114,7 +114,7 @@
                             </div>
                         </div>
                     </div>
-                    <div style="width: 1150px;">
+                    <div class="width1150">
                         <div class="form-group">
                             <label for="shortDescription">Krótki opis sprzętu</label>
                             <input type="text" class="form-control" id="shortDescription" name="shortDescription"
@@ -123,8 +123,8 @@
                                    value="${equipment.shortDescription}">
                         </div>
                     </div>
-                    <div style="display: flex; margin-top: 30px">
-                        <div style="width: 550px">
+                    <div class="displayFlex marginTop30">
+                        <div class="width550">
                             <div class="form-group">
                                 <label for="longDescription">Długi opis sprzętu</label>
                                 <textarea class="form-control" id="longDescription" name="longDescription"
@@ -134,12 +134,11 @@
                             </div>
                         </div>
 
-                        <div style="margin-left: 50px;width: 550px">
+                        <div class="marginLeft50 width550">
                             <div class="form-group">
                                 <label for="equipmentImage">Zdjęcie sprzętu</label>
                                 <input type="file" class="form-control" id="equipmentImage" name="equipmentImage">
-                                <img id="smallEquipmentImage" alt="Podgląd zdjęcia"
-                                     style="width: 500px; margin-top: 10px"
+                                <img id="smallEquipmentImage" alt="Podgląd zdjęcia" class="width500 marginTop10"
                                      src="data:image/jpg;base64, ${equipment.base64Image}">
                             </div>
                         </div>
@@ -153,8 +152,7 @@
         </div>
     </div>
 
-    <footer>
-        <div style="height: 30px"></div>
+    <footer class="footerFreeSpace30px">
         <jsp:include page="footer.jsp"/>
     </footer>
 </div>

@@ -26,65 +26,65 @@
         <jsp:include page="header.jsp"/>
     </header>
 
-    <div style="width: 98%; margin: 30px auto 0">
-        <div style="background-color: #d7e6f3; padding: 15px 15px 15px 40px; margin-bottom: 50px">
-            <h2 style="color: #0d0e48">#${customer.customerId} ${customer.firstName} ${customer.lastName}</h2>
+    <div class="width98Margin30auto0">
+        <div class="backgroundColord7e6f3Padding15151540MarginBottom50">
+            <h2 class="color0d0e48">#${customer.customerId} ${customer.firstName} ${customer.lastName}</h2>
         </div>
-        <div style="display: flex">
-            <div style="margin-right: 15px; width: 500px;">
+        <div class="displayFlex">
+            <div class="marginRight15Width500">
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">
-                        <h4 style="color: #b60001">ID:</h4> &nbsp;
-                        <h3 style="color: #0d0e48">${customer.customerId}</h3>
+                        <h4 class="colorb60001">ID:</h4> &nbsp;
+                        <h3 class="color0d0e48">${customer.customerId}</h3>
                     </li>
                     <li class="list-group-item">
-                        <h4 style="color: #b60001">Data rejestracji:</h4> &nbsp;
-                        <h3 style="color: #0d0e48">${customer.registerDate}</h3>
+                        <h4 class="colorb60001">Data rejestracji:</h4> &nbsp;
+                        <h3 class="color0d0e48">${customer.registerDate}</h3>
                     </li>
                     <li class="list-group-item">
-                        <h4 style="color: #b60001">Email:</h4> &nbsp;
-                        <h3 style="color: #0d0e48">${customer.email}</h3>
+                        <h4 class="colorb60001">Email:</h4> &nbsp;
+                        <h3 class="color0d0e48">${customer.email}</h3>
                     </li>
                     <li class="list-group-item">
-                        <h4 style="color: #b60001">Imię:</h4> &nbsp;
-                        <h3 style="color: #0d0e48">${customer.firstName}</h3>
+                        <h4 class="colorb60001">Imię:</h4> &nbsp;
+                        <h3 class="color0d0e48">${customer.firstName}</h3>
                     </li>
                     <li class="list-group-item">
-                        <h4 style="color: #b60001">Nazwisko:</h4> &nbsp;
-                        <h3 style="color: #0d0e48">${customer.lastName}</h3>
+                        <h4 class="colorb60001">Nazwisko:</h4> &nbsp;
+                        <h3 class="color0d0e48">${customer.lastName}</h3>
                     </li>
                     <li class="list-group-item">
-                        <h4 style="color: #b60001">Ulica:</h4> &nbsp;
-                        <h3 style="color: #0d0e48">${customer.street}</h3>
+                        <h4 class="colorb60001">Ulica:</h4> &nbsp;
+                        <h3 class="color0d0e48">${customer.street}</h3>
                     </li>
                 </ul>
             </div>
-            <div style="width: 50px"></div>
-            <div style="margin-right: 15px; width: 500px;">
+            <div class="width50"></div>
+            <div class="marginRight15Width500">
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">
-                        <h4 style="color: #b60001">Numer domu:</h4> &nbsp;
-                        <h3 style="color: #0d0e48">${customer.homeNumber}</h3>
+                        <h4 class="colorb60001">Numer domu:</h4> &nbsp;
+                        <h3 class="color0d0e48">${customer.homeNumber}</h3>
                     </li>
                     <li class="list-group-item">
-                        <h4 style="color: #b60001">Miasto:</h4> &nbsp;
-                        <h3 style="color: #0d0e48">${customer.city}</h3>
+                        <h4 class="colorb60001">Miasto:</h4> &nbsp;
+                        <h3 class="color0d0e48">${customer.city}</h3>
                     </li>
                     <li class="list-group-item">
-                        <h4 style="color: #b60001">Kod pocztowy:</h4> &nbsp;
-                        <h3 style="color: #0d0e48">${customer.zipCode}</h3>
+                        <h4 class="colorb60001">Kod pocztowy:</h4> &nbsp;
+                        <h3 class="color0d0e48">${customer.zipCode}</h3>
                     </li>
                     <li class="list-group-item">
-                        <h4 style="color: #b60001">Kraj:</h4> &nbsp;
-                        <h3 style="color: #0d0e48">${customer.country}</h3>
+                        <h4 class="colorb60001">Kraj:</h4> &nbsp;
+                        <h3 class="color0d0e48">${customer.country}</h3>
                     </li>
                     <li class="list-group-item">
-                        <h4 style="color: #b60001">Numer telefonu:</h4> &nbsp;
-                        <h3 style="color: #0d0e48">${customer.phone}</h3>
+                        <h4 class="colorb60001">Numer telefonu:</h4> &nbsp;
+                        <h3 class="color0d0e48">${customer.phone}</h3>
                     </li>
                 </ul>
             </div>
-            <div style="width: 100px; margin-left: 20px">
+            <div class="marginLeft20Width100">
                 <div>
                     <h5>Akcje:</h5>
                 </div>
@@ -96,8 +96,7 @@
         </div>
     </div>
 
-    <footer>
-        <div style="height: 30px"></div>
+    <footer class="footerFreeSpace30px">
         <jsp:include page="footer.jsp"/>
     </footer>
 </div>

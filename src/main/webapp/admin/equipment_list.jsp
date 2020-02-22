@@ -26,19 +26,19 @@
         <jsp:include page="header.jsp"/>
     </header>
 
-    <div style="width: 98%; margin: 0 auto">
+    <div class="width98Margin0auto">
 
-        <div align="center" style="margin-top: 15px">
-            <h2><p style="color: #2d0001;">${equipmentCategoryName} - ${equipmentSex}</p></h2>
+        <div align="center" class="marginTop15">
+            <h2><p class="color2d0001">${equipmentCategoryName} - ${equipmentSex}</p></h2>
         </div>
 
         <div align="center">
-            <h3><a href="../admin/precreateNewEquipment?eq=${eqCat}&sex=${sex}"><p style="color:#2b57b4">DODAJ NOWY
+            <h3><a href="../admin/precreateNewEquipment?eq=${eqCat}&sex=${sex}"><p class="color2b57b4">DODAJ NOWY
                 SPRZĘT DO BAZY</p></a></h3>
         </div>
 
         <div align="center">
-            <h5><p style="color: #950002;">${message}</p></h5>
+            <h5><p class="color950002">${message}</p></h5>
         </div>
 
         <div>
@@ -81,8 +81,7 @@
         </div>
     </div>
 
-    <footer>
-        <div style="height: 30px"></div>
+    <footer class="footerFreeSpace30px">
         <jsp:include page="footer.jsp"/>
     </footer>
 </div>

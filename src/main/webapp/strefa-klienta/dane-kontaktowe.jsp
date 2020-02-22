@@ -24,7 +24,7 @@
 </header>
 
 <div class="container">
-    <div style="padding-bottom: 20px">
+    <div class="paddingBottom20">
         <ul class="nav">
             <li class="nav-item">
                 <a class="nav-link active" href="../homepage/index.jsp">Strona główna</a>
@@ -45,12 +45,12 @@
     </div>
     <div>
         <div>
-            <p style="font-size: 30px; padding-bottom: 20px">Dane kontaktowe</p>
+            <p class="fontSize30PaddingBottom20">Dane kontaktowe</p>
         </div>
-        <div class="firstMessage" style="padding-left: 20px;padding-right: 20px;text-align: justify">
+        <div class="firstMessage paddingLeft20paddingRight20textAlignJustify">
 
-            <p style="font-size: 18px">SIEDZIBA BIURA:</p>
-            <p style="font-size: 14px">
+            <p class="fontSize18">SIEDZIBA BIURA:</p>
+            <p class="fontSize14">
                 ul. XYZ 00
                 <br><br>
                 xx-xxx XYZ
@@ -61,8 +61,8 @@
                 <br><br>
                 <br><br>
             </p>
-            <p style="font-size: 18px">KONTO BANKOWE [PLN]:</p>
-            <p style="font-size: 14px">
+            <p class="fontSize18">KONTO BANKOWE [PLN]:</p>
+            <p class="fontSize14">
                 XYZ Spółka Jawna
                 <br><br>
                 ul. XYZ 00
@@ -73,8 +73,8 @@
                 <br><br>
                 <br><br>
             </p>
-            <p style="font-size: 18px">WALUTOWE KONTO BANKOWE [EURO]:</p>
-            <p style="font-size: 14px">
+            <p class="fontSize18">WALUTOWE KONTO BANKOWE [EURO]:</p>
+            <p class="fontSize14">
                 XYZ Spółka Jawna
                 <br><br>
                 ul. XYZ 00
@@ -88,8 +88,7 @@
         </div>
     </div>
 
-    <footer>
-        <div style="height: 30px"></div>
+    <footer class="footerFreeSpace30px">
         <jsp:include page="../homepage/footer.jsp"/>
     </footer>
 </div>

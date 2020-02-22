@@ -26,7 +26,7 @@
         <jsp:directive.include file="header.jsp"/>
     </header>
 
-    <div style="width: 98%; margin: 0 auto">
+    <div class="width98Margin0auto">
         <div align="center">
             &nbsp;
             <p>Uzupełnij wszytkie pola w celu dodania nowej recenzji.</p>
@@ -74,8 +74,7 @@
         </div>
     </div>
 
-    <footer>
-        <div style="height: 30px"></div>
+    <footer class="footerFreeSpace30px">
         <jsp:include page="footer.jsp"/>
     </footer>
 </div>

@@ -26,7 +26,7 @@
         <jsp:directive.include file="header.jsp"/>
     </header>
 
-    <div style="width: 500px; margin: 0 auto">
+    <div class="width500pxMargin0auto">
         <div align="center">
             &nbsp;
             <p>Uzupełnij wszytkie pola w celu wykonania edycji.</p>
@@ -101,8 +101,7 @@
         </div>
     </div>
 
-    <footer>
-        <div style="height: 30px"></div>
+    <footer class="footerFreeSpace30px">
         <jsp:directive.include file="footer.jsp"/>
     </footer>
 </div>

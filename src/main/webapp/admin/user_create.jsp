@@ -26,7 +26,7 @@
         <jsp:include page="header.jsp"/>
     </header>
 
-    <div style="width: 500px; margin: 0 auto">
+    <div class="width500pxMargin0auto">
         <div align="center">
             &nbsp;
             <c:if test="${user != null}">
@@ -76,8 +76,7 @@
         </div>
     </div>
 
-    <footer>
-        <div style="height: 30px"></div>
+    <footer class="footerFreeSpace30px">
         <jsp:include page="footer.jsp"/>
     </footer>
 </div>

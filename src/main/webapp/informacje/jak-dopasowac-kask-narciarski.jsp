@@ -24,7 +24,7 @@
 </header>
 
 <div class="container">
-    <div style="padding-bottom: 20px">
+    <div class="paddingBottom20">
         <ul class="nav">
             <li class="nav-item">
                 <a class="nav-link active" href="../homepage/index.jsp">Strona główna</a>
@@ -45,17 +45,17 @@
     </div>
     <div>
         <div>
-            <p style="font-size: 30px; padding-bottom: 20px">JAK DOPASOWAĆ KASK NARCIARSKI?</p>
+            <p class="fontSize30PaddingBottom20">JAK DOPASOWAĆ KASK NARCIARSKI?</p>
         </div>
         <div>
-            <p style="font-size:24px; padding-bottom: 20px">ŻEBY KASK WŁAŚCIWIE SPEŁNIAŁ SWOJE ZADANIE, CZYLI ZAPEWNIAŁ
+            <p class="fontSize24PaddingBottom20">ŻEBY KASK WŁAŚCIWIE SPEŁNIAŁ SWOJE ZADANIE, CZYLI ZAPEWNIAŁ
                 BEZPIECZEŃSTWO, MUSI BYĆ ODPOWIEDNIO DOBRANY – NIE MOŻE BYĆ ZA CIASNY, ANI TYM BARDZIEJ ZBYT LUŹNY.</p>
         </div>
         <div>
-            <p style="font-size:24px; padding-bottom: 25px">ZMIERZ OBWÓD GŁOWY</p>
+            <p class="fontSize24PaddingBottom20">ZMIERZ OBWÓD GŁOWY</p>
         </div>
-        <div class="firstMessage" style="padding-left: 20px;padding-right: 20px;text-align: justify">
-            <ul style="font-size: 14px">
+        <div class="firstMessage paddingLeft20paddingRight20textAlignJustify">
+            <ul class="fontSize14">
                 <li>
                     Pomiaru najlepiej dokonać za pomocą metra krawieckiego, około 1 cm nad linią brwi. Otrzymany wynik
                     przekłada się na rozmiar kasku danego producenta np. S(55-56) – przykładowa tabelka znajduje się na
@@ -70,10 +70,10 @@
         </div>
         <br> <br>
         <div>
-            <p style="font-size: 24px; padding-bottom: 20px">MIERZENIE KASKU W DOMU</p>
+            <p class="fontSize24PaddingBottom20">MIERZENIE KASKU W DOMU</p>
         </div>
-        <div class="firstMessage" style="padding-left: 20px;padding-right: 20px;text-align: justify">
-            <ul style="font-size: 14px">
+        <div class="firstMessage paddingLeft20paddingRight20textAlignJustify">
+            <ul class="fontSize14">
                 <li>
                     Załóż kask i zapnij pasek pod brodą, następnie poruszaj głową na boki, w przód oraz w tył.
                 </li>
@@ -85,10 +85,10 @@
         </div>
         <br> <br>
         <div>
-            <p style="font-size: 24px; padding-bottom: 20px">DOPASOWANIE DO GOGLI</p>
+            <p class="fontSize24PaddingBottom20">DOPASOWANIE DO GOGLI</p>
         </div>
-        <div class="firstMessage" style="padding-left: 20px;padding-right: 20px;text-align: justify">
-            <p style="font-size: 14px">
+        <div class="firstMessage paddingLeft20paddingRight20textAlignJustify">
+            <p class="fontSize14">
                 W doborze kasku ważnym elementem jest także jego kompatybilność z goglami. Między kaskiem a goglami
                 powinna być tylko niewielka szczelina, dzięki czemu narciarz będzie chroniony przed mrozem i
                 wiatrem.
@@ -98,8 +98,7 @@
         </div>
     </div>
 
-    <footer>
-        <div style="height: 30px"></div>
+    <footer class="footerFreeSpace30px">
         <jsp:include page="../homepage/footer.jsp"/>
     </footer>
 </div>
