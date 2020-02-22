@@ -263,3 +263,4 @@ For DB error (500) page looks similar but with different error number.
 
 ## 5 TODO list
 * Make refactoring of backend code - delete unused code and simplify what is possible.
+* Add more tests
