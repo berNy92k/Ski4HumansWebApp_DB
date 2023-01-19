@@ -1,5 +1,11 @@
 package pl.ski4humans.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -16,6 +22,11 @@ import java.util.Base64;
 import java.util.HashSet;
 import java.util.Set;
 
+@Getter
+@Setter
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "manufacturer")
 @NamedQueries({
@@ -24,6 +35,7 @@ import java.util.Set;
     @NamedQuery(name = "Manufacturer.countAll", query = "SELECT COUNT(m) FROM Manufacturer m"),
 })
 public class Manufacturer {
+
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(name = "manufacturer_id")
@@ -42,73 +54,14 @@ public class Manufacturer {
   @OneToMany(fetch = FetchType.LAZY,
       mappedBy = "manufacturer"
   )
+  @Builder.Default
   private Set<Equipment> equipments = new HashSet<>();
 
   @Transient
   private String base64Image;
 
-  public Manufacturer() {
-  }
-
-  public Manufacturer(String manufacturerName, String description, byte[] image) {
-    this.manufacturerName = manufacturerName;
-    this.description = description;
-    this.image = image;
-  }
-
-  public Manufacturer(Integer manufacturerId, String manufacturerName, String description, byte[] image) {
-    this.manufacturerId = manufacturerId;
-    this.manufacturerName = manufacturerName;
-    this.description = description;
-    this.image = image;
-  }
-
-  public Integer getManufacturerId() {
-    return manufacturerId;
-  }
-
-  public void setManufacturerId(Integer manufacturerId) {
-    this.manufacturerId = manufacturerId;
-  }
-
-  public String getManufacturerName() {
-    return manufacturerName;
-  }
-
-  public void setManufacturerName(String manufacturerName) {
-    this.manufacturerName = manufacturerName;
-  }
-
-  public String getDescription() {
-    return description;
-  }
-
-  public void setDescription(String description) {
-    this.description = description;
-  }
-
-  public byte[] getImage() {
-    return image;
-  }
-
-  public void setImage(byte[] image) {
-    this.image = image;
-  }
-
-  public Set<Equipment> getEquipments() {
-    return equipments;
-  }
-
-  public void setEquipments(Set<Equipment> equipments) {
-    this.equipments = equipments;
-  }
-
   public String getBase64Image() {
     this.base64Image = Base64.getEncoder().encodeToString(this.image);
     return this.base64Image;
-  }
-
-  public void setBase64Image(String base64Image) {
-    this.base64Image = base64Image;
   }
 }

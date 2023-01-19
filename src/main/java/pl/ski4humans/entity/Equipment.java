@@ -1,5 +1,11 @@
 package pl.ski4humans.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -21,6 +27,11 @@ import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
+@Getter
+@Setter
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "equipment",
     uniqueConstraints = @UniqueConstraint(columnNames = "name"))
@@ -81,175 +92,20 @@ public class Equipment {
 
   @OneToMany(fetch = FetchType.EAGER,
       mappedBy = "equipment")
+  @Builder.Default
   private Set<Review> reviews = new HashSet<>();
 
   @OneToMany(fetch = FetchType.EAGER,
       mappedBy = "equipment")
+  @Builder.Default
   private Set<OrderEquipmentDetail> orderDetails = new HashSet<>();
 
   @Transient
   private String base64Image;
 
-  public Equipment() {
-  }
-
-  public Equipment(String name, Manufacturer manufacturer, String shortDescription, String longDescription,
-                   String sex, byte[] image, float price, String lengthOrSize, Category category) {
-    this.name = name;
-    this.manufacturer = manufacturer;
-    this.shortDescription = shortDescription;
-    this.longDescription = longDescription;
-    this.sex = sex;
-    this.image = image;
-    this.price = price;
-    this.lengthOrSize = lengthOrSize;
-    this.category = category;
-  }
-
-  public Equipment(String name, Manufacturer manufacturer, String shortDescription, String longDescription,
-                   String sex, byte[] image, float price, String lengthOrSize, Category category,
-                   Date publishDate, Date lastUpdateTime) {
-    this.name = name;
-    this.manufacturer = manufacturer;
-    this.shortDescription = shortDescription;
-    this.longDescription = longDescription;
-    this.sex = sex;
-    this.image = image;
-    this.price = price;
-    this.lengthOrSize = lengthOrSize;
-    this.category = category;
-    this.publishDate = publishDate;
-    this.lastUpdateTime = lastUpdateTime;
-  }
-
-  public Equipment(Integer equipmentId, String name, Manufacturer manufacturer, String shortDescription,
-                   String longDescription, String sex, byte[] image, float price, String lengthOrSize,
-                   Category category, Date publishDate, Date lastUpdateTime) {
-    this.equipmentId = equipmentId;
-    this.name = name;
-    this.manufacturer = manufacturer;
-    this.shortDescription = shortDescription;
-    this.longDescription = longDescription;
-    this.sex = sex;
-    this.image = image;
-    this.price = price;
-    this.lengthOrSize = lengthOrSize;
-    this.category = category;
-    this.publishDate = publishDate;
-    this.lastUpdateTime = lastUpdateTime;
-  }
-
-  public Integer getEquipmentId() {
-    return equipmentId;
-  }
-
-  public void setEquipmentId(Integer equipmentId) {
-    this.equipmentId = equipmentId;
-  }
-
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-  public Manufacturer getManufacturer() {
-    return manufacturer;
-  }
-
-  public void setManufacturer(Manufacturer manufacturer) {
-    this.manufacturer = manufacturer;
-  }
-
-  public String getShortDescription() {
-    return shortDescription;
-  }
-
-  public void setShortDescription(String shortDescription) {
-    this.shortDescription = shortDescription;
-  }
-
-  public String getLongDescription() {
-    return longDescription;
-  }
-
-  public void setLongDescription(String longDescription) {
-    this.longDescription = longDescription;
-  }
-
-  public String getSex() {
-    return sex;
-  }
-
-  public void setSex(String sex) {
-    this.sex = sex;
-  }
-
-  public byte[] getImage() {
-    return image;
-  }
-
-  public void setImage(byte[] image) {
-    this.image = image;
-  }
-
-  public float getPrice() {
-    return price;
-  }
-
-  public void setPrice(float price) {
-    this.price = price;
-  }
-
-  public String getLengthOrSize() {
-    return lengthOrSize;
-  }
-
-  public void setLengthOrSize(String lengthOrSize) {
-    this.lengthOrSize = lengthOrSize;
-  }
-
-  public Category getCategory() {
-    return category;
-  }
-
-  public void setCategory(Category category) {
-    this.category = category;
-  }
-
-  public Date getPublishDate() {
-    return publishDate;
-  }
-
-  public void setPublishDate(Date publishDate) {
-    this.publishDate = publishDate;
-  }
-
-  public Date getLastUpdateTime() {
-    return lastUpdateTime;
-  }
-
-  public void setLastUpdateTime(Date lastUpdateTime) {
-    this.lastUpdateTime = lastUpdateTime;
-  }
-
   public String getBase64Image() {
     this.base64Image = Base64.getEncoder().encodeToString(this.image);
     return this.base64Image;
-  }
-
-  public Set<Review> getReviews() {
-    return reviews;
-  }
-
-  public void setReviews(Set<Review> reviews) {
-    this.reviews = reviews;
-  }
-
-  public void setBase64Image(String base64Image) {
-    this.base64Image = base64Image;
   }
 
   @Override

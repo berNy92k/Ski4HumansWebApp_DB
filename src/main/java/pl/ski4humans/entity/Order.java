@@ -1,5 +1,10 @@
 package pl.ski4humans.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import pl.ski4humans.controller.frontend.shoppingCartAndPayment.model.OrderStatus;
 import pl.ski4humans.controller.frontend.shoppingCartAndPayment.model.PaymentMethod;
 
@@ -22,6 +27,11 @@ import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
+@Getter
+@Setter
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "orders")
 @NamedQueries({
@@ -59,10 +69,8 @@ public class Order {
   @OneToMany(fetch = FetchType.LAZY,
       cascade = CascadeType.ALL,
       mappedBy = "order")
+  @Builder.Default
   private Set<OrderEquipmentDetail> orderEquipmentDetails = new HashSet<>();
-
-  public Order() {
-  }
 
   public Integer getTotalOfOrder() {
     int quantity = 0;
@@ -72,68 +80,12 @@ public class Order {
     return quantity;
   }
 
-  public Integer getOrderId() {
-    return orderId;
-  }
-
-  public void setOrderId(Integer orderId) {
-    this.orderId = orderId;
-  }
-
-  public Customer getCustomer() {
-    return customer;
-  }
-
-  public void setCustomer(Customer customer) {
-    this.customer = customer;
-  }
-
-  public ShippingAddress getShippingAddress() {
-    return shippingAddress;
-  }
-
-  public void setShippingAddress(ShippingAddress shippingAddress) {
-    this.shippingAddress = shippingAddress;
-  }
-
-  public String getPaymentMethod() {
-    return paymentMethod;
-  }
-
   public void setPaymentMethod(PaymentMethod paymentMethod) {
     this.paymentMethod = paymentMethod.getPaymentMethod();
   }
 
-  public float getTotal() {
-    return total;
-  }
-
-  public void setTotal(float total) {
-    this.total = total;
-  }
-
-  public String getStatus() {
-    return status;
-  }
-
   public void setStatus(OrderStatus status) {
     this.status = status.getOrderStatus();
-  }
-
-  public Date getOrderDate() {
-    return orderDate;
-  }
-
-  public void setOrderDate(Date orderDate) {
-    this.orderDate = orderDate;
-  }
-
-  public Set<OrderEquipmentDetail> getOrderEquipmentDetails() {
-    return orderEquipmentDetails;
-  }
-
-  public void setOrderEquipmentDetails(Set<OrderEquipmentDetail> orderEquipmentDetails) {
-    this.orderEquipmentDetails = orderEquipmentDetails;
   }
 
   @Override

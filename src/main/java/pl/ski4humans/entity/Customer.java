@@ -1,5 +1,11 @@
 package pl.ski4humans.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -16,6 +22,11 @@ import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
+@Getter
+@Setter
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "customer")
 @NamedQueries({
@@ -65,175 +76,13 @@ public class Customer {
 
   @OneToMany(fetch = FetchType.EAGER,
       mappedBy = "customer")
+  @Builder.Default
   private Set<Review> reviews = new HashSet<>();
 
   @OneToMany(fetch = FetchType.LAZY,
       mappedBy = "customer")
+  @Builder.Default
   private Set<Order> orders = new HashSet<>();
-
-  public Customer() {
-  }
-
-  public Customer(String email, String password, String firstName,
-                  String lastName, String street, String homeNumber, String city,
-                  String zipCode, String country, String phone) {
-    this.email = email;
-    this.password = password;
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.street = street;
-    this.homeNumber = homeNumber;
-    this.city = city;
-    this.zipCode = zipCode;
-    this.country = country;
-    this.phone = phone;
-  }
-
-  public Customer(String email, String password, String firstName,
-                  String lastName, String street, String homeNumber, String city,
-                  String zipCode, String country, String phone, Date registerDate) {
-    this.email = email;
-    this.password = password;
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.street = street;
-    this.homeNumber = homeNumber;
-    this.city = city;
-    this.zipCode = zipCode;
-    this.country = country;
-    this.phone = phone;
-    this.registerDate = registerDate;
-  }
-
-  public Customer(Integer customerId, String email, String password, String firstName,
-                  String lastName, String street, String homeNumber, String city,
-                  String zipCode, String country, String phone, Date registerDate) {
-    this.customerId = customerId;
-    this.email = email;
-    this.password = password;
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.street = street;
-    this.homeNumber = homeNumber;
-    this.city = city;
-    this.zipCode = zipCode;
-    this.country = country;
-    this.phone = phone;
-    this.registerDate = registerDate;
-  }
-
-  public Integer getCustomerId() {
-    return customerId;
-  }
-
-  public void setCustomerId(Integer customerId) {
-    this.customerId = customerId;
-  }
-
-  public String getEmail() {
-    return email;
-  }
-
-  public void setEmail(String email) {
-    this.email = email;
-  }
-
-  public String getPassword() {
-    return password;
-  }
-
-  public void setPassword(String password) {
-    this.password = password;
-  }
-
-  public String getFirstName() {
-    return firstName;
-  }
-
-  public void setFirstName(String firstName) {
-    this.firstName = firstName;
-  }
-
-  public String getLastName() {
-    return lastName;
-  }
-
-  public void setLastName(String lastName) {
-    this.lastName = lastName;
-  }
-
-  public String getStreet() {
-    return street;
-  }
-
-  public void setStreet(String street) {
-    this.street = street;
-  }
-
-  public String getHomeNumber() {
-    return homeNumber;
-  }
-
-  public void setHomeNumber(String homeNumber) {
-    this.homeNumber = homeNumber;
-  }
-
-  public String getCity() {
-    return city;
-  }
-
-  public void setCity(String city) {
-    this.city = city;
-  }
-
-  public String getZipCode() {
-    return zipCode;
-  }
-
-  public void setZipCode(String zipCode) {
-    this.zipCode = zipCode;
-  }
-
-  public String getCountry() {
-    return country;
-  }
-
-  public void setCountry(String country) {
-    this.country = country;
-  }
-
-  public String getPhone() {
-    return phone;
-  }
-
-  public void setPhone(String phone) {
-    this.phone = phone;
-  }
-
-  public Date getRegisterDate() {
-    return registerDate;
-  }
-
-  public void setRegisterDate(Date registerDate) {
-    this.registerDate = registerDate;
-  }
-
-  public Set<Review> getReviews() {
-    return reviews;
-  }
-
-  public void setReviews(Set<Review> reviews) {
-    this.reviews = reviews;
-  }
-
-  public Set<Order> getOrders() {
-
-    return orders;
-  }
-
-  public void setOrders(Set<Order> orders) {
-    this.orders = orders;
-  }
 
   @Override
   public boolean equals(Object o) {

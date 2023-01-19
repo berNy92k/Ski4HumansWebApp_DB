@@ -53,7 +53,7 @@ public class UserServices {
         if (emails.size() > 0) {
             userList(email + ConstantsPL.USER_EMAIL_ALREADY_EXIST_IN_DB);
         } else {
-            User newUser = new User(email, fullName, password);
+            User newUser = User.builder().email(email).fullName(fullName).password(password).build();
             userDAO.create(newUser);
             userList(ConstantsPL.NEW_USER_WAS_CREATED);
         }

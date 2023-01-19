@@ -1,5 +1,11 @@
 package pl.ski4humans.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -13,6 +19,11 @@ import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
+@Getter
+@Setter
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "Shipping_Address")
 public class ShippingAddress {
@@ -51,98 +62,8 @@ public class ShippingAddress {
 
   @OneToMany(fetch = FetchType.LAZY,
       mappedBy = "shippingAddress")
+  @Builder.Default
   private Set<Order> order = new HashSet<>();
-
-  public ShippingAddress() {
-  }
-
-  public Integer getShippingAddressId() {
-    return shippingAddressId;
-  }
-
-  public void setShippingAddressId(Integer shippingAddressId) {
-    this.shippingAddressId = shippingAddressId;
-  }
-
-  public String getFirstName() {
-    return firstName;
-  }
-
-  public void setFirstName(String firstName) {
-    this.firstName = firstName;
-  }
-
-  public String getLastName() {
-    return lastName;
-  }
-
-  public void setLastName(String lastName) {
-    this.lastName = lastName;
-  }
-
-  public String getStreetName() {
-    return streetName;
-  }
-
-  public void setStreetName(String streetName) {
-    this.streetName = streetName;
-  }
-
-  public String getHouseOrApartmentNr() {
-    return houseOrApartmentNr;
-  }
-
-  public void setHouseOrApartmentNr(String houseOrApartmentNr) {
-    this.houseOrApartmentNr = houseOrApartmentNr;
-  }
-
-  public String getZipCode() {
-    return zipCode;
-  }
-
-  public void setZipCode(String zipCode) {
-    this.zipCode = zipCode;
-  }
-
-  public String getCity() {
-    return city;
-  }
-
-  public void setCity(String city) {
-    this.city = city;
-  }
-
-  public Set<Order> getOrder() {
-    return order;
-  }
-
-  public void setOrder(Set<Order> order) {
-    this.order = order;
-  }
-
-  public String getEmail() {
-    return email;
-  }
-
-  public void setEmail(String email) {
-    this.email = email;
-  }
-
-  public String getCountry() {
-    return country;
-  }
-
-  public void setCountry(String country) {
-    this.country = country;
-  }
-
-  public String getPhone() {
-    return phone;
-  }
-
-  public void setPhone(String phone) {
-    this.phone = phone;
-  }
 
   @Override
   public boolean equals(Object o) {

@@ -50,7 +50,7 @@ public class CategoryServices {
         if (categories.size() > 0) {
             categoryList(name + ConstantsPL.CATEGORY_NAME_ALREADY_EXIST_IN_DB);
         } else {
-            Category newCategory = new Category(name);
+            Category newCategory = Category.builder().name(name).build();
             categoryDAO.create(newCategory);
             categoryList(ConstantsPL.NEW_CATEGORY_WAS_CREATED);
         }
@@ -93,7 +93,7 @@ public class CategoryServices {
         } else if (categoryFoundByName != null && !categoryFoundByName.getCategoryId().equals(categoryFoundById.getCategoryId())) {
             categoryList(ConstantsPL.CATEGORY_WAS_NOT_UPDATED + name + ConstantsPL.CATEGORY_NAME_ALREADY_EXIST_IN_DB);
         } else {
-            Category newCategory = new Category(categoryId, name);
+            Category newCategory = Category.builder().categoryId(categoryId).name(name).build();
             categoryDAO.update(newCategory);
 
             categoryList(ConstantsPL.CATEGORY_WAS_UPDATED);

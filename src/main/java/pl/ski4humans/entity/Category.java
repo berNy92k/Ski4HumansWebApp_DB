@@ -1,5 +1,10 @@
 package pl.ski4humans.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -15,6 +20,11 @@ import javax.validation.constraints.NotNull;
 import java.util.HashSet;
 import java.util.Set;
 
+@Getter
+@Setter
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "category")
 @NamedQueries({
@@ -34,41 +44,6 @@ public class Category {
 
   @OneToMany(fetch = FetchType.LAZY,
       mappedBy = "category")
+  @Builder.Default
   private Set<Equipment> categories = new HashSet<>();
-
-  public Category() {
-  }
-
-  public Category(String name) {
-    this.name = name;
-  }
-
-  public Category(Integer categoryId, String name) {
-    this.categoryId = categoryId;
-    this.name = name;
-  }
-
-  public Integer getCategoryId() {
-    return categoryId;
-  }
-
-  public void setCategoryId(Integer categoryId) {
-    this.categoryId = categoryId;
-  }
-
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-  public Set<Equipment> getCategories() {
-    return categories;
-  }
-
-  public void setCategories(Set<Equipment> categories) {
-    this.categories = categories;
-  }
 }

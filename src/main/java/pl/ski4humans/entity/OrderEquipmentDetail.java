@@ -1,5 +1,11 @@
 package pl.ski4humans.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -12,6 +18,11 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import java.util.Objects;
 
+@Getter
+@Setter
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "Order_Equipment_Detail")
 public class OrderEquipmentDetail {
@@ -34,49 +45,6 @@ public class OrderEquipmentDetail {
   @ManyToOne(fetch = FetchType.EAGER)
   @JoinColumn(name = "equipment_id")
   private Equipment equipment;
-
-  public OrderEquipmentDetail() {
-  }
-
-  public Integer getOrderEquipmentDetailId() {
-    return orderEquipmentDetailId;
-  }
-
-  public void setOrderEquipmentDetailId(Integer orderEquipmentDetailId) {
-    this.orderEquipmentDetailId = orderEquipmentDetailId;
-  }
-
-  public Equipment getEquipment() {
-    return equipment;
-  }
-
-  public void setEquipment(Equipment equipment) {
-    this.equipment = equipment;
-  }
-
-  public int getQuantity() {
-    return quantity;
-  }
-
-  public void setQuantity(int quantity) {
-    this.quantity = quantity;
-  }
-
-  public float getSubtotal() {
-    return subtotal;
-  }
-
-  public void setSubtotal(float subtotal) {
-    this.subtotal = subtotal;
-  }
-
-  public Order getOrder() {
-    return order;
-  }
-
-  public void setOrder(Order order) {
-    this.order = order;
-  }
 
   @Override
   public boolean equals(Object o) {
