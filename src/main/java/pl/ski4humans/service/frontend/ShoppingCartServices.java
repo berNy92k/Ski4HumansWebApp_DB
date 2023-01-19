@@ -6,12 +6,14 @@ import pl.ski4humans.controller.frontend.shoppingCartAndPayment.model.ShoppingCa
 import pl.ski4humans.controller.frontend.shoppingCartAndPayment.model.TransactionData;
 import pl.ski4humans.dao.EquipmentDAO;
 import pl.ski4humans.dao.OrderDAO;
-import pl.ski4humans.entity.*;
+import pl.ski4humans.entity.Customer;
+import pl.ski4humans.entity.Equipment;
+import pl.ski4humans.entity.Order;
+import pl.ski4humans.entity.OrderEquipmentDetail;
+import pl.ski4humans.entity.ShippingAddress;
 
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -20,196 +22,200 @@ import java.io.IOException;
 import java.util.*;
 
 public class ShoppingCartServices {
-    private HttpServletRequest request;
-    private HttpServletResponse response;
-    private EquipmentDAO equipmentDAO;
-    private OrderDAO orderDAO;
 
-    public ShoppingCartServices(HttpServletRequest req, HttpServletResponse resp) {
-        this.request = req;
-        this.response = resp;
-        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("Ski4HumansWebApp");
-        EntityManager entityManager = entityManagerFactory.createEntityManager();
-        equipmentDAO = new EquipmentDAO(entityManager);
-        orderDAO = new OrderDAO(entityManager);
+  private final HttpServletRequest request;
+  private final HttpServletResponse response;
+  private final EquipmentDAO equipmentDAO;
+  private final OrderDAO orderDAO;
+
+  public ShoppingCartServices(final HttpServletRequest req, final HttpServletResponse resp) {
+    this.request = req;
+    this.response = resp;
+    EntityManager entityManager = Persistence
+        .createEntityManagerFactory("Ski4HumansWebApp")
+        .createEntityManager();
+    equipmentDAO = new EquipmentDAO(entityManager);
+    orderDAO = new OrderDAO(entityManager);
+  }
+
+  public void viewShoppingCart() throws ServletException, IOException {
+    Object shoppingCart = request.getSession().getAttribute("cart");
+
+    if (shoppingCart == null) {
+      shoppingCart = new ShoppingCart();
+      request.getSession().setAttribute("cart", shoppingCart);
     }
 
-    public void viewShoppingCart() throws ServletException, IOException {
-        Object shoppingCart = request.getSession().getAttribute("cart");
+    request
+        .getRequestDispatcher(ConstantsFrontendPL.ShoppingCart.SHOPPING_CART_HOMEPAGE_URL)
+        .forward(request, response);
+  }
 
-        if (shoppingCart == null) {
-            shoppingCart = new ShoppingCart();
-            request.getSession().setAttribute("cart", shoppingCart);
-        }
+  public void addToShoppingCart() throws ServletException, IOException {
+    final Integer equipmentId = Integer.valueOf(request.getParameter("eq"));
+    ShoppingCart shoppingCart = (ShoppingCart) request.getSession().getAttribute("cart");
 
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher(ConstantsFrontendPL.SHOPPING_CART_HOMEPAGE_URL);
-        requestDispatcher.forward(request, response);
+    if (shoppingCart == null) {
+      shoppingCart = new ShoppingCart();
+      request.getSession().setAttribute("cart", shoppingCart);
     }
 
-    public void addToShoppingCart() throws ServletException, IOException {
-        Integer equipmentId = Integer.valueOf(request.getParameter("eq"));
+    final Equipment equipment = equipmentDAO.get(equipmentId);
+    shoppingCart.addEquipment(equipment);
 
-        ShoppingCart shoppingCart = (ShoppingCart) request.getSession().getAttribute("cart");
+    request.setAttribute(ConstantsFrontendPL.MESSAGE, ConstantsFrontendPL.ShoppingCart.SHOPPING_CART_EQUIPMENT_WAS_ADDED);
 
-        if (shoppingCart == null) {
-            shoppingCart = new ShoppingCart();
-            request.getSession().setAttribute("cart", shoppingCart);
-        }
+    request
+        .getRequestDispatcher(ConstantsFrontendPL.ShoppingCart.SHOPPING_CART_HOMEPAGE_URL)
+        .forward(request, response);
+  }
 
-        Equipment equipment = equipmentDAO.get(equipmentId);
-        shoppingCart.addEquipment(equipment);
+  public void deleteFromShoppingCart() throws ServletException, IOException {
+    final Integer equipmentId = Integer.valueOf(request.getParameter("eq"));
+    ShoppingCart shoppingCart = (ShoppingCart) request.getSession().getAttribute("cart");
 
-        request.setAttribute(ConstantsFrontendPL.MESSAGE, ConstantsFrontendPL.SHOPPING_CART_EQUIPMENT_WAS_ADDED);
+    final Equipment equipment = equipmentDAO.get(equipmentId);
+    shoppingCart.removeEquipmentByEquipment(equipment);
 
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher(ConstantsFrontendPL.SHOPPING_CART_HOMEPAGE_URL);
-        requestDispatcher.forward(request, response);
+    request.setAttribute(ConstantsFrontendPL.MESSAGE, ConstantsFrontendPL.ShoppingCart.SHOPPING_CART_EQUIPMENT_WAS_DELETED);
+
+    request
+        .getRequestDispatcher(ConstantsFrontendPL.ShoppingCart.SHOPPING_CART_HOMEPAGE_URL)
+        .forward(request, response);
+  }
+
+  public void updateEquipmentInShoppingCart() throws ServletException, IOException {
+    final ShoppingCart shoppingCart = (ShoppingCart) request.getSession().getAttribute("cart");
+
+    final Map<Integer, Integer> idEqAndQuantity = new HashMap<>();
+    for (int i = 1; i <= shoppingCart.getTotalQuantityOfEquipments(); i++) {
+      final Integer eqId = Integer.valueOf(request.getParameter("eqId" + i));
+      final Integer quantity = Integer.valueOf(request.getParameter("quantity" + i));
+      idEqAndQuantity.put(eqId, quantity);
+    }
+    shoppingCart.updateShoppingCart(idEqAndQuantity);
+
+    request.setAttribute(ConstantsFrontendPL.MESSAGE, ConstantsFrontendPL.ShoppingCart.SHOPPING_CART_EQUIPMENT_WAS_UPDATED);
+
+    viewShoppingCart();
+  }
+
+  public void clearShoppingCart() throws ServletException, IOException {
+    final ShoppingCart shoppingCart = (ShoppingCart) request.getSession().getAttribute("cart");
+    shoppingCart.clearShoppingCart();
+
+    request.setAttribute(ConstantsFrontendPL.MESSAGE, ConstantsFrontendPL.ShoppingCart.SHOPPING_CART_EQUIPMENT_WAS_CLEARED);
+
+    viewShoppingCart();
+  }
+
+  public void checkoutShoppingCart() throws ServletException, IOException {
+    final Customer loggedCustomer = (Customer) request.getSession().getAttribute(ConstantsFrontendPL.LoginRegister.LOGGED_CUSTOMER);
+
+    if (loggedCustomer != null) {
+      request.setAttribute("loggedCustomer", loggedCustomer);
+
+      request
+          .getRequestDispatcher(ConstantsFrontendPL.ShoppingCart.SHOPPING_CART_CHECKOUT_HOMEPAGE_URL)
+          .forward(request, response);
+    } else {
+      request.setAttribute(ConstantsFrontendPL.MESSAGE, ConstantsFrontendPL.ShoppingCart.SHOPPING_CART_CUSTOMER_NOT_LOGGED);
+      viewShoppingCart();
+    }
+  }
+
+  public void continueCheckoutShoppingCart() throws ServletException, IOException {
+    final HttpSession session = request.getSession();
+    final Customer loggedCustomer = (Customer) session.getAttribute(ConstantsFrontendPL.LoginRegister.LOGGED_CUSTOMER);
+    final ShoppingCart shoppingCart = (ShoppingCart) request.getSession().getAttribute("cart");
+    final ShippingAddress shippingAddress = fillShippingAddress();
+
+    final TransactionData transactionData = new TransactionData(
+        shippingAddress,
+        shoppingCart,
+        loggedCustomer);
+
+    session.setAttribute("transactionData", transactionData);
+
+    request
+        .getRequestDispatcher(ConstantsFrontendPL.ShoppingCart.SHOPPING_CART_FINAL_CHECKOUT_HOMEPAGE_URL)
+        .forward(request, response);
+  }
+
+  private ShippingAddress fillShippingAddress() {
+    final String email = request.getParameter("email");
+    final String firstName = request.getParameter("firstName");
+    final String lastName = request.getParameter("lastName");
+    final String street = request.getParameter("street");
+    final String homeNumber = request.getParameter("homeNumber");
+    final String city = request.getParameter("city");
+    final String zipCode = request.getParameter("zipCode");
+    final String country = request.getParameter("country");
+    final String phone = request.getParameter("phone");
+
+    return ShippingAddress.builder()
+        .email(email)
+        .firstName(firstName)
+        .lastName(lastName)
+        .streetName(street)
+        .houseOrApartmentNr(homeNumber)
+        .city(city)
+        .zipCode(zipCode)
+        .country(country)
+        .phone(phone)
+        .build();
+  }
+
+  public void payment() throws ServletException, IOException {
+    final HttpSession session = request.getSession();
+    final TransactionData transactionData = (TransactionData) session.getAttribute("transactionData");
+
+    // get objects from Transaction Data
+    final Customer customer = transactionData.getCustomer();
+    final ShippingAddress shippingAddressToSaveInDB = transactionData.getShippingAddress();
+    final ShoppingCart shoppingCart = transactionData.getShoppingCart();
+
+    // Save Order in DB
+    final Order orderToSaveInDB = Order.builder()
+        .customer(customer)
+        .shippingAddress(shippingAddressToSaveInDB)
+        .total(shoppingCart.getTotalAmount())
+        .orderDate(new Date())
+        .build();
+    orderToSaveInDB.setPaymentMethod(PaymentMethod.CASH_ON_DELIVERY);
+    orderToSaveInDB.setStatus(OrderStatus.ORDER_NEW);
+
+    // Add every single 'Order Equipment Details' to 'Order'
+    final Set<OrderEquipmentDetail> orderEquipmentDetails = new HashSet<>();
+    for (final Map.Entry<Equipment, Integer> singleOrderOfEquipmentWithQuantity : shoppingCart.getShoppingCart().entrySet()) {
+      final Equipment equipment = singleOrderOfEquipmentWithQuantity.getKey();
+      final Integer quantity = singleOrderOfEquipmentWithQuantity.getValue();
+
+      orderEquipmentDetails.add(
+          OrderEquipmentDetail.builder()
+              .equipment(equipment)
+              .quantity(quantity)
+              .subtotal(equipment.getPrice() * quantity)
+              .order(orderToSaveInDB)
+              .build()
+      );
     }
 
-    public void deleteFromShoppingCart() throws ServletException, IOException {
-        Integer equipmentId = Integer.valueOf(request.getParameter("eq"));
+    orderToSaveInDB.setOrderEquipmentDetails(orderEquipmentDetails);
+    final Order order = orderDAO.create(orderToSaveInDB);
 
-        ShoppingCart shoppingCart = (ShoppingCart) request.getSession().getAttribute("cart");
+    // return to page
+    if (order.getOrderId() > 0) {
+      session.removeAttribute("transactionData");
+      session.removeAttribute("cart");
 
-        Equipment equipment = equipmentDAO.get(equipmentId);
-        shoppingCart.removeEquipmentByEquipment(equipment);
-
-        request.setAttribute(ConstantsFrontendPL.MESSAGE, ConstantsFrontendPL.SHOPPING_CART_EQUIPMENT_WAS_DELETED);
-
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher(ConstantsFrontendPL.SHOPPING_CART_HOMEPAGE_URL);
-        requestDispatcher.forward(request, response);
+      request.setAttribute(ConstantsFrontendPL.MESSAGE, ConstantsFrontendPL.ShoppingCart.TRANSACTION_FINISHED_WITH_SUCCESFULL);
+    } else {
+      request.setAttribute(ConstantsFrontendPL.MESSAGE, ConstantsFrontendPL.ShoppingCart.TRANSACTION_FAILED);
     }
 
-    public void updateEquipmentInShoppingCart() throws ServletException, IOException {
-        ShoppingCart shoppingCart = (ShoppingCart) request.getSession().getAttribute("cart");
-
-        Map<Integer, Integer> idEqAndQuantity = new HashMap<>();
-        for (int i = 1; i <= shoppingCart.getTotalQuantityOfEquipments(); i++) {
-            Integer eqId = Integer.valueOf(request.getParameter("eqId" + i));
-            Integer quantity = Integer.valueOf(request.getParameter("quantity" + i));
-            idEqAndQuantity.put(eqId, quantity);
-        }
-        shoppingCart.updateShoppingCart(idEqAndQuantity);
-
-        request.setAttribute(ConstantsFrontendPL.MESSAGE, ConstantsFrontendPL.SHOPPING_CART_EQUIPMENT_WAS_UPDATED);
-
-        viewShoppingCart();
-    }
-
-    public void clearShoppingCart() throws ServletException, IOException {
-        ShoppingCart shoppingCart = (ShoppingCart) request.getSession().getAttribute("cart");
-        shoppingCart.clearShoppingCart();
-
-        request.setAttribute(ConstantsFrontendPL.MESSAGE, ConstantsFrontendPL.SHOPPING_CART_EQUIPMENT_WAS_CLEARED);
-
-        viewShoppingCart();
-    }
-
-    public void checkoutShoppingCart() throws ServletException, IOException {
-        HttpSession session = request.getSession();
-        Customer loggedCustomer = (Customer) session.getAttribute(ConstantsFrontendPL.LOGGED_CUSTOMER);
-
-        if (loggedCustomer != null) {
-            request.setAttribute("loggedCustomer", loggedCustomer);
-
-            RequestDispatcher requestDispatcher = request.getRequestDispatcher(ConstantsFrontendPL.SHOPPING_CART_CHECKOUT_HOMEPAGE_URL);
-            requestDispatcher.forward(request, response);
-        } else {
-            request.setAttribute(ConstantsFrontendPL.MESSAGE, ConstantsFrontendPL.SHOPPING_CART_CUSTOMER_NOT_LOGGED);
-            viewShoppingCart();
-        }
-    }
-
-    public void continueCheckoutShoppingCart() throws ServletException, IOException {
-        HttpSession session = request.getSession();
-        Customer loggedCustomer = (Customer) session.getAttribute(ConstantsFrontendPL.LOGGED_CUSTOMER);
-        ShoppingCart shoppingCart = (ShoppingCart) request.getSession().getAttribute("cart");
-        ShippingAddress shippingAddress = fillShippingAddress();
-
-        TransactionData transactionData = new TransactionData(
-                shippingAddress,
-                shoppingCart,
-                loggedCustomer);
-
-        session.setAttribute("transactionData", transactionData);
-
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher(ConstantsFrontendPL.SHOPPING_CART_FINAL_CHECKOUT_HOMEPAGE_URL);
-        requestDispatcher.forward(request, response);
-    }
-
-    private ShippingAddress fillShippingAddress() {
-        String email = request.getParameter("email");
-        String firstName = request.getParameter("firstName");
-        String lastName = request.getParameter("lastName");
-        String street = request.getParameter("street");
-        String homeNumber = request.getParameter("homeNumber");
-        String city = request.getParameter("city");
-        String zipCode = request.getParameter("zipCode");
-        String country = request.getParameter("country");
-        String phone = request.getParameter("phone");
-
-        ShippingAddress shippingAddress = new ShippingAddress();
-        shippingAddress.setEmail(email);
-        shippingAddress.setFirstName(firstName);
-        shippingAddress.setLastName(lastName);
-        shippingAddress.setStreetName(street);
-        shippingAddress.setHouseOrApartmentNr(homeNumber);
-        shippingAddress.setCity(city);
-        shippingAddress.setZipCode(zipCode);
-        shippingAddress.setCountry(country);
-        shippingAddress.setPhone(phone);
-
-        return shippingAddress;
-    }
-
-    public void payment() throws ServletException, IOException {
-        HttpSession session = request.getSession();
-        TransactionData transactionData = (TransactionData) session.getAttribute("transactionData");
-
-        // get objects from Transaction Data
-        Customer customer = transactionData.getCustomer();
-        ShippingAddress shippingAddressToSaveInDB = transactionData.getShippingAddress();
-        ShoppingCart shoppingCart = transactionData.getShoppingCart();
-
-        // Save Order in DB
-        Order orderToSaveInDB = new Order();
-        orderToSaveInDB.setCustomer(customer);
-        orderToSaveInDB.setShippingAddress(shippingAddressToSaveInDB);
-        orderToSaveInDB.setPaymentMethod(PaymentMethod.CASH_ON_DELIVERY);
-        orderToSaveInDB.setTotal(shoppingCart.getTotalAmount());
-        orderToSaveInDB.setStatus(OrderStatus.ORDER_NEW);
-        orderToSaveInDB.setOrderDate(new Date());
-
-        // Add every single 'Order Equipment Details' to 'Order'
-        Set<OrderEquipmentDetail> orderEquipmentDetails = new HashSet<>();
-        for (Map.Entry<Equipment, Integer> singleOrderOfEquipmentWithQuantity : shoppingCart.getShoppingCart().entrySet()) {
-            Equipment equipment = singleOrderOfEquipmentWithQuantity.getKey();
-            Integer quantity = singleOrderOfEquipmentWithQuantity.getValue();
-            float subTotalPrice = equipment.getPrice() * quantity;
-
-            OrderEquipmentDetail orderEquipmentDetailToSaveInDB = new OrderEquipmentDetail();
-            orderEquipmentDetailToSaveInDB.setEquipment(equipment);
-            orderEquipmentDetailToSaveInDB.setQuantity(quantity);
-            orderEquipmentDetailToSaveInDB.setSubtotal(subTotalPrice);
-            orderEquipmentDetailToSaveInDB.setOrder(orderToSaveInDB);
-
-            orderEquipmentDetails.add(orderEquipmentDetailToSaveInDB);
-        }
-
-        orderToSaveInDB.setOrderEquipmentDetails(orderEquipmentDetails);
-        Order order = orderDAO.create(orderToSaveInDB);
-
-        // return to page
-        if (order.getOrderId() > 0) {
-            session.removeAttribute("transactionData");
-            session.removeAttribute("cart");
-
-            request.setAttribute(ConstantsFrontendPL.MESSAGE, ConstantsFrontendPL.TRANSACTION_FINISHED_WITH_SUCCESFULL);
-            RequestDispatcher requestDispatcher = request.getRequestDispatcher(ConstantsFrontendPL.PAYMENT_HOMEPAGE_URL);
-            requestDispatcher.forward(request, response);
-        } else {
-            request.setAttribute(ConstantsFrontendPL.MESSAGE, ConstantsFrontendPL.TRANSACTION_FAILED);
-            RequestDispatcher requestDispatcher = request.getRequestDispatcher(ConstantsFrontendPL.PAYMENT_HOMEPAGE_URL);
-            requestDispatcher.forward(request, response);
-        }
-    }
+    request
+        .getRequestDispatcher(ConstantsFrontendPL.ShoppingCart.PAYMENT_HOMEPAGE_URL)
+        .forward(request, response);
+  }
 }
