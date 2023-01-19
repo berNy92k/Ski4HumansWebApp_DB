@@ -34,7 +34,7 @@ public class Customer {
   private String email;
   @NotNull
   @Column(name = "password")
-  private String password;
+  private String password; // local tests so keep string (it can be change later)
   @NotNull
   @Column(name = "first_name")
   private String firstName;

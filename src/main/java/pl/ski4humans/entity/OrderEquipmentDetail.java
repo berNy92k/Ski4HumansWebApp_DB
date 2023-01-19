@@ -21,10 +21,6 @@ public class OrderEquipmentDetail {
   @Column(name = "order_eq_detail_id")
   private Integer orderEquipmentDetailId;
   @NotNull
-  @ManyToOne(fetch = FetchType.EAGER)
-  @JoinColumn(name = "equipment_id")
-  private Equipment equipment;
-  @NotNull
   @Column(name = "quantity")
   private int quantity;
   @NotNull
@@ -34,6 +30,10 @@ public class OrderEquipmentDetail {
   @ManyToOne(fetch = FetchType.EAGER)
   @JoinColumn(name = "order_id")
   private Order order;
+  @NotNull
+  @ManyToOne(fetch = FetchType.EAGER)
+  @JoinColumn(name = "equipment_id")
+  private Equipment equipment;
 
   public OrderEquipmentDetail() {
   }

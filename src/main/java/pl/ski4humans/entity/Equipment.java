@@ -47,10 +47,6 @@ public class Equipment {
   @Column(name = "name")
   private String name;
   @NotNull
-  @ManyToOne(fetch = FetchType.LAZY)
-  @JoinColumn(name = "manufacturer_id")
-  private Manufacturer manufacturer;
-  @NotNull
   @Column(name = "short_description")
   private String shortDescription;
   @NotNull
@@ -72,6 +68,10 @@ public class Equipment {
   @ManyToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "category_id")
   private Category category;
+  @NotNull
+  @ManyToOne(fetch = FetchType.LAZY)
+  @JoinColumn(name = "manufacturer_id")
+  private Manufacturer manufacturer;
   @NotNull
   @Column(name = "publish_date")
   private Date publishDate;

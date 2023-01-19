@@ -35,15 +35,6 @@ public class Order {
   @Column(name = "order_id")
   private Integer orderId;
   @NotNull
-  @ManyToOne(fetch = FetchType.LAZY)
-  @JoinColumn(name = "customer_id")
-  private Customer customer;
-  @NotNull
-  @ManyToOne(fetch = FetchType.LAZY,
-      cascade = CascadeType.ALL)
-  @JoinColumn(name = "shipping_address_id")
-  private ShippingAddress shippingAddress;
-  @NotNull
   @Column(name = "payment_method")
   private String paymentMethod;
   @NotNull
@@ -55,6 +46,15 @@ public class Order {
   @NotNull
   @Column(name = "order_date")
   private Date orderDate;
+  @NotNull
+  @ManyToOne(fetch = FetchType.LAZY)
+  @JoinColumn(name = "customer_id")
+  private Customer customer;
+  @NotNull
+  @ManyToOne(fetch = FetchType.LAZY,
+      cascade = CascadeType.ALL)
+  @JoinColumn(name = "shipping_address_id")
+  private ShippingAddress shippingAddress;
 
   @OneToMany(fetch = FetchType.LAZY,
       cascade = CascadeType.ALL,
