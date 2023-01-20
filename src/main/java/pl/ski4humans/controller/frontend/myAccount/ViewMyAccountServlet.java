@@ -12,10 +12,11 @@ import java.io.IOException;
 @WebServlet("/homepage/myAccount")
 public class ViewMyAccountServlet extends HttpServlet {
 
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp)
-            throws ServletException, IOException {
-        CustomerServices customerServices = new CustomerServices(req, resp);
-        customerServices.myAccountViewCustomer();
-    }
+  @Override
+  protected void doGet(final HttpServletRequest req,
+                       final HttpServletResponse resp) throws ServletException, IOException {
+
+    final CustomerServices customerServices = new CustomerServices(req, resp);
+    customerServices.myAccountViewCustomer();
+  }
 }

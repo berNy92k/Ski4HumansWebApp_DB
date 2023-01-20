@@ -13,10 +13,11 @@ import java.io.IOException;
 @WebServlet("/equipment")
 public class ListEquipmentServlet extends HttpServlet {
 
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp)
-            throws ServletException, IOException {
-        EquipmentServices equipmentServices = new EquipmentServices(req, resp);
-        equipmentServices.equipmentList();
-    }
+  @Override
+  protected void doGet(final HttpServletRequest req,
+                       final HttpServletResponse resp) throws ServletException, IOException {
+
+    final EquipmentServices equipmentServices = new EquipmentServices(req, resp);
+    equipmentServices.equipmentList();
+  }
 }

@@ -12,16 +12,18 @@ import java.io.IOException;
 @WebServlet("/viewEquipment")
 public class ViewEquipmentServlet extends HttpServlet {
 
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp)
-            throws ServletException, IOException {
-        doGet(req,resp);
-    }
+  @Override
+  protected void doPost(final HttpServletRequest req,
+                        final HttpServletResponse resp) throws ServletException, IOException {
 
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp)
-            throws ServletException, IOException {
-        EquipmentServices equipmentServices = new EquipmentServices(req, resp);
-        equipmentServices.viewEquipment();
-    }
+    doGet(req, resp);
+  }
+
+  @Override
+  protected void doGet(final HttpServletRequest req,
+                       final HttpServletResponse resp) throws ServletException, IOException {
+
+    final EquipmentServices equipmentServices = new EquipmentServices(req, resp);
+    equipmentServices.viewEquipment();
+  }
 }

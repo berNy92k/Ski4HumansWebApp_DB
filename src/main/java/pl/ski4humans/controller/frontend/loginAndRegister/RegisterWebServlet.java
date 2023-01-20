@@ -12,15 +12,19 @@ import java.io.IOException;
 @WebServlet("/homepage/register")
 public class RegisterWebServlet extends HttpServlet {
 
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        CustomerServices customerServices = new CustomerServices(req, resp);
-        customerServices.registerFormCustomer();
-    }
+  @Override
+  protected void doGet(final HttpServletRequest req,
+                       final HttpServletResponse resp) throws ServletException, IOException {
 
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        CustomerServices customerServices = new CustomerServices(req, resp);
-        customerServices.registerCustomer();
-    }
+    final CustomerServices customerServices = new CustomerServices(req, resp);
+    customerServices.registerFormCustomer();
+  }
+
+  @Override
+  protected void doPost(final HttpServletRequest req,
+                        final HttpServletResponse resp) throws ServletException, IOException {
+
+    final CustomerServices customerServices = new CustomerServices(req, resp);
+    customerServices.registerCustomer();
+  }
 }
