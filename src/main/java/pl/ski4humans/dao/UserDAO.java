@@ -9,48 +9,46 @@ import java.util.Map;
 
 public class UserDAO extends JpaDAO<User> implements GenericDAO<User> {
 
-    public UserDAO(EntityManager entityManager) {
-        super(entityManager);
-    }
+  public UserDAO(final EntityManager entityManager) {
+    super(entityManager);
+  }
 
-    public User create(User user) {
-        return super.create(user);
-    }
+  public User create(final User user) {
+    return super.create(user);
+  }
 
-    public User update(User user) {
-        return super.update(user);
-    }
+  public User update(final User user) {
+    return super.update(user);
+  }
 
-    public User get(Object id) {
-        return super.find(User.class, id);
-    }
+  public User get(final Object id) {
+    return super.find(User.class, id);
+  }
 
-    public void delete(Object id) {
-        super.delete(User.class, id);
-    }
+  public void delete(final Object id) {
+    super.delete(User.class, id);
+  }
 
-    public List<User> listAll() {
-        return super.findByNamedQueryWithoutParameters("User.findAll");
-    }
+  public List<User> listAll() {
+    return super.findByNamedQueryWithoutParameters("User.findAll");
+  }
 
-    public List<User> findByEmail(String email) {
-        return super.findByNamedQueryWithParameter("User.findByEmail", "email", email);
-    }
+  public List<User> findByEmail(final String email) {
+    return super.findByNamedQueryWithParameter("User.findByEmail", "email", email);
+  }
 
-    public boolean checkLoginAndPassword(String email, String password) {
-        Map<String, Object> loginAndPassword = new HashMap<>();
-        loginAndPassword.put("email", email);
-        loginAndPassword.put("password", password);
+  public boolean checkLoginAndPassword(final String email, final String password) {
+    final Map<String, Object> loginAndPassword = new HashMap<>();
+    loginAndPassword.put("email", email);
+    loginAndPassword.put("password", password);
 
-        List<User> users = super.findByNamedQueryWithMapOfParameters("User.checkLoginAndPassword", loginAndPassword);
+    final List<User> users =
+        super.findByNamedQueryWithMapOfParameters("User.checkLoginAndPassword", loginAndPassword);
 
-        if (users.size() == 1) {
-            return true;
-        }
-        return false;
-    }
+    return users.size() == 1;
+  }
 
-    public long count() {
-        return super.countByNamedQuery("User.countAll");
-    }
+  public long count() {
+    return super.countByNamedQuery("User.countAll");
+  }
 }

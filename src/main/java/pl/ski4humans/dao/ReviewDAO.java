@@ -7,41 +7,41 @@ import java.util.List;
 
 public class ReviewDAO extends JpaDAO<Review> implements GenericDAO<Review> {
 
-    public ReviewDAO(EntityManager entityManager) {
-        super(entityManager);
-    }
+  public ReviewDAO(final EntityManager entityManager) {
+    super(entityManager);
+  }
 
-    @Override
-    public Review create(Review review) {
-        return super.create(review);
-    }
+  @Override
+  public Review create(final Review review) {
+    return super.create(review);
+  }
 
-    @Override
-    public Review update(Review review) {
-        return super.update(review);
-    }
+  @Override
+  public Review update(final Review review) {
+    return super.update(review);
+  }
 
-    @Override
-    public Review get(Object id) {
-        return super.find(Review.class, id);
-    }
+  @Override
+  public Review get(final Object id) {
+    return super.find(Review.class, id);
+  }
 
-    @Override
-    public void delete(Object id) {
-        super.delete(Review.class, id);
-    }
+  @Override
+  public void delete(final Object id) {
+    super.delete(Review.class, id);
+  }
 
-    @Override
-    public List<Review> listAll() {
-        return super.findByNamedQueryWithoutParameters("Review.findAll");
-    }
+  @Override
+  public List<Review> listAll() {
+    return super.findByNamedQueryWithoutParameters("Review.findAll");
+  }
 
-    @Override
-    public long count() {
-        return super.countByNamedQuery("Review.countAll");
-    }
+  @Override
+  public long count() {
+    return super.countByNamedQuery("Review.countAll");
+  }
 
-    public List<Review> findAllByEquipmentId(int equipmentId) {
-        return super.findByNamedQueryWithParameter("Review.findAllByEquipmentId", "equipmentId", equipmentId);
-    }
+  public List<Review> findAllByEquipmentId(final int equipmentId) {
+    return super.findByNamedQueryWithParameter("Review.findAllByEquipmentId", "equipmentId", equipmentId);
+  }
 }
