@@ -13,7 +13,9 @@ import java.io.IOException;
 public class SearchServlet extends HttpServlet {
 
   @Override
-  protected void doGet(final HttpServletRequest req, final HttpServletResponse resp) throws ServletException, IOException {
+  protected void doGet(final HttpServletRequest req,
+                       final HttpServletResponse resp) throws ServletException, IOException {
+
     final EquipmentServices equipmentServices = new EquipmentServices(req, resp);
     equipmentServices.searchEquipmentList();
   }

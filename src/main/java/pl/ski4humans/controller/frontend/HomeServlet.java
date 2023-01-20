@@ -13,13 +13,17 @@ import java.io.IOException;
 public class HomeServlet extends HttpServlet {
 
   @Override
-  protected void doGet(final HttpServletRequest req, final HttpServletResponse resp) throws ServletException, IOException {
+  protected void doGet(final HttpServletRequest req,
+                       final HttpServletResponse resp) throws ServletException, IOException {
+
     final EquipmentServices equipmentServices = new EquipmentServices(req, resp);
     equipmentServices.equipmentShortList();
   }
 
   @Override
-  protected void doPost(final HttpServletRequest req, final HttpServletResponse resp) throws ServletException, IOException {
+  protected void doPost(final HttpServletRequest req,
+                        final HttpServletResponse resp) throws ServletException, IOException {
+
     doGet(req, resp);
   }
 }

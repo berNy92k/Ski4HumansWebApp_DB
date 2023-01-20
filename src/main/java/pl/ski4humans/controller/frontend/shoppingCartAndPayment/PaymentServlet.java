@@ -12,16 +12,17 @@ import java.io.IOException;
 @WebServlet("/homepage/payment")
 public class PaymentServlet extends HttpServlet {
 
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp)
-            throws ServletException, IOException {
-        doPost(req, resp);
-    }
+  @Override
+  protected void doGet(final HttpServletRequest req,
+                       final HttpServletResponse resp) throws ServletException, IOException {
+    doPost(req, resp);
+  }
 
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp)
-            throws ServletException, IOException {
-        ShoppingCartServices shoppingCartServices = new ShoppingCartServices(req, resp);
-        shoppingCartServices.payment();
-    }
+  @Override
+  protected void doPost(final HttpServletRequest req,
+                        final HttpServletResponse resp) throws ServletException, IOException {
+
+    final ShoppingCartServices shoppingCartServices = new ShoppingCartServices(req, resp);
+    shoppingCartServices.payment();
+  }
 }

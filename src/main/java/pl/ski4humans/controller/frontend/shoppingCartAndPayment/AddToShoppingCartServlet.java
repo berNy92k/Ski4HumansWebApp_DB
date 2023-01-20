@@ -12,10 +12,11 @@ import java.io.IOException;
 @WebServlet("/homepage/addToShoppingCart")
 public class AddToShoppingCartServlet extends HttpServlet {
 
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp)
-            throws ServletException, IOException {
-        ShoppingCartServices shoppingCartServices = new ShoppingCartServices(req,resp);
-        shoppingCartServices.addToShoppingCart();
-    }
+  @Override
+  protected void doGet(final HttpServletRequest req,
+                       final HttpServletResponse resp) throws ServletException, IOException {
+
+    final ShoppingCartServices shoppingCartServices = new ShoppingCartServices(req, resp);
+    shoppingCartServices.addToShoppingCart();
+  }
 }

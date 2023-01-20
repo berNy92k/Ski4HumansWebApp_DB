@@ -12,16 +12,18 @@ import java.io.IOException;
 @WebServlet("/homepage/continueCheckout")
 public class ContinueCheckoutShoppingCartServlet extends HttpServlet {
 
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp)
-            throws ServletException, IOException {
-        doPost(req, resp);
-    }
+  @Override
+  protected void doGet(final HttpServletRequest req,
+                       final HttpServletResponse resp) throws ServletException, IOException {
 
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp)
-            throws ServletException, IOException {
-        ShoppingCartServices shoppingCartServices = new ShoppingCartServices(req, resp);
-        shoppingCartServices.continueCheckoutShoppingCart();
-    }
+    doPost(req, resp);
+  }
+
+  @Override
+  protected void doPost(final HttpServletRequest req,
+                        final HttpServletResponse resp) throws ServletException, IOException {
+
+    final ShoppingCartServices shoppingCartServices = new ShoppingCartServices(req, resp);
+    shoppingCartServices.continueCheckoutShoppingCart();
+  }
 }
