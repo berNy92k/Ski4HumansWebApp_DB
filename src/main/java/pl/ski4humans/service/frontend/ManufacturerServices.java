@@ -2,7 +2,7 @@ package pl.ski4humans.service.frontend;
 
 import pl.ski4humans.dao.ManufacturerDAO;
 import pl.ski4humans.entity.Manufacturer;
-import pl.ski4humans.service.admin.ConstantsPL;
+import pl.ski4humans.service.admin.ConstantsAdminPL;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
@@ -32,7 +32,7 @@ public class ManufacturerServices {
 
     request.setAttribute("manufacturerList", manufacturers);
     if (manufacturers != null && manufacturers.size() == 0) {
-      request.setAttribute(ConstantsPL.MESSAGE, ConstantsFrontendPL.Manufacturer.LACK_OF_MANUFACTURER_IN_DB);
+      request.setAttribute(ConstantsAdminPL.MESSAGE, ConstantsFrontendPL.Manufacturer.LACK_OF_MANUFACTURER_IN_DB);
     }
 
     request

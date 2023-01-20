@@ -1,6 +1,6 @@
 package pl.ski4humans.controller.admin;
 
-import pl.ski4humans.service.admin.ConstantsPL;
+import pl.ski4humans.service.admin.ConstantsAdminPL;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
@@ -24,18 +24,18 @@ public class AdminLoginFilter implements Filter {
         HttpServletRequest httpServletRequest = (HttpServletRequest) request;
         HttpSession session = httpServletRequest.getSession(false);
 
-        boolean loggedIn = session != null && session.getAttribute(ConstantsPL.LOGGED_USER) != null;
+        boolean loggedIn = session != null && session.getAttribute(ConstantsAdminPL.LOGGED_USER) != null;
         String loginURI = httpServletRequest.getContextPath() + "/admin/login";
         boolean isTheSameURI = httpServletRequest.getRequestURI().equals(loginURI);
         boolean loginJspPage = httpServletRequest.getRequestURI().endsWith("/admin/login.jsp");
 
         if (loggedIn && (isTheSameURI || loginJspPage)) {
-            RequestDispatcher requestDispatcher = request.getRequestDispatcher(ConstantsPL.ADMIN_URL);
+            RequestDispatcher requestDispatcher = request.getRequestDispatcher(ConstantsAdminPL.User.ADMIN_URL);
             requestDispatcher.forward(request, response);
         } else if (loggedIn || isTheSameURI) {
             filterChain.doFilter(request, response);
         } else {
-            RequestDispatcher requestDispatcher = request.getRequestDispatcher(ConstantsPL.ADMIN_LOGIN_URL_JSP);
+            RequestDispatcher requestDispatcher = request.getRequestDispatcher(ConstantsAdminPL.User.ADMIN_LOGIN_URL_JSP);
             requestDispatcher.forward(request, response);
         }
     }

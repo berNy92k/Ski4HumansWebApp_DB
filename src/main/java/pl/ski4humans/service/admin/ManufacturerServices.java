@@ -4,9 +4,7 @@ import pl.ski4humans.dao.ManufacturerDAO;
 import pl.ski4humans.entity.Manufacturer;
 
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -16,147 +14,153 @@ import java.io.InputStream;
 import java.util.List;
 
 public class ManufacturerServices {
-    private ManufacturerDAO manufacturerDAO;
-    private HttpServletRequest request;
-    private HttpServletResponse response;
 
-    public ManufacturerServices(HttpServletRequest req, HttpServletResponse resp) {
-        this.request = req;
-        this.response = resp;
-        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("Ski4HumansWebApp");
-        EntityManager entityManager = entityManagerFactory.createEntityManager();
-        manufacturerDAO = new ManufacturerDAO(entityManager);
+  private final ManufacturerDAO manufacturerDAO;
+  private final HttpServletRequest request;
+  private final HttpServletResponse response;
+
+  public ManufacturerServices(final HttpServletRequest req, final HttpServletResponse resp) {
+    this.request = req;
+    this.response = resp;
+    EntityManager entityManager = Persistence
+        .createEntityManagerFactory("Ski4HumansWebApp")
+        .createEntityManager();
+    manufacturerDAO = new ManufacturerDAO(entityManager);
+  }
+
+  public void manufacturerList() throws ServletException, IOException {
+    manufacturerList(ConstantsAdminPL.NULL);
+  }
+
+  public void manufacturerList(String message) throws ServletException, IOException {
+    final List<Manufacturer> manufacturers = manufacturerDAO.listAll();
+
+    request.setAttribute("manufacturerList", manufacturers);
+    if (message != null) {
+      request.setAttribute(ConstantsAdminPL.MESSAGE, message);
     }
 
-    public void manufacturerList()
-            throws ServletException, IOException {
-        manufacturerList(ConstantsPL.NULL);
+    request
+        .getRequestDispatcher(ConstantsAdminPL.Manufacturer.MANUFACTURER_LIST_URL)
+        .forward(request, response);
+  }
+
+  public void createManufacturer() throws ServletException, IOException {
+    final String manufacturerName = request.getParameter("manufacturerName");
+    final String description = request.getParameter("description");
+
+    final List<Manufacturer> manufacturers = manufacturerDAO.findByManufacturerName(manufacturerName);
+
+    if (manufacturers.size() > 0) {
+      manufacturerList(manufacturerName + ConstantsAdminPL.Manufacturer.MANUFACTURER_ALREADY_EXIST_IN_DB);
+      return;
     }
 
-    public void manufacturerList(String message)
-            throws ServletException, IOException {
-        List<Manufacturer> manufacturers = manufacturerDAO.listAll();
+    final Manufacturer newManufacturer = Manufacturer.builder()
+        .manufacturerName(manufacturerName)
+        .description(description)
+        .build();
 
-        request.setAttribute("manufacturerList", manufacturers);
-        if (message != null) {
-            request.setAttribute(ConstantsPL.MESSAGE, message);
-        }
+    // get Image
+    final Part imagePart = request.getPart("manufacturerImage");
+    if (imagePart != null && imagePart.getSize() > 0) {
+      final long size = imagePart.getSize();
+      final byte[] imageBytes = new byte[(int) size];
 
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher(ConstantsPL.MANUFACTURER_LIST_URL);
-        requestDispatcher.forward(request, response);
+      final InputStream inputStream = imagePart.getInputStream();
+      inputStream.read(imageBytes);
+      inputStream.close();
+
+      newManufacturer.setImage(imageBytes);
     }
 
-    public void createManufacturer()
-            throws ServletException, IOException {
-        String manufacturerName = request.getParameter("manufacturerName");
-        String description = request.getParameter("description");
+    final Manufacturer manufacturer = manufacturerDAO.create(newManufacturer);
+    if (manufacturer.getManufacturerId() > 0) {
+      manufacturerList(ConstantsAdminPL.Manufacturer.NEW_MANUFACTURER_WAS_CREATED);
+    } else {
+      manufacturerList(ConstantsAdminPL.Manufacturer.NEW_MANUFACTURER_WAS_NOT_CREATED);
+    }
+  }
 
-        List<Manufacturer> manufacturers = manufacturerDAO.findByManufacturerName(manufacturerName);
+  public void editManufacturer() throws ServletException, IOException {
+    final Integer id = Integer.valueOf(request.getParameter("id"));
+    final Manufacturer manufacturer = manufacturerDAO.get(id);
 
-        if (manufacturers.size() > 0) {
-            manufacturerList(manufacturerName + ConstantsPL.MANUFACTURER_ALREADY_EXIST_IN_DB);
-            return;
-        }
+    if (manufacturer != null) {
+      request.setAttribute("manufacturer", manufacturer);
 
-        Manufacturer newManufacturer = new Manufacturer();
-        newManufacturer.setManufacturerName(manufacturerName);
-        newManufacturer.setDescription(description);
+      request
+          .getRequestDispatcher(ConstantsAdminPL.Manufacturer.MANUFACTURER_CREATE_URL)
+          .forward(request, response);
+    } else {
+      manufacturerList(ConstantsAdminPL.Manufacturer.COULD_NOT_FIND_MANUFACTURER_BY_ID + id);
+    }
+  }
 
-        // get Image
-        Part imagePart = request.getPart("manufacturerImage");
-        if (imagePart != null && imagePart.getSize() > 0) {
-            long size = imagePart.getSize();
-            byte[] imageBytes = new byte[(int) size];
+  public void updateManufacturer() throws ServletException, IOException {
+    final Integer manufacturerId = Integer.valueOf(request.getParameter("manufacturerId"));
+    final String manufacturerName = request.getParameter("manufacturerName");
+    final String description = request.getParameter("description");
 
-            InputStream inputStream = imagePart.getInputStream();
-            inputStream.read(imageBytes);
-            inputStream.close();
+    boolean isMoreEmailsInDatabase = false;
 
-            newManufacturer.setImage(imageBytes);
-        }
+    final Manufacturer userFoundById = manufacturerDAO.get(manufacturerId);
 
-        Manufacturer manufacturer = manufacturerDAO.create(newManufacturer);
-        if (manufacturer.getManufacturerId() > 0) {
-            manufacturerList(ConstantsPL.NEW_MANUFACTURER_WAS_CREATED);
-        } else {
-            manufacturerList(ConstantsPL.NEW_MANUFACTURER_WAS_NOT_CREATED);
-        }
+    final List<Manufacturer> manufacturers = manufacturerDAO.findByManufacturerName(manufacturerName);
+    Manufacturer userFoundByName = null;
+    if (manufacturers.size() > 0 && manufacturers.size() < 2) {
+      userFoundByName = manufacturers.get(0);
+    } else if (manufacturers.size() > 1) {
+      isMoreEmailsInDatabase = true;
     }
 
-    public void editManufacturer()
-            throws ServletException, IOException {
-        Integer id = Integer.valueOf(request.getParameter("id"));
-        Manufacturer manufacturer = manufacturerDAO.get(id);
+    if (isMoreEmailsInDatabase) {
 
-        if (manufacturer != null) {
-            request.setAttribute("manufacturer", manufacturer);
+      manufacturerList(ConstantsAdminPL.Manufacturer.MANUFACTURER_WAS_NOT_UPDATED
+          + manufacturerName + ConstantsAdminPL.Manufacturer.MANUFACTURER_ALREADY_EXIST_IN_DB);
+    } else if (userFoundByName != null
+        && !userFoundByName.getManufacturerId().equals(userFoundById.getManufacturerId())) {
 
-            RequestDispatcher requestDispatcher = request.getRequestDispatcher(ConstantsPL.MANUFACTURER_CREATE_URL);
-            requestDispatcher.forward(request, response);
-        } else {
-            manufacturerList(ConstantsPL.COULD_NOT_FIND_MANUFACTURER_BY_ID + id);
-        }
+      manufacturerList(ConstantsAdminPL.Manufacturer.MANUFACTURER_WAS_NOT_UPDATED
+          + manufacturerName + ConstantsAdminPL.Manufacturer.MANUFACTURER_ALREADY_EXIST_IN_DB);
+    } else {
+
+      final Manufacturer manufacturer = Manufacturer.builder()
+          .manufacturerId(manufacturerId)
+          .manufacturerName(manufacturerName)
+          .description(description)
+          .build();
+
+      // get Image
+      final Part manufacturerImage = request.getPart("manufacturerImage");
+      if (manufacturerImage != null && manufacturerImage.getSize() > 0) {
+        final long size = manufacturerImage.getSize();
+        final byte[] bytes = new byte[(int) size];
+
+        final InputStream inputStream = manufacturerImage.getInputStream();
+        inputStream.read(bytes);
+        inputStream.close();
+
+        manufacturer.setImage(bytes);
+      } else {
+        manufacturer.setImage(userFoundById.getImage());
+      }
+
+      manufacturerDAO.update(manufacturer);
+      manufacturerList(ConstantsAdminPL.Manufacturer.MANUFACTURER_WAS_UPDATED);
     }
+  }
 
-    public void updateManufacturer()
-            throws ServletException, IOException {
-        Integer manufacturerId = Integer.valueOf(request.getParameter("manufacturerId"));
-        String manufacturerName = request.getParameter("manufacturerName");
-        String description = request.getParameter("description");
+  public void deleteManufacturer() throws ServletException, IOException {
+    final Integer manufacturerId = Integer.valueOf(request.getParameter("id"));
+    final Manufacturer manufacturer = manufacturerDAO.get(manufacturerId);
 
-        boolean isMoreEmailsInDatabase = false;
-
-        Manufacturer userFoundById = manufacturerDAO.get(manufacturerId);
-
-        List<Manufacturer> manufacturers = manufacturerDAO.findByManufacturerName(manufacturerName);
-        Manufacturer userFoundByName = null;
-        if (manufacturers.size() > 0 && manufacturers.size() < 2) {
-            userFoundByName = manufacturers.get(0);
-        } else if (manufacturers.size() > 1) {
-            isMoreEmailsInDatabase = true;
-        }
-
-        if (isMoreEmailsInDatabase) {
-            manufacturerList(ConstantsPL.MANUFACTURER_WAS_NOT_UPDATED + manufacturerName + ConstantsPL.MANUFACTURER_ALREADY_EXIST_IN_DB);
-        } else if (userFoundByName != null && !userFoundByName.getManufacturerId().equals(userFoundById.getManufacturerId())) {
-            manufacturerList(ConstantsPL.MANUFACTURER_WAS_NOT_UPDATED + manufacturerName + ConstantsPL.MANUFACTURER_ALREADY_EXIST_IN_DB);
-        } else {
-            Manufacturer manufacturer = new Manufacturer();
-            manufacturer.setManufacturerId(manufacturerId);
-            manufacturer.setManufacturerName(manufacturerName);
-            manufacturer.setDescription(description);
-
-            // get Image
-            Part manufacturerImage = request.getPart("manufacturerImage");
-            if (manufacturerImage != null && manufacturerImage.getSize() > 0) {
-                long size = manufacturerImage.getSize();
-                byte[] bytes = new byte[(int) size];
-
-                InputStream inputStream = manufacturerImage.getInputStream();
-                inputStream.read(bytes);
-                inputStream.close();
-
-                manufacturer.setImage(bytes);
-            } else {
-                manufacturer.setImage(userFoundById.getImage());
-            }
-
-            manufacturerDAO.update(manufacturer);
-            manufacturerList(ConstantsPL.MANUFACTURER_WAS_UPDATED);
-        }
+    if (manufacturer != null) {
+      manufacturerDAO.delete(manufacturerId);
+      manufacturerList(ConstantsAdminPL.Manufacturer.MANUFACTURER_WAS_DELETED);
+    } else {
+      manufacturerList(ConstantsAdminPL.Manufacturer.COULD_NOT_FIND_MANUFACTURER_BY_ID
+          + manufacturerId + ConstantsAdminPL.Manufacturer.DELETED_BY_ANOTHER_MANUFACTURER_ADMIN);
     }
-
-    public void deleteManufacturer()
-            throws ServletException, IOException {
-        Integer manufacturerId = Integer.valueOf(request.getParameter("id"));
-
-        Manufacturer manufacturer = manufacturerDAO.get(manufacturerId);
-
-        if (manufacturer != null) {
-            manufacturerDAO.delete(manufacturerId);
-            manufacturerList(ConstantsPL.MANUFACTURER_WAS_DELETED);
-        } else {
-            manufacturerList(ConstantsPL.COULD_NOT_FIND_MANUFACTURER_BY_ID + manufacturerId + ConstantsPL.DELETED_BY_ANOTHER_MANUFACTURER_ADMIN);
-        }
-    }
+  }
 }

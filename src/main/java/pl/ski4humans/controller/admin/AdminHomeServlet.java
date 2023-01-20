@@ -1,6 +1,6 @@
 package pl.ski4humans.controller.admin;
 
-import pl.ski4humans.service.admin.ConstantsPL;
+import pl.ski4humans.service.admin.ConstantsAdminPL;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -20,7 +20,7 @@ public class AdminHomeServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        RequestDispatcher dispatcher = req.getRequestDispatcher(ConstantsPL.ADMIN_HOMEPAGE_URL_JSP);
+        RequestDispatcher dispatcher = req.getRequestDispatcher(ConstantsAdminPL.User.ADMIN_HOMEPAGE_URL_JSP);
         dispatcher.forward(req, resp);
     }
 }
