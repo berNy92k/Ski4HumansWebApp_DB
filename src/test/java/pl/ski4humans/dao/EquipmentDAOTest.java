@@ -20,155 +20,155 @@ import static junit.framework.TestCase.assertEquals;
 import static junit.framework.TestCase.assertTrue;
 
 public class EquipmentDAOTest extends BaseDAOTest {
-    private static EquipmentDAO equipmentDAO;
-    private static ManufacturerDAO manufacturerDAO;
-    private static CategoryDAO categoryDAO;
+  private static EquipmentDAO equipmentDAO;
+  private static ManufacturerDAO manufacturerDAO;
+  private static CategoryDAO categoryDAO;
 
-    @BeforeClass
-    public static void setUp() {
-        entityManagerSetUp();
+  @BeforeClass
+  public static void setUp() {
+    entityManagerSetUp();
 
-        equipmentDAO = new EquipmentDAO(entityManager);
-        manufacturerDAO = new ManufacturerDAO(entityManager);
-        categoryDAO = new CategoryDAO(entityManager);
+    equipmentDAO = new EquipmentDAO(entityManager);
+    manufacturerDAO = new ManufacturerDAO(entityManager);
+    categoryDAO = new CategoryDAO(entityManager);
+  }
+
+  @Test
+  public void testCreateEquipment() {
+    Equipment equipment = new Equipment();
+    equipment.setName("Narty Head Supershape I.Magnum + Head PR 112");
+
+    Manufacturer manufacturer = manufacturerDAO.get(2);
+    equipment.setManufacturer(manufacturer);
+    equipment.setShortDescription("ShortDesc");
+    equipment.setLongDescription("LongDescLongDescLongDescLongDescLongDescLongDescLongDescLongDescLongDescLongDesc");
+
+    // MEN, WOMAN or CHILD
+    equipment.setSex("MAN");
+
+    String urlToImage = "D:\\berNy\\JAVA_SDA\\3)_Projekty\\3)_Ski4Humans\\PicToTest\\narty-head-supershape-imagnum-head-prx-11.jpg";
+    byte[] bytesImage = new byte[0];
+    try {
+      bytesImage = Files.readAllBytes(Paths.get(urlToImage));
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+    if (bytesImage.length > 0) {
+      equipment.setImage(bytesImage);
     }
 
-    @Test
-    public void testCreateEquipment() {
-        Equipment equipment = new Equipment();
-        equipment.setName("Narty Head Supershape I.Magnum + Head PR 112");
+    equipment.setPrice(1500f);
+    equipment.setLengthOrSize("170");
 
-        Manufacturer manufacturer = manufacturerDAO.get(2);
-        equipment.setManufacturer(manufacturer);
-        equipment.setShortDescription("ShortDesc");
-        equipment.setLongDescription("LongDescLongDescLongDescLongDescLongDescLongDescLongDescLongDescLongDescLongDesc");
+    Category category = categoryDAO.get(1);
+    equipment.setCategory(category);
 
-        // MEN, WOMAN or CHILD
-        equipment.setSex("MAN");
+    // current date
+    equipment.setPublishDate(new Date());
+    equipment.setLastUpdateTime(new Date());
 
-        String urlToImage = "D:\\berNy\\JAVA_SDA\\3)_Projekty\\3)_Ski4Humans\\PicToTest\\narty-head-supershape-imagnum-head-prx-11.jpg";
-        byte[] bytesImage = new byte[0];
-        try {
-            bytesImage = Files.readAllBytes(Paths.get(urlToImage));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        if (bytesImage.length > 0) {
-            equipment.setImage(bytesImage);
-        }
+    equipment = equipmentDAO.create(equipment);
 
-        equipment.setPrice(1500f);
-        equipment.setLengthOrSize("170");
+    assertTrue(equipment.getEquipmentId() > 0);
+  }
 
-        Category category = categoryDAO.get(1);
-        equipment.setCategory(category);
+  @Test(expected = PersistenceException.class)
+  public void testCreateEquipmentWithoutSetFields() {
+    Equipment equipment = new Equipment();
 
-        // current date
-        equipment.setPublishDate(new Date());
-        equipment.setLastUpdateTime(new Date());
+    equipmentDAO.create(equipment);
+  }
 
-        equipment = equipmentDAO.create(equipment);
+  @Test
+  public void testUpdateEquipment() {
+    Equipment equipment = new Equipment();
+    equipment.setEquipmentId(1);
+    equipment.setName("Narty Head Supershape I.Magnum + Head PR 11");
 
-        assertTrue(equipment.getEquipmentId() > 0);
+    Manufacturer manufacturer = manufacturerDAO.get(2);
+    equipment.setManufacturer(manufacturer);
+    equipment.setShortDescription("ShortDescEDIT");
+    equipment.setLongDescription("LongDescLongDescLongDescLongDescLongDescLongDescLongDescLongDescLongDescLongDesc");
+
+    // MEN, WOMAN or CHILD
+    equipment.setSex("MEN");
+
+    String urlToImage = "D:\\berNy\\JAVA_SDA\\3)_Projekty\\3)_Ski4Humans\\PicToTest\\narty-head-supershape-imagnum-head-prx-11.jpg";
+    byte[] bytesImage = new byte[0];
+    try {
+      bytesImage = Files.readAllBytes(Paths.get(urlToImage));
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+    if (bytesImage.length > 0) {
+      equipment.setImage(bytesImage);
     }
 
-    @Test(expected = PersistenceException.class)
-    public void testCreateEquipmentWithoutSetFields() {
-        Equipment equipment = new Equipment();
+    equipment.setPrice(1500f);
+    equipment.setLengthOrSize("170");
 
-        equipmentDAO.create(equipment);
-    }
+    Category category = categoryDAO.get(8);
+    equipment.setCategory(category);
 
-    @Test
-    public void testUpdateEquipment() {
-        Equipment equipment = new Equipment();
-        equipment.setEquipmentId(1);
-        equipment.setName("Narty Head Supershape I.Magnum + Head PR 11");
+    // current date
+    equipment.setPublishDate(new Date());
+    equipment.setLastUpdateTime(new Date());
 
-        Manufacturer manufacturer = manufacturerDAO.get(2);
-        equipment.setManufacturer(manufacturer);
-        equipment.setShortDescription("ShortDescEDIT");
-        equipment.setLongDescription("LongDescLongDescLongDescLongDescLongDescLongDescLongDescLongDescLongDescLongDesc");
+    Equipment updateEquipment = equipmentDAO.update(equipment);
 
-        // MEN, WOMAN or CHILD
-        equipment.setSex("MEN");
+    assertEquals("ShortDescEDIT", updateEquipment.getShortDescription());
+  }
 
-        String urlToImage = "D:\\berNy\\JAVA_SDA\\3)_Projekty\\3)_Ski4Humans\\PicToTest\\narty-head-supershape-imagnum-head-prx-11.jpg";
-        byte[] bytesImage = new byte[0];
-        try {
-            bytesImage = Files.readAllBytes(Paths.get(urlToImage));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        if (bytesImage.length > 0) {
-            equipment.setImage(bytesImage);
-        }
+  @Test(expected = PersistenceException.class)
+  public void testUpdateEquipmentWithoutSetFields() {
+    Equipment equipment = new Equipment();
 
-        equipment.setPrice(1500f);
-        equipment.setLengthOrSize("170");
+    equipmentDAO.update(equipment);
+  }
 
-        Category category = categoryDAO.get(8);
-        equipment.setCategory(category);
+  @Test
+  public void testGetEquipmentNotNull() {
+    Integer equipmentId = 1;
+    Equipment equipment = equipmentDAO.get(equipmentId);
 
-        // current date
-        equipment.setPublishDate(new Date());
-        equipment.setLastUpdateTime(new Date());
+    assertNotNull(equipment);
+  }
 
-        Equipment updateEquipment = equipmentDAO.update(equipment);
+  @Test
+  public void testGetEquipmentNull() {
+    Integer equipmentId = 3000;
+    Equipment equipment = equipmentDAO.get(equipmentId);
 
-        assertEquals("ShortDescEDIT", updateEquipment.getShortDescription());
-    }
+    assertNull(equipment);
+  }
 
-    @Test(expected = PersistenceException.class)
-    public void testUpdateEquipmentWithoutSetFields() {
-        Equipment equipment = new Equipment();
+  @Test
+  public void testDeleteEquipment() {
+    Integer equipmentId = 5;
+    equipmentDAO.delete(equipmentId);
 
-        equipmentDAO.update(equipment);
-    }
+    Equipment deletedEquipment = equipmentDAO.get(equipmentId);
 
-    @Test
-    public void testGetEquipmentNotNull() {
-        Integer equipmentId = 1;
-        Equipment equipment = equipmentDAO.get(equipmentId);
+    assertNull(deletedEquipment);
+  }
 
-        assertNotNull(equipment);
-    }
+  @Test
+  public void testListAllEquipment() {
+    List<Equipment> equipments = equipmentDAO.listAll();
+    int size = equipments.size();
 
-    @Test
-    public void testGetEquipmentNull() {
-        Integer equipmentId = 3000;
-        Equipment equipment = equipmentDAO.get(equipmentId);
+    assertEquals(1, size);
+  }
 
-        assertNull(equipment);
-    }
+  @Test
+  public void testCountEquipment() {
+    long count = equipmentDAO.count();
 
-    @Test
-    public void testDeleteEquipment() {
-        Integer equipmentId = 5;
-        equipmentDAO.delete(equipmentId);
+    assertEquals(1, count);
+  }
 
-        Equipment deletedEquipment = equipmentDAO.get(equipmentId);
-
-        assertNull(deletedEquipment);
-    }
-
-    @Test
-    public void testListAllEquipment() {
-        List<Equipment> equipments = equipmentDAO.listAll();
-        int size = equipments.size();
-
-        assertEquals(1, size);
-    }
-
-    @Test
-    public void testCountEquipment() {
-        long count = equipmentDAO.count();
-
-        assertEquals(1, count);
-    }
-
-    @AfterClass
-    public static void tearDown() {
-        close();
-    }
+  @AfterClass
+  public static void tearDown() {
+    close();
+  }
 }

@@ -14,101 +14,101 @@ import static junit.framework.TestCase.assertEquals;
 import static junit.framework.TestCase.assertTrue;
 
 public class CategoryDAOTest extends BaseDAOTest {
-    private static CategoryDAO categoryDAO;
+  private static CategoryDAO categoryDAO;
 
-    @BeforeClass
-    public static void setUp() {
-        entityManagerSetUp();
+  @BeforeClass
+  public static void setUp() {
+    entityManagerSetUp();
 
-        categoryDAO = new CategoryDAO(entityManager);
-    }
+    categoryDAO = new CategoryDAO(entityManager);
+  }
 
-    @Test
-    public void testCreateCategory() {
-        Category category = new Category();
-        category.setName("TestCategory");
+  @Test
+  public void testCreateCategory() {
+    Category category = new Category();
+    category.setName("TestCategory");
 
-        category = categoryDAO.create(category);
+    category = categoryDAO.create(category);
 
-        assertTrue(category.getCategoryId() > 0);
-    }
+    assertTrue(category.getCategoryId() > 0);
+  }
 
-    @Test(expected = PersistenceException.class)
-    public void testCreateCategoryWithoutSetFields() {
-        Category category = new Category();
+  @Test(expected = PersistenceException.class)
+  public void testCreateCategoryWithoutSetFields() {
+    Category category = new Category();
 
-        categoryDAO.create(category);
-    }
+    categoryDAO.create(category);
+  }
 
-    @Test
-    public void testUpdateCategory() {
-        Category category = new Category();
-        category.setCategoryId(8);
-        category.setName("TestCategoryUpdate");
+  @Test
+  public void testUpdateCategory() {
+    Category category = new Category();
+    category.setCategoryId(8);
+    category.setName("TestCategoryUpdate");
 
-        Category updateCategory = categoryDAO.update(category);
+    Category updateCategory = categoryDAO.update(category);
 
-        assertEquals("TestCategoryUpdate", updateCategory.getName());
-    }
+    assertEquals("TestCategoryUpdate", updateCategory.getName());
+  }
 
-    @Test(expected = PersistenceException.class)
-    public void testUpdateCategoryWithoutSetFields() {
-        Category category = new Category();
+  @Test(expected = PersistenceException.class)
+  public void testUpdateCategoryWithoutSetFields() {
+    Category category = new Category();
 
-        categoryDAO.update(category);
-    }
+    categoryDAO.update(category);
+  }
 
-    @Test
-    public void testGetCategoryNotNull() {
-        Integer CategoryId = 8;
-        Category category = categoryDAO.get(CategoryId);
+  @Test
+  public void testGetCategoryNotNull() {
+    Integer CategoryId = 8;
+    Category category = categoryDAO.get(CategoryId);
 
-        assertNotNull(category);
-    }
+    assertNotNull(category);
+  }
 
-    @Test
-    public void testGetCategoryNull() {
-        Integer CategoryId = 3000;
-        Category category = categoryDAO.get(CategoryId);
+  @Test
+  public void testGetCategoryNull() {
+    Integer CategoryId = 3000;
+    Category category = categoryDAO.get(CategoryId);
 
-        assertNull(category);
-    }
+    assertNull(category);
+  }
 
-    @Test
-    public void testDeleteCategory() {
-        Integer CategoryId = 1;
-        categoryDAO.delete(CategoryId);
+  @Test
+  public void testDeleteCategory() {
+    Integer CategoryId = 1;
+    categoryDAO.delete(CategoryId);
 
-        Category deletedCategory = categoryDAO.get(CategoryId);
+    Category deletedCategory = categoryDAO.get(CategoryId);
 
-        assertNull(deletedCategory);
-    }
+    assertNull(deletedCategory);
+  }
 
-    @Test
-    public void testListAllCategory() {
-        List<Category> categories = categoryDAO.listAll();
-        int size = categories.size();
+  @Test
+  public void testListAllCategory() {
+    List<Category> categories = categoryDAO.listAll();
+    int size = categories.size();
 
-        assertEquals(2, size);
-    }
+    assertEquals(2, size);
+  }
 
-    @Test
-    public void testFindByName() {
-        List<Category> byName = categoryDAO.findByName("Narty damskie3");
-        String id = "3";
+  @Test
+  public void testFindByName() {
+    List<Category> byName = categoryDAO.findByName("Narty damskie3");
+    String id = "3";
 
-        assertEquals(id, byName.get(0).getCategoryId().toString());
-    }
+    assertEquals(id, byName.get(0).getCategoryId().toString());
+  }
 
-    @Test
-    public void testCountCategory() {
-        long count = categoryDAO.count();
+  @Test
+  public void testCountCategory() {
+    long count = categoryDAO.count();
 
-        assertEquals(2, count);
-    }
+    assertEquals(2, count);
+  }
 
-    @AfterClass
-    public static void tearDown() {
-        close();
-    }
+  @AfterClass
+  public static void tearDown() {
+    close();
+  }
 }
