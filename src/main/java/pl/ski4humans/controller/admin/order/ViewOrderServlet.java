@@ -1,7 +1,6 @@
 package pl.ski4humans.controller.admin.order;
 
 import pl.ski4humans.service.admin.OrderServices;
-import pl.ski4humans.service.admin.ReviewServices;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -12,10 +11,12 @@ import java.io.IOException;
 
 @WebServlet("/admin/viewOrder")
 public class ViewOrderServlet extends HttpServlet {
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp)
-            throws ServletException, IOException {
-        OrderServices orderServices = new OrderServices(req, resp);
-        orderServices.viewOrder();
-    }
+
+  @Override
+  protected void doGet(final HttpServletRequest req,
+                       final HttpServletResponse resp) throws ServletException, IOException {
+
+    final OrderServices orderServices = new OrderServices(req, resp);
+    orderServices.viewOrder();
+  }
 }

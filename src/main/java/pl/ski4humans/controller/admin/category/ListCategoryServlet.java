@@ -12,9 +12,11 @@ import java.io.IOException;
 @WebServlet("/admin/categories")
 public class ListCategoryServlet extends HttpServlet {
 
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        CategoryServices categoryServices = new CategoryServices(req, resp);
-        categoryServices.categoryList();
-    }
+  @Override
+  protected void doGet(final HttpServletRequest req,
+                       final HttpServletResponse resp) throws ServletException, IOException {
+
+    final CategoryServices categoryServices = new CategoryServices(req, resp);
+    categoryServices.categoryList();
+  }
 }

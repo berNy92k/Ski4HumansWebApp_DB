@@ -11,9 +11,12 @@ import java.io.IOException;
 
 @WebServlet("/admin/deleteManufacturer")
 public class DeleteManufacturerServlet extends HttpServlet {
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        ManufacturerServices manufacturerServices = new ManufacturerServices(req,resp);
-        manufacturerServices.deleteManufacturer();
-    }
+
+  @Override
+  protected void doGet(final HttpServletRequest req,
+                       final HttpServletResponse resp) throws ServletException, IOException {
+
+    final ManufacturerServices manufacturerServices = new ManufacturerServices(req, resp);
+    manufacturerServices.deleteManufacturer();
+  }
 }

@@ -11,10 +11,12 @@ import java.io.IOException;
 
 @WebServlet("/admin/deleteReview")
 public class DeleteReviewServlet extends HttpServlet {
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp)
-            throws ServletException, IOException {
-        ReviewServices reviewServices = new ReviewServices(req, resp);
-        reviewServices.deleteReview();
-    }
+
+  @Override
+  protected void doGet(final HttpServletRequest req,
+                       final HttpServletResponse resp) throws ServletException, IOException {
+
+    final ReviewServices reviewServices = new ReviewServices(req, resp);
+    reviewServices.deleteReview();
+  }
 }

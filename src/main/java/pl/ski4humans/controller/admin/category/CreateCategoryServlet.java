@@ -1,7 +1,6 @@
 package pl.ski4humans.controller.admin.category;
 
 import pl.ski4humans.service.admin.CategoryServices;
-import pl.ski4humans.service.admin.UserServices;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -12,9 +11,12 @@ import java.io.IOException;
 
 @WebServlet("/admin/createNewCategory")
 public class CreateCategoryServlet extends HttpServlet {
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        CategoryServices categoryServices = new CategoryServices(req,resp);
-        categoryServices.createCategory();
-    }
+
+  @Override
+  protected void doPost(final HttpServletRequest req,
+                        final HttpServletResponse resp) throws ServletException, IOException {
+
+    final CategoryServices categoryServices = new CategoryServices(req, resp);
+    categoryServices.createCategory();
+  }
 }

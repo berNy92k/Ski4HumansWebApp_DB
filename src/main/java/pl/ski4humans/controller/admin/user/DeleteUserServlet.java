@@ -11,9 +11,12 @@ import java.io.IOException;
 
 @WebServlet("/admin/deleteUser")
 public class DeleteUserServlet extends HttpServlet {
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        UserServices userServices = new UserServices(req,resp);
-        userServices.deleteUser();
-    }
+
+  @Override
+  protected void doGet(final HttpServletRequest req,
+                       final HttpServletResponse resp) throws ServletException, IOException {
+
+    final UserServices userServices = new UserServices(req, resp);
+    userServices.deleteUser();
+  }
 }

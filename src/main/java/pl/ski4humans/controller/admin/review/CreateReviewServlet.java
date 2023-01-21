@@ -11,9 +11,12 @@ import java.io.IOException;
 
 @WebServlet("/admin/createNewReview")
 public class CreateReviewServlet extends HttpServlet {
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        ReviewServices reviewServices = new ReviewServices(req, resp);
-        reviewServices.createReview();
-    }
+
+  @Override
+  protected void doPost(final HttpServletRequest req,
+                        final HttpServletResponse resp) throws ServletException, IOException {
+
+    final ReviewServices reviewServices = new ReviewServices(req, resp);
+    reviewServices.createReview();
+  }
 }

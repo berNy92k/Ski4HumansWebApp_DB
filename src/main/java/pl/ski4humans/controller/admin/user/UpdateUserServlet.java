@@ -11,9 +11,12 @@ import java.io.IOException;
 
 @WebServlet("/admin/updateUser")
 public class UpdateUserServlet extends HttpServlet {
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        UserServices userServices = new UserServices(req,resp);
-        userServices.updateUser();
-    }
+
+  @Override
+  protected void doPost(final HttpServletRequest req,
+                        final HttpServletResponse resp) throws ServletException, IOException {
+
+    final UserServices userServices = new UserServices(req, resp);
+    userServices.updateUser();
+  }
 }

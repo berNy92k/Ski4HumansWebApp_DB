@@ -12,9 +12,11 @@ import java.io.IOException;
 @WebServlet("/admin/users")
 public class ListUserServlet extends HttpServlet {
 
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        UserServices userServices = new UserServices(req, resp);
-        userServices.userList();
-    }
+  @Override
+  protected void doGet(final HttpServletRequest req,
+                       final HttpServletResponse resp) throws ServletException, IOException {
+
+    final UserServices userServices = new UserServices(req, resp);
+    userServices.userList();
+  }
 }

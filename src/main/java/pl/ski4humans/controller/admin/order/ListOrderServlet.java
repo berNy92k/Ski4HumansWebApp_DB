@@ -12,10 +12,11 @@ import java.io.IOException;
 @WebServlet("/admin/orders")
 public class ListOrderServlet extends HttpServlet {
 
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp)
-            throws ServletException, IOException {
-        OrderServices orderServices = new OrderServices(req, resp);
-        orderServices.ordersList();
-    }
+  @Override
+  protected void doGet(final HttpServletRequest req,
+                       final HttpServletResponse resp) throws ServletException, IOException {
+
+    final OrderServices orderServices = new OrderServices(req, resp);
+    orderServices.ordersList();
+  }
 }

@@ -11,9 +11,12 @@ import java.io.IOException;
 
 @WebServlet("/admin/preCreateNewReview")
 public class PrecreateReviewServlet extends HttpServlet {
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        ReviewServices reviewServices = new ReviewServices(req, resp);
-        reviewServices.preCreateReview();
-    }
+
+  @Override
+  protected void doGet(final HttpServletRequest req,
+                       final HttpServletResponse resp) throws ServletException, IOException {
+
+    final ReviewServices reviewServices = new ReviewServices(req, resp);
+    reviewServices.preCreateReview();
+  }
 }

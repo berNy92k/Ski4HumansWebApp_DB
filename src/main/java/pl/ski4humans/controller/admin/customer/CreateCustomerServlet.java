@@ -11,9 +11,12 @@ import java.io.IOException;
 
 @WebServlet("/admin/createNewCustomer")
 public class CreateCustomerServlet extends HttpServlet {
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        CustomerServices customerServices = new CustomerServices(req, resp);
-        customerServices.createCustomer();
-    }
+
+  @Override
+  protected void doPost(final HttpServletRequest req,
+                        final HttpServletResponse resp) throws ServletException, IOException {
+
+    final CustomerServices customerServices = new CustomerServices(req, resp);
+    customerServices.createCustomer();
+  }
 }

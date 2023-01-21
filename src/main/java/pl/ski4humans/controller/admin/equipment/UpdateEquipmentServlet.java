@@ -12,14 +12,17 @@ import java.io.IOException;
 
 @WebServlet("/admin/updateEquipment")
 @MultipartConfig(
-        fileSizeThreshold = 1024 * 10,
-        maxFileSize = 1024 * 300,
-        maxRequestSize = 1024 * 1024
+    fileSizeThreshold = 1024 * 10,
+    maxFileSize = 1024 * 300,
+    maxRequestSize = 1024 * 1024
 )
 public class UpdateEquipmentServlet extends HttpServlet {
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        EquipmentServices equipmentServices = new EquipmentServices(req, resp);
-        equipmentServices.updateEquipment();
-    }
+
+  @Override
+  protected void doPost(final HttpServletRequest req,
+                        final HttpServletResponse resp) throws ServletException, IOException {
+
+    final EquipmentServices equipmentServices = new EquipmentServices(req, resp);
+    equipmentServices.updateEquipment();
+  }
 }

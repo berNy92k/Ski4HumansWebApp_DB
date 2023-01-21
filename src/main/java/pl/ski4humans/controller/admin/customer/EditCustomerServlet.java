@@ -11,9 +11,12 @@ import java.io.IOException;
 
 @WebServlet("/admin/editCustomer")
 public class EditCustomerServlet extends HttpServlet {
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        CustomerServices customerServices = new CustomerServices(req, resp);
-        customerServices.editCustomer();
-    }
+
+  @Override
+  protected void doGet(final HttpServletRequest req,
+                       final HttpServletResponse resp) throws ServletException, IOException {
+
+    final CustomerServices customerServices = new CustomerServices(req, resp);
+    customerServices.editCustomer();
+  }
 }
