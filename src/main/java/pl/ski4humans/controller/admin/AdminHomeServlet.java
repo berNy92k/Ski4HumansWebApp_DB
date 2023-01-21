@@ -13,14 +13,17 @@ import java.io.IOException;
 @WebServlet("/admin/")
 public class AdminHomeServlet extends HttpServlet {
 
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        doGet(req, resp);
-    }
+  @Override
+  protected void doPost(final HttpServletRequest req,
+                        final HttpServletResponse resp) throws ServletException, IOException {
 
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        RequestDispatcher dispatcher = req.getRequestDispatcher(ConstantsAdminPL.User.ADMIN_HOMEPAGE_URL_JSP);
-        dispatcher.forward(req, resp);
-    }
+    doGet(req, resp);
+  }
+
+  protected void doGet(final HttpServletRequest req,
+                       final HttpServletResponse resp) throws ServletException, IOException {
+
+    final RequestDispatcher dispatcher = req.getRequestDispatcher(ConstantsAdminPL.User.ADMIN_HOMEPAGE_URL_JSP);
+    dispatcher.forward(req, resp);
+  }
 }
